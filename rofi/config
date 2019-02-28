@@ -1,0 +1,26 @@
+rofi.combi-modi:    window,drun,run
+#rofi.font:         monospace 10
+rofi.lines:	    	5 
+rofi.columns:       2
+rofi.modi:          combi,run,drun,window
+rofi.terminal:	    xfce4-terminal
+rofi.location:                       1
+rofi.kb-accept-entry:                Control+m,Return,KP_Enter
+ofi.kb-accept-custom:                Control+Return
+rofi.kb-accept-alt:                  Shift+Return
+rofi.kb-mode-next:                   Shift+Right,Tab
+rofi.kb-mode-previous:               Shift+Left,Control+ISO_Left_Tab
+rofi.kb-row-left:                    Control+h
+rofi.kb-row-right:                   Control+l
+rofi.kb-row-up:                      Up,Control+k,ISO_Left_Tab
+rofi.kb-row-down:                    Down,Control+j
+rofi.kb-row-tab:                     Control+Tab
+rofi.kb-page-prev:                   Page_Up
+rofi.kb-page-next:                   Page_Down
+rofi.kb-row-first:                   Home,KP_Home
+rofi.kb-row-last:                    End,KP_End
+rofi.kb-row-select:                  Control+space
+rofi.kb-remove-to-eol:               Control+p
+rofi.kb-remove-char-back:            BackSpace
+
+rofi.theme: /usr/share/rofi/themes/Arc-Mantis.rasi
