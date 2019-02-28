@@ -1,0 +1,345 @@
+# i3 config file (v4) 
+# 1. MOD 2. APPEARANCE 3. TERMINAL EMULATOR 4. MENU 5. NAVIGATION 6. WORKSPACES 7. CONFIG 8. POWER 9. RESIZE 10. AUTO EXEC 11. APP BIND 12. FLOAT ENABLED WINDOW
+
+# 1.MOD
+set $mod Mod1
+set $m mod4
+
+# 2. APPEARANCE
+
+# 2.1 FONTS
+
+font pango:Noto Sans Mono 11
+#font pango:monospace 11
+#font xft:URWGothic-Book 11
+
+# 2.2 COLORS
+
+set_from_resource $term_background background
+set_from_resource $term_foreground foreground
+set_from_resource $term_color0     color0
+set_from_resource $term_color1     color1
+set_from_resource $term_color2     color2
+set_from_resource $term_color3     color3
+set_from_resource $term_color4     color4
+set_from_resource $term_color5     color5
+set_from_resource $term_color6     color6
+set_from_resource $term_color7     color7
+set_from_resource $term_color8     color8
+set_from_resource $term_color9     color9
+set_from_resource $term_color10    color10
+set_from_resource $term_color11    color11
+set_from_resource $term_color12    color12
+set_from_resource $term_color13    color13
+set_from_resource $term_color14    color14
+set_from_resource $term_color15    color15
+
+
+set_from_resource $darkblack    color0  #282828
+set_from_resource $black        color8  #928374
+set_from_resource $darkred      color1  #cc241d
+set_from_resource $red          color9  #fb4934
+set_from_resource $darkgreen    color2  #98971a
+set_from_resource $green        color10 #b8bb26
+set_from_resource $darkyellow   color3  #d79921
+set_from_resource $yellow       color11 #fabd2f
+set_from_resource $darkblue     color4  #458588
+set_from_resource $blue         color12 #83a598
+set_from_resource $darkmagenta  color5  #b16286
+set_from_resource $magenta      color13 #d3869b
+set_from_resource $darkcyan     color6  #689d6a
+set_from_resource $cyan         color14 #8ec07c
+set_from_resource $darkwhite    color7  #a89984
+set_from_resource $white        color15 #ebdbb2
+set $transparent                #00000000
+
+#                       BORDER          BACKGROUND  TEXT        INDICATOR       CHILD_BORDER
+client.focused          $cyan           $darkcyan   $magenta    $darkmagenta    $darkblue
+client.unfocused        $transparent    $blue       $white      $darkblue       $darkblack
+client.focused_inactive $transparent    $blue       $white      $darkblue       $darkblack
+client.urgent           $darkred        $darkred    $black      $darkred        $darkred
+client.background       $black
+
+
+#client.focused              #556064 #556064 #80FFF9 #FDF6E3
+#client.focused_inactive     #2F3D44 #2F3D44 #AD69AF #454948
+#client.unfocused            #2F3D44 #2F3D44 #AD69AF #454948
+#client.urgent               #CB4B16 #FDF6E3 #AD69AF #268BD2
+#client.placeholder          #000000 #0c0c0c #ffffff #000000 
+#client.background           #2B2C2B
+
+
+# 2.3 WINDOW
+
+new_window pixel 2 
+new_float normal
+
+
+hide_edge_borders none
+floating_modifier $mod
+
+
+# 3. TERMINAL EMULATOR
+
+set $myTerm st
+set $myTerm2 termite
+bindsym $mod+Return exec $myTerm
+bindsym $mod+slash exec $myTerm
+
+
+
+
+
+bindsym $m+y kill
+bindsym $mod+Shift+x kill
+bindsym $mod+y kill
+
+# 4. MENU
+
+bindsym $mod+semicolon exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+bindsym $m+semicolon exec --no-startup-id rofi -show combi -font "Noto Sans 13"
+
+
+# 5. NAVIGATION
+
+set $up k
+set $down j
+set $left h
+set $right l
+
+# 5.1 FOCUS MOVE
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+#alternate (arrowkey)
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# 5.2 WINDOW MOVE
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+#alternate (mod2)
+
+bindsym $m+$left move left
+bindsym $m+$down move down
+bindsym $m+$up move up
+bindsym $m+$right move right
+
+#alternate (arrowkey)
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# 5.3 LAYOUT
+
+bindsym $mod+z split h;exec notify-send 'tile horizontally'
+bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $m+space split toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $m+u floating toggle
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+
+# 6. WORKSPACES
+
+# 6.1 WS NAME
+
+
+set $ws1 ""  
+set $ws2 ""
+set $ws3 ""
+set $ws4 ""
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+
+# 6.2 NAV WS
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+#bindsym $mod+5 workspace $ws5
+#bindsym $mod+6 workspace $ws6
+#bindsym $mod+7 workspace $ws7
+#bindsym $mod+8 workspace $ws8
+
+#alternate (mod2)
+bindsym $m+a workspace $ws1
+bindsym $m+s workspace $ws2
+bindsym $m+d workspace $ws3
+bindsym $m+f workspace $ws4
+
+# 6.3 MV WS
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+#bindsym $mod+Shift+5 move container to workspace $ws5
+#bindsym $mod+Shift+6 move container to workspace $ws6
+#bindsym $mod+Shift+7 move container to workspace $ws7
+#bindsym $mod+Shift+8 move container to workspace $ws8
+
+#alternate (mod2)
+
+bindsym $m+q move container to workspace $ws1
+bindsym $m+w move container to workspace $ws2
+bindsym $m+e move container to workspace $ws3
+bindsym $m+r move container to workspace $ws4
+
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+$right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+$left workspace prev
+
+# 6.4 APP WS
+
+#assign [class="Firefox|qutebrowser|Vivaldi-stable|Vivaldi-snapshot|Opera"] 		$ws2         
+#assign [class="Vlc|vlc|MPlayer|mpv"]                                          		$ws3     
+#assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]      	$ws4
+#assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                	$ws4
+#assign [class="libreoffice-writer|libreoffice-calc"]                              	$ws4
+
+#
+# Workspace 2 browser related
+#assign [class="Chromium|Google-chrome"]                                             → 2
+
+# Workspace 4 text editor related
+# Workspace 3 Inkscape
+#assign [class="Inkscape"]                                                           → 3
+
+# Workspace 4 Gimp
+#assign [class="Gimp"]                                                               → 4
+
+# Workspace 5 Images and meld
+#assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
+#assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
+#assign [class="Meld"]                                                               → 5
+
+# Workspace 6 all video related software
+
+# Workspace 7 virtual machines and settings
+#assign [class="Vmplayer|VirtualBox"]                                                → 7
+
+# Workspace 8 file managers
+#assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
+
+# Workspace 9 email clients
+#assign [class="Geary|Evolution"]                                                    → 9
+
+# Workspace 10 music related
+#assign [class="Spotify|spotify"]                                                    → 10
+#fix for spotify not moving to workspace 10
+#for_window [class="Spotify"] move to workspace 10
+
+
+# 7. CONFIG
+
+bindsym $mod+Ctrl+r reload
+bindsym $mod+Shift+r restart
+
+
+# 8. POWER
+
+bindsym $mod+0 mode "$mode_system"
+
+
+set $mode_system (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+9 exec --no-startup-id blurlock
+
+
+# 9. RESIZE
+
+bindsym $mod+r mode "resize"
+bindsym $m+m mode "resize"
+mode "resize" {
+	    bindsym $left resize shrink width 4 px or 4 ppt
+        bindsym $down resize grow height 4 px or 4 ppt
+        bindsym $up resize shrink height 4 px or 4 ppt
+        bindsym $right resize grow width 4 px or 4 ppt
+
+	    bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        
+        bindsym Left resize shrink width 4 px or 4 ppt
+
+		bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+# 10. AUTO EXEC
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id numlockx on
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager 
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd 
+exec_always --no-startup-id xinput set-prop 14 283 1
+exec_always --no-startup-id numlockx on
+exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+exec_always feh --bg-scale ~/Pictures/feh/f6.jpg
+
+# 11. APP BIND
+
+bindsym $mod+i exec qutebrowser
+bindsym $mod+o exec $myTerm -e nnn
+bindsym $m+o exec $myTerm -e ranger
+bindsym $mod+p exec thunar
+bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter 
+bindsym Print exec --no-startup-id xfce4-screenshooter -f
+bindsym shift+Print exec --no-startup-id xfce4-screenshooter -w
+bindsym $m+Shift+l exec slimlock
+bindsym XF86Calculator exec galculator
+bindsym $mod+n exec xfce4-popup-notes --show-hide
+
+
+# 12. FLOAT ENABLED WINDOW
+
+for_window [class="Galculator"] floating enable
+for_window [class="MPlayer"] floating enable
+for_window [class="mpv"] floating enable
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+#bar
+#    {
+#
+#    }
