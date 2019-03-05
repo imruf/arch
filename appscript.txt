@@ -9,3 +9,9 @@ cmake qt5 lxappearance lxappearance-gtk3
 Aur
 ranger qutebrowser equalx pdftk marvin st surf klatexformula 
 
+
+
+git
+git add home
+git commit -m "home"
+git push -u origin master
