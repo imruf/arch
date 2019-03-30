@@ -62,7 +62,7 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -220,7 +220,7 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias sys='sudo systemctl'
 alias mount='udisksctl mount -b'
-alias ytv='youtube-viewer'
+alias ytv='youtube-viewer -C'
 alias ytd='youtube-dl'
 alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
@@ -229,6 +229,9 @@ alias inpkg='makepkg -si'
 alias mail='neomutt'
 alias dic='sdcv'
 alias music='ncmpcpp'
+alias updb='sudo updatedb'
+alias yakyak='./AUR/yakyak/yakyak'
+alias radio='curseradio'
 
 
 #Powerlevel9k
