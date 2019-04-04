@@ -62,7 +62,7 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract)
+plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -230,8 +230,19 @@ alias mail='neomutt'
 alias dic='sdcv'
 alias music='ncmpcpp'
 alias updb='sudo updatedb'
-alias yakyak='./AUR/yakyak/yakyak'
+alias hangout='./AUR/yakyak/yakyak'
 alias radio='curseradio'
+
+
+#Git
+alias gc='git clone'
+alias gu='git push -u origin master'
+alias ga='git commit -a'
+
+
+#Bind
+bindkey -v
+
 
 
 #Powerlevel9k
@@ -252,7 +263,6 @@ alias radio='curseradio'
 
 #POWERLEVEL9K_MODE='nerdfont-complete'
 
-POWERLEVEL9K_MODE='nerdfont-complete'
 
 #POWERLEVEL9K_COLOR_SCHEME='light'
 
@@ -263,13 +273,13 @@ OS_ICON='\uF303'
 
 
 
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='032'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='151'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='000'
 
 
-POWERLEVEL9K_TIME_BACKGROUND='032'
+POWERLEVEL9K_TIME_BACKGROUND='151'
 
-POWERLEVEL9K_DIR_HOME_BACKGROUND='195'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='230'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='springgreen2'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
@@ -284,7 +294,7 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='grey11'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='grey11'
 
-POWERLEVEL9K_STATUS_OK_BACKGROUND='195'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='230'
 POWERLEVEL9K_STATUS_OK_FOREGROUND='black'
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
