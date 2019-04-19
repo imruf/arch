@@ -215,11 +215,13 @@ bindsym $mod+Ctrl+$left workspace prev
 
 # 6.4 APP WS
 
-#assign [class="Firefox|qutebrowser|Vivaldi-stable|Vivaldi-snapshot|Opera"] 		$ws2         
-#assign [class="Vlc|vlc|MPlayer|mpv"]                                          		$ws3     
-#assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]      	$ws4
-#assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                	$ws4
-#assign [class="libreoffice-writer|libreoffice-calc"]                              	$ws4
+
+assign [class="st-256color|Termite|Thunar"] 						$ws1         
+assign [class="Firefox|qutebrowser|Vivaldi-stable|Vivaldi-snapshot|Surf|Opera"] 		$ws2         
+assign [class="Vlc|vlc|MPlayer|mpv"]                                          		$ws3     
+assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]      	$ws4
+assign [class="Xed|xed|Brackets|Atom|Code|Geany"]				        $ws4
+assign [class="libreoffice-startcenter|Soffice"]				        $ws4
 
 #
 # Workspace 2 browser related
@@ -309,10 +311,12 @@ exec --no-startup-id numlockx on
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager 
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd 
-exec_always --no-startup-id xinput set-prop 14 283 1
+exec --no-startup-id redshift
+exec_always --no-startup-id xinput set-prop 14 284 1
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
-exec_always feh --bg-scale ~/Pictures/feh/f6.jpg
+exec_always feh --bg-scale ~/Pictures/feh/arcoqtile.jpg
+
 
 # 11. APP BIND
 
@@ -324,6 +328,7 @@ bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
 bindsym shift+Print exec --no-startup-id xfce4-screenshooter -w
 bindsym $m+Shift+l exec slimlock
+bindsym ctrl+shift+l exec "sleep 1 && xtrlock"
 bindsym XF86Calculator exec galculator
 bindsym $mod+n exec xfce4-popup-notes --show-hide
 
@@ -333,13 +338,27 @@ bindsym $mod+n exec xfce4-popup-notes --show-hide
 for_window [class="Galculator"] floating enable
 for_window [class="MPlayer"] floating enable
 for_window [class="mpv"] floating enable
+#for_window [class="yakyak"] floating enable
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-#bar
-#    {
-#
+
+
+# 13. BAR/PANNEL
+#bar 
+#	{
+#   	 position top
+#   	 status_command i3status
+#	status_command i3status -c ~/.config/i3/i3status.conf
+#	status_command python /usr/lib/python3.7/site-packages/powerline/bindings/i3/powerline-i3.py
+#	font pango:PowerlineFont 12
+#	exec "powerline-lemonbar --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11'"
 #    }
+
+
+#exec python /usr/lib/site-packages/powerline/bindings/lemonbar/powerline-lemonbar.py –i3 --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11'"
+
+
