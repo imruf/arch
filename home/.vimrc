@@ -18,14 +18,28 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1"
 
 set number
+set relativenumber
 
 
 syntax on
 
 
-execute pathogen#infect()
-filetype plugin indent on
+"execute pathogen#infect()
+"filetype plugin indent on
 
-let g:airline_theme= 'hybridline'
+set laststatus=2
+
+"let g:airline_theme= 'hybridline'
 
 colorscheme dracula
+
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
+set t_Co=256
+
+let g:powerline_pycmd="py3"
+
