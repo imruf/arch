@@ -116,17 +116,17 @@ bindsym $mod+$right focus right
 
 #alternate (arrowkey)
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # 5.2 WINDOW MOVE
 
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+#bindsym $mod+Shift+$left move left
+#bindsym $mod+Shift+$down move down
+#bindsym $mod+Shift+$up move up
+#bindsym $mod+Shift+$right move right
 
 #alternate (mod2)
 
@@ -137,10 +137,10 @@ bindsym $m+$right move right
 
 #alternate (arrowkey)
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # 5.3 LAYOUT
 
@@ -175,10 +175,12 @@ set $ws4 ""
 
 # 6.2 NAV WS
 
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
+#bindsym $mod+1 workspace $ws1
+#bindsym $mod+2 workspace $ws2
+#bindsym $mod+3 workspace $ws3
+#bindsym $mod+4 workspace $ws4
+
+
 #bindsym $mod+5 workspace $ws5
 #bindsym $mod+6 workspace $ws6
 #bindsym $mod+7 workspace $ws7
@@ -192,10 +194,11 @@ bindsym $m+f workspace $ws4
 
 # 6.3 MV WS
 
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
+#bindsym $mod+Shift+1 move container to workspace $ws1
+#bindsym $mod+Shift+2 move container to workspace $ws2
+#bindsym $mod+Shift+3 move container to workspace $ws3
+#bindsym $mod+Shift+4 move container to workspace $ws4
+
 #bindsym $mod+Shift+5 move container to workspace $ws5
 #bindsym $mod+Shift+6 move container to workspace $ws6
 #bindsym $mod+Shift+7 move container to workspace $ws7
@@ -208,9 +211,9 @@ bindsym $m+w move container to workspace $ws2
 bindsym $m+e move container to workspace $ws3
 bindsym $m+r move container to workspace $ws4
 
-bindsym $mod+Ctrl+Right workspace next
+#bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+$right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+#bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+$left workspace prev
 
 # 6.4 APP WS
@@ -328,7 +331,7 @@ bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
 bindsym shift+Print exec --no-startup-id xfce4-screenshooter -w
 bindsym $m+Shift+l exec slimlock
-bindsym ctrl+shift+l exec "sleep 1 && xtrlock"
+#bindsym ctrl+shift+l exec "sleep 1 && xtrlock"
 bindsym XF86Calculator exec galculator
 bindsym $mod+n exec xfce4-popup-notes --show-hide
 
