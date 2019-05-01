@@ -1,7 +1,3 @@
-
-
-
-
 /* based on chromium plugin code, adapted by Nibble<.gs@gmail.com> */
 var hint_num_str = '';
 var hint_elems = [];
