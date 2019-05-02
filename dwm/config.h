@@ -54,6 +54,7 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+#define CMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -62,17 +63,22 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y1, "-sf", col_y2, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *pmenucmd[] = { "oblogout", NULL };
+static const char *fmcmd[] = { "thunar", NULL };
+static const char *bcmd[] = { "qutebrowser", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key               function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
+	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,             focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,             incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,             incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_i,             incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_d,             incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,             setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,             setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_j,             movestack,      {.i = +1 } },
@@ -91,6 +97,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,        focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,         tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,        tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_x,             spawn,          {.v = pmenucmd } },
 	TAGKEYS(                        XK_1,                             0)
 	TAGKEYS(                        XK_2,                             1)
 	TAGKEYS(                        XK_3,                             2)
@@ -101,7 +108,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                             7)
 	TAGKEYS(                        XK_9,                             8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
+	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 };
+
+
+
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
