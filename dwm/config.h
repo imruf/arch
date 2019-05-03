@@ -49,6 +49,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod1Mask
+#define MOD2   Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -109,6 +110,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                             8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
+	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
 };
 
 
