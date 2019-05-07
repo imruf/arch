@@ -105,8 +105,8 @@ export QT_IM_MODULE=ibus
 
 #list
 alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
+alias la='ls -a --color=auto'
+alias lah='ls -lah --color=auto'
 alias l='ls' 					
 alias l.="ls -A | egrep '^\.'"      
 
@@ -188,6 +188,7 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist"
 
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
@@ -224,24 +225,30 @@ alias ytv='youtube-viewer -C'
 alias ytd='youtube-dl'
 alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
-alias in='sudo pacman -S'
+alias inp='sudo pacman -S'
 alias inpkg='makepkg -si'
 alias mail='neomutt'
 alias dic='sdcv'
 alias music='ncmpcpp'
 alias updb='sudo updatedb'
-alias hangout='./AUR/yakyak/yakyak'
 alias radio='curseradio'
-
+alias music='ncmpcpp'
+alias sv='sudo vim'
 
 #Git
 alias gc='git clone'
 alias gu='git push -u origin master'
-alias ga='git commit -a'
+alias gca='git commit -a'
+alias ga='git add'
+alias gs='git status'
+
+#Archive
+alias uz='atool -x'
+alias zip='atool -a'
 
 
 #Bind
-bindkey -v
+#bindkey -v
 
 
 
@@ -261,25 +268,25 @@ bindkey -v
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 #POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
-
+POWERLEVEL9K_MODE='awesome-fontconfig'
 
 #POWERLEVEL9K_COLOR_SCHEME='light'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
-OS_ICON='\uF303'
+OS_ICON='\uF300'
 
 
 
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='151'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='039'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='000'
 
 
-POWERLEVEL9K_TIME_BACKGROUND='151'
+POWERLEVEL9K_TIME_BACKGROUND='039'
+POWERLEVEL9K_TIME_FOREGROUND='000'
 
-POWERLEVEL9K_DIR_HOME_BACKGROUND='230'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='6'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='springgreen2'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
@@ -294,9 +301,20 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='grey11'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='grey11'
 
-POWERLEVEL9K_STATUS_OK_BACKGROUND='230'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='6'
 POWERLEVEL9K_STATUS_OK_FOREGROUND='black'
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
 #POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="007"
 
+
+#Highligh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
+ZSH_HIGHLIGHT_STYLES[default]=fg=white,bold
+
+
+neofetch --ascii_distro arcolinux_small
+#neofetch
