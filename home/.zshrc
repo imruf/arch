@@ -315,6 +315,10 @@ ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
 ZSH_HIGHLIGHT_STYLES[default]=fg=white,bold
 
+#surfraw
+alias srb='sr bing'
+alias srd='sr duckduckgo'
+alias srg='sr google'
 
-neofetch --ascii_distro arcolinux_small
 #neofetch
+neofetch --ascii_distro arcolinux_small
