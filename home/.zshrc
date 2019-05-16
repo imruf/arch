@@ -246,6 +246,17 @@ alias gs='git status'
 alias uz='atool -x'
 alias zip='atool -a'
 
+#surfraw
+alias srb='sr bing'
+alias srd='sr duckduckgo'
+alias srg='sr google'
+
+#ssh
+alias fsh='sudo systemctl start sshd'
+alias fshs='sudo systemctl stop sshd'
+
+alias q='exit'
+
 
 #Bind
 #bindkey -v
@@ -314,11 +325,6 @@ ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
 ZSH_HIGHLIGHT_STYLES[default]=fg=white,bold
-
-#surfraw
-alias srb='sr bing'
-alias srd='sr duckduckgo'
-alias srg='sr google'
 
 #neofetch
 neofetch --ascii_distro arcolinux_small
