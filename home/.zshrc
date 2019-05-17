@@ -88,7 +88,9 @@ alias trizenskip='trizen -S --skipinteg'
 #MOUNT
 alias mount='udisksctl mount -b'
 alias files='sudo udisksctl mount -b /dev/sda4'
+alias ufiles='sudo udisksctl unmount -b /dev/sda4'
 alias os='sudo udisksctl mount -b /dev/sda2'
+alias uos='sudo udisksctl unmount -b /dev/sda2'
 
 #youtube-dl
 alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
