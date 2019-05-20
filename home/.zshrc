@@ -90,6 +90,9 @@ alias files='udisksctl mount -b /dev/sda4'
 alias ufiles='udisksctl unmount -b /dev/sda4'
 alias os='udisksctl mount -b /dev/sda2'
 alias uos='udisksctl unmount -b /dev/sda2'
+alias usb='udisksctl mount -b /dev/sdb1'
+alias uusb='udisksctl unmount -b /dev/sdb1'
+
 
 #youtube-dl
 alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
@@ -106,9 +109,14 @@ alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
+#MAIL
+alias mail='neomutt'
+alias mp="cp mp ~/.muttrc"
+alias ib="cp ib ~/.muttrc"
+alias rr="cp rr ~/.muttrc"
+
 #MIS
 alias sys='sudo systemctl'
-alias mail='neomutt'
 alias dic='sdcv'
 alias radio='curseradio'
 alias music='ncmpcpp'
@@ -173,8 +181,8 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='0'
 POWERLEVEL9K_TIME_BACKGROUND='031'
 POWERLEVEL9K_TIME_FOREGROUND='0'
 
-POWERLEVEL9K_DIR_HOME_BACKGROUND='14'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='7'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='24'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='springgreen2'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
 
@@ -188,8 +196,8 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='grey11'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='grey11'
 
-POWERLEVEL9K_STATUS_OK_BACKGROUND='14'
-POWERLEVEL9K_STATUS_OK_FOREGROUND='black'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='7'
+POWERLEVEL9K_STATUS_OK_FOREGROUND='24'
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
 
