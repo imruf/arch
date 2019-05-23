@@ -29,10 +29,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           0,         0,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,         0,        -1 },
-	{ "st",       NULL,       NULL,       0,            0,           1,         1,        -1 },
+	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
+	{ "Gimp",            NULL,       NULL,                      0,            1,           0,         0,        -1 },
+	{ "Firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
+	{ "qutebrowser",     NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
+	{ "Surf",            NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
+	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
+	{ "Soffice",         NULL,       NULL,                      1 << 3,       0,           0,         0,        -1 },
+    { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 },
+    { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
+	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 };
 
 /* layout(s) */
@@ -121,9 +129,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
 };
-
-
-
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
