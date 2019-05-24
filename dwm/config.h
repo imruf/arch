@@ -72,7 +72,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y1, "-sf", col_y2, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *pmenucmd[] = { "oblogout", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
 
@@ -100,6 +99,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,             setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,         setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,         togglefloating, {0} },
+	{ MOD2,                         XK_u,             togglefloating, {0} },
 	{ MODKEY,                       XK_0,             view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,             tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,         focusmon,       {.i = -1 } },
@@ -115,7 +115,6 @@ static Key keys[] = {
 	{ MOD2,                         XK_z,             moveplace,      {.ui = WIN_SW }},
 	{ MOD2,                         XK_x,             moveplace,      {.ui = WIN_S  }},
 	{ MOD2,                         XK_b,             moveplace,      {.ui = WIN_SE }},
-	{ MODKEY|ShiftMask,             XK_x,             spawn,          {.v = pmenucmd } },
 	TAGKEYS(                        XK_1,                             0)
 	TAGKEYS(                        XK_2,                             1)
 	TAGKEYS(                        XK_3,                             2)
