@@ -11,18 +11,18 @@ settings:
         q: quit
         x: hint links spawn mpv {hint-url}
   colors.webpage.bg:
-    global: white
+    global: grey
   content.user_stylesheets:
     global: null
   tabs.title.format:
     global: '{audio}{index}: {host}'
   url.searchengines:
     global:
-      DEFAULT: https://duckduckgo.com/?q={}
+        DEFAULT: https://www.google.com/search?hl=en&q={}
       aur: https://aur.archlinux.org/packages/?O=0&K={}
       aw: https://wiki.archlinux.org/?search={}
       bing: https://bing.com/search?q={}
-      g: https://www.google.com/search?hl=en&q={}
+      ddg: https://duckduckgo.com/?q={}
   url.start_pages:
     global: about:blank
   window.hide_decoration:
