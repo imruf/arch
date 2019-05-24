@@ -18,8 +18,7 @@ settings:
     global: '{audio}{index}: {host}'
   url.searchengines:
     global:
-        DEFAULT: https://www.google.com/search?hl=en&q={}
-      aur: https://aur.archlinux.org/packages/?O=0&K={}
+      DEFAULT: https://www.google.com/search?hl=en&q={}
       aw: https://wiki.archlinux.org/?search={}
       bing: https://bing.com/search?q={}
       ddg: https://duckduckgo.com/?q={}
