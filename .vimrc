@@ -79,7 +79,7 @@ let g:Powerline_theme='long'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='bubblegum'
 
 " Uncomment to prevent non-normal modes showing in powerline and below powerline.
 set noshowmode
@@ -129,7 +129,7 @@ hi Statement ctermfg=3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse Scrolling
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set mouse=nicr
+"set mouse=nicr
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Splits and Tabbed Files
@@ -146,5 +146,4 @@ let g:minimap_highlight='Visual'
 
 let g:python_highlight_all = 1
 syntax on
-
 
