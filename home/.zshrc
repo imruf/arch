@@ -139,8 +139,8 @@ alias srd='sr duckduckgo'
 alias srg='sr google'
 
 #SSH
-alias fsh='sudo systemctl start sshd'
-alias fshs='sudo systemctl stop sshd'
+alias fst='sudo systemctl start sshd'
+alias fsts='sudo systemctl stop sshd'
 
 alias q='exit'
 
