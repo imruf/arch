@@ -127,6 +127,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
+    { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
+    { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
 };
 
 /* button definitions */
