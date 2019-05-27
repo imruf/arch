@@ -39,7 +39,7 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 },
     { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 },
-    { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
+    { "Galculator",      NULL,       "Galculator",              0,       True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 };
 
@@ -74,7 +74,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, 
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
+#include <X11/XF86keysym.h>
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key               function        argument */
@@ -115,6 +119,8 @@ static Key keys[] = {
 	{ MOD2,                         XK_z,             moveplace,      {.ui = WIN_SW }},
 	{ MOD2,                         XK_x,             moveplace,      {.ui = WIN_S  }},
 	{ MOD2,                         XK_b,             moveplace,      {.ui = WIN_SE }},
+    { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
+    { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
 	TAGKEYS(                        XK_1,                             0)
 	TAGKEYS(                        XK_2,                             1)
 	TAGKEYS(                        XK_3,                             2)
@@ -124,11 +130,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                             6)
 	TAGKEYS(                        XK_8,                             7)
 	TAGKEYS(                        XK_9,                             8)
+    { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+    { 0,                            XF86XK_AudioMute,        spawn, {.v = mutevol } },
+    { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
-    { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
-    { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
 };
 
 /* button definitions */
