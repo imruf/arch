@@ -77,6 +77,8 @@ static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+/*static const char *brinc[] = { "dwm-brc", "up", NULL };*/
+/*static const char *brdec[] = { "dwm-brc", "down", NULL };*/
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -136,6 +138,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
+    /*{ 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },*/
+    /*{ 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },*/
 };
 
 /* button definitions */
