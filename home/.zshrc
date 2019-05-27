@@ -142,6 +142,12 @@ alias srg='sr google'
 alias fst='sudo systemctl start sshd'
 alias fsts='sudo systemctl stop sshd'
 
+#POWERMANAGEMENT
+alias iph='i3exit suspend'
+alias ipl='i3exit lock'
+alias ips='i3exit shutdown'
+alias ipr='i3exit reboot'
+
 alias q='exit'
 
 
