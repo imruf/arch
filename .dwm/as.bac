@@ -1,0 +1,68 @@
+#! /bin/bash 
+compton --config ~/.config/i3/compton.conf &
+numlockx on &
+xinput set-prop 14 284 1
+feh --bg-scale ~/Pictures/feh/wallpaper/galaxy.jpg
+redshift &
+
+wifi(){
+	#ip=$(ip route get 8.8.8.8 2>/dev/null|grep -Eo 'src [0-9.]+'|grep -Eo '[0-9.]+')
+
+	if=wlp4s0
+		while IFS=$': \t' read -r label value
+		do
+			case $label in SSID) SSID=$value
+				;;
+	#	signal) SIGNAL=$value
+	#			;;
+		esac
+	done < <(iw "$if" link)
+
+	#echo -e "$SSID $SIGNAL $ip"
+	echo -e "$SSID"
+}
+
+dte(){
+  dte="$(date +"%A, %B %d | 🕒 %l:%M%p")"
+  echo -e "$dte"
+}
+
+#upd(){
+#  upd=`checkupdates | wc -l`
+#  echo -e "⟳ $upd updates"
+#}
+
+#bat(){
+#	hash acpi || return 0
+#	onl="$(grep "on-line" <(acpi -V))"
+#	charge="$(awk '{ sum += $1 } END { print sum }' /sys/class/power_supply/BAT*/capacity)"
+#	if test -z "$onl"
+#	then
+#		# suspend when we close the lid
+#		#systemctl --user stop inhibit-lid-sleep-on-battery.service
+#		echo -e "${charge}"
+#	else
+#		# On mains! no need to suspend
+#		#systemctl --user start inhibit-lid-sleep-on-battery.service
+#		echo -e "${charge}"
+#	fi
+#}
+
+mem(){
+  mem=`free | awk '/Mem/ {printf "%d MiB/%d MiB\n", $3 / 1024.0, $2 / 1024.0 }'`
+  echo -e "$mem"
+}
+
+cpu(){
+  read cpu a b c previdle rest < /proc/stat
+  prevtotal=$((a+b+c+previdle))
+  sleep 0.5
+  read cpu a b c idle rest < /proc/stat
+  total=$((a+b+c+idle))
+  cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
+  echo -e "$cpu% cpu"
+}
+while true; do
+    xsetroot -name "$(cpu) | $(mem) | $(dte) | $(wifi)"
+     sleep 30s    # Update time every ten seconds
+done &
