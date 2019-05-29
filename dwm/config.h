@@ -82,6 +82,8 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
+/* #include "selfrestart.c" */
+
 static Key keys[] = {
 	/* modifier                     key               function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
@@ -97,6 +99,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,             setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_j,             movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,             movestack,      {.i = -1 } },
+	{ MOD2,                         XK_h,             movestack,      {.i = +1 } },
+	{ MOD2,                         XK_l,             movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return,        zoom,           {0} },
 	{ MODKEY,                       XK_Tab,           view,           {0} },
 	{ MODKEY,                       XK_y,             killclient,     {0} },
@@ -140,6 +144,7 @@ static Key keys[] = {
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
     /*{ 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },*/
     /*{ 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },*/
+    /*{ MODKEY|ShiftMask,             XK_r,             self_restart,   {0} },*/
 };
 
 /* button definitions */

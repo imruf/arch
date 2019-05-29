@@ -1270,8 +1270,8 @@ moveplace(const Arg *arg)
 		 return;
 	if (selmon->lt[selmon->sellt]->arrange && !c->isfloating)
 		togglefloating(NULL);
-	nh = (selmon->wh / 1.5) - (c->bw * 2);
-	nw = (selmon->ww / 1.5) - (c->bw * 2);
+	nh = (selmon->wh / 1.8) - (c->bw * 2);
+	nw = (selmon->ww / 1.8) - (c->bw * 2);
 	nx = (arg->ui % 3) -1;
 	ny = (arg->ui / 3) -1;
 	if (nx < 0)
