@@ -40,6 +40,7 @@ static const Rule rules[] = {
     { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 },
     { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,       True,                             -1 },
+    { "Xfce4-notes",     NULL,      "Xfce4-notes",              0,       True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 };
 
@@ -141,6 +142,7 @@ static Key keys[] = {
     { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
+	{ MODKEY,                       XK_n,             spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
     /*{ 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },*/
     /*{ 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },*/
