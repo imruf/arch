@@ -78,8 +78,8 @@ static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-/*static const char *brinc[] = { "dwm-brc", "up", NULL };*/
-/*static const char *brdec[] = { "dwm-brc", "down", NULL };*/
+static const char *brinc[] = { "/usr/bin/brightnessctl", "s", "+5", "radeon_bl0", NULL };
+static const char *brdec[] = { "/usr/bin/brightnessctl", "s", "5-", "radeon_bl0", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -144,8 +144,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
 	{ MODKEY,                       XK_n,             spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
-    /*{ 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },*/
-    /*{ 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },*/
+    { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },
     /*{ MODKEY|ShiftMask,             XK_r,             self_restart,   {0} },*/
 };
 
