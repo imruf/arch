@@ -137,15 +137,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                             6)
 	TAGKEYS(                        XK_8,                             7)
 	TAGKEYS(                        XK_9,                             8)
-    { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-    { 0,                            XF86XK_AudioMute,        spawn, {.v = mutevol } },
-    { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
-	{ MODKEY,                       XK_o,             spawn,          CMD("st -e nnn") },
-	{ MODKEY,                       XK_n,             spawn,          CMD("xfce4-popup-notes --show-hide") },
-	{ MOD2,                         XK_o,             spawn,          CMD("st -e ranger") },
-    { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brinc} },
-    { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdec} },
+	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
+	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
+	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
+    { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
+    { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
+    { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
+    { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc} },
+    { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec} },
     /*{ MODKEY|ShiftMask,             XK_r,             self_restart,   {0} },*/
 };
 
