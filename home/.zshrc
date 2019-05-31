@@ -75,10 +75,12 @@ alias rmv='sudo pacman -Rns'
 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias cc='sudo pacman -Sc'
 
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
 #AUR
+alias yinp='yay -S'
 alias inpkg='makepkg -si'
 alias upaur="yay -Syu --noconfirm"
 alias yayskip='yay -S --mflags --skipinteg'
