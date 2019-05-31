@@ -11,6 +11,10 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_black[]       = "#000000";
+static const char col_red[]         = "#ff0000";
+static const char col_yellow[]      = "#ffff00";
+static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
 static const char col_y2[]          = "#fea63c";
 static const char *colors[][3]      = {
@@ -19,7 +23,6 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
-
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
@@ -38,8 +41,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 },
     { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 },
-    { "Galculator",      NULL,       "Galculator",              0,       True,                             -1 },
-    { "Xfce4-notes",     NULL,      "Xfce4-notes",              0,       True,                             -1 },
+    { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
+    { "Xfce4-notes",     NULL,       "Xfce4-notes",             0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 };
 
@@ -140,6 +143,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
+	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
+	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
+	{ ShiftMask,                    XK_Print,          spawn,          CMD("xfce4-screenshooter -w") },
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
