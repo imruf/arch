@@ -51,8 +51,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[T]=",      tile },    /* first entry is default */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -71,15 +71,15 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y1, "-sf", col_y2, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *brinc[] = { "/usr/bin/brightnessctl", "s", "+5", "radeon_bl0", NULL };
-static const char *brdec[] = { "/usr/bin/brightnessctl", "s", "5-", "radeon_bl0", NULL };
+static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };
+static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"

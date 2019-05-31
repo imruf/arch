@@ -70,7 +70,7 @@ alias pac='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 alias up='sudo pacman -Syu'
 alias pacs='pacman -Ss'
-alias ins='sudo pacman -S'
+alias inp='sudo pacman -S'
 alias rmv='sudo pacman -Rns'
 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
