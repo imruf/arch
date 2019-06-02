@@ -82,9 +82,10 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 #AUR
 alias yinp='yay -S'
 alias inpkg='makepkg -si'
-alias upaur="yay -Syu --noconfirm"
+alias upaur="yay -Syu"
 alias yayskip='yay -S --mflags --skipinteg'
 alias trizenskip='trizen -S --skipinteg'
+#alias upaur="yay -Syu --noconfirm"
 
 #MOUNT
 alias mount='udisksctl mount -b'
@@ -143,6 +144,10 @@ alias srg='sr google'
 #SSH
 alias fst='sudo systemctl start sshd'
 alias fsts='sudo systemctl stop sshd'
+
+#PNGLatex
+#pnglatex -h for help
+alias eq='pnglatex -b Transparent -d 300 -s 12 -o eq.png'
 
 #POWERMANAGEMENT
 alias iph='i3exit suspend'
