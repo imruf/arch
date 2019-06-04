@@ -76,6 +76,10 @@ alias rmv='sudo pacman -Rns'
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 alias cc='sudo pacman -Sc'
+alias nrp='pacman -Qdt'
+alias lfp='pacman -Qqm'
+alias fp='pacman -Qm'
+alias efp='pacman -Qqe'
 
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
@@ -200,7 +204,7 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='springgreen2'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
 
 POWERLEVEL9K_OS_ICON_BACKGROUND='000'
-POWERLEVEL9K_OS_ICON_FOREGROUND='024'
+POWERLEVEL9K_OS_ICON_FOREGROUND='031'
 
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='grey11'
