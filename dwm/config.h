@@ -74,6 +74,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
@@ -90,6 +91,7 @@ static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
 static Key keys[] = {
 	/* modifier                     key               function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
+	{ MOD2,                         XK_semicolon,     spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
@@ -144,6 +146,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
+	{ 0,                            XF86XK_Calculator, spawn,          CMD("galculator") },
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
 	{ ShiftMask,                    XK_Print,          spawn,          CMD("xfce4-screenshooter -w") },
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
