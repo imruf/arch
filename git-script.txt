@@ -1,0 +1,5 @@
+git
+git add home
+git commit -m "home"
+git commit -a
+git push -u origin master
