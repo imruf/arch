@@ -1,6 +1,7 @@
 #EXPORT 
+export TERM="xterm-256color"
+export TERM="st-256color"
 export ZSH="/home/masud/.oh-my-zsh"
-export EDITOR=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
@@ -187,7 +188,7 @@ POWERLEVEL9K_COLOR_SCHEME='dark'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
-OS_ICON='\uF300'
+OS_ICON='\uF303'
 
 
 
@@ -227,3 +228,8 @@ ZSH_HIGHLIGHT_STYLES[default]=fg=white,bold
 
 #NEOFETCH
 neofetch --ascii_distro arcolinux_small
+
+#ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
