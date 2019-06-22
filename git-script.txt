@@ -1,3 +1,6 @@
+git config --global user.name 'imrufbd'
+git config --global user.email 'imrufbd@gmail.com'
+
 git
 git add home
 git commit -m "home"
