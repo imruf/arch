@@ -3,7 +3,8 @@ xfce4-power-manager &
 compton --config ~/.config/compton/compton.conf &
 numlockx on &
 xinput set-prop 14 284 1
-feh --bg-scale ~/Pictures/feh/wallpaper/galaxy.jpg
+#variety &
+feh --bg-scale ~/Pictures/feh/vt/nasa_apod/LightPillars_Brady_4000.jpg
 redshift &
 
 wifi(){
@@ -20,11 +21,11 @@ wifi(){
 	done < <(iw "$if" link)
 
 	#echo -e "$SSID $SIGNAL $ip"
-	echo -e "$SSID "
+	echo -e "$SSID"
 }
 
 dte(){
-  dte="$(date +"  %d %b, %a |  %H:%M")"
+  dte="$(date +" %d %b, %a| %H:%M")"
   echo -e "$dte"
 }
 
@@ -70,6 +71,6 @@ vol() {
 	fi
 }
 while true; do
-    xsetroot -name "$(cpu) | $(mem)| $(vol) | $(bat) | $(dte) | $(wifi)"
+    xsetroot -name "$(cpu)|$(mem)|$(vol)|$(bat)|$(dte)|$(wifi)"
      sleep 1m    # Update time every ten seconds
 done &
