@@ -120,7 +120,6 @@ alias ytd='youtube-dl'
 alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
-alias ytdmpv='mpv --ytdl-format='
 
 #MAIL
 alias mail='neomutt'
