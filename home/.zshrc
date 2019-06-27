@@ -1,5 +1,5 @@
 #EXPORT 
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 export TERM="st-256color"
 export ZSH="/home/masud/.oh-my-zsh"
 export GTK_IM_MODULE=ibus
@@ -11,7 +11,11 @@ plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 
 #SOURCE
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+#Theme
+#ZSH_THEME=powerlevel10k/powerlevel10k
 
 #LIST
 alias ls='ls --color=auto'
@@ -87,10 +91,10 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 #AUR
 alias yinp='yay -S'
 alias inpkg='makepkg -si'
-alias upaur="yay -Syu"
+#alias upaur="yay -Syu"
 alias yayskip='yay -S --mflags --skipinteg'
 alias trizenskip='trizen -S --skipinteg'
-#alias upaur="yay -Syu --noconfirm"
+alias upaur="yay -Syu --noconfirm"
 
 #MOUNT
 alias mount='udisksctl mount -b'
@@ -116,6 +120,7 @@ alias ytd='youtube-dl'
 alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
+alias ytdmpv='mpv --ytdl-format='
 
 #MAIL
 alias mail='neomutt'
@@ -129,6 +134,8 @@ alias dic='sdcv'
 alias radio='curseradio'
 alias music='ncmpcpp'
 alias sv='sudo vim'
+alias ibus='ibus-daemon -xdr'
+alias wp='variety -n'
 
 #GIT
 alias gc='git clone'
@@ -152,7 +159,7 @@ alias fsts='sudo systemctl stop sshd'
 
 #PNGLatex
 #pnglatex -h for help
-alias eq='pnglatex -b Transparent -d 300 -s 12 -o eq.png'
+alias eq='pnglatex -b Transparent -e displaymath -d 300 -s 18 -o eq.png'
 
 #POWERMANAGEMENT
 alias iph='i3exit suspend'
@@ -181,7 +188,7 @@ alias q='exit'
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 #POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
 

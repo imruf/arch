@@ -31,18 +31,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
+     /* { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 }, */
+    /* { "Gimp",            NULL,       NULL,                      0,            1,           0,         0,        -1 }, */
+     /* { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 }, */
+    
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
-	{ "Gimp",            NULL,       NULL,                      0,            1,           0,         0,        -1 },
 	{ "Firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "qutebrowser",     NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "Surf",            NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
 	{ "Soffice",         NULL,       NULL,                      1 << 3,       0,           0,         0,        -1 },
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
-    { "Xfce4-notes",     NULL,       "Xfce4-notes",             0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 };
 
@@ -81,8 +81,8 @@ static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };
-static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
+/*static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
+static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };*/
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -144,7 +144,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
-	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
+	{ MOD2,                         XK_o,              spawn,          CMD("urxvt -e ranger") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("galculator") },
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
@@ -152,8 +152,8 @@ static Key keys[] = {
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
-    { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc} },
-    { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec} },
+    /*{ 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc} },*/
+    /*{ 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec} },*/
     /*{ MODKEY|ShiftMask,             XK_r,             self_restart,   {0} },*/
 };
 
