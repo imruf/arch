@@ -60,22 +60,15 @@ keys = [
 # alt + FUNCTION KEYS
 
     Key([mod], "f", lazy.window.toggle_fullscreen()),
-    Key([mod], "h", lazy.spawn('urxvt -e htop')),
     Key([mod], "y", lazy.window.kill()),
     Key([mod], "i", lazy.spawn('qutebrowser')),
-    Key([mod], "Return", lazy.spawn('st')),
     Key([mod], "slash", lazy.spawn('st')),
     Key([mod], "o", lazy.spawn('st -e nnn')),
     Key(["mod4"], "o", lazy.spawn('st -e ranger')),
-    Key([mod], "F12", lazy.spawn('rofi -show combi')),
     Key(["mod4"], "semicolon", lazy.spawn('rofi -show combi')),
     Key([mod], "p", lazy.spawn('thunar')),
     Key([mod], "semicolon", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'")),
 # alt + SHIFT KEYS
-
-    Key([mod, "shift"], "Return", lazy.spawn('thunar')),
-    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'")),
-    Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "shift"], "e", lazy.shutdown()),
     Key([mod, "shift"], "s", lazy.spawn('oblogout')),
@@ -100,8 +93,8 @@ keys = [
 # MULTIMEDIA KEYS
 
 # INCREASE/DECREASE BRIGHTNESS
-    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 5")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 5")),
+#    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 5")),
+#    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 5")),
 
 # INCREASE/DECREASE/MUTE VOLUME
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),

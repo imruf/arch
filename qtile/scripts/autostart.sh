@@ -31,7 +31,7 @@ run xfce4-power-manager &
 numlockx on &
 redshift &
 xinput set-prop 14 284 1 &
-compton --config $HOME/.config/i3/compton.conf &
+compton --config $HOME/.config/compton/compton.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
