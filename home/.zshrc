@@ -135,6 +135,7 @@ alias music='ncmpcpp'
 alias sv='sudo vim'
 alias ibus='ibus-daemon -xdr'
 alias wp='variety -n'
+alias rit='rtv'
 
 #GIT
 alias gc='git clone'
@@ -158,7 +159,7 @@ alias fsts='sudo systemctl stop sshd'
 
 #PNGLatex
 #pnglatex -h for help
-alias eq='pnglatex -b Transparent -e displaymath -d 300 -s 18 -o eq.png'
+alias eq='pnglatex -b Transparent -d 300 -s 12'
 
 #POWERMANAGEMENT
 alias iph='i3exit suspend'
