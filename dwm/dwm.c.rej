@@ -1,18 +1,26 @@
---- dwm.c	2008-11-17 18:09:29.000000000 +0100
-+++ dwm.c	2008-09-09 21:46:17.000000000 +0200
-@@ -517,8 +515,13 @@ drawbar(void) {
- 	}
- 	else
- 		x = dc.x;
--	stextw = drawstatustext(x);
--	dc.x = ww - stextw;
-+	dc.w = TEXTW(stext);
-+	dc.x = ww - dc.w;
-+	if(dc.x < x) {
-+		dc.x = x;
-+		dc.w = ww - x;
-+	}
-+	drawtext(stext, dc.norm, False);
- 	if((dc.w = dc.x - x) > bh) {
- 		dc.x = x;
- 		if(sel) {
+--- dwm.c
++++ dwm.c
+@@ -266,7 +258,6 @@ static Display *dpy;
+ static Drw *drw;
+ static Monitor *mons, *selmon;
+ static Window root;
+-static Bar eb;
+ 
+ /* configuration, allows nested code to access above variables */
+ #include "config.h"
+@@ -579,7 +568,6 @@ configurenotify(XEvent *e)
+ 			updatebars();
+ 			for (m = mons; m; m = m->next)
+ 				XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
+-			XMoveResizeWindow(dpy, eb.win, mons->wx, eb.y, mons->ww, bh);
+ 			focus(NULL);
+ 			arrange(NULL);
+ 		}
+@@ -1560,7 +1545,6 @@ setup(void)
+ 	root = RootWindow(dpy, screen);
+ 	drw = drw_create(dpy, screen, root, sw, sh);
+ 	drw_load_fonts(drw, fonts, LENGTH(fonts));
+-	eb.show = extrabar;
+ 	if (!drw->fontcount)
+ 		die("no fonts could be loaded.\n");
+ 	bh = drw->fonts[0]->h + 2;
