@@ -45,6 +45,9 @@ alias merge="xrdb -merge ~/.Xresources"
 #OUTPUT
 alias df='df -h'
 
+#CONKY
+alias kc='killall conky'
+
 #HARDWARE
 alias hw="hwinfo --short"
 
@@ -89,12 +92,16 @@ alias efp='pacman -Qqe'
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
 #AUR
-alias yinp='yay -S'
 alias inpkg='makepkg -si'
 #alias upaur="yay -Syu"
+#yay
+alias yinp='yay -S'
 alias yayskip='yay -S --mflags --skipinteg'
+alias upyay="yay -Syu --noconfirm"
+#trizen
+alias tinp='trizen -S'
+alias uptrizen="trizen -Syu --noconfirm"
 alias trizenskip='trizen -S --skipinteg'
-alias upaur="yay -Syu --noconfirm"
 
 #MOUNT
 alias mount='udisksctl mount -b'
@@ -129,6 +136,7 @@ alias rr="cp rr ~/.muttrc"
 
 #MIS
 alias sys='sudo systemctl'
+alias vol='ncpamixer'
 alias dic='sdcv'
 alias radio='curseradio'
 alias music='ncmpcpp'
@@ -136,6 +144,7 @@ alias sv='sudo vim'
 alias ibus='ibus-daemon -xdr'
 alias wp='variety -n'
 alias rit='rtv'
+alias keep='keepcli'
 
 #GIT
 alias gc='git clone'
@@ -227,10 +236,10 @@ POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
 
 #HIGHLIGHT
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
-ZSH_HIGHLIGHT_STYLES[default]=fg=white,bold
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
+ZSH_HIGHLIGHT_STYLES[default]=fg=blue,bold
 
 
 #NEOFETCH
