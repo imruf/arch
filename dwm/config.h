@@ -78,6 +78,10 @@ static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *iph[] = { "i3exit", "suspend", NULL };
+static const char *ipr[] = { "i3exit", "reboot", NULL };
+static const char *ips[] = { "i3exit", "shutdown", NULL };
+static const char *ipl[] = { "i3exit", "lock", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
@@ -142,6 +146,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                             7)
 	TAGKEYS(                        XK_9,                             8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
+	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
+	{ MODKEY|ShiftMask,             XK_s,              spawn,          {.v = ips } },
+	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,              spawn,          CMD("xterm -e ranger") },
