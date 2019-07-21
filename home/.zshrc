@@ -145,6 +145,8 @@ alias ibus='ibus-daemon -xdr'
 alias wp='variety -n'
 alias rit='rtv'
 alias keep='keepcli'
+alias drive='gdrive'
+alias books='pysheng'
 
 #GIT
 alias gc='git clone'
@@ -171,10 +173,10 @@ alias fsts='sudo systemctl stop sshd'
 alias eq='pnglatex -b Transparent -d 300 -s 12'
 
 #POWERMANAGEMENT
-alias iph='i3exit suspend'
-alias ipl='i3exit lock'
-alias ips='i3exit shutdown'
-alias ipr='i3exit reboot'
+#alias iph='i3exit suspend'
+#alias ipl='i3exit lock'
+#alias ips='i3exit shutdown'
+#alias ipr='i3exit reboot'
 
 alias q='exit'
 
