@@ -273,10 +273,10 @@ bindsym $mod+x mode "$mode_system"
 set $mode_system (l)ock, (e)xit, (h)uspend, (r)eboot, (s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym h exec --no-startup-id i3exit suspend, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym h exec --no-startup-id i3exit shutdown, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -318,14 +318,14 @@ exec --no-startup-id redshift
 exec_always --no-startup-id xinput set-prop 14 284 1
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
-exec_always feh --bg-scale ~/Pictures/feh/wallpaper/galaxy.jpg
+exec_always feh --bg-scale ~/Pictures/feh/vt/Desktoppr/ultrawide_katana.jpg
 
 
 # 11. APP BIND
 
 bindsym $mod+i exec qutebrowser
 bindsym $mod+o exec $myTerm -e nnn
-bindsym $m+o exec $myTerm -e ranger
+bindsym $m+o exec xterm -e ranger
 bindsym $mod+p exec thunar
 bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter 
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
