@@ -111,7 +111,7 @@ alias os='udisksctl mount -b /dev/sda2'
 alias uos='udisksctl unmount -b /dev/sda2'
 alias usb='udisksctl mount -b /dev/sdb1'
 alias uusb='udisksctl unmount -b /dev/sdb1'
-
+alias eusb='udisksctl poweroff -b /dev/sdb1'
 
 #youtube-dl
 alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
@@ -147,6 +147,9 @@ alias rit='rtv'
 alias keep='keepcli'
 alias drive='gdrive'
 alias books='pysheng'
+alias imgur='imgur_downloader'
+alias dmnt='mountjutsu'
+
 
 #GIT
 alias gc='git clone'
