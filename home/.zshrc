@@ -111,7 +111,7 @@ alias os='udisksctl mount -b /dev/sda2'
 alias uos='udisksctl unmount -b /dev/sda2'
 alias usb='udisksctl mount -b /dev/sdb1'
 alias uusb='udisksctl unmount -b /dev/sdb1'
-alias eusb='udisksctl poweroff -b /dev/sdb1'
+alias eusb='udisksctl power-off -b /dev/sdb1'
 
 #youtube-dl
 alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
