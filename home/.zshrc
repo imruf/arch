@@ -6,6 +6,20 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
 
+#nnn
+[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+n()
+{
+        export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
+
+        nnn "$@"
+
+        if [ -f $NNN_TMPFILE ]; then
+                . $NNN_TMPFILE
+                rm -f $NNN_TMPFILE > /dev/null
+        fi
+}
+
 #PLUGINS
 plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 
