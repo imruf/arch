@@ -154,7 +154,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
 	{ MOD2,                         XK_o,              spawn,          CMD("xterm -e ranger") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
-	{ 0,                            XF86XK_Calculator, spawn,          CMD("galculator") },
+	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") },
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
 	{ ShiftMask,                    XK_Print,          spawn,          CMD("xfce4-screenshooter -w") },
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
