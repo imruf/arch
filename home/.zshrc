@@ -159,10 +159,12 @@ alias ibus='ibus-daemon -xdr'
 alias wp='variety -n'
 alias rit='rtv'
 alias keep='keepcli'
+alias tweet='turses'
 alias drive='gdrive'
 alias books='pysheng'
 alias imgur='imgur_downloader'
 alias dmnt='mountjutsu'
+alias ip='ip addr show'
 
 
 #GIT
@@ -180,6 +182,10 @@ alias zip='atool -a'
 alias srb='sr bing'
 alias srd='sr duckduckgo'
 alias srg='sr google'
+alias srv='sr youtube'
+alias sraw='sr archwiki'
+alias sraur='sr aur'
+alias srpkg='sr archpkg'
 
 #SSH
 alias fst='sudo systemctl start sshd'
@@ -262,7 +268,8 @@ ZSH_HIGHLIGHT_STYLES[default]=fg=blue,bold
 
 
 #NEOFETCH
-neofetch --ascii_distro arcolinux_small
+#neofetch --ascii_distro arcolinux_small
+alias neo='neofetch --ascii_distro arcolinux_small'
 
 #ibus
 export GTK_IM_MODULE=ibus
