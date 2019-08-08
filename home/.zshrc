@@ -165,6 +165,7 @@ alias books='pysheng'
 alias imgur='imgur_downloader'
 alias dmnt='mountjutsu'
 alias ip='ip addr show'
+alias weather='curl wttr.in/khagrachari'
 
 
 #GIT
@@ -183,9 +184,13 @@ alias srb='sr bing'
 alias srd='sr duckduckgo'
 alias srg='sr google'
 alias srv='sr youtube'
+alias sry='sr yahoo'
 alias sraw='sr archwiki'
 alias sraur='sr aur'
 alias srpkg='sr archpkg'
+alias srmdb='sr imdb'
+alias srgit='sr github'
+alias sru='sr urban'
 
 #SSH
 alias fst='sudo systemctl start sshd'
