@@ -148,15 +148,40 @@ alias mp="cp mp ~/.muttrc"
 alias ib="cp ib ~/.muttrc"
 alias rr="cp rr ~/.muttrc"
 
+#TRANSMISSION
+tsm-clearcompleted() {
+        transmission-remote -l | grep 100% | grep Done | \
+        awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;}
+tsm() { transmission-remote --list ;}
+        # numbers of ip being blocked by the blocklist
+        # credit: smw from irc #transmission
+tsm-count() { echo "Blocklist rules:" $(curl -s --data \
+        '{"method": "session-get"}' localhost:9091/transmission/rpc -H \
+        "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
+        | cut -d: -f 11 | cut -d, -f1) ;}
+tsm-blocklist() { $PATH_SCRIPTS/blocklist.sh ;}         # update blocklist
+tsm-daemon() { transmission-daemon ;}
+tsm-quit() { killall transmission-daemon ;}
+tsm-altspeedenable() { transmission-remote --alt-speed ;}       # limit bandwidth
+tsm-altspeeddisable() { transmission-remote --no-alt-speed ;}   # dont limit bandwidth
+tsm-add() { transmission-remote --add "$1" ;}
+tsm-askmorepeers() { transmission-remote -t"$1" --reannounce ;}
+tsm-pause() { transmission-remote -t"$1" --stop ;}              # <id> or all
+tsm-start() { transmission-remote -t"$1" --start ;}             # <id> or all
+tsm-purge() { transmission-remote -t"$1" --remove-and-delete ;} # delete data also
+tsm-remove() { transmission-remote -t"$1" --remove ;}           # leaves data alone
+tsm-info() { transmission-remote -t"$1" --info ;}
+tsm-speed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
+
 #MIS
 alias sys='sudo systemctl'
 alias vol='ncpamixer'
-alias dic='sdcv'
+alias def='sdcv'
 alias radio='curseradio'
 alias music='ncmpcpp'
 alias sv='sudo vim'
 alias ibus='ibus-daemon -xdr'
-alias wp='variety -n'
+alias wp='QuickWall --setter feh'
 alias rit='rtv'
 alias keep='keepcli'
 alias tweet='turses'
