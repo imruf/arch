@@ -245,6 +245,3 @@ UXTerm*colorBD: rgb:3f/3f/3f
 !UXTerm*color13: rgb:fc/54/fc
 !UXTerm*color14: rgb:54/fc/fc
 !UXTerm*color15: rgb:fc/fc/fc
-UXTerm*boldMode: false
-UXTerm*colorBDMode: true
-UXTerm*colorBD: rgb:3f/3f/3f
