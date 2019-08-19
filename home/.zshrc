@@ -216,10 +216,12 @@ alias srpkg='sr archpkg'
 alias srmdb='sr imdb'
 alias srgit='sr github'
 alias sru='sr urban'
+alias srpb='sr piratebay'
 
 #SSH
 alias fst='sudo systemctl start sshd'
 alias fsts='sudo systemctl stop sshd'
+alias termux='ssh -p 8022 u0_a127@192.168.137.234'
 
 #PNGLatex
 #pnglatex -h for help

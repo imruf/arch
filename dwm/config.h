@@ -152,7 +152,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
-	{ MOD2,                         XK_o,              spawn,          CMD("xterm -e ranger") },
+	{ MOD2,                         XK_o,              spawn,          CMD("urxvt -e ranger") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") },
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
