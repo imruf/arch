@@ -1,27 +1,13 @@
 #EXPORT 
-#export TERM="xterm-256color"
+export TERM="xterm-256color"
 export TERM="st-256color"
 export ZSH="/home/masud/.oh-my-zsh"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
 
-#nnn
-[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
-n()
-{
-        export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
-
-        nnn "$@"
-
-        if [ -f $NNN_TMPFILE ]; then
-                . $NNN_TMPFILE
-                rm -f $NNN_TMPFILE > /dev/null
-        fi
-}
-
 #PLUGINS
-plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
+plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions vi-mode)
 
 #SOURCE
 source $ZSH/oh-my-zsh.sh
@@ -173,6 +159,21 @@ tsm-remove() { transmission-remote -t"$1" --remove ;}           # leaves data al
 tsm-info() { transmission-remote -t"$1" --info ;}
 tsm-speed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
 
+#nnn
+#alias nnn='nnn -d'
+#[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+#n()
+#{
+#        export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
+#
+#        nnn "$@"
+#
+#        if [ -f $NNN_TMPFILE ]; then
+#                . $NNN_TMPFILE
+#                rm -f $NNN_TMPFILE > /dev/null
+#        fi
+#}
+
 #MIS
 alias sys='sudo systemctl'
 alias vol='ncpamixer'
@@ -191,6 +192,7 @@ alias imgur='imgur_downloader'
 alias dmnt='mountjutsu'
 alias ip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
+alias e.g='tldr'
 
 
 #GIT
@@ -241,45 +243,35 @@ alias q='exit'
 
 #POWERLEVEL9K
 
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_context_FOREGROUND='red'
-#POWERLEVEL9K_context_BACKGROUND='blue'
-#POWERLEVEL9K_TIME_FOREGROUND='red'
-#POWERLEVEL9K_TIME_BACKGROUND='blue'
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-#POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-#POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-#POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
-#POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
-#POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
-
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode time)
 
 OS_ICON='\uF303'
 
-
-
+#Context
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='031'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='0'
 
+#Time
+#POWERLEVEL9K_TIME_BACKGROUND='240'
+#POWERLEVEL9K_TIME_FOREGROUND='249'
 
-POWERLEVEL9K_TIME_BACKGROUND='031'
-POWERLEVEL9K_TIME_FOREGROUND='0'
-
+#Dir
 POWERLEVEL9K_DIR_HOME_BACKGROUND='7'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='24'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='springgreen2'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
 
+#OS_ICON
 POWERLEVEL9K_OS_ICON_BACKGROUND='000'
 POWERLEVEL9K_OS_ICON_FOREGROUND='031'
 
+#VCS
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='grey11'
 POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
@@ -287,10 +279,17 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='grey11'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='grey11'
 
-POWERLEVEL9K_STATUS_OK_BACKGROUND='7'
-POWERLEVEL9K_STATUS_OK_FOREGROUND='24'
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
+#Status
+#POWERLEVEL9K_STATUS_OK_BACKGROUND='000'
+#POWERLEVEL9K_STATUS_OK_FOREGROUND='220'
+#POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
+#POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
+
+# Vi-Mode
+POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='245'
+POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='000'
+POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='000'
+POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='yellow'
 
 #HIGHLIGHT
 ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,bold
@@ -302,8 +301,3 @@ ZSH_HIGHLIGHT_STYLES[default]=fg=blue,bold
 #NEOFETCH
 #neofetch --ascii_distro arcolinux_small
 alias neo='neofetch --ascii_distro arcolinux_small'
-
-#ibus
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
