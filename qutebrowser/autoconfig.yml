@@ -18,12 +18,12 @@ settings:
     global: '{audio}{index}: {host}'
   url.searchengines:
     global:
-      DEFAULT: https://duckduckgo.com/?q={}
-      gg: https://www.google.com/search?hl=en&q={}
+      DEFAULT: https://www.google.com/search?hl=en&q={}
       aur: https://aur.archlinux.org/packages/?O=0&K={}
       aw: https://wiki.archlinux.org/?search={}
       bing: https://bing.com/search?q={}
       ddg: https://duckduckgo.com/?q={}
+      gg: https://www.google.com/search?hl=en&q={}
   url.start_pages:
     global: about:blank
   window.hide_decoration:

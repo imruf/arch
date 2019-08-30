@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle For Managing Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,11 +21,15 @@ Plugin 'jreybert/vimagit'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vimwiki/vimwiki'                            " Vim wiki
 Plugin 'ap/vim-css-color'                           " Color previews for CSS
+"Plugin 'lervag/vimtex'
+Plugin 'xuhdev/vim-latex-live-preview'
+"Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'tpope/vim-surround'                         " Change surrounding marks
 "Plugin 'klen/python-mode'                          " Python Mode
 
 call vundle#end()		" required, all plugins must appear before this line.
 
+execute pathogen#infect()
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -58,6 +61,12 @@ ino <Down> <Nop>
 ino <Left> <Nop>
 ino <Right> <Nop>
 
+" Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,6 +81,7 @@ set laststatus=2
 
 syntax on   
 set relativenumber
+set number
 set showcmd
 let g:rehash256 = 1
 let g:Powerline_symbols='unicode'
@@ -142,6 +152,8 @@ set incsearch
 set nobackup
 set noswapfile
 
+map <C-p> :LLPStartPreview<CR>
+let g:livepreview_previewer = 'zathura'
 let g:minimap_highlight='Visual'
 
 let g:python_highlight_all = 1

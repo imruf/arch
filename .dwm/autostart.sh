@@ -4,8 +4,9 @@ compton --config ~/.config/compton/compton.conf &
 numlockx on &
 xinput set-prop 14 284 1
 #variety &
-feh --bg-scale ~/Pictures/feh/vt/nasa_apod/LightPillars_Brady_4000.jpg
+feh --bg-scale ~/Pictures/feh/dwm/nano-schematic-infraorange-3840x2400.jpg
 redshift &
+#conky &
 
 wifi(){
 	#ip=$(ip route get 8.8.8.8 2>/dev/null|grep -Eo 'src [0-9.]+'|grep -Eo '[0-9.]+')

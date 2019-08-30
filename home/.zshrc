@@ -196,11 +196,11 @@ alias e.g='tldr'
 
 
 #GIT
-alias gc='git clone'
-alias gu='git push -u origin master'
-alias gca='git commit -a'
-alias ga='git add'
-alias gs='git status'
+alias gitc='git clone'
+alias gitu='git push -u origin master'
+alias gitca='git commit -a'
+alias gita='git add'
+alias gits='git status'
 
 #ARCHIVE
 alias uz='atool -x'
@@ -248,7 +248,6 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_COLOR_SCHEME='dark'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode time)
 
 OS_ICON='\uF303'

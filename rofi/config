@@ -1,9 +1,9 @@
 rofi.combi-modi:    window,drun,run
-#rofi.font:         monospace 10
+#rofi.font:          Monospace 10
 rofi.lines:	    	5 
 rofi.columns:       2
 rofi.modi:          combi,run,drun,window
-rofi.terminal:	    xfce4-terminal
+rofi.terminal:	    st
 rofi.location:                       1
 rofi.kb-accept-entry:                Control+m,Return,KP_Enter
 ofi.kb-accept-custom:                Control+Return
@@ -23,4 +23,4 @@ rofi.kb-row-select:                  Control+space
 rofi.kb-remove-to-eol:               Control+p
 rofi.kb-remove-char-back:            BackSpace
 
-rofi.theme: /usr/share/rofi/themes/Arc-Mantis.rasi
+rofi.theme: /usr/share/rofi/themes/DarkBlue.rasi
