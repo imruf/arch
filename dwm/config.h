@@ -78,6 +78,7 @@ static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *pmenu[] = { "powermenu", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
 static const char *iph[] = { "i3exit", "shutdown", NULL };
@@ -146,6 +147,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                             7)
 	TAGKEYS(                        XK_9,                             8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_x,              spawn,          {.v = pmenu } },
 	{ MODKEY|ShiftMask,             XK_s,              spawn,          {.v = ips } },
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
