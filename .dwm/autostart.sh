@@ -3,27 +3,17 @@ xfce4-power-manager &
 compton --config ~/.config/compton/compton.conf &
 numlockx on &
 xinput set-prop 14 284 1
-#variety &
-feh --bg-scale ~/Pictures/feh/dwm/nano-schematic-infraorange-3840x2400.jpg
+feh --bg-scale ~/Pictures/feh/dwm/GaaVK4n.jpg
 redshift &
-#conky &
-
 
 wifi(){
-	#ip=$(ip route get 8.8.8.8 2>/dev/null|grep -Eo 'src [0-9.]+'|grep -Eo '[0-9.]+')
-
-#	if=wlp4s0
-#		while IFS=$': \t' read -r label value
-#		do
-#			case $label in SSID) SSID=$value
-#				;;
-#		#signal) SIGNAL=$value
-#		#		;;
-#		esac
-#	done < <(iw "$if" link)
     ssid=$(iwgetid -r)
     sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')
-	echo -e "$ssid $sig"
+    if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
+	    echo -e "$ssid $sig"
+    else
+        echo -e "?"
+    fi
 }
 
 dte(){
@@ -31,10 +21,6 @@ dte(){
   echo -e "$dte"
 }
 
-#upd(){
-#  upd=`checkupdates | wc -l`
-#  echo -e "⟳ $upd updates"
-#}
 bat(){
     status="$(cat /sys/class/power_supply/AC0/online)"
     battery="$(cat /sys/class/power_supply/BAT0/capacity)"
@@ -54,21 +40,9 @@ bat(){
 	done
     fi
 }
-#bat(){
-#    status="$(cat /sys/class/power_supply/AC0/online)"
-#    battery="$(cat /sys/class/power_supply/BAT0/capacity)"
-#    timer="$(acpi -b | grep "Battery" | awk '{print $5}' | cut -c 1-5)"
-#    if [ "${status}" == 1 ]; then
-#      echo -ne "${color6} ${color0}🗲 ${battery}%"
-#    else
-#      echo -ne "${color6} ${color0}${battery}%"
-#    fi
-#}
 
 mem(){
   mem=`free | awk '/Mem/ {printf "%d MiB\n", $3 / 1024.0}'`
-  #mem=`free | awk '/Mem/ {printf "%d MiB/%d MiB\n", $3 / 1024.0, $2 / 1024.0 }'`
-  #echo -e " $mem"
   echo -e " $mem"
 }
 
@@ -87,16 +61,7 @@ vol() {
     echo -e $volume
 }
 
-#vol() {
-#	volume="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
-#	if test "$volume" -gt 0
-#	then
-#		echo -e " ${volume}"
-#	else
-#		echo -e ""
-#	fi
-#}
 while true; do
-    xsetroot -name "$(cpu)|$(mem)|$(vol)|$(bat)|$(dte)~$(wifi)"
+    xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
      sleep 1m    # Update time every ten seconds
 done &

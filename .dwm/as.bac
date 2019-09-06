@@ -4,7 +4,7 @@ compton --config ~/.config/compton/compton.conf &
 numlockx on &
 xinput set-prop 14 284 1
 #variety &
-feh --bg-scale ~/Pictures/feh/dwm/nano-schematic-infraorange-3840x2400.jpg
+feh --bg-scale ~/Pictures/feh/dwm/GaaVK4n.jpg
 redshift &
 #conky &
 
@@ -12,22 +12,26 @@ redshift &
 wifi(){
 	#ip=$(ip route get 8.8.8.8 2>/dev/null|grep -Eo 'src [0-9.]+'|grep -Eo '[0-9.]+')
 
-	if=wlp4s0
-		while IFS=$': \t' read -r label value
-		do
-			case $label in SSID) SSID=$value
-				;;
-		signal) SIGNAL=$value
-				;;
-		esac
-	done < <(iw "$if" link)
-
-	#echo -e "$SSID $SIGNAL $ip"
-	echo -e "$SSID"
+#	if=wlp4s0
+#		while IFS=$': \t' read -r label value
+#		do
+#			case $label in SSID) SSID=$value
+#				;;
+#		#signal) SIGNAL=$value
+#		#		;;
+#		esac
+#	done < <(iw "$if" link)
+    ssid=$(iwgetid -r)
+    sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')
+    if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
+	    echo -e "$ssid $sig"
+    else
+        echo -e "?"
+    fi
 }
 
 dte(){
-  dte="$(date +" %d %b, %a| %H:%M")"
+  dte="$(date +" %d %b, %a|%H:%M  " )"
   echo -e "$dte"
 }
 
@@ -68,7 +72,8 @@ bat(){
 mem(){
   mem=`free | awk '/Mem/ {printf "%d MiB\n", $3 / 1024.0}'`
   #mem=`free | awk '/Mem/ {printf "%d MiB/%d MiB\n", $3 / 1024.0, $2 / 1024.0 }'`
-  echo -e " $mem"
+  #echo -e " $mem"
+  echo -e " $mem"
 }
 
 cpu(){
@@ -82,7 +87,8 @@ cpu(){
 }
 
 vol() {
-	amixer get Master | grep -o "[0-9]*%\|\[on\]\|\[off\]" | sed "s/\[on\]//;s/\[off\]//"
+    volume=$(pavolume.sh)
+    echo -e $volume
 }
 
 #vol() {
@@ -95,6 +101,6 @@ vol() {
 #	fi
 #}
 while true; do
-    xsetroot -name "$(cpu)|$(mem)|L$(vol)R|$(bat)|$(dte)|$(wifi)"
+    xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
      sleep 1m    # Update time every ten seconds
 done &
