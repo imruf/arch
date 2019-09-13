@@ -112,6 +112,7 @@ alias uos='udisksctl unmount -b /dev/sda2'
 alias usb='udisksctl mount -b /dev/sdb1'
 alias uusb='udisksctl unmount -b /dev/sdb1'
 alias eusb='udisksctl power-off -b /dev/sdb1'
+alias sdx='mountjutsu'
 
 #youtube-dl
 alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
@@ -185,14 +186,13 @@ alias ibus='ibus-daemon -xdr'
 alias wp='QuickWall --setter feh'
 alias rit='rtv'
 alias keep='keepcli'
-alias tweet='turses'
 alias drive='gdrive'
 alias books='pysheng'
 alias imgur='imgur_downloader'
-alias dmnt='mountjutsu'
 alias ip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
+#alias tweet='turses'
 
 
 #GIT
@@ -248,7 +248,8 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_COLOR_SCHEME='dark'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history vi_mode time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 OS_ICON='\uF303'
 
