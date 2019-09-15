@@ -31,9 +31,6 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-     /* { "mpv",             NULL,       "mpv",                     1 << 2,       True,                             -1 }, */
-    /* { "Gimp",            NULL,       NULL,                      0,            1,           0,         0,        -1 }, */
-     /* { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                             -1 }, */
     
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
 	{ "Firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
@@ -44,6 +41,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
+    { "mpv",             NULL,       "mpv",                     0,       True,                        1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 0,       True,                        1,        -1 },
 };
 
 /* layout(s) */
@@ -73,7 +72,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_cyan, "-sf", col_gray4, "-i", "-p", "launch:", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "thunar", NULL };
@@ -149,7 +148,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                             8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_x,              spawn,          {.v = pmenu } },
-	{ MODKEY,                       XK_s,              spawn,          {.v = dweb } },
+	{ MODKEY|ControlMask,           XK_i,              spawn,          {.v = dweb } },
 	{ MODKEY|ShiftMask,             XK_s,              spawn,          {.v = ips } },
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
