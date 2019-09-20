@@ -72,10 +72,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_cyan, "-sf", col_gray4, "-i", "-p", "launch:", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", "launch:", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *fmcmd[] = { "thunar", NULL };
+static const char *fmcmd[] = { "pcmanfm", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *pmenu[] = { "powermenu", NULL };
 static const char *dweb[] = { "dweb", NULL };
