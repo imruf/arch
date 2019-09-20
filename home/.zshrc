@@ -192,6 +192,7 @@ alias imgur='imgur_downloader'
 alias ip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
+alias pst='peerflix -k'
 #alias tweet='turses'
 
 
