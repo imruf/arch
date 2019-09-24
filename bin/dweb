@@ -10,7 +10,7 @@
 # cursor is on a web browser it acts as the address bar of that browser.
 
 browser='st -e elinks'
-engine='https://www.google.com/search?hl=en&q=%s'
+engine='https://www.startpage.com/do/search?query=%s'
 bookmarks="$HOME/.bookmarks"
 
 gotourl() {

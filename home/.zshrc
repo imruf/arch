@@ -136,6 +136,10 @@ alias ib="cp ib ~/.muttrc"
 alias rr="cp rr ~/.muttrc"
 
 #TRANSMISSION
+
+alias pfx='peerflix -k'
+alias tfx='torrentflix'
+
 tsm-clearcompleted() {
         transmission-remote -l | grep 100% | grep Done | \
         awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;}
@@ -189,10 +193,9 @@ alias keep='keepcli'
 alias drive='gdrive'
 alias books='pysheng'
 alias imgur='imgur_downloader'
-alias ipadd='ip addr show'
+alias myip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
-alias pst='peerflix -k'
 #alias tweet='turses'
 
 
@@ -208,6 +211,7 @@ alias uz='atool -x'
 alias zip='atool -a'
 
 #SURFRAW
+alias srs='sr startpage'
 alias srb='sr bing'
 alias srd='sr duckduckgo'
 alias srg='sr google'
@@ -220,6 +224,12 @@ alias srmdb='sr imdb'
 alias srgit='sr github'
 alias sru='sr urban'
 alias srpb='sr piratebay'
+
+#torsocks
+alias tor='sys start tor.service'
+alias tors='sys stop tor.service'
+alias ctor='torsocks elinks 'https://check.torproject.org/''
+alias torb='~/AUR/tor-browser_en-US/Browser/./start-tor-browser'
 
 #SSH
 alias fst='sudo systemctl start sshd'

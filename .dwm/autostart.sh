@@ -1,6 +1,5 @@
 #! /bin/bash 
 xfce4-power-manager &
-compton --config ~/.config/compton/compton.conf &
 numlockx on &
 xinput set-prop 14 284 1 &
 feh --bg-scale ~/Pictures/feh/dwm/GaaVK4n.jpg &
