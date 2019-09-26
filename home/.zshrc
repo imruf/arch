@@ -12,10 +12,10 @@ plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 #SOURCE
 source $ZSH/oh-my-zsh.sh
 #source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
 #Theme
-#ZSH_THEME=powerlevel10k/powerlevel10k
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 #LIST
 alias ls='ls --color=auto'

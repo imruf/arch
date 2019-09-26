@@ -9,7 +9,7 @@ static const char dmenufont[]       = "NotoMonoRegular:bold:pixelsize=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#FFBB00";
 static const char col_cyan[]        = "#005577";
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
@@ -18,6 +18,8 @@ static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
 static const char col_y2[]          = "#fea63c";
 static const char *colors[][3]      = {
+/*static const char col_gray4[]       = "#eeeeee";*/
+/*static const char col_cyan[]        = "#005577";*/
 
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -41,8 +43,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     0,       True,                        1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 0,       True,                        1,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
 };
 
 /* layout(s) */
