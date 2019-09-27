@@ -8,8 +8,8 @@ rofi.location:                       1
 rofi.kb-accept-entry:                Control+m,Return,KP_Enter
 ofi.kb-accept-custom:                Control+Return
 rofi.kb-accept-alt:                  Shift+Return
-rofi.kb-mode-next:                   Shift+Right,Tab
-rofi.kb-mode-previous:               Shift+Left,Control+ISO_Left_Tab
+rofi.kb-mode-next:                   Shift+Right,Control+n
+rofi.kb-mode-previous:               Shift+Left,Control+p,Control+ISO_Left_Tab
 rofi.kb-row-left:                    Control+h
 rofi.kb-row-right:                   Control+l
 rofi.kb-row-up:                      Up,Control+k,ISO_Left_Tab
@@ -20,7 +20,7 @@ rofi.kb-page-next:                   Page_Down
 rofi.kb-row-first:                   Home,KP_Home
 rofi.kb-row-last:                    End,KP_End
 rofi.kb-row-select:                  Control+space
-rofi.kb-remove-to-eol:               Control+p
+rofi.kb-remove-to-eol:               Control+r
 rofi.kb-remove-char-back:            BackSpace
 
 rofi.theme: /usr/share/rofi/themes/DarkBlue.rasi
