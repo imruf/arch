@@ -15,15 +15,15 @@ declare -A COMMANDS
 # List of defined 'bangs'
 
 # open custom web searches
-COMMANDS["websearch"]="~/.local/bin/.scripts/rofi-scripts-collection/rofi-surfraw-websearch.sh"
+COMMANDS["websearch"]="rsw"
 LABELS["websearch"]=""
 
 # open bookmarks
-COMMANDS["bookmarks"]="~/.local/bin/.scripts/rofi-scripts-collection/rofi-surfraw-bookmarks.sh"
+COMMANDS["bookmarks"]="rsb"
 LABELS["bookmarks"]=""
 
 # search local files
-COMMANDS["locate"]="~/.local/bin/.scripts/rofi-scripts-collection/rofi-locate.sh"
+COMMANDS["locate"]="rsl"
 LABELS["locate"]=""
 
 # launch programs
@@ -96,7 +96,7 @@ fi
 if test ${COMMANDS[$choice]+isset}
 then
     # Execute the choice
-    eval echo "Executing: ${COMMANDS[$choice]}"
+    #eval echo "Executing: ${COMMANDS[$choice]}"
     eval ${COMMANDS[$choice]}
 else
  eval  $choice | rofi
