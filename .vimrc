@@ -1,3 +1,5 @@
+let mapleader =","
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -17,14 +19,14 @@ Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'vimwiki/vimwiki'                            " Vim wiki
 Plugin 'ap/vim-css-color'                           " Color previews for CSS
 "Plugin 'lervag/vimtex'
-Plugin 'xuhdev/vim-latex-live-preview'
-"Plugin 'ying17zi/vim-live-latex-preview'
+"Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'tpope/vim-surround'                         " Change surrounding marks
 "Plugin 'klen/python-mode'                          " Python Mode
 
 call vundle#end()		" required, all plugins must appear before this line.
 
-execute pathogen#infect()
+"execute pathogen#infect()
 filetype plugin indent on    " required
 
 
@@ -52,13 +54,15 @@ ino <Right> <Nop>
 "Copy paste Clipboard Access:
 
 vnoremap <C-c> "+y
-map <C-v> "+P
+map <C-z> "+P
 
 set rtp+=/usr/share/powerline/bindings/vim/
 
 set laststatus=2
 
 set t_Co=256
+
+set encoding=utf-8
 
 syntax on   
 set relativenumber
@@ -114,3 +118,8 @@ let g:minimap_highlight='Visual'
 let g:python_highlight_all = 1
 syntax on
 
+" Compile document, be it groff/LaTeX/markdown/etc.
+	map <leader>c :w! \| !compiler <c-r>%<CR>
+
+" Open corresponding .pdf/.html or preview
+	map <leader>p :!opout <c-r>%<CR><CR>
