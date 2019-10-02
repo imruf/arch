@@ -197,6 +197,8 @@ alias imgur='imgur_downloader'
 alias myip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
+
+alias vim='nvim'
 #alias tweet='turses'
 
 

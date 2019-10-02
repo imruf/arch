@@ -1,8 +1,8 @@
 #! /bin/bash 
 xfce4-power-manager &
 numlockx on &
-xinput set-prop 14 284 1 &
-feh --bg-scale ~/Pictures/feh/dwm/GaaVK4n.jpg &
+#xinput set-prop 14 284 1 &
+feh --bg-scale ~/Pictures/feh/dwm/nano.jpg &
 redshift &
 
 wifi(){

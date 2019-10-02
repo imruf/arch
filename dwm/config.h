@@ -74,8 +74,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", "launch:", NULL };
-static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "pcmanfm", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
@@ -91,6 +90,7 @@ static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NUL
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
 /*static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
 static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };*/
+/*static const char *roficmd[] = { "rofi", "-show", "combi", NULL };*/
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -98,8 +98,8 @@ static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };
 
 static Key keys[] = {
 	/* modifier                     key               function        argument */
-	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
-	{ MOD2,                         XK_semicolon,     spawn,          {.v = roficmd } },
+	{ MOD2,                         XK_semicolon,     spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_semicolon,     spawn,          {.v = rbang } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
@@ -152,7 +152,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_x,              spawn,          {.v = pmenu } },
 	{ MODKEY|ControlMask,           XK_i,              spawn,          {.v = dweb } },
-	{ MOD2,                         XK_i,              spawn,          {.v = rbang } },
 	{ MODKEY|ShiftMask,             XK_s,              spawn,          {.v = ips } },
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },

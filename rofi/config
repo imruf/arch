@@ -14,12 +14,12 @@ rofi.kb-row-left:                    Control+h
 rofi.kb-row-right:                   Control+l
 rofi.kb-row-up:                      Up,Control+k,ISO_Left_Tab
 rofi.kb-row-down:                    Down,Control+j
-rofi.kb-row-tab:                     Control+Tab
+rofi.kb-row-tab:                     Control+Tab,Control+space
+rofi.kb-row-select:                  Tab
 rofi.kb-page-prev:                   Page_Up
 rofi.kb-page-next:                   Page_Down
 rofi.kb-row-first:                   Home,KP_Home
 rofi.kb-row-last:                    End,KP_End
-rofi.kb-row-select:                  Control+space
 rofi.kb-remove-to-eol:               Control+r
 rofi.kb-remove-char-back:            BackSpace
 

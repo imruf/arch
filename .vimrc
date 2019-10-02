@@ -56,54 +56,57 @@ ino <Right> <Nop>
 vnoremap <C-c> "+y
 map <C-z> "+P
 
-set rtp+=/usr/share/powerline/bindings/vim/
 
-set laststatus=2
+" Enable autocompletion:
+	set wildmode=longest,list,full
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-set t_Co=256
-
-set encoding=utf-8
+" Spell-check set to <leader>o, 'o' for 'orthography':
+	map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 syntax on   
+
+set rtp+=/usr/share/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+set encoding=utf-8
 set relativenumber
 set number
 set showcmd
+set noshowmode
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set hlsearch
+
+set splitbelow splitright
+
 let g:rehash256 = 1
 let g:Powerline_symbols='unicode'
 let g:Powerline_theme='long'
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
 
-set noshowmode
 
-set expandtab
-
-set smarttab
-
-set shiftwidth=4
-set tabstop=4
-
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeShowLineNumbers=1
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI = 1
-
-
-let g:minimap_show='<leader>mm'
-let g:minimap_update='<leader>mu'
-let g:minimap_close='<leader>mc'
-let g:minimap_toggle='<leader>mt'
+"map <C-n> :NERDTreeToggle<CR>
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
+"let NERDTreeShowLineNumbers=1
+"let NERDTreeShowHidden=1
+"let NERDTreeMinimalUI = 1
+"let g:minimap_show='<leader>mm'
+"let g:minimap_update='<leader>mu'
+"let g:minimap_close='<leader>mc'
+"let g:minimap_toggle='<leader>mt'
 
 hi LineNr ctermfg=242
 hi CursorLineNr ctermfg=15
 hi VertSplit ctermfg=8 ctermbg=0
 hi Statement ctermfg=3
 
-set splitbelow splitright
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
@@ -123,3 +126,5 @@ syntax on
 
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
+
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>)%')"<space>\|<space>R<space>--vanilla<enter>

@@ -172,5 +172,8 @@ press q to quit record
 to run the macro #@record_key
 e.g 100@1 will repeat the macro 100 times
 
+10. To save a file, simply type the following command:
+:w !sudo tee %
+
 #For More
 https://github.com/shawncplus/vim-classes
