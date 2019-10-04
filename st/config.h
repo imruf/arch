@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "UbuntuMono Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -83,11 +83,11 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0xed;
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#002b36",
+"#002b36", 
 "#dc322f",
 "#859900",
 "#b58900",
@@ -95,6 +95,7 @@ static const char *colorname[] = {
 "#6c71c4",
 "#2aa198",
 "#93a1a1",
+
 "#657b83",
 "#dc322f",
 "#859900",
@@ -105,112 +106,16 @@ static const char *colorname[] = {
 "#fdf6e3",
 
 [255] = 0,
+
 "#002b36",
 "#93a1a1",
-
-"#cb4b16",
-"#d33682",
-"#073642",
-"#586e75",
-"#839496",
-"#eee8d5",
-
- };
-
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 3;
-static unsigned int defaultrcs = 12;
-    /*Darculized Theme*/
-/*
- [0] = "#000000", 
- [1] = "#ff5555", 
- [2] = "#50fa7b", 
- [3] = "#f1fa8c", 
- [4] = "#bd93f9", 
- [5] = "#ff79c6", 
- [6] = "#8be9fd", 
- [7] = "#bbbbbb", 
-
- [8]  = "#44475a",
- [9]  = "#ff5555",
- [10] = "#50fa7b",
- [11] = "#f1fa8c",
- [12] = "#bd93f9",
- [13] = "#ff79c6",
- [14] = "#8be9fd",
- [15] = "#ffffff",
-
- [256] = "#282a36",
- [257] = "#f8f8f2",
-
- };
-
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
-
-*/
-  /*Solarized Theme*/  
-/*
- [0] = "#073642", 
- [1] = "#dc322f", 
- [2] = "#859900", 
- [3] = "#b58900", 
- [4] = "#268bd2", 
- [5] = "#d33682", 
- [6] = "#2aa198", 
- [7] = "#eee8d5", 
-  
- [8]  = "#002b36", 
- [9]  = "#cb4b16", 
- [10] = "#586e75", 
- [11] = "#657b83", 
- [12] = "#839496", 
- [13] = "#6c71c4", 
- [14] = "#93a1a1", 
- [15] = "#fdf6e3", 
-
-[256] = "#002b36", 
-[257] = "#839496", 
-
- };
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
-static unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
-*/ 
-
-    /*Grubbox Theme*/
-/*
-"#282828", 
-"#cc241d",
-"#98971a",
-"#d79921",
-"#458588",
-"#b16286",
-"#689d6a",
-"#a89984",
-"#928374",
-"#fb4934",
-"#b8bb26",
-"#fabd2f",
-"#83a598",
-"#d3869b",
-"#8ec07c",
-"#ebdbb2",
-[255] = 0,
-"#282828",
-"#ebdbb2",
-"#add8e6",
 };
 
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
-static unsigned int defaultcs = 258;
+static unsigned int defaultcs = 3;
 static unsigned int defaultrcs = 0;
-*/
+
 /*
  * Colors used, when the specific fg == defaultfg. So in rever    se mode this
  * will reverse too. Another logic would only make the simple     feature too
