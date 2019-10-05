@@ -6,6 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -83,11 +84,39 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#002b36", 
+"#44475a",
+"#ff5555",
+"#50fa7b",
+"#ffb86c",
+"#8be9fd",
+"#bd93f9",
+"#ff79c6",
+"#94A3A5",
+         
+"#000000",
+"#ff5555",
+"#50fa7b",
+"#ffb86c",
+"#8be9fd",
+"#bd93f9",
+"#ff79c6",
+"#ffffff",
+         
+[255] = 0,
+"#282a36",
+"#94A3A5",
+
+};
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 3;
+static unsigned int defaultrcs = 0;
+
+/*"#002b36", 
 "#dc322f",
 "#859900",
 "#b58900",
@@ -115,7 +144,7 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 3;
 static unsigned int defaultrcs = 0;
-
+*/
 /*
  * Colors used, when the specific fg == defaultfg. So in rever    se mode this
  * will reverse too. Another logic would only make the simple     feature too
@@ -166,6 +195,9 @@ static MouseShortcut mshortcuts[] = {
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open",
+	"externalpipe", NULL };
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -179,6 +211,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
+	{ TERMMOD,              XK_U,           externalpipe,   {.v = openurlcmd } },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
     { Mod1Mask|ControlMask, XK_k,           kscrollup,      {.i = -1} },
 	{ Mod1Mask|ControlMask, XK_j,           kscrolldown,    {.i = -1} },

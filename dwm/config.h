@@ -9,8 +9,8 @@ static const char dmenufont[]       = "NotoMonoRegular:bold:pixelsize=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#FFBB00";
-static const char col_cyan[]        = "#005577";
+static const char col_gray4[]       = "#FFBB00"; /* tag color */
+static const char col_cyan[]        = "#131313"; /* bar color */
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
@@ -98,8 +98,8 @@ static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };
 
 static Key keys[] = {
 	/* modifier                     key               function        argument */
-	{ MOD2,                         XK_semicolon,     spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_semicolon,     spawn,          {.v = rbang } },
+	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
+	{ MOD2,                         XK_semicolon,     spawn,          {.v = rbang } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
