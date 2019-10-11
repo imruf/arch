@@ -5,13 +5,9 @@
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
 #delete the hashtags of the next lines and restart
-
-EDITOR=vim
-
-
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=dbus
-export QT_IM_MODULE=ibus
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=dbus
+#export QT_IM_MODULE=ibus
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -60,14 +56,11 @@ alias merge="xrdb -merge ~/.Xresources"
 
 # Aliases for software managment
 # pacman or pm
-alias pac='sudo pacman --color auto'
+alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
-alias up='sudo pacman -Syu'
-alias rmv='sudo pacman -Rns'
-
 
 # yay as aur helper - updates everything
-alias upaur="yay -Syu --noconfirm"
+alias pksyua="yay -Syu --noconfirm"
 
 #ps
 alias ps="ps auxf"
@@ -130,7 +123,7 @@ alias yta-opus="youtube-dl --extract-audio --audio-format opus "
 alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 
-alias ytd-best="youtube-dl -f bestvideo+bestaudio "
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
@@ -143,35 +136,5 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-#neofetch
+neofetch
 
-#my_bashrc_settings
-#Setting Bash prompt. Capitalizes username and host if root user (my root user uses this same config file).
-
-if [ "$EUID" -ne 0 ]
-	then export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-	else export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]ROOT\[$(tput setaf 2)\]@\[$(tput setaf 4)\]$(hostname | awk '{print toupper($0)}') \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-fi
-
-export GPG_TTY=$(tty)
-
-alias sys='sudo systemctl'
-alias mount='udisksctl mount -b'
-alias ytv='youtube-viewer'
-alias ytd='youtube-dl'
-alias ytdF='youtube-dl -F'
-alias ytdf='youtube-dl -f'
-alias in='sudo pacman -S'
-alias inpkg='makepkg -si'
-alias mail='neomutt'
-alias dic='sdcv'
-
-
-#powerline
-
-
-
-#powerline-daemon -q
-#POWERLINE_BASH_CONTINUATION=1
-#POWERLINE_BASH_SELECT=1
-#. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh

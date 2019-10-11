@@ -1,9 +1,9 @@
-sw_volume: 48
+sw_volume: 28
 audio_device_state:1:pulse audio
 audio_device_state:1:toggle_visualizer
 state: pause
-current: 2
-time: 66.410000
+current: 964
+time: 3.494000
 random: 0
 repeat: 0
 single: 1
@@ -974,4 +974,7 @@ playlist_begin
 959:UnTag/Bangla movie/Kornofuli Sampanwala .mp3
 960:UnTag/bbc20/ektara.mp3
 961:UnTag/bbc20/Ektara_Tui_Desher_Kotha_Bol.mp3
+962:UnTag/chakma/na chang.mp3
+963:UnTag/Robindro/RABINDA 1/02.Ei Kathata.mp3
+964:UnTag/Robindro/RABINDA 1/26. Na Chahile Jare(Indrani ).mp3
 playlist_end

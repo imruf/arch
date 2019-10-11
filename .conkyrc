@@ -140,9 +140,10 @@ ${color1}[Alt]+p${alignr}${color2}File Manager${color}
 ${color1}[Alt]+i${alignr}${color2}Web Browser${color}
 ${color1}[Alt]+y${alignr}${color2}Close Window${color}
 ${color1}${hr}${color}
+${color1}[Alt]+[Shift]+x${alignr}${color2}Power Menu${color}
 ${color1}[Alt]+[Shift]+e${alignr}${color2}Log Out${color}
-${color1}[Alt]+[Shift]+h${alignr}${color2}Suspend${color}
-${color1}[Alt]+[Shift]+s${alignr}${color2}Shutdown${color}
+${color1}[Alt]+[Shift]+s${alignr}${color2}Suspend${color}
+${color1}[Alt]+[Shift]+h${alignr}${color2}Shutdown${color}
 ${color1}[Alt]+[Shift]+l${alignr}${color2}lock${color}
 #${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];

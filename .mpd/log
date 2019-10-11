@@ -1450,3 +1450,17 @@ Jan 28 21:02 : exception: OutputThread could not get realtime scheduling, contin
 Jan 28 21:02 : client: [0] opened from 127.0.0.1:42092
 Jan 28 21:02 : client: [0] closed
 Jan 28 21:03 : player: played "Rupom Islam/Kolkata Band/Beche Thakar Gaan.mp3"
+Apr 25 12:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 25 12:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 25 12:53 : client: [0] opened from [::1]:52796
+Apr 25 12:53 : client: [0] closed
+Apr 26 20:18 : player: played "UnTag/Robindro/RABINDA 1/26. Na Chahile Jare(Indrani ).mp3"
+Jun 08 21:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 08 21:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 08 21:36 : client: [0] opened from [::1]:53210
+Jun 08 21:36 : client: [0] closed
+Jun 18 00:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 18 00:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 18 00:59 : client: [0] opened from [::1]:57384
+Jun 18 00:59 : client: [0] closed
+Jun 18 01:00 : player: played "UnTag/Robindro/RABINDA 1/26. Na Chahile Jare(Indrani ).mp3"

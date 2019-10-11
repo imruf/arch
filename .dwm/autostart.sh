@@ -2,7 +2,7 @@
 xfce4-power-manager &
 numlockx on &
 #xinput set-prop 14 284 1 &
-feh --bg-scale ~/Pictures/feh/dwm/nano.jpg &
+feh --bg-scale ~/Pictures/feh/dwm/Fusco.jpg &
 redshift &
 
 wifi(){
@@ -16,7 +16,7 @@ wifi(){
 }
 
 dte(){
-  dte="$(date +" %d %b, %a|%H:%M  " )"
+  dte="$(date +" %d %b, %a|%H:%M ")"
   echo -e "$dte"
 }
 
@@ -52,7 +52,7 @@ cpu(){
   read cpu a b c idle rest < /proc/stat
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-  echo -e "  $cpu%"
+  echo -e " $cpu%"
 }
 
 vol() {

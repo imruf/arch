@@ -84,39 +84,12 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.7;
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#44475a",
-"#ff5555",
-"#50fa7b",
-"#ffb86c",
-"#8be9fd",
-"#bd93f9",
-"#ff79c6",
-"#94A3A5",
-         
-"#000000",
-"#ff5555",
-"#50fa7b",
-"#ffb86c",
-"#8be9fd",
-"#bd93f9",
-"#ff79c6",
-"#ffffff",
-         
-[255] = 0,
-"#282a36",
-"#94A3A5",
-
-};
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 3;
-static unsigned int defaultrcs = 0;
-
-/*"#002b36", 
+/* solarized */
+"#002b36", 
 "#dc322f",
 "#859900",
 "#b58900",
@@ -144,6 +117,37 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 3;
 static unsigned int defaultrcs = 0;
+
+    /* Brogrammer 
+	"#292d3e",
+	"#f07178",
+	"#c3e88d",
+	"#ffcb6b",
+	"#82aaff",
+	"#c792ea",
+	"#89ddff",
+	"#d0d0d0",
+
+	"#434758",
+	"#ff8b92",
+	"#ddffa7",
+	"#ffe585",
+	"#9cc4ff",
+	"#e1acff",
+	"#a3f7ff",
+	"#ffffff",
+
+	[255] = 0,
+
+	"#bbc5ff",
+	"#292d3e",
+};
+
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 3;
+static unsigned int defaultrcs = 257;
+
 */
 /*
  * Colors used, when the specific fg == defaultfg. So in rever    se mode this

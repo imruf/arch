@@ -23,8 +23,8 @@ COMMANDS["bookmarks"]="rsb"
 LABELS["bookmarks"]=""
 
 # search local files
-COMMANDS["locate"]="rsl"
-LABELS["locate"]=""
+#COMMANDS["locate"]="rl"
+#LABELS["locate"]=""
 
 # launch programs
 COMMANDS["apps"]="rofi -show combi"
@@ -69,7 +69,7 @@ function print_menu()
 function start()
 {
     #print_menu | rofi -dmenu -p "?=>" 
-    print_menu | sort | rofi -dmenu -p ">>>"
+    print_menu | sort | rofi -dmenu -i -p ">>>"
     #print_menu | sort | rofi -dmenu -mesg ">>> launch your collection of rofi scripts" -i -p "rofi-bangs: "
 
 }

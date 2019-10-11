@@ -19,7 +19,7 @@ source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME=powerlevel10k/powerlevel10k
 
 #LIST
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a --color=auto'
 alias lah='ls -lah --color=auto'
 alias l='ls' 					
@@ -197,9 +197,11 @@ alias imgur='imgur_downloader'
 alias myip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
+alias tweet='turses'
+alias mkdir='mkdir -p'
+alias pdf='zathura'
 
 alias vim='nvim'
-#alias tweet='turses'
 
 
 #GIT
@@ -317,3 +319,6 @@ ZSH_HIGHLIGHT_STYLES[default]=fg=blue,bold
 #neofetch --ascii_distro arcolinux_small
 alias neo='neofetch --ascii_distro arcolinux_small'
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
