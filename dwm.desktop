@@ -5,3 +5,5 @@ Exec=dwm
 Type=Application
 X-LightDM-DesktopName=DWM
 DesktopNames=dwm
+
+#Put this in /usr/share/xsessions/
