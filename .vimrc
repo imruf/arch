@@ -1,45 +1,106 @@
-" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually justG
-" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
-" you can find below.  If you wish to change any of those settings, you should
-" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing archlinux.vim since it alters the value of the
-" 'compatible' option.
+let mapleader =","
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages.
-runtime! archlinux.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
-" Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
-" and configure vim to your own liking!
+set rtp+=~/.vim/bundle/Vundle.vim
 
-" do not load defaults if ~/.vimrc is missing
-"let skip_defaults_vim=1"
+call vundle#begin()		" required, all plugins must appear after this line.
 
-set number
-set relativenumber
+Plugin 'gmarik/Vundle.vim'							" Vundle
+Plugin 'vim-airline/vim-airline'					" Airline
+Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
 
-
-syntax on
-
+call vundle#end()		" required, all plugins must appear before this line.
 
 "execute pathogen#infect()
-"filetype plugin indent on
+filetype plugin indent on    " required
 
+
+"Remap ESC to ii
+:imap ii <Esc>
+
+"Disable arrow keys in Normal mode
+no <Up> <Nop>
+no <Down> <Nop>
+no <Left> <Nop>
+no <Right> <Nop>
+
+"Disable arrow keys in Insert mode
+ino <Up> <Nop>
+ino <Down> <Nop>
+ino <Left> <Nop>
+ino <Right> <Nop>
+
+" Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
+
+"Copy paste Clipboard Access:
+
+vnoremap <C-c> "+y
+map <C-z> "+P
+
+
+" Enable autocompletion:
+	set wildmode=longest,list,full
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Spell-check set to <leader>o, 'o' for 'orthography':
+	map <leader>o :setlocal spell! spelllang=en_us<CR>
+
+syntax on   
+
+set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
-
-"let g:airline_theme= 'hybridline'
-
-colorscheme dracula
-
-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
-set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
 set t_Co=256
+set encoding=utf-8
+set relativenumber
+set number
+set showcmd
+set noshowmode
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set hlsearch
 
-let g:powerline_pycmd="py3"
+set splitbelow splitright
+
+let g:rehash256 = 1
+let g:Powerline_symbols='unicode'
+let g:Powerline_theme='long'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
+
+
+"map <C-n> :NERDTreeToggle<CR>
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
+"let NERDTreeShowLineNumbers=1
+"let NERDTreeShowHidden=1
+"let NERDTreeMinimalUI = 1
+"let g:minimap_show='<leader>mm'
+"let g:minimap_update='<leader>mu'
+"let g:minimap_close='<leader>mc'
+"let g:minimap_toggle='<leader>mt'
+
+hi LineNr ctermfg=242
+hi CursorLineNr ctermfg=15
+hi VertSplit ctermfg=8 ctermbg=0
+hi Statement ctermfg=3
+
+
+set path+=**					" Searches current directory recursively.
+set wildmenu					" Display all matches when tab complete.
+set incsearch
+set nobackup
+set noswapfile
+
+let g:python_highlight_all = 1
+syntax on
 
