@@ -29,13 +29,13 @@ xterm*eightBitInput: false
 xterm*foreground: #93a1a1
 xterm*background: #002b36
 xterm*color0: #002b36
-xterm*color1: #dc322f
-xterm*color2: #859900
-xterm*color3: #b58900
-xterm*color4: #268bd2
-xterm*color5: #6c71c4
-xterm*color6: #2aa198
-xterm*color7: #93a1a1
+xterm*color1: #dc322f 
+xterm*color2: #859900 
+xterm*color3: #b58900 
+xterm*color4: #268bd2 
+xterm*color5: #6c71c4 
+xterm*color6: #2aa198 
+xterm*color7: #93a1a1 
 xterm*color8: #657b83
 xterm*color9: #dc322f
 xterm*color10: #859900
@@ -44,37 +44,12 @@ xterm*color12: #268bd2
 xterm*color13: #6c71c4
 xterm*color14: #2aa198
 xterm*color15: #fdf6e3
-xterm*color16: #cb4b16
-xterm*color17: #d33682
-xterm*color18: #073642
-xterm*color19: #586e75
-xterm*color20: #839496
-xterm*color21: #eee8d5
-!xterm*color0: rgb:00/00/00
-!xterm*color1: rgb:a8/00/00
-!xterm*color2: rgb:00/a8/00
-!xterm*color3: rgb:a8/54/00
-!xterm*color4: rgb:5f/81/9d
-!xterm*color5: rgb:a8/00/a8
-!xterm*color6: rgb:00/a8/a8
-!xterm*color7: rgb:70/78/80
-!xterm*color8: rgb:54/54/54
-!xterm*color9: rgb:fc/54/54
-!xterm*color10: rgb:54/fc/54
-!xterm*color11: rgb:fc/fc/54
-!xterm*color12: rgb:81/a2/be
-!xterm*color13: rgb:fc/54/fc
-!xterm*color14: rgb:54/fc/fc
-!xterm*color15: rgb:c5/c8/c6
-!xterm*boldMode: false
-
-
+xterm*color16: #002b36
+xterm*color17: #93a1a1
 
 ! ------------------------------------------------------------------------------
 ! URxvt standard arcolinux theme - Reload with xrdb -merge ~/.Xresources
 ! ------------------------------------------------------------------------------
-
-
 
 ! general settings
 URxvt*imLocale:         en_US.UTF-8
@@ -239,23 +214,3 @@ UXTerm*color21: #eee8d5
 UXTerm*boldMode: false
 UXTerm*colorBDMode: true
 UXTerm*colorBD: rgb:3f/3f/3f
-
-
-!UXTerm*background: rgb:63/63/63
-!UXTerm*foreground: rgb:00/00/00
-!UXTerm*color0: rgb:00/00/00
-!UXTerm*color1: rgb:a8/00/00
-!UXTerm*color2: rgb:00/a8/00
-!UXTerm*color3: rgb:a8/54/00
-!UXTerm*color4: rgb:00/00/a8
-!UXTerm*color5: rgb:a8/00/a8
-!UXTerm*color6: rgb:00/a8/a8
-!UXTerm*color7: rgb:a8/a8/a8
-!UXTerm*color8: rgb:54/54/54
-!UXTerm*color9: rgb:fc/54/54
-!UXTerm*color10: rgb:54/fc/54
-!UXTerm*color11: rgb:fc/fc/54
-!UXTerm*color12: rgb:54/54/fc
-!UXTerm*color13: rgb:fc/54/fc
-!UXTerm*color14: rgb:54/fc/fc
-!UXTerm*color15: rgb:fc/fc/fc

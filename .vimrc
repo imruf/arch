@@ -10,6 +10,8 @@ call vundle#begin()		" required, all plugins must appear after this line.
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
+Plugin 'chrisbra/unicode.vim'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -103,4 +105,10 @@ set noswapfile
 
 let g:python_highlight_all = 1
 syntax on
+
+" Compile document, be it groff/LaTeX/markdown/etc.
+	map <leader>c :w! \| !compiler <c-r>%<CR>
+
+" Open corresponding .pdf/.html or preview
+	map <leader>p :!opout <c-r>%<CR><CR>
 
