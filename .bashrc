@@ -12,129 +12,250 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export TERM="xterm-256color"
+export TERM="st-256color"
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=dbus
+export QT_IM_MODULE=ibus
 export HISTCONTROL=ignoreboth:erasedups
 
-PS1='[\u@\h \W]\$ '
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
-if [ -d "$HOME/.bin" ] ;
-	then PATH="$HOME/.bin:$PATH"
-fi
 
-#list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
+#LIST
+alias ls='ls --color=auto --group-directories-first'
+alias la='ls -a --color=auto'
+alias lah='ls -lah --color=auto'
 alias l='ls' 					
 alias l.="ls -A | egrep '^\.'"      
 
-#fix obvious typo's
+#TYPO
 alias cd..='cd ..'
 alias pdw="pwd"
 
-## Colorize the grep command output for ease of use (good for log files)##
+#GREP
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-#readable output
-alias df='df -h'
-
-#pacman unlock
-alias unlock="sudo rm /var/lib/pacman/db.lck"
-
-#free
+#FREE
 alias free="free -mt"
 
-#continue download
-alias wget="wget -c"
-
-#userlist
+#USERLIST
 alias userlist="cut -d: -f1 /etc/passwd"
 
-#merge new settings
+#MERGE
 alias merge="xrdb -merge ~/.Xresources"
 
-# Aliases for software managment
-# pacman or pm
-alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syyu'
+#OUTPUT
+alias df='df -h'
 
-# yay as aur helper - updates everything
-alias pksyua="yay -Syu --noconfirm"
-
-#ps
-alias ps="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-
-#grub update
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-#improve png
-alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
-
-#add new fonts
-alias fc='sudo fc-cache -fv'
-
-#copy/paste all content of /etc/skel over to home folder - Beware
-alias skel='cp -rf /etc/skel/* ~'
-#backup contents of /etc/skel to hidden backup folder in home/user
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
-
-#copy bashrc-latest over on bashrc - cb= copy bash
-alias cb="cp ~/.bashrc-latest ~/.bashrc && source ~/.bashrc"
-
-#quickly kill conkies
+#CONKY
 alias kc='killall conky'
 
-#hardware info --short
+#HARDWARE
 alias hw="hwinfo --short"
 
-#skip integrity check
-alias yayskip='yay -S --mflags --skipinteg'
-alias trizenskip='trizen -S --skipinteg'
-
-#check vulnerabilities microcode
+#MICROCODE
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
-#get fastest mirrors in your neighborhood 
+#GRUB
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#DATABASE
+alias updb='sudo updatedb'
+
+#FONTS
+alias fc='sudo fc-cache -fv'
+
+#WGET
+alias wget="wget -c"
+
+#MIRROR
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist"
 
-#mounting the folder Public for exchange between host and guest on virtualbox
-alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
+#PACMAN
+alias pac='sudo pacman --color auto'
+alias update='sudo pacman -Syyu'
+alias up='sudo pacman -Syu'
+alias pacs='pacman -Ss'
+alias inp='sudo pacman -S'
+alias rmv='sudo pacman -Rns'
 
-#shopt
-shopt -s autocd # change to named directory
-shopt -s cdspell # autocorrects cd misspellings
-shopt -s cmdhist # save multi-line commands in history as single line
-shopt -s dotglob
-shopt -s histappend # do not overwrite history
-shopt -s expand_aliases # expand aliases
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias cc='sudo pacman -Sc'
+alias nrp='pacman -Qdt'
+alias lfp='pacman -Qqm'
+alias fp='pacman -Qm'
+alias efp='pacman -Qqe'
 
-#youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
-
-#Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
-#Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+#AUR
+alias inpkg='makepkg -si'
+#alias upaur="yay -Syu"
+#yay
+alias yinp='yay -S'
+alias yayskip='yay -S --mflags --skipinteg'
+alias upyay="yay -Syu --noconfirm"
+#trizen
+alias tinp='trizen -S'
+alias uptrizen="trizen -Syu --noconfirm"
+alias trizenskip='trizen -S --skipinteg'
 
-#create a file called .bashrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
+#MOUNT
+alias mount='udisksctl mount -b'
+alias usb='udisksctl mount -b /dev/sdb1'
+alias uusb='udisksctl unmount -b /dev/sdb1'
+alias eusb='udisksctl power-off -b /dev/sdb1'
+alias sdx='mountjutsu'
+
+#youtube-dl
+alias ytd-aac="youtube-dl --extract-audio --audio-format aac "
+alias ytd-best="youtube-dl --extract-audio --audio-format best "
+alias ytd-flac="youtube-dl --extract-audio --audio-format flac "
+alias ytd-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias ytd-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias ytd-opus="youtube-dl --extract-audio --audio-format opus "
+alias ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias ytd-wav="youtube-dl --extract-audio --audio-format wav "
+alias ytd-best="youtube-dl -f bestvideo+bestaudio "
+alias ytd='youtube-dl'
+alias ytdF='youtube-dl -F'
+alias ytdf='youtube-dl -f'
+alias ytv='youtube-viewer -C'
+
+#MAIL
+alias mail='neomutt'
+alias mp="cp mp ~/.muttrc"
+alias ib="cp ib ~/.muttrc"
+alias rr="cp rr ~/.muttrc"
+
+#TRANSMISSION
+
+alias pfx='peerflix -k'
+alias tfx='torrentflix'
+
+tsmcc() {
+        transmission-remote -l | grep 100% | grep Done | \
+        awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;}
+tsm() { transmission-remote --list ;}
+        # numbers of ip being blocked by the blocklist
+        # credit: smw from irc #transmission
+tsmcnt() { echo "Blocklist rules:" $(curl -s --data \
+        '{"method": "session-get"}' localhost:9091/transmission/rpc -H \
+        "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
+        | cut -d: -f 11 | cut -d, -f1) ;}
+tsmbl() { $PATH_SCRIPTS/blocklist.sh ;}         # update blocklist
+tsmdmn() { transmission-daemon ;}
+tsmquit() { killall transmission-daemon ;}
+tsmase() { transmission-remote --alt-speed ;}       # limit bandwidth
+tsmasd() { transmission-remote --no-alt-speed ;}   # dont limit bandwidth
+tsmadd() { transmission-remote --add "$1" ;}
+tsmaskp() { transmission-remote -t"$1" --reannounce ;}
+tsmstop() { transmission-remote -t"$1" --stop ;}              # <id> or all
+tsmstart() { transmission-remote -t"$1" --start ;}             # <id> or all
+tsmpurge() { transmission-remote -t"$1" --remove-and-delete ;} # delete data also
+tsmdel() { transmission-remote -t"$1" --remove ;}           # leaves data alone
+tsminfo() { transmission-remote -t"$1" --info ;}
+tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
+
+#nnn
+#alias nnn='nnn -d'
+#[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+#n()
+#{
+#        export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
+#
+#        nnn "$@"
+#
+#        if [ -f $NNN_TMPFILE ]; then
+#                . $NNN_TMPFILE
+#                rm -f $NNN_TMPFILE > /dev/null
+#        fi
+#}
+
+#MIS
+alias sys='sudo systemctl'
+alias vol='ncpamixer'
+alias def='sdcv'
+alias radio='curseradio'
+alias music='ncmpcpp'
+alias sv='sudo vim'
+alias ibus='ibus-daemon -xdr'
+alias wp='QuickWall --setter feh'
+alias rit='torsocks rtv'
+alias keep='keepcli'
+alias drive='gdrive'
+alias books='pysheng'
+alias imgur='imgur_downloader'
+alias myip='ip addr show'
+alias weather='curl wttr.in/khagrachari'
+alias e.g='tldr'
+alias tweet='turses'
+alias mkdir='mkdir -p'
+alias pdf='zathura'
+
+alias vim='nvim'
+
+alias dwm='startx'
+
+
+#GIT
+alias gitc='git clone'
+alias gitu='git push -u origin master'
+alias gitca='git commit -a'
+alias gita='git add'
+alias gits='git status'
+
+#ARCHIVE
+alias uz='atool -x'
+alias zip='atool -a'
+
+#SURFRAW
+alias srs='sr startpage'
+alias srb='sr bing'
+alias srd='sr duckduckgo'
+alias srg='sr google'
+alias srv='sr youtube'
+alias sry='sr yahoo'
+alias sraw='sr archwiki'
+alias sraur='sr aur'
+alias srpkg='sr archpkg'
+alias srmdb='sr imdb'
+alias srgit='sr github'
+alias sru='sr urban'
+alias srpb='sr piratebay'
+
+#torsocks
+alias tor='sys start tor.service'
+alias tors='sys stop tor.service'
+alias ctorg='torsocks qutebrowser 'https://check.torproject.org/''
+alias ctorc='torsocks elinks 'https://check.torproject.org/''
+alias torb='~/AUR/tor-browser_en-US/Browser/./start-tor-browser'
+
+#SSH
+alias fst='sudo systemctl start sshd'
+alias fsts='sudo systemctl stop sshd'
+alias termux='ssh -p 8022 u0_a127@192.168.137.234'
+
+#PNGLatex
+#pnglatex -h for help
+alias eq='pnglatex -b Transparent -d 300 -s 12'
+
+#POWERMANAGEMENT
+#alias iph='i3exit suspend'
+#alias ipl='i3exit lock'
+#alias ips='i3exit shutdown'
+#alias ipr='i3exit reboot'
+
+alias q='exit'
+
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
-
-neofetch
 
