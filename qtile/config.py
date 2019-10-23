@@ -71,7 +71,7 @@ keys = [
 # alt + SHIFT KEYS
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "shift"], "e", lazy.shutdown()),
-    Key([mod, "shift"], "s", lazy.spawn('oblogout')),
+    Key([mod, "shift"], "x", lazy.spawn('oblogout')),
 
 # CONTROL + ALT KEYS
 

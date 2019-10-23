@@ -149,6 +149,7 @@ static unsigned int defaultcs = 3;
 static unsigned int defaultrcs = 257;
 
 */
+
 /*
  * Colors used, when the specific fg == defaultfg. So in rever    se mode this
  * will reverse too. Another logic would only make the simple     feature too
