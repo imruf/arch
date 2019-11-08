@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -9,8 +10,10 @@ static const char dmenufont[]       = "LinuxLibertine:bold:pixelsize=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#FFBB00";  /* tag color */
-static const char col_cyan[]        = "#131313";  /* bar color */
+static const char col_gray4[]       = "#FFBB00"; /* tag color */
+static const char col_cyan[]        = "#131313"; /* bar color */
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
@@ -18,13 +21,20 @@ static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
 static const char col_y2[]          = "#fea63c";
 static const char *colors[][3]      = {
-/*static const char col_gray4[]       = "#eeeeee";*/
-/*static const char col_cyan[]        = "#005577";*/
-
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
+/*static const char col_gray4[]       = "#eeeeee";*/
+/*static const char col_cyan[]        = "#005577";*/
+
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 /* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
@@ -34,7 +44,7 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-    
+
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
 	{ "firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "qutebrowser",     NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
@@ -55,8 +65,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]=",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
+	{ "[]=",      tile },    /* first entry is default */
+	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -89,16 +99,13 @@ static const char *ipl[] = { "i3exit", "lock", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-/*static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
-static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };*/
-/*static const char *roficmd[] = { "rofi", "-show", "combi", NULL };*/
-/*
-static const char *rbang[] = { "rbang", NULL };
-*/
+/* static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL }; */
+/* static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL }; */
+/* static const char *roficmd[] = { "rofi", "-show", "combi", NULL }; */
+/* static const char *rbang[] = { "rbang", NULL }; */
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
-/* #include "selfrestart.c" */
 
 static Key keys[] = {
 	/* modifier                     key               function        argument */
@@ -116,8 +123,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,             setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_j,             movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,             movestack,      {.i = -1 } },
-	{ MOD2,                         XK_h,             movestack,      {.i = +1 } },
-	{ MOD2,                         XK_l,             movestack,      {.i = -1 } },
+	{ MOD2,                         XK_j,             movestack,      {.i = +1 } },
+	{ MOD2,                         XK_k,             movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return,        zoom,           {0} },
 	{ MODKEY,                       XK_Tab,           view,           {0} },
 	{ MODKEY,                       XK_y,             killclient,     {0} },
@@ -133,26 +140,17 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,        focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,         tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,        tagmon,         {.i = +1 } },
-	{ MOD2,                         XK_q,             moveplace,      {.ui = WIN_NW }},
-	{ MOD2,                         XK_w,             moveplace,      {.ui = WIN_N  }},
-	{ MOD2,                         XK_e,             moveplace,      {.ui = WIN_NE }},
-	{ MOD2,                         XK_a,             moveplace,      {.ui = WIN_W  }},
-	{ MOD2,                         XK_s,             moveplace,      {.ui = WIN_C  }},
-	{ MOD2,                         XK_d,             moveplace,      {.ui = WIN_E  }},
-	{ MOD2,                         XK_z,             moveplace,      {.ui = WIN_SW }},
-	{ MOD2,                         XK_x,             moveplace,      {.ui = WIN_S  }},
-	{ MOD2,                         XK_b,             moveplace,      {.ui = WIN_SE }},
     { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
     { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
-	TAGKEYS(                        XK_1,                             0)
-	TAGKEYS(                        XK_2,                             1)
-	TAGKEYS(                        XK_3,                             2)
-	TAGKEYS(                        XK_4,                             3)
-	TAGKEYS(                        XK_5,                             4)
-	TAGKEYS(                        XK_6,                             5)
-	TAGKEYS(                        XK_7,                             6)
-	TAGKEYS(                        XK_8,                             7)
-	TAGKEYS(                        XK_9,                             8)
+	TAGKEYS(                        XK_1,                      0)
+	TAGKEYS(                        XK_2,                      1)
+	TAGKEYS(                        XK_3,                      2)
+	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
+	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_x,              spawn,          {.v = pmenu } },
 	{ MODKEY|ControlMask,           XK_i,              spawn,          {.v = dweb } },
@@ -170,9 +168,6 @@ static Key keys[] = {
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
-    /*{ 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc} },*/
-    /*{ 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec} },*/
-    /*{ MODKEY|ShiftMask,             XK_r,             self_restart,   {0} },*/
 };
 
 /* button definitions */
