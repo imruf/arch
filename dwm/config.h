@@ -5,12 +5,12 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
-static const char dmenufont[]       = "NotoMonoRegular:bold:pixelsize=14";
+static const char dmenufont[]       = "LinuxLibertine:bold:pixelsize=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#FFBB00"; /* tag color */
-static const char col_cyan[]        = "#131313"; /* bar color */
+static const char col_gray4[]       = "#FFBB00";  /* tag color */
+static const char col_cyan[]        = "#131313";  /* bar color */
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
@@ -27,6 +27,7 @@ static const char *colors[][3]      = {
 };
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+/* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -35,7 +36,7 @@ static const Rule rules[] = {
 	 */
     
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
-	{ "Firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
+	{ "firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "qutebrowser",     NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "Surf",            NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
 	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
@@ -43,8 +44,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
+    { "mpv",             NULL,       "mpv",                     0,            True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 0,            True,                   1,        -1 },
 };
 
 /* layout(s) */
@@ -77,12 +78,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "pcmanfm", NULL };
-static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *bcmd[] = { "firefox", NULL };
 static const char *pmenu[] = { "powermenu", NULL };
 static const char *dweb[] = { "dweb", NULL };
-static const char *rbang[] = { "rbang", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
+static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *iph[] = { "i3exit", "shutdown", NULL };
 static const char *ipl[] = { "i3exit", "lock", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -91,6 +92,9 @@ static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NUL
 /*static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL };
 static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };*/
 /*static const char *roficmd[] = { "rofi", "-show", "combi", NULL };*/
+/*
+static const char *rbang[] = { "rbang", NULL };
+*/
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -99,7 +103,7 @@ static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL };
 static Key keys[] = {
 	/* modifier                     key               function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
-	{ MOD2,                         XK_semicolon,     spawn,          {.v = rbang } },
+	{ MOD2,                         XK_semicolon,     spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
@@ -157,7 +161,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn -d") },
-	{ MODKEY,                       XK_n,              spawn,          CMD("xfce4-popup-notes --show-hide") },
+	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("xterm -e ranger") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") },
