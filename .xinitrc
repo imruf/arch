@@ -2,6 +2,16 @@
 #
 # ~/.xinitrc
 #
+###########################
+###########################
+##### _ __ ___  _ __#######
+#####| '_ ` _ \| '_ \######
+#####| | | | | | |_) |#####
+#####|_| |_| |_| .__/ #####
+#####          |_|    #####
+###########################
+###########################
+
 # Executed by startx (run your window manager from here)
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
@@ -14,3 +24,7 @@ fi
 
 
 exec dwm
+#exec startxfce4
+#exec xmonad
+#exec qtile
+#exec i3

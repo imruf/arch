@@ -1,3 +1,14 @@
+/*
+###########################
+###########################
+##### _ __ ___  _ __#######
+#####| '_ ` _ \| '_ \######
+#####| | | | | | |_) |#####
+#####|_| |_| |_| .__/ #####
+#####          |_|    #####
+###########################
+###########################
+*/
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -12,19 +23,28 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#FFBB00"; /* tag color */
 static const char col_cyan[]        = "#131313"; /* bar color */
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
 static const char col_y2[]          = "#fea63c";
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+
+static const char *colors[][8]      = {
+	/*					fg         bg          border   */
+	[SchemeNorm] =	 { col_gray3, col_gray1,   col_gray2 },
+	[SchemeSel]  =	 { col_gray4, col_cyan,    col_cyan },
+	[SchemeWarn] =	 { col_black, col_yellow,  col_red },
+	[SchemeUrgent]=	 { col_cyan,  "#7197e7",   col_gray1 },
+                     { "#7197e7", col_black,   col_black }, 
+                     { col_cyan,  "#A77AC4",   col_gray1 }, 
+                     { "#A77AC4", col_black,   col_black }, 
+                     { col_cyan,  "#8be9fd",    col_gray1 }, 
+                     { "#FFBB00", col_black,   col_black }, 
 };
+
 
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -54,8 +74,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     0,            True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 0,            True,                   1,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 2,            True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,            True,                   1,        -1 },
 };
 
 /* layout(s) */

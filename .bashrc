@@ -1,6 +1,15 @@
 #
 # ~/.bashrc
 #
+###########################
+###########################
+##### _ __ ___  _ __#######
+#####| '_ ` _ \| '_ \######
+#####| | | | | | |_) |#####
+#####|_| |_| |_| .__/ #####
+#####          |_|    #####
+###########################
+###########################
 
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
@@ -10,6 +19,8 @@
 #export QT_IM_MODULE=ibus
 
 # If not running interactively, don't do anything
+[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+
 [[ $- != *i* ]] && return
 
 export TERM="xterm-256color"
@@ -255,7 +266,3 @@ alias eq='pnglatex -b Transparent -d 300 -s 12'
 #alias ipr='i3exit reboot'
 
 alias q='exit'
-
-
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
-

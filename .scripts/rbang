@@ -15,16 +15,16 @@ declare -A COMMANDS
 # List of defined 'bangs'
 
 # open custom web searches
-COMMANDS["websearch"]="rsw"
+COMMANDS["websearch"]="rsr"
 LABELS["websearch"]=""
 
 # open bookmarks
-COMMANDS["bookmarks"]="rsb"
+COMMANDS["bookmarks"]="rb"
 LABELS["bookmarks"]=""
 
 # search local files
-#COMMANDS["locate"]="rl"
-#LABELS["locate"]=""
+COMMANDS["locate"]="rl"
+LABELS["locate"]=""
 
 # launch programs
 COMMANDS["apps"]="rofi -show combi"

@@ -83,7 +83,7 @@ trap 'rm "$tmpfile"' 0 1 15
 printf '%s\n%s\n' "$uricur" "$1" > "$tmpfile"
 cat "$bookmarks" >> "$tmpfile"
 sed -i -E '/^(#|$)/d' "$tmpfile"
-choice=$(dmenu -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14' -i -p "search:" -w "$winid" < "$tmpfile") || exit 1
+choice=$(dmenu -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'Hack:bold:pixelsize=14' -i -p "search:" -w "$winid" < "$tmpfile") || exit 1
 #choice=$(dmenu -i -p "Go:" -w "$winid" < "$tmpfile") || exit 1
 
 # Detect links without protocol (This is WIP)

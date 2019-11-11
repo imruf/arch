@@ -42,7 +42,7 @@ set bidi_support false
 
 set show_hidden_bookmarks true
 
-set colorscheme mycolor1
+set colorscheme default
 
 set preview_files true
 set preview_directories true

@@ -1,3 +1,13 @@
+"###########################
+"###########################
+"##### _ __ ___  _ __#######
+"#####| '_ ` _ \| '_ \######
+"#####| | | | | | |_) |#####
+"#####|_| |_| |_| .__/ #####
+"#####          |_|    #####
+"###########################
+"###########################
+
 let mapleader =","
 
 set nocompatible              " be iMproved, required
@@ -10,8 +20,9 @@ call vundle#begin()		" required, all plugins must appear after this line.
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
-Plugin 'chrisbra/unicode.vim'
-Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'chrisbra/unicode.vim'                       " unicode search
+Plugin 'PotatoesMaster/i3-vim-syntax'               " i3-syntax
+Plugin 'chrisbra/Colorizer'                         " color from rgb
 
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -112,3 +123,5 @@ syntax on
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
 
+
+map <leader>h :ColorHighlight

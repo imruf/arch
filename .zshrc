@@ -1,3 +1,13 @@
+###########################
+###########################
+##### _ __ ___  _ __#######
+#####| '_ ` _ \| '_ \######
+#####| | | | | | |_) |#####
+#####|_| |_| |_| .__/ #####
+#####          |_|    #####
+###########################
+###########################
+
 #EXPORT 
 export TERM="xterm-256color"
 export TERM="st-256color"
@@ -5,7 +15,6 @@ export ZSH="/home/masud/.oh-my-zsh"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
-
 
 #PLUGINS
 plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions vi-mode)
@@ -106,10 +115,6 @@ alias trizenskip='trizen -S --skipinteg'
 
 #MOUNT
 alias mount='udisksctl mount -b'
-alias files='udisksctl mount -b /dev/sda4'
-alias ufiles='udisksctl unmount -b /dev/sda4'
-alias os='udisksctl mount -b /dev/sda2'
-alias uos='udisksctl unmount -b /dev/sda2'
 alias usb='udisksctl mount -b /dev/sdb1'
 alias uusb='udisksctl unmount -b /dev/sdb1'
 alias eusb='udisksctl power-off -b /dev/sdb1'
@@ -187,22 +192,22 @@ alias def='sdcv'
 alias radio='curseradio'
 alias music='ncmpcpp'
 alias sv='sudo vim'
-alias ibus='ibus-daemon -xdr'
-alias wp='QuickWall --setter feh'
 alias rit='rtv'
 alias keep='keepcli'
 alias drive='gdrive'
 alias books='pysheng'
 alias imgur='imgur_downloader'
-alias myip='ip addr show'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
 alias tweet='turses'
 alias mkdir='mkdir -p'
 alias pdf='zathura'
+#alias ibus='ibus-daemon -xdr'
 
 alias vim='nvim'
 
+#alias wp='QuickWall --setter feh'
+alias wp='splash'
 
 #GIT
 alias gitc='git clone'
@@ -233,9 +238,21 @@ alias srpb='sr piratebay'
 #torsocks
 alias tor='sys start tor.service'
 alias tors='sys stop tor.service'
-alias ctorg='torsocks qutebrowser 'https://check.torproject.org/''
 alias ctorc='torsocks elinks 'https://check.torproject.org/''
-alias torb='~/AUR/tor-browser_en-US/Browser/./start-tor-browser'
+#alias ctorb='torsocks surf https://check.torproject.org/'
+
+#IP
+alias myip='ip addr show'
+alias ip-isp='curl ifconfig.co'
+#curl ifconfig.co/json
+#http -b ifconfig.co
+#wget -qO- ifconfig.co
+#fetch -qo- https://ifconfig.co
+#bat -print=b ifconfig.co/ip
+#curl ifconfig.co/country
+#curl ifconfig.co/country-iso
+#curl ifconfig.co/city
+#curl ifconfig.co/asn
 
 #SSH
 alias fst='sudo systemctl start sshd'
@@ -245,6 +262,16 @@ alias termux='ssh -p 8022 u0_a127@192.168.137.234'
 #PNGLatex
 #pnglatex -h for help
 alias eq='pnglatex -b Transparent -d 300 -s 12'
+
+#JavaWM
+alias jwc='wmname LG3D'
+
+#DE/WM
+alias dwm='startx'
+alias xfce='exec startxfce4'
+
+
+
 
 #POWERMANAGEMENT
 #alias iph='i3exit suspend'
@@ -266,7 +293,7 @@ POWERLEVEL9K_COLOR_SCHEME='dark'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history vi_mode time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 OS_ICON='\uF303'
 
@@ -315,9 +342,10 @@ ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
 ZSH_HIGHLIGHT_STYLES[default]=fg=blue,bold
 
 
-#NEOFETCH
+#FETCH
+pfetch
 #neofetch --ascii_distro arcolinux_small
-alias neo='neofetch --ascii_distro arcolinux_small'
+#alias neo='neofetch --ascii_distro arcolinux_small'
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
