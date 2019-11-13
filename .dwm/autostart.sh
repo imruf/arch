@@ -1,23 +1,21 @@
 #! /bin/bash 
-###########################
-###########################
-##### _ __ ___  _ __#######
-#####| '_ ` _ \| '_ \######
-#####| | | | | | |_) |#####
-#####|_| |_| |_| .__/ #####
-#####          |_|    #####
-###########################
-###########################
 
 xfce4-power-manager &
-feh --bg-scale ~/Pictures/feh/dwm/Gaa.jpg &
+feh --bg-scale ~/Pictures/feh/dwm/frank.jpg &
 redshift &
 numlockx on &
 ibus-daemon -xdr &
-#compton --config ~/.config/compton/compton.conf &
+compton --config ~/.config/compton/compton.conf &
 #xinput set-prop 14 284 1 &
 
 
+testweather() { \
+	[ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" != "$(date '+%Y-%m-%d')" ] &&
+		ping -q -c 1 1.1.1.1 >/dev/null &&
+		curl -s "wttr.in/$location" > "$HOME/.local/share/weatherreport" &&
+		notify-send "🌞 Weather" "New weather forecast for today." &&
+		refbar
+		}
 #function get_bytes {
 #interface=$(ip route get 8.8.8.8 2>/dev/null| awk '{print $5}')
 #line=$(grep $interface /proc/net/dev | cut -d ':' -f 2 | awk '{print "received_bytes="$1, "transmitted_bytes="$9}')
@@ -83,18 +81,17 @@ bat(){
 
 mem(){
   mem=`free | awk '/Mem/ {printf "%d MiB\n", $3 / 1024.0}'`
-  echo -ne "\x09  $mem"
+  echo -ne "\x09" " $mem"
 }
 
-cpu(){
+cpu() {
   read cpu a b c previdle rest < /proc/stat
   prevtotal=$((a+b+c+previdle))
   sleep 0.5
   read cpu a b c idle rest < /proc/stat
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-  cpu_temp="$( sensors | grep 'temp1:' | cut -c16-17 | head -1)"
-  echo -ne "$cpu%  $cpu_temp°C"
+  echo -ne "$cpu% "
 }
 
 vol() {
@@ -104,16 +101,18 @@ vol() {
 
 #mpd() {
 #    mpd=$(ncmp)
-#    echo -e $mpd
+#    echo -e "$mpd"
 #}
 
-#wr() {
-#    wr=$(i3weather)
-#    echo -e $wr
-#}
+wr() {
+    [ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] &&
+		sed '16q;d' "$HOME/.local/share/weatherreport" | grep -wo "[0-9]*%" | sort -n | sed -e '$!d' | sed -e "s/^/ /g" | tr -d '\n' &&
+		sed '13q;d' "$HOME/.local/share/weatherreport" | grep -o "m\\(-\\)*[0-9]\\+" | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print " ",$1 "°","",$2 "°"}'
+    }
 
 while true; do
-    
+   testweather &
+   wait
 #	# Get new transmitted, received byte number values and current time
 #	get_bytes
 #
@@ -121,9 +120,6 @@ while true; do
 #	up=$(get_velocity $received_bytes $old_received_bytes $now)
 #   down=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
     
-
-    xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
-    #xsetroot -name "$(mem)$(cpu)$(vol)$(bat)$(dte)$(wifi)"
-    #xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$up $down $(wifi)"
-    sleep 60    # Update time every ten seconds
+    xsetroot -name "$(mem)|$(wr)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
+    sleep 60   # Update time every ten seconds
 done &

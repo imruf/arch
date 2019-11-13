@@ -1,14 +1,3 @@
-/*
-###########################
-###########################
-##### _ __ ___  _ __#######
-#####| '_ ` _ \| '_ \######
-#####| | | | | | |_) |#####
-#####|_| |_| |_| .__/ #####
-#####          |_|    #####
-###########################
-###########################
-*/
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -74,8 +63,8 @@ static const Rule rules[] = {
     { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 2,            True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,            True,                   1,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
 };
 
 /* layout(s) */

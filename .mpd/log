@@ -3871,3 +3871,125 @@ Nov 10 19:32 : exception: OutputThread could not get realtime scheduling, contin
 Nov 10 20:47 : player: played "Jat Gelo Jat Gelo Bole.mp3"
 Nov 10 20:49 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Nov 10 20:49 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 11 20:09 : client: [0] opened from [::1]:47608
+Nov 11 20:09 : client: [0] closed
+Nov 11 20:10 : client: [1] opened from [::1]:47612
+Nov 11 20:10 : client: [1] closed
+Nov 11 20:11 : client: [2] opened from [::1]:47614
+Nov 11 20:11 : client: [2] closed
+Nov 11 20:12 : client: [3] opened from [::1]:47616
+Nov 11 20:12 : client: [3] closed
+Nov 11 20:13 : client: [4] opened from [::1]:47618
+Nov 11 20:13 : client: [4] closed
+Nov 11 20:14 : client: [5] opened from [::1]:47622
+Nov 11 20:14 : client: [5] closed
+Nov 11 20:15 : client: [6] opened from [::1]:47624
+Nov 11 20:15 : client: [6] closed
+Nov 11 20:16 : client: [7] opened from [::1]:47626
+Nov 11 20:16 : client: [7] closed
+Nov 11 20:17 : client: [8] opened from [::1]:47628
+Nov 11 20:17 : client: [8] closed
+Nov 11 20:18 : client: [9] opened from [::1]:47630
+Nov 11 20:18 : client: [9] closed
+Nov 11 20:19 : client: [10] opened from [::1]:47634
+Nov 11 20:19 : client: [10] closed
+Nov 11 20:20 : client: [11] opened from [::1]:47636
+Nov 11 20:20 : client: [11] closed
+Nov 11 20:21 : client: [12] opened from [::1]:47638
+Nov 11 20:21 : client: [12] closed
+Nov 11 20:22 : client: [13] opened from [::1]:47640
+Nov 11 20:22 : client: [13] closed
+Nov 11 20:23 : client: [14] opened from [::1]:47642
+Nov 11 20:23 : client: [14] closed
+Nov 11 20:24 : client: [15] opened from [::1]:47646
+Nov 11 20:24 : client: [15] closed
+Nov 11 20:25 : client: [16] opened from [::1]:47650
+Nov 11 20:25 : client: [16] closed
+Nov 11 20:26 : client: [17] opened from [::1]:47652
+Nov 11 20:26 : client: [17] closed
+Nov 11 20:27 : client: [18] opened from [::1]:47654
+Nov 11 20:27 : client: [18] closed
+Nov 11 20:28 : client: [19] opened from [::1]:47656
+Nov 11 20:28 : client: [19] closed
+Nov 11 20:29 : client: [20] opened from [::1]:47660
+Nov 11 20:29 : client: [20] closed
+Nov 11 20:36 : client: [21] opened from [::1]:47664
+Nov 11 20:36 : client: [21] closed
+Nov 11 20:43 : client: [22] opened from [::1]:47668
+Nov 11 20:43 : client: [22] closed
+Nov 11 20:48 : client: [23] opened from [::1]:47674
+Nov 11 20:48 : client: [23] closed
+Nov 11 20:49 : client: [24] opened from [::1]:47676
+Nov 11 20:49 : client: [24] closed
+Nov 11 20:56 : client: [25] opened from [::1]:47680
+Nov 11 20:56 : client: [25] closed
+Nov 11 20:57 : client: [26] opened from [::1]:47682
+Nov 11 20:57 : client: [26] closed
+Nov 12 12:42 : client: [27] opened from [::1]:48004
+Nov 12 12:42 : client: [27] closed
+Nov 12 12:44 : client: [28] opened from [::1]:48006
+Nov 12 12:44 : client: [28] closed
+Nov 12 12:53 : client: [29] opened from [::1]:48032
+Nov 12 12:53 : client: [29] closed
+Nov 12 12:54 : client: [30] opened from [::1]:48036
+Nov 12 12:54 : client: [30] closed
+Nov 12 12:55 : client: [31] opened from [::1]:48042
+Nov 12 12:55 : client: [31] closed
+Nov 12 12:56 : client: [32] opened from [::1]:48046
+Nov 12 12:56 : client: [32] closed
+Nov 12 12:57 : client: [33] opened from [::1]:48050
+Nov 12 12:57 : client: [33] closed
+Nov 12 12:58 : client: [34] opened from [::1]:48052
+Nov 12 12:58 : client: [34] closed
+Nov 12 12:59 : client: [35] opened from [::1]:48054
+Nov 12 12:59 : client: [35] closed
+Nov 12 13:00 : client: [36] opened from [::1]:48056
+Nov 12 13:00 : client: [36] closed
+Nov 12 13:01 : client: [37] opened from [::1]:48060
+Nov 12 13:01 : client: [37] closed
+Nov 12 13:05 : client: [38] opened from [::1]:48062
+Nov 12 13:05 : client: [38] closed
+Nov 12 13:06 : client: [39] opened from [::1]:48066
+Nov 12 13:06 : client: [39] closed
+Nov 12 13:35 : player: played "Jat Gelo Jat Gelo Bole.mp3"
+Nov 12 22:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 22:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 22:56 : client: [0] opened from [::1]:44534
+Nov 12 22:56 : client: [0] closed
+Nov 12 22:56 : client: [1] opened from [::1]:44536
+Nov 12 22:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 22:56 : ffmpeg/opus: Could not update timestamps for skipped samples.
+Nov 12 22:57 : client: [1] closed
+Nov 12 22:57 : client: [2] opened from [::1]:44540
+Nov 12 22:57 : client: [2] closed
+Nov 12 22:58 : client: [3] opened from [::1]:44594
+Nov 12 22:58 : client: [3] closed
+Nov 12 22:59 : client: [4] opened from [::1]:44656
+Nov 12 22:59 : client: [4] closed
+Nov 12 23:00 : client: [5] opened from [::1]:44668
+Nov 12 23:00 : client: [5] closed
+Nov 12 23:01 : ffmpeg/opus: Could not update timestamps for discarded samples.
+Nov 12 23:01 : player: played "Abbulish.......je tumi tarar mato-WR0iPjrQqhs.webm"
+Nov 12 23:01 : client: [6] opened from [::1]:44712
+Nov 12 23:01 : client: [6] closed
+Nov 12 23:02 : client: [7] opened from [::1]:44716
+Nov 12 23:02 : client: [7] closed
+Nov 12 23:03 : client: [8] opened from [::1]:44718
+Nov 12 23:03 : client: [8] closed
+Nov 12 23:03 : client: [9] opened from [::1]:44720
+Nov 12 23:03 : client: [9] closed
+Nov 12 23:03 : client: [10] opened from [::1]:44722
+Nov 12 23:03 : client: [10] closed
+Nov 12 23:13 : player: played "Aarshi Nogor_3.mp3"
+Nov 12 23:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 23:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 23:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 23:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 23:23 : player: played "Aarshi Nogor_3.mp3"
+Nov 12 23:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 23:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 13 17:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 13 17:01 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 13 19:40 : player: played "Aarshi Nogor_3.mp3"
+Nov 13 19:42 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 13 19:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

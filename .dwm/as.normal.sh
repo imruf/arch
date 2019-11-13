@@ -1,16 +1,7 @@
 #! /bin/bash 
-###########################
-###########################
-##### _ __ ___  _ __#######
-#####| '_ ` _ \| '_ \######
-#####| | | | | | |_) |#####
-#####|_| |_| |_| .__/ #####
-#####          |_|    #####
-###########################
-###########################
 
 xfce4-power-manager &
-feh --bg-scale ~/Pictures/feh/dwm/Gaa.jpg &
+feh --bg-scale ~/Pictures/feh/dwm/M106.jpg &
 redshift &
 numlockx on &
 ibus-daemon -xdr &
@@ -83,7 +74,7 @@ bat(){
 
 mem(){
   mem=`free | awk '/Mem/ {printf "%d MiB\n", $3 / 1024.0}'`
-  echo -ne "\x09  $mem"
+  echo -ne "\x09" " $mem"
 }
 
 cpu(){
@@ -94,7 +85,7 @@ cpu(){
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
   cpu_temp="$( sensors | grep 'temp1:' | cut -c16-17 | head -1)"
-  echo -ne "$cpu%  $cpu_temp°C"
+  echo -ne "$cpu% $cpu_temp°C "
 }
 
 vol() {
@@ -102,15 +93,18 @@ vol() {
     echo -e "$volume"
 }
 
-#mpd() {
-#    mpd=$(ncmp)
-#    echo -e $mpd
-#}
+mpd() {
+    mpd=$(ncmp)
+    echo -e $mpd
+}
 
-#wr() {
-#    wr=$(i3weather)
-#    echo -e $wr
-#}
+testweather() { \
+	[ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" != "$(date '+%Y-%m-%d')" ] &&
+		ping -q -c 1 1.1.1.1 >/dev/null &&
+		curl -s "wttr.in/$location" > "$HOME/.local/share/weatherreport" &&
+		notify-send "🌞 Weather" "New weather forecast for today." &&
+		refbar
+		}
 
 while true; do
     
@@ -121,9 +115,6 @@ while true; do
 #	up=$(get_velocity $received_bytes $old_received_bytes $now)
 #   down=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
     
-
-    xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
-    #xsetroot -name "$(mem)$(cpu)$(vol)$(bat)$(dte)$(wifi)"
-    #xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$up $down $(wifi)"
-    sleep 60    # Update time every ten seconds
+xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
+    sleep 60   # Update time every ten seconds
 done &

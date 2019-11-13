@@ -1,13 +1,3 @@
-###########################
-###########################
-##### _ __ ___  _ __#######
-#####| '_ ` _ \| '_ \######
-#####| | | | | | |_) |#####
-#####|_| |_| |_| .__/ #####
-#####          |_|    #####
-###########################
-###########################
-
 #EXPORT 
 export TERM="xterm-256color"
 export TERM="st-256color"
@@ -92,7 +82,7 @@ alias inp='sudo pacman -S'
 alias rmv='sudo pacman -Rns'
 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
 alias cc='sudo pacman -Sc'
 alias nrp='pacman -Qdt'
 alias lfp='pacman -Qqm'

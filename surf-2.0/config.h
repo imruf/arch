@@ -1,14 +1,3 @@
-/*
-###########################
-###########################
-##### _ __ ___  _ __#######
-#####| '_ ` _ \| '_ \######
-#####| | | | | | |_) |#####
-#####|_| |_| |_| .__/ #####
-#####          |_|    #####
-###########################
-###########################
-*/
 /* modifier 0 means no modifier */
 static int surfuseragent    = 1;  /* Append Surf version to default WebKit user agent */
 static char *fulluseragent  = ""; /* Or override the whole user agent string */
