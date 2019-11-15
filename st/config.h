@@ -88,7 +88,6 @@ float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-/* solarized */
 "#002b36", 
 "#dc322f",
 "#859900",
