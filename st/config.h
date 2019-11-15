@@ -7,6 +7,7 @@
  */
 static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
+
 static int borderpx = 2;
 
 /*
@@ -84,44 +85,48 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1.0;
+float alpha = 0.8;           //< alpha value used when the window is focused.
+float alphaUnfocussed = 0.6; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#002b36", 
-"#dc322f",
-"#859900",
-"#b58900",
-"#268bd2",
-"#6c71c4",
-"#2aa198",
-"#93a1a1",
-
-"#657b83",
-"#dc322f",
-"#859900",
-"#b58900",
-"#268bd2",
-"#6c71c4",
-"#2aa198",
-"#fdf6e3",
+"#073642",  /*  0: black    */
+"#dc322f",  /*  1: red      */
+"#859900",  /*  2: green    */
+"#b58900",  /*  3: yellow   */
+"#268bd2",  /*  4: blue     */
+"#d33682",  /*  5: magenta  */
+"#2aa198",  /*  6: cyan     */
+"#eee8d5",  /*  7: white    */
+"#002b36",  /*  8: brblack  */
+"#cb4b16",  /*  9: brred    */
+"#586e75",  /* 10: brgreen  */
+"#657b83",  /* 11: bryellow */
+"#839496",  /* 12: brblue   */
+"#6c71c4",  /* 13: brmagenta*/
+"#93a1a1",  /* 14: brcyan   */
+"#fdf6e3",  /* 15: brwhite  */
 
 [255] = 0,
 
 "#002b36",
 "#93a1a1",
-};
 
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 3;
+ };
+ 
+unsigned int defaultfg = 12;
+unsigned int defaultbg = 8;
+static unsigned int defaultcs = 5;
 static unsigned int defaultrcs = 0;
 
-/*
- * Colors used, when the specific fg == defaultfg. So in rever    se mode this
- * will reverse too. Another logic would only make the simple     feature too
- * complex.
+
+/* my default
+ * Default colors (colorname index)
+ * foreground, background, cursor, reverse cursor
+static unsigned int defaultcs = 3;
+static unsigned int defaultrcs = 0;
  */
+
 unsigned int defaultitalic = 7;
 unsigned int defaultunderline = 7;
 
@@ -155,21 +160,27 @@ static unsigned int mousebg = 0;
 static unsigned int defaultattr = 11;
 
 /*
+ * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
+ * Note that if you want to use ShiftMask with selmasks, set this to an other
+ * modifier, set to 0 to not use it.
+ */
+static uint forcemousemod = ShiftMask;
+
+/*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-	{ Button4,              XK_ANY_MOD,     "\031" },
-	{ Button5,              XK_ANY_MOD,     "\005" },
+	/* mask                 button   function        argument       release */
+	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
-static char *openurlcmd[] = { "/bin/sh", "-c",
-	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open",
-	"externalpipe", NULL };
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -183,11 +194,12 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ TERMMOD,              XK_U,           externalpipe,   {.v = openurlcmd } },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
     { Mod1Mask|ControlMask, XK_k,           kscrollup,      {.i = -1} },
 	{ Mod1Mask|ControlMask, XK_j,           kscrolldown,    {.i = -1} },
 
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
@@ -205,10 +217,6 @@ static Shortcut shortcuts[] = {
  * * 0: no value
  * * > 0: cursor application mode enabled
  * * < 0: cursor application mode disabled
- * crlf value
- * * 0: no value
- * * > 0: crlf mode is enabled
- * * < 0: crlf mode is disabled
  *
  * Be careful with the order of the definitions because st searches in
  * this table sequentially, so any XK_ANY_MOD must be in the last
@@ -226,13 +234,6 @@ static KeySym mappedkeys[] = { -1 };
  * numlock (Mod2Mask) and keyboard layout (XK_SWITCH_MOD) are ignored.
  */
 static uint ignoremod = Mod2Mask|XK_SWITCH_MOD;
-
-/*
- * Override mouse-select while mask is active (when MODE_MOUSE is set).
- * Note that if you want to use ShiftMask with selmasks, set this to an other
- * modifier, set to 0 to not use it.
- */
-static uint forceselmod = ShiftMask;
 
 /*
  * This is the huge key array which defines all compatibility to the Linux

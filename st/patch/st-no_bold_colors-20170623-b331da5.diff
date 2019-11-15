@@ -1,5 +1,7 @@
---- x.c
-+++ x.c
+diff --git a/x.c b/x.c
+index fbfd350..110f3cc 100644
+--- a/x.c
++++ b/x.c
 @@ -1158,7 +1158,7 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
  
  	/* Change basic system colors [0-7] to bright system colors [8-15] */

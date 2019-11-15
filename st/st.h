@@ -74,6 +74,7 @@ typedef union {
 	uint ui;
 	float f;
 	const void *v;
+	const char *s;
 } Arg;
 
 void die(const char *, ...);
@@ -81,7 +82,6 @@ void redraw(void);
 void draw(void);
 
 void kscrolldown(const Arg *);
-void externalpipe(const Arg *);
 void kscrollup(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
@@ -124,3 +124,4 @@ extern unsigned int tabspaces;
 extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern float alpha;
+extern float alphaUnfocussed;
