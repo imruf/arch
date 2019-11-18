@@ -11,11 +11,12 @@ plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 
 #SOURCE
 source $ZSH/oh-my-zsh.sh
-#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+#source /home/masud/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
 source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
 #Theme
 ZSH_THEME=powerlevel10k/powerlevel10k
+#ZSH_THEME=robbyrussell
 
 #LIST
 alias ls='ls --color=auto --group-directories-first'
@@ -126,10 +127,8 @@ alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
 #MAIL
+alias newmail='mailsync'
 alias mail='neomutt'
-alias mp="cp mp ~/.muttrc"
-alias ib="cp ib ~/.muttrc"
-alias rr="cp rr ~/.muttrc"
 
 #TRANSMISSION
 
@@ -277,7 +276,7 @@ alias q='exit'
 
 #POWERLEVEL9K
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
 
