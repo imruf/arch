@@ -15,7 +15,9 @@ source $ZSH/oh-my-zsh.sh
 source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
 #Theme
-ZSH_THEME=powerlevel10k/powerlevel10k
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+#ZSH_THEME=powerlevel10k/powerlevel10k
 #ZSH_THEME=robbyrussell
 
 #LIST
