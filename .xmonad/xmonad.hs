@@ -38,7 +38,7 @@ import Control.Monad (liftM2)
 
 
 myStartupHook = do
-    spawn "/usr/local/bin/autostart.sh"
+    spawn "/home/masud/.xmonad/scripts/autostart.sh"
     setWMName "LG3D"
 
 -- colours
@@ -130,112 +130,62 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + FUNCTION KEYS
 
   [ ((modMask, xK_slash), spawn $ "st" ) 
-  , ((modMask, xK_Return), spawn $ "st" )
-  , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
-  , ((modMask, xK_x), spawn $ "oblogout" )
   , ((modMask, xK_p), spawn $ "thunar" )
+  , ((modMask, xK_o), spawn $ "st -e nnn -d" )
+  , ((mod4Mask, xK_o), spawn $ "xterm -e ranger" )
   , ((modMask, xK_semicolon), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'" )
   , ((mod4Mask, xK_semicolon), spawn $ "rofi -show combi" )
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask, xK_y ), kill)
-  , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
+  --, ((modMask .|. shiftMask , xK_x ), spawn $ "pmenu" ))
+  , ((modMask .|. shiftMask , xK_e ), io (exitWith ExitSuccess))
+  , ((modMask, xK_x), spawn $ "oblogout" )
 
-
-
-
-
-
-
-
-
-  , ((0, xK_Print), spawn $ "scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'")
   , ((controlMask, xK_Print), spawn $ "xfce4-screenshooter" )
+  , ((shiftMask, xK_Print), spawn $ "xfce4-screenshooter -w" )
+  , ((0, xK_Print), spawn $ "xfce4-screenshooter -f" )
   , ((controlMask .|. shiftMask , xK_Print ), spawn $ "gnome-screenshot -i")
 
-
-
-  -- Mute volume
-  --, ((0, xF86XK_AudioMute), spawn $ "amixer -q set Master toggle")
+  --volume
   , ((0, xF86XK_AudioMute), spawn $ "set-sink-mute 0 toggle")
-
-  -- Decrease volume
-  --, ((0, xF86XK_AudioLowerVolume), spawn $ "amixer -q set Master 5%-")
   , ((0, xF86XK_AudioLowerVolume), spawn $ "pactl set-sink-volume 0 -5%")
-
-  -- Increase volume
-  --, ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
   , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume 0 +5%")
 
-  -- Increase brightness
+  --brightness
   , ((0, xF86XK_MonBrightnessUp),  spawn $ "xbacklight -inc 5")
-
-  -- Decrease brightness
   , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
 
-  --, ((0, xF86XK_AudioPrev), spawn $ "mpc prev")
-  --, ((0, xF86XK_AudioStop), spawn $ "mpc stop")
-
---  , ((0, xF86XK_AudioPlay), spawn $ "playerctl play-pause")
---  , ((0, xF86XK_AudioNext), spawn $ "playerctl next")
---  , ((0, xF86XK_AudioPrev), spawn $ "playerctl previous")
---  , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
-
-
-  --------------------------------------------------------------------
   --  XMONAD LAYOUT KEYS
 
   -- Cycle through the available layout algorithms.
   , ((modMask, xK_space), sendMessage NextLayout)
 
   --Focus selected desktop
-  , ((mod1Mask, xK_Tab), nextWS)
-
-  --Focus selected desktop
   , ((modMask, xK_Tab), nextWS)
-
-  --Focus selected desktop
-  , ((controlMask .|. mod1Mask , xK_Left ), prevWS)
-
-  --Focus selected desktop
-  , ((controlMask .|. mod1Mask , xK_Right ), nextWS)
+  , ((controlMask .|. modMask , xK_h ), prevWS)
+  , ((controlMask .|. modMask , xK_l ), nextWS)
 
   --  Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf)
 
-  -- Move focus to the next window.
+  -- Move focus window.
   , ((modMask, xK_j), windows W.focusDown)
-
-  -- Move focus to the previous window.
   , ((modMask, xK_k), windows W.focusUp  )
-
-  -- Move focus to the master window.
   , ((modMask .|. shiftMask, xK_m), windows W.focusMaster  )
 
-  -- Swap the focused window with the next window.
-  , ((modMask .|. shiftMask, xK_j), windows W.swapDown  )
-
-  -- Swap the focused window with the next window.
-  , ((controlMask .|. modMask, xK_Down), windows W.swapDown  )
-
-  -- Swap the focused window with the previous window.
-  , ((modMask .|. shiftMask, xK_k), windows W.swapUp    )
-
-  -- Swap the focused window with the previous window.
-  , ((controlMask .|. modMask, xK_Up), windows W.swapUp  )
+  -- Swap the focused window.
+  , ((mod4Mask, xK_j), windows W.swapDown  )
+  , ((mod4Mask, xK_k), windows W.swapUp    )
 
   -- Shrink the master area.
-  , ((controlMask .|. shiftMask , xK_h), sendMessage Shrink)
-
-  -- Expand the master area.
-  , ((controlMask .|. shiftMask , xK_l), sendMessage Expand) 
+  , ((modMask, xK_h), sendMessage Shrink)
+  , ((modMask, xK_l), sendMessage Expand) 
   -- Push window back into tiling.
   , ((controlMask .|. shiftMask , xK_t), withFocused $ windows . W.sink)
 
   -- Increment the number of windows in the master area.
-  , ((controlMask .|. modMask, xK_Left), sendMessage (IncMasterN 1))
-
-  -- Decrement the number of windows in the master area.
-  , ((controlMask .|. modMask, xK_Right), sendMessage (IncMasterN (-1)))
+  , ((shiftMask .|. modMask, xK_i), sendMessage (IncMasterN 1))
+  , ((shiftMask .|. modMask, xK_d), sendMessage (IncMasterN (-1)))
 
   ]
   ++

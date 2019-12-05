@@ -83,15 +83,8 @@ floating_modifier $mod
 
 set $myTerm st
 set $myTerm2 termite
-bindsym $mod+Return exec $myTerm
 bindsym $mod+slash exec $myTerm
 
-
-
-
-
-bindsym $m+y kill
-bindsym $mod+Shift+x kill
 bindsym $mod+y kill
 
 # 4. MENU
@@ -114,33 +107,10 @@ bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-#alternate (arrowkey)
-
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
-
-# 5.2 WINDOW MOVE
-
-#bindsym $mod+Shift+$left move left
-#bindsym $mod+Shift+$down move down
-#bindsym $mod+Shift+$up move up
-#bindsym $mod+Shift+$right move right
-
-#alternate (mod2)
-
 bindsym $m+$left move left
 bindsym $m+$down move down
 bindsym $m+$up move up
 bindsym $m+$right move right
-
-#alternate (arrowkey)
-
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
 
 # 5.3 LAYOUT
 
@@ -175,10 +145,10 @@ set $ws4 ""
 
 # 6.2 NAV WS
 
-#bindsym $mod+1 workspace $ws1
-#bindsym $mod+2 workspace $ws2
-#bindsym $mod+3 workspace $ws3
-#bindsym $mod+4 workspace $ws4
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 
 
 #bindsym $mod+5 workspace $ws5
@@ -194,10 +164,10 @@ bindsym $m+f workspace $ws4
 
 # 6.3 MV WS
 
-#bindsym $mod+Shift+1 move container to workspace $ws1
-#bindsym $mod+Shift+2 move container to workspace $ws2
-#bindsym $mod+Shift+3 move container to workspace $ws3
-#bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
 
 #bindsym $mod+Shift+5 move container to workspace $ws5
 #bindsym $mod+Shift+6 move container to workspace $ws6
@@ -308,23 +278,23 @@ mode "resize" {
 
 # 10. AUTO EXEC
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+exec_always --no-startup-id /home/masud/.config/polybar/launch.sh 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id numlockx on
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager 
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd 
 exec --no-startup-id redshift
-exec_always --no-startup-id xinput set-prop 14 284 1
+#exec_always --no-startup-id xinput set-prop 14 284 1
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
-exec_always feh --bg-scale ~/Pictures/feh/vt/Desktoppr/ultrawide_katana.jpg
+exec_always feh --bg-scale ~/Pictures/feh/i3/glowing_lake.jpg
 
 
 # 11. APP BIND
 
 bindsym $mod+i exec qutebrowser
-bindsym $mod+o exec $myTerm -e nnn
+bindsym $mod+o exec $myTerm -e nnn -d
 bindsym $m+o exec xterm -e ranger
 bindsym $mod+p exec thunar
 bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter 
@@ -352,9 +322,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # 13. BAR/PANNEL
 #bar 
 #	{
-#   	 position top
-#   	 status_command i3status
-#	status_command i3status -c ~/.config/i3/i3status.conf
+#    font pango:mono 10
+#   	status_command i3blocks
+#    position top
+#    mode dock
+#    modifier none
 #	status_command python /usr/lib/python3.7/site-packages/powerline/bindings/i3/powerline-i3.py
 #	font pango:PowerlineFont 12
 #	exec "powerline-lemonbar --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11'"

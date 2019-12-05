@@ -17,13 +17,13 @@ function run {
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
-(run $HOME/.config/polybar/launch.sh) &
+(run /home/masud/.config/polybar/launch.sh) &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
 
 #cursor active at boot
-xsetroot -cursor_name left_ptr &
+#xsetroot -cursor_name left_ptr &
 
 #Some ways to set your wallpaper besides variety or nitrogen
 feh --bg-scale ~/.xmonad/wall.jpg &
@@ -32,12 +32,12 @@ feh --bg-scale ~/.xmonad/wall.jpg &
 
 #starting utility applications at boot time
 #run variety &
-run nm-applet &
+#run nm-applet &
 #run pamac-tray &
-run xfce4-power-manager &
+#xfce4-power-manager &
 numlockx on &
 #blueberry-tray &
-compton --config $HOME/.config/i3/compton.conf &
+picom -b --config $HOME/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
