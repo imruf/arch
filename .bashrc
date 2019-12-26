@@ -15,7 +15,6 @@
 [[ $- != *i* ]] && return
 
 export TERM="xterm-256color"
-export TERM="st-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
@@ -109,6 +108,14 @@ alias upyay="yay -Syu --noconfirm"
 alias tinp='trizen -S'
 alias uptrizen="trizen -Syu --noconfirm"
 alias trizenskip='trizen -S --skipinteg'
+
+#XBPS
+alias up='sudo xbps-install -Su'
+alias pacs='xbps-query -Rs'
+alias inp='sudo xbps-install -S'
+alias rmv='sudo xbps-remove -R'
+alias armv='sudo xbps-remove -o'
+alias ccache='sudo pacman -O'
 
 #MOUNT
 alias mount='udisksctl mount -b'

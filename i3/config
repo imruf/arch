@@ -278,7 +278,7 @@ mode "resize" {
 
 # 10. AUTO EXEC
 
-exec_always --no-startup-id /home/masud/.config/polybar/launch.sh 
+#exec_always --no-startup-id /home/masud/.config/polybar/launch.sh 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id numlockx on
 #exec --no-startup-id nm-applet
@@ -320,6 +320,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 
 # 13. BAR/PANNEL
+bar {
+	font pango:mono 10
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
+
 #bar 
 #	{
 #    font pango:mono 10
