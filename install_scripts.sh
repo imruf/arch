@@ -9,4 +9,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
---noconfirm --needed mpv gimp ibus ibus-m17n m17n-db atool youtube-viewer youtube-dl stardict sdcv android-tools zathura zathura-pdf-mupdf ranger mplayer mlocate libreoffice-still mpd ncmpcpp mutt neomutt optipng compton redshift
+--noconfirm --needed mpv gimp ibus ibus-m17n m17n-db atool youtube-viewer youtube-dl stardict sdcv android-tools zathura zathura-pdf-mupdf ranger mplayer mlocate libreoffice-still mpd ncmpcpp mutt neomutt optipng picom redshift

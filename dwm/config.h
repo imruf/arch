@@ -10,8 +10,8 @@ static const char dmenufont[]       = "LinuxLibertine:bold:pixelsize=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#FFBB00"; /* tag color */
-static const char col_cyan[]        = "#131313"; /* bar color */
+static const char col_gray4[]       = "#839496"; /* tag color */
+static const char col_cyan[]        = "#002b36"; /* bar color */
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
@@ -27,11 +27,11 @@ static const char *colors[][8]      = {
 	[SchemeSel]  =	 { col_gray4, col_cyan,    col_cyan },
 	[SchemeWarn] =	 { col_black, col_yellow,  col_red },
 	[SchemeUrgent]=	 { col_cyan,  "#7197e7",   col_gray1 },
-                     { "#7197e7", col_black,   col_black }, 
-                     { col_cyan,  "#A77AC4",   col_gray1 }, 
-                     { "#A77AC4", col_black,   col_black }, 
-                     { col_cyan,  "#8be9fd",    col_gray1 }, 
-                     { "#FFBB00", col_black,   col_black }, 
+                     { "#7197e7", col_black,   col_black },
+                     { col_cyan,  "#A77AC4",   col_gray1 },
+                     { "#A77AC4", col_black,   col_black },
+                     { col_cyan,  "#8be9fd",    col_gray1 },
+                     { "#FFBB00", col_black,   col_black },
 };
 
 
@@ -45,7 +45,8 @@ static const unsigned int alphas[][3]      = {
 /*static const char col_cyan[]        = "#005577";*/
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "" };
+/* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 /* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 
 static const Rule rules[] = {
@@ -55,16 +56,17 @@ static const Rule rules[] = {
 	 */
 
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
-	{ "firefox",         NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
-	{ "qutebrowser",     NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
-	{ "Surf",            NULL,       NULL,                      1 << 1,       0,           0,         0,        -1 },
+	{ "firefox",         NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
+	{ "qutebrowser",     NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
+	{ "Surf",            NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
 	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
 	{ "Soffice",         NULL,       NULL,                      1 << 3,       0,           0,         0,        -1 },
-    { "Firefox",         NULL,       "Firefox Preferences",     1 << 1,       True,                             -1 },
+    { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
+	{ "libreoffice",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 1,       True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 1,       True,                   1,        -1 },
 };
 
 /* layout(s) */
@@ -74,9 +76,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[T]",      tile },    /* first entry is default */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "[B]",      bstack },
 };
 
 /* key definitions */
@@ -97,10 +100,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "pcmanfm", NULL };
-static const char *bcmd[] = { "firefox", NULL };
+static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *pmenu[] = { "powermenu", NULL };
 static const char *dweb[] = { "dweb", NULL };
-static const char *ips[] = { "i3exit", "suspend", NULL };
+static const char *ips[] = { "i3exit" "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *iph[] = { "i3exit", "shutdown", NULL };
@@ -136,10 +139,12 @@ static Key keys[] = {
 	{ MOD2,                         XK_k,             movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return,        zoom,           {0} },
 	{ MODKEY,                       XK_Tab,           view,           {0} },
+	{ ControlMask,                  XK_space,         view,           {0} },
 	{ MODKEY,                       XK_y,             killclient,     {0} },
 	{ MODKEY,                       XK_t,             setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,             setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,             setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_t,             setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,         setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,         togglefloating, {0} },
 	{ MOD2,                         XK_u,             togglefloating, {0} },
@@ -167,9 +172,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
-	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn -d") },
-	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
-	{ MOD2,                         XK_o,              spawn,          CMD("xterm -e ranger") },
+	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
+	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
+	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") },
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },

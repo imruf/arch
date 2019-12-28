@@ -10,9 +10,12 @@ call vundle#begin()		" required, all plugins must appear after this line.
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
+Plugin 'scrooloose/nerdtree'						" added nerdtree
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'chrisbra/unicode.vim'                       " unicode search
 Plugin 'PotatoesMaster/i3-vim-syntax'               " i3-syntax
 Plugin 'chrisbra/Colorizer'                         " color from rgb
+Plugin 'flazz/vim-colorschemes'                     " vim colorscheme
 
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -56,6 +59,7 @@ map <C-z> "+P
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 syntax on   
+colorscheme solarized8_dark
 
 set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
@@ -78,15 +82,15 @@ let g:Powerline_symbols='unicode'
 let g:Powerline_theme='long'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized_flood'
 
 
-"map <C-n> :NERDTreeToggle<CR>
-"let g:NERDTreeDirArrowExpandable = '▸'
-"let g:NERDTreeDirArrowCollapsible = '▾'
-"let NERDTreeShowLineNumbers=1
-"let NERDTreeShowHidden=1
-"let NERDTreeMinimalUI = 1
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI = 1
 "let g:minimap_show='<leader>mm'
 "let g:minimap_update='<leader>mu'
 "let g:minimap_close='<leader>mc'

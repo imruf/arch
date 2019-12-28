@@ -1,21 +1,14 @@
 #! /bin/bash 
 
-xfce4-power-manager &
-feh --bg-scale ~/Pictures/feh/dwm/frank.jpg &
-redshift &
-numlockx on &
-ibus-daemon -xdr &
-compton --config ~/.config/compton/compton.conf &
+#now the apps are manged with .xprofile
+#xfce4-power-manager &
+#feh --bg-scale ~/Pictures/feh/dwm/city.jpg &
+#redshift &
+#numlockx on &
+#ibus-daemon -xdr &
+#picom --config ~/.config/picom/compton.conf &
 #xinput set-prop 14 284 1 &
 
-
-testweather() { \
-	[ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" != "$(date '+%Y-%m-%d')" ] &&
-		ping -q -c 1 1.1.1.1 >/dev/null &&
-		curl -s "wttr.in/$location" > "$HOME/.local/share/weatherreport" &&
-		notify-send "🌞 Weather" "New weather forecast for today." &&
-		refbar
-		}
 #function get_bytes {
 #interface=$(ip route get 8.8.8.8 2>/dev/null| awk '{print $5}')
 #line=$(grep $interface /proc/net/dev | cut -d ':' -f 2 | awk '{print "received_bytes="$1, "transmitted_bytes="$9}')
@@ -48,15 +41,15 @@ wifi(){
     ssid=$(iwgetid -r)
     sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')
     if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
-	    echo -e "$ssid $sig"
+	    echo -e "$c9 $ssid $sig"
     else
-        echo -e "?"
+        echo -e "$c7 ?"
     fi
 }
 
 dte(){
   dte="$(date +" %d %b, %a|%H:%M ")"
-  echo -ne "$dte"
+  echo -e "$dte"
 }
 
 bat(){
@@ -64,16 +57,16 @@ bat(){
     battery="$(cat /sys/class/power_supply/BAT0/capacity)"
     timer="$(acpi -b | grep "Battery" | awk '{print $5}' | cut -c 1-5)"
     if [ "${status}" == 1 ]; then
-      echo -ne " 🗲 "
+      echo -e "$c9  $c7 🗲 "
     else
 	for x in /sys/class/power_supply/BAT0/capacity;
 	do
 	case "$(cat $x)" in
-		100|9[0-9])	echo -ne "" ;;
-		8[0-9]|7[0-9])	echo -ne "" ;;
-		6[0-9]|5[0-9])	echo -ne "" ;;
-		4[0-9]|3[0-9])	echo -ne "" ;;
-		*)		echo -ne "" ;;
+		100|9[0-9])	echo -e "$c1 " ;;
+		8[0-9]|7[0-9])	echo -e "$c2 " ;;
+		6[0-9]|5[0-9])	echo -e "$c2 " ;;
+		4[0-9]|3[0-9])	echo -e "$c2 " ;;
+		*)		echo -e "$c3 " ;;
 	esac
 	done
     fi
@@ -84,14 +77,14 @@ mem(){
   echo -ne "\x09" " $mem"
 }
 
-cpu() {
+cpu(){
   read cpu a b c previdle rest < /proc/stat
   prevtotal=$((a+b+c+previdle))
   sleep 0.5
   read cpu a b c idle rest < /proc/stat
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-  echo -ne "$cpu% "
+  echo -e "$cpu% "
 }
 
 vol() {
@@ -101,18 +94,16 @@ vol() {
 
 #mpd() {
 #    mpd=$(ncmp)
-#    echo -e "$mpd"
+#    echo -e $mpd
 #}
 
-wr() {
-    [ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] &&
-		sed '16q;d' "$HOME/.local/share/weatherreport" | grep -wo "[0-9]*%" | sort -n | sed -e '$!d' | sed -e "s/^/ /g" | tr -d '\n' &&
-		sed '13q;d' "$HOME/.local/share/weatherreport" | grep -o "m\\(-\\)*[0-9]\\+" | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print " ",$1 "°","",$2 "°"}'
-    }
+#wr() {
+#    wr=$(i3weather)
+#    echo -e $wr
+#}
 
 while true; do
-   testweather &
-   wait
+    
 #	# Get new transmitted, received byte number values and current time
 #	get_bytes
 #
@@ -120,6 +111,8 @@ while true; do
 #	up=$(get_velocity $received_bytes $old_received_bytes $now)
 #   down=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
     
-    xsetroot -name "$(mem)|$(wr)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
-    sleep 60   # Update time every ten seconds
+
+    #xsetroot -name "$(mem)$(cpu)$(vol)$(bat)$sp1$(dte)$(wifi)"
+    xsetroot -name "$(mem)|$(cpu)|$(vol)|$(bat)|$(dte)|$(wifi)"
+    sleep 60    # Update time every ten seconds
 done &

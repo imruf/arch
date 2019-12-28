@@ -85,8 +85,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;           //< alpha value used when the window is focused.
-float alphaUnfocussed = 0.6; //< alpha value used when the focus is lost
+float alpha = 0.9;           //< alpha value used when the window is focused.
+float alphaUnfocussed = 0.8; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -113,7 +113,7 @@ static const char *colorname[] = {
 "#93a1a1",
 
  };
- 
+
 unsigned int defaultfg = 12;
 unsigned int defaultbg = 8;
 static unsigned int defaultcs = 5;
@@ -137,7 +137,7 @@ unsigned int defaultunderline = 7;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
