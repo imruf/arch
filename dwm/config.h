@@ -173,10 +173,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
+	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },
 	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
-	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") },
+	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") }, /* menu-calc script */
 	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
 	{ ShiftMask,                    XK_Print,          spawn,          CMD("xfce4-screenshooter -w") },
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
