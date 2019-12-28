@@ -189,8 +189,8 @@ tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sle
 #}
 
 #MIS
-#alias sys='sudo systemctl'
-alias sys='sudo sv'
+alias sys='sudo systemctl'
+#alias sys='sudo sv'
 alias vol='ncpamixer'
 alias def='sdcv'
 alias radio='curseradio'
@@ -261,7 +261,7 @@ alias ip-isp='curl ifconfig.co'
 #SSH
 alias fst='sudo systemctl start sshd'
 alias fsts='sudo systemctl stop sshd'
-alias termux='ssh -p 8022 u0_a127@192.168.137.234'
+#alias termux='ssh -p 8022 u0_a127@192.168.137.234'
 
 #PNGLatex
 #pnglatex -h for help
