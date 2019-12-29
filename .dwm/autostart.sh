@@ -8,6 +8,7 @@
 #ibus-daemon -xdr &
 #picom --config ~/.config/picom/compton.conf &
 #xinput set-prop 14 284 1 &
+wmname LG3D & #wmname program to define wm name to run java program
 
 #function get_bytes {
 #interface=$(ip route get 8.8.8.8 2>/dev/null| awk '{print $5}')
