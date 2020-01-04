@@ -172,7 +172,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
-	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn") },
+	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn -d") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },

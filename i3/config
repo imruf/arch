@@ -9,7 +9,7 @@ set $m mod4
 
 # 2.1 FONTS
 
-font pango:Noto Sans Mono 11
+font pango:Hack 10
 #font pango:monospace 11
 #font xft:URWGothic-Book 11
 
@@ -78,6 +78,12 @@ new_float normal
 hide_edge_borders none
 floating_modifier $mod
 
+# 2.4 GAPS
+for_window [class="^.*"] border pixel 2
+gaps inner 7
+gaps outer 7
+
+
 
 # 3. TERMINAL EMULATOR
 
@@ -119,10 +125,10 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $m+space split toggle
 
 bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout tabbed
+bindsym $mod+t layout toggle split
 
-bindsym $mod+f fullscreen toggle
+bindsym $mod+m fullscreen toggle
 
 bindsym $m+u floating toggle
 bindsym $mod+space focus mode_toggle
@@ -240,7 +246,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x mode "$mode_system"
 
 
-set $mode_system (l)ock, (e)xit, (h)uspend, (r)eboot, (s)hutdown
+set $mode_system (l)ock, (e)xit, (s)uspend, (r)eboot, (h)halt
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
@@ -252,6 +258,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" "i3-msg exit"
+
 
 
 # 9. RESIZE
@@ -283,19 +291,19 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id numlockx on
 #exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager 
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd 
+#exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd 
 exec --no-startup-id redshift
 #exec_always --no-startup-id xinput set-prop 14 284 1
 exec_always --no-startup-id numlockx on
-exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
-exec_always feh --bg-scale ~/Pictures/feh/i3/glowing_lake.jpg
+#exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+#exec_always feh --bg-scale ~/Pictures/feh/i3/glowing_lake.jpg
 
 
 # 11. APP BIND
 
 bindsym $mod+i exec qutebrowser
 bindsym $mod+o exec $myTerm -e nnn -d
-bindsym $m+o exec xterm -e ranger
+bindsym $m+o exec st -e ranger
 bindsym $mod+p exec thunar
 bindsym ctrl+Print exec --no-startup-id xfce4-screenshooter 
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
@@ -321,9 +329,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # 13. BAR/PANNEL
 bar {
-	font pango:mono 10
+	font pango:Hack 10 
 	status_command i3blocks
-	position top
+	position bottom
 	mode dock
 	modifier None
 }

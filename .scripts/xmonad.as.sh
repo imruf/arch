@@ -23,7 +23,7 @@ function run {
 #setxkbmap -layout be
 
 #cursor active at boot
-#xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr &
 
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.xmonad/wall.jpg &

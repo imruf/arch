@@ -38,7 +38,7 @@ import Control.Monad (liftM2)
 
 
 myStartupHook = do
-    spawn "/home/masud/.xmonad/scripts/autostart.sh"
+    spawn "/home/masud/.scripts/xmonad.as.sh"
     setWMName "LG3D"
 
 -- colours
@@ -57,7 +57,8 @@ myModMask = mod1Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
-myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
+myWorkspaces    = ["\61705","\61501","\61612","\61564","\61947","\61502","\61899","\61635","\62150","\61872"]
+--myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
 --myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10"]
 --myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
 
@@ -130,9 +131,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + FUNCTION KEYS
 
   [ ((modMask, xK_slash), spawn $ "st" ) 
-  , ((modMask, xK_p), spawn $ "thunar" )
-  , ((modMask, xK_o), spawn $ "st -e nnn -d" )
-  , ((mod4Mask, xK_o), spawn $ "xterm -e ranger" )
+  , ((modMask, xK_p), spawn $ "pcmanfm" )
+  , ((mod4Mask, xK_p), spawn $ "st -e lf" )
+  , ((modMask, xK_o), spawn $ "st -e nnn" )
+  , ((mod4Mask, xK_o), spawn $ "st -e ranger" )
   , ((modMask, xK_semicolon), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'" )
   , ((mod4Mask, xK_semicolon), spawn $ "rofi -show combi" )
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
@@ -144,7 +146,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask, xK_Print), spawn $ "xfce4-screenshooter" )
   , ((shiftMask, xK_Print), spawn $ "xfce4-screenshooter -w" )
   , ((0, xK_Print), spawn $ "xfce4-screenshooter -f" )
-  , ((controlMask .|. shiftMask , xK_Print ), spawn $ "gnome-screenshot -i")
 
   --volume
   , ((0, xF86XK_AudioMute), spawn $ "set-sink-mute 0 toggle")
@@ -152,8 +153,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume 0 +5%")
 
   --brightness
-  , ((0, xF86XK_MonBrightnessUp),  spawn $ "xbacklight -inc 5")
-  , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
+  --, ((0, xF86XK_MonBrightnessUp),  spawn $ "xbacklight -inc 5")
+  --, ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
 
   --  XMONAD LAYOUT KEYS
 
