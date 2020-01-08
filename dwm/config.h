@@ -64,9 +64,9 @@ static const Rule rules[] = {
     { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       True,                             -1 },
     { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-	{ "libreoffice",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 1,       True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 1,       True,                   1,        -1 },
+	{ "libreoffice",     NULL,           NULL,                  1 << 3,       0,           0,         0,        -1 },
+    { "mpv",             NULL,       "mpv",                     0,       True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 0,       True,                   1,        -1 },
 };
 
 /* layout(s) */
@@ -176,13 +176,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },
-	{ 0,                            XK_Print,          spawn,          CMD("xfce4-screenshooter -f") },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") }, /* menu-calc script */
-	{ ControlMask,                  XK_Print,          spawn,          CMD("xfce4-screenshooter") },
-	{ ShiftMask,                    XK_Print,          spawn,          CMD("xfce4-screenshooter -w") },
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
+	{ 0,                            XK_Print,          spawn,          CMD("scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'") },
+	{ ShiftMask,                    XK_Print,          spawn,          CMD("scrot -u '%Y-%d-%m_$wx$h.png' -e 'mv $f ~/shots/'") },
 };
 
 /* button definitions */
