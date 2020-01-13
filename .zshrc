@@ -27,6 +27,12 @@ alias lah='ls -lah --color=auto'
 alias l='ls' 					
 alias l.="ls -A | egrep '^\.'"      
 
+#Files
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -v"
+alias mkd="mkdir -pv"
+
 #TYPO
 alias cd..='cd ..'
 alias pdw="pwd"
@@ -35,6 +41,9 @@ alias pdw="pwd"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+#diff
+alias diff="diff --color=auto" \
 
 #FREE
 alias free="free -mt"
@@ -173,21 +182,6 @@ tsmdel() { transmission-remote -t"$1" --remove ;}           # leaves data alone
 tsminfo() { transmission-remote -t"$1" --info ;} #info
 tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
 
-#nnn
-#alias nnn='nnn -d'
-#[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
-#n()
-#{
-#        export NNN_TMPFILE=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
-#
-#        nnn "$@"
-#
-#        if [ -f $NNN_TMPFILE ]; then
-#                . $NNN_TMPFILE
-#                rm -f $NNN_TMPFILE > /dev/null
-#        fi
-#}
-
 #MIS
 alias sys='sudo systemctl'
 #alias sys='sudo sv'
@@ -204,11 +198,10 @@ alias imgur='imgur_downloader'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
 alias tweet='turses'
-alias mkdir='mkdir -p'
 alias pdf='zathura'
 alias el='elinks'
+alias ka='killall'
 #alias ibus='ibus-daemon -xdr'
-
 
 alias vim='nvim'
 
@@ -279,34 +272,20 @@ alias i3='cp .xinit/i3.xinitrc .xinitrc && gui'
 alias xfce='cp .xinit/xfce.xinitrc .xinitrc && gui'
 alias xmonad='cp .xinit/xmonad.xinitrc .xinitrc && gui'
 
-
-
-
 #POWERMANAGEMENT
 #alias iph='i3exit suspend'
 #alias ipl='i3exit lock'
 #alias ips='i3exit shutdown'
 #alias ipr='i3exit reboot'
+alias bat="cat /sys/class/power_supply/BAT?/capacity" \
 
 alias q='exit'
-
 
 #Bind
 #bindkey -v
 
-#POWERLEVEL9K
-
-#POWERLEVEL9K_MODE='nerdfont-complete'
-
 #FETCH
 pfetch
-#neofetch --ascii_distro arcolinux_small
-#alias neo='neofetch --ascii_distro arcolinux_small'
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
