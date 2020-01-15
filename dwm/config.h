@@ -111,8 +111,8 @@ static const char *ipl[] = { "i3exit", "lock", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-/* static const char *brdec[] = { "brightnessctl", "s", "5-", "radeon_bl0", NULL }; */
-/* static const char *brinc[] = { "brightnessctl", "s", "+5", "radeon_bl0", NULL }; */
+static const char *brdec[] = { "brightnessctl", "s", "5%-", NULL };
+static const char *brinc[] = { "brightnessctl", "s", "+5%", NULL };
 /* static const char *roficmd[] = { "rofi", "-show", "combi", NULL }; */
 /* static const char *rbang[] = { "rbang", NULL }; */
 
@@ -176,6 +176,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },
+    { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc } },
+    { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec } },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("=") }, /* menu-calc script */
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
