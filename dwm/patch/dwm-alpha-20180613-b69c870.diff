@@ -5,21 +5,21 @@ Subject: [PATCH] Allow dwm to have translucent bars, while keeping all the
  text on it opaque, just like the alpha-patch for st. Updated for b69c870.
 
 ---
- config.h     |  7 ++++++
+ config.def.h |  7 ++++++
  config.mk    |  2 +-
  drw.c        | 26 ++++++++++++-----------
  drw.h        |  9 +++++---
  dwm.c        | 60 ++++++++++++++++++++++++++++++++++++++++++++++------
  5 files changed, 82 insertions(+), 22 deletions(-)
 
-diff --git a/config.h b/config.h
+diff --git a/config.def.h b/config.def.h
 index 1c0b587..4f68fe8 100644
---- a/config.h
-+++ b/config.h
+--- a/config.def.h
++++ b/config.def.h
 @@ -12,11 +12,18 @@ static const char col_gray2[]       = "#444444";
  static const char col_gray3[]       = "#bbbbbb";
- static const char col_gray4[]       = "#bbbbbb";
- static const char col_cyan[]        = "#131313";
+ static const char col_gray4[]       = "#eeeeee";
+ static const char col_cyan[]        = "#005577";
 +static const unsigned int baralpha = 0xd0;
 +static const unsigned int borderalpha = OPAQUE;
  static const char *colors[][3]      = {
