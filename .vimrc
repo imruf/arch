@@ -59,7 +59,6 @@ map <C-z> "+P
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 syntax on   
-colorscheme solarized8_dark
 
 set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
@@ -119,3 +118,5 @@ syntax on
 
 
 map <leader>h :ColorHighlight
+noremap <leader>u :w \| startinsert \| term urlview %<cr>
+":nnoremap <leader>u :silent w\|!urlview %<CR>

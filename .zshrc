@@ -20,15 +20,16 @@ source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-them
 #ZSH_THEME=powerlevel10k/powerlevel10k
 #ZSH_THEME=robbyrussell
 
+#Files
 #LIST
 alias ls='ls --color=auto --group-directories-first'
-alias la='ls -a --color=auto'
-alias lah='ls -lah --color=auto'
-alias l='ls' 					
-alias l.="ls -A | egrep '^\.'"      
+alias lsa='ls -lah --color=auto --group-directories-first'
+#alias la='ls -a --color=auto'
+#alias lah='ls -lah --color=auto'
+#alias l='ls' 					
+#alias l.="ls -A | egrep '^\.'"      
 
-#Files
-alias cp="cp -iv"
+alias cp="cp -v"
 alias mv="mv -iv"
 alias rm="rm -v"
 alias mkd="mkdir -pv"
@@ -69,8 +70,25 @@ alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 #GRUB
 #alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-#DATABASE
+#DATABASE/Search #fzf
 alias updb='sudo updatedb'
+alias e='fzf_file'
+alias f='fzf_cd'
+alias k='fzf_kill'
+alias h='fzf_history'
+
+
+fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+
+# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
+
+fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
+
+fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
+
+fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+
+# ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
 
 #FONTS
 alias fc='sudo fc-cache -fv'
@@ -155,7 +173,7 @@ alias mail='neomutt'
 
 #TRANSMISSION
 
-alias pfx='peerflix -k'
+alias pfx='peerflix -k -f /home/masud/Videos/ptfx'
 alias tfx='torrentflix'
 
 tsmcc() {
@@ -277,7 +295,7 @@ alias xmonad='cp .xinit/xmonad.xinitrc .xinitrc && gui'
 #alias ipl='i3exit lock'
 #alias ips='i3exit shutdown'
 #alias ipr='i3exit reboot'
-alias bat="cat /sys/class/power_supply/BAT?/capacity" \
+#alias bat="cat /sys/class/power_supply/BAT?/capacity" \
 
 alias q='exit'
 
@@ -285,7 +303,7 @@ alias q='exit'
 #bindkey -v
 
 #FETCH
-pfetch
+alias inf='pfetch'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

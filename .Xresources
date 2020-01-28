@@ -1,119 +1,36 @@
-! ------------------------------------------------------------------------------
-! xterm standard arcolinux theme
-! ------------------------------------------------------------------------------
-! https://critical.ch/xterm/
-! ------------------------------------------------------------------------------
-
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
 Xft.autohint: true
 Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-!Xft.lcdfilter: lcdfilter
-!Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
 
 XTerm*renderFont: true
-xterm*font: 8x16
-xterm*faceName: Hack
+XTerm*faceName: xft:Hack
 XTerm*faceSize: 12
 XTerm*utf8: 2
 XTerm*locale: true
-xterm*loginShell: true
-xterm*vt100*geometry: 90x34
-xterm*saveLines: 2000
-xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName: xterm-color
-xterm*eightBitInput: false
 
-xterm*foreground: #93a1a1
-xterm*background: #002b36
-xterm*color0: #002b36
-xterm*color1: #dc322f 
-xterm*color2: #859900 
-xterm*color3: #b58900 
-xterm*color4: #268bd2 
-xterm*color5: #6c71c4 
-xterm*color6: #2aa198 
-xterm*color7: #93a1a1 
-xterm*color8: #657b83
-xterm*color9: #dc322f
-xterm*color10: #859900
-xterm*color11: #b58900
-xterm*color12: #268bd2
-xterm*color13: #6c71c4
-xterm*color14: #2aa198
-xterm*color15: #fdf6e3
-xterm*color16: #002b36
-xterm*color17: #93a1a1
-
-! ------------------------------------------------------------------------------
-! URxvt standard arcolinux theme - Reload with xrdb -merge ~/.Xresources
-! ------------------------------------------------------------------------------
-
-! general settings
-URxvt*imLocale:         en_US.UTF-8
-URxvt*saveline:         15000
-URxvt*termName:         xterm-256color
-URxvt*urgentOnBell:     false
-URxvt*visualBell:       false
-URxvt*iso14755:         false
-URxvt*iso14755_52:      false
-URxvt*meta8:            false
-URxvt*metaSendsEscape:  true
-URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
-
-! appearance
-URxvt*depth:             32
-URxvt*transparent:      false
-URxvt*shading:          30
-!URxvt*background:       rgba:0000/0000/0000/AAAA
-!URxvt*background:       [80]#404552
-!URxvt*background:       [70]#3F424A
-URxvt*background:        #002b36
-URxvt*foreground:        #93a1a1
-URxvt*underlineColor:    #4682B4
-URxvt*highlightColor:    #4682B4
-URxvt*throughColor:      Blue
-URxvt*cursorColor:       #cb4c16
-URxvt*scrollBar:         false
-URxvt*scrollTtyOutput:   false
-URxvt*scrollWithBuffer:  true
-URxvt*scrollTtyKeypress: true
-URxvt*internalBorder:    0
-URxvt*externalBorder:    0
-URxvt*colorIT:      	 #87af5f
-URxvt*colorBD:      	 #c5c8c6
-URxvt*colorUL:      	 #87afd7
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
 
 
-! colors
-URxvt*color0: #002b36
-URxvt*color1: #dc322f
-URxvt*color2: #859900
-URxvt*color3: #b58900
-URxvt*color4: #268bd2
-URxvt*color5: #6c71c4
-URxvt*color6: #2aa198
-URxvt*color7: #93a1a1
-URxvt*color8: #657b83
-URxvt*color9: #dc322f
-URxvt*color10: #859900
-URxvt*color11: #b58900
-URxvt*color12: #268bd2
-URxvt*color13: #6c71c4
-URxvt*color14: #2aa198
-URxvt*color15: #fdf6e3
-URxvt*color16: #cb4b16
-URxvt*color17: #d33682
-URxvt*color18: #073642
-URxvt*color19: #586e75
-URxvt*color20: #839496
-URxvt*color21: #eee8d5
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
 
-! fonts
-URxvt.font: xft:UbuntuMono Nerd Font:pixelsize:20:antialias=true:autohint=true, \
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+Urxvt*buffered: false
+URxvt.intensityStyles: false
+URxvt.font: xft:UbuntuMono Nerd Font:size=13, \
             xft:Inconsolata Nerd Font Mono:size=13, \
             xft:DejaVuSansMono Nerd Font:size=13, \
             xft:DroidSansMono Nerd Font:size=13, \
@@ -121,97 +38,56 @@ URxvt.font: xft:UbuntuMono Nerd Font:pixelsize:20:antialias=true:autohint=true, 
             xft:RobotoMono Nerd Font:size=13, \
             xft:Noto Sans Mono:size=13, \
             xft:Monospace:style=Medium:size=13   
-URxvt*letterSpace: 	    		-2
-URxvt*imFont:               	xft:Monospace:regular:size=12
-URxvt*boldFont:             	xft:Monospace:bold:size=12
-URxvt*italicFont:           	xft:Monospace:italic:size=12
-URxvt*boldItalicFont:     		xft:Monospace:regular:size=12
-! run :.!fc-list | grep <font-name>
+URxvt.saveLines: 2000
+URxvt.scrollBar: false
+URxvt.cursorColor: white
 
-! perl extensions
-URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
-!URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,tabbed
-
-! macros for clipboard and selection
-URxvt*copyCommand:      xclip -i -selection clipboard
-URxvt*pasteCommand:     xclip -o -selection clipboard
-URxvt*keysym.M-c:       perl:clipboard:copy
-URxvt*keysym.m-v:       perl:clipboard:paste
-URxvt*keysym.M-C-v:     perl:clipboard:paste_escaped
-URxvt*keysym.M-Escape:  perl:keyboard-select:activate
-URxvt*keysym.M-s:       perl:keyboard-select:search
-URxvt*keysym.M-u:       perl:url-select:select_next
-URxvt*resize-font.smaller:	C-Down
-URxvt*resize-font.bigger:	C-Up
-URxvt*urlLauncher:      elinks
-URxvt*underlineURLs:    true
-URxvt*urlButton:        1
-URxvt*geometry: 		90x30
-
-! tabbed
-URxvt*tabbed.tabbar-fg: 4
-URxvt*tabbed.tabbar-bg: 16
-URxvt*tabbed.tab-fg:    15
-URxvt*tabbed.tab-bg:    4
-URxvt*buffered:         false
-URxvt*keysym.Control-Shift-C: perl:clipboard:copy
-URxvt*keysym.Control-Shift-V: perl:clipboard:paste
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger:  C-k
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt*depth: 32
 
 
+! Dracula Xresources palette
+!! COLORS
 
+! special
+URxvt*foreground:   #bbc5ff
+URxvt*background:   [95]#292d3e
+URxvt*cursorColor:  #bbc5ff
 
+XTerm*foreground: #d8dee9
+XTerm*background: #2e3440
+XTerm*cursorColor: #d8dee9
 
-! ------------------------------------------------------------------------------
-! UXTerm standard arcolinux theme
-! ------------------------------------------------------------------------------
-
-
-
-! termtype
-UXTerm*termName: xterm-256color
-
-
-UXTerm*cursorColor:        white
-UXTerm*VT100.geometry:     90x30
-UXTerm*font:               UbuntuMono Nerd Font
-UXTerm*faceSize:		   12
-UXTerm*dynamicColors:      true
-UXTerm*utf8:               2
-UXTerm*eightBitInput:      true
-UXTerm*saveLines:          10000
-UXTerm*scrollKey:          true
-UXTerm*scrollTtyOutput:    false
-UXTerm*scrollBar:          false
-UXTerm*rightScrollBar:     false
-UXTerm*jumpScroll:         true
-UXTerm*multiScroll:        true
-UXTerm*toolBar:            false
-
-! fix colors
-UXTerm*foreground: #93a1a1
-UXTerm*background: #002b36
-UXTerm*color0: #002b36
-UXTerm*color1: #dc322f
-UXTerm*color2: #859900
-UXTerm*color3: #b58900
-UXTerm*color4: #268bd2
-UXTerm*color5: #6c71c4
-UXTerm*color6: #2aa198
-UXTerm*color7: #93a1a1
-UXTerm*color8: #657b83
-UXTerm*color9: #dc322f
-UXTerm*color10: #859900
-UXTerm*color11: #b58900
-UXTerm*color12: #268bd2
-UXTerm*color13: #6c71c4
-UXTerm*color14: #2aa198
-UXTerm*color15: #fdf6e3
-UXTerm*color16: #cb4b16
-UXTerm*color17: #d33682
-UXTerm*color18: #073642
-UXTerm*color19: #586e75
-UXTerm*color20: #839496
-UXTerm*color21: #eee8d5
-UXTerm*boldMode: false
-UXTerm*colorBDMode: true
-UXTerm*colorBD: rgb:3f/3f/3f
+*.color0:       #3b4252
+*.color1:       #bf616a
+*.color2:       #a3be8c
+*.color3:       #ebcb8b
+*.color4:       #81a1c1
+*.color5:       #b48ead
+*.color6:       #88c0d0
+*.color7:       #e5e8f0
+*.color8:       #4c566a
+*.color9:       #bf616a
+*.color10:      #a3be8c
+*.color11:      #ebcb8b
+*.color12:      #81a1c1
+*.color13:      #b48ead
+*.color14:      #8fbcbb
+*.color15:      #eceff4

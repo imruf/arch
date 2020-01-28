@@ -7,7 +7,6 @@
  */
 static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
-
 static int borderpx = 2;
 
 /*
@@ -110,13 +109,40 @@ static const char *colorname[] = {
 [255] = 0,
 
 "#002b36",
-"#93a1a1",
+"#839496",
+"#dc322f", /* 258 -> cursor */
 
  };
 
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
-static unsigned int defaultcs = 5;
+static const char *altcolorname[] = {
+"#073642",
+"#dc322f",
+"#859900",
+"#b58900",
+"#268bd2",
+"#d33682",
+"#2aa198",
+"#eee8d5",
+"#002b36",
+"#cb4b16",
+"#586e75",
+"#657b83",
+"#839496",
+"#6c71c4",
+"#93a1a1",
+"#fdf6e3",
+
+[255] = 0,
+
+"#fdf6e3",
+"#657b83",
+"#dc322f", /* 258 -> cursor */
+
+ };
+
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 0;
 
 
@@ -195,6 +221,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_P,           swapcolors,     {.i =  0} },
     { Mod1Mask|ControlMask, XK_k,           kscrollup,      {.i = -1} },
 	{ Mod1Mask|ControlMask, XK_j,           kscrolldown,    {.i = -1} },
 
