@@ -168,8 +168,8 @@ alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
 #MAIL
-alias newmail='mailsync'
-alias mail='neomutt'
+#alias newmail='mailsync'
+alias mail='mailsync && neomutt'
 
 #TRANSMISSION
 
@@ -217,6 +217,8 @@ alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
 alias tweet='turses'
 alias pdf='zathura'
+alias img='sxiv'
+alias calc='sc-im'
 alias el='elinks'
 alias ka='killall'
 #alias ibus='ibus-daemon -xdr'
@@ -258,7 +260,8 @@ alias tors='sys stop tor.service'
 alias ctorc='torsocks elinks 'https://check.torproject.org/''
 #alias ctorb='torsocks surf https://check.torproject.org/'
 
-#IP
+#IP/PING
+alias pnet='ping -c 3 google.com'
 alias myip='ip addr show'
 alias ip-isp='curl ifconfig.co'
 #curl ifconfig.co/json
@@ -307,3 +310,5 @@ alias inf='pfetch'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+source /home/masud/.config/broot/launcher/bash/br
