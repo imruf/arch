@@ -1,0 +1,29 @@
+[Default Applications]
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
+x-scheme-handler/mailto=mail.desktop;
+text/x-shellscript=text.desktop;
+application/postscript=pdf.desktop;
+image/gif=img.desktop;
+application/rss+xml=rss.desktop
+
+[Added Associations]
+text/x-csrc=mousepad.desktop;
+text/plain=nvim.desktop;
+text/markdown=nvim.desktop;
+text/x-patch=nvim.desktop;
+image/png=sxiv-rifle.desktop;
+image/jpeg=sxiv-rifle.desktop;
+audio/mpeg=mpv.desktop;
+video/x-flv=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/webm=mpv.desktop;
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+application/json=vim-usercreated-1.desktop;
+application/x-shellscript=nvim.desktop;
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
