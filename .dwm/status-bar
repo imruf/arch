@@ -1,0 +1,63 @@
+#!/bin/sh
+
+ptime() {
+  echo "CST "$(TZ="Asia/Shanghai" date "+%H:%M") "/ "$(date "+%a %b %e %l:%M %p")
+}
+
+pwifi() {
+  echo " "$(iw wlp2s0 link | grep signal | awk -F ": " '{print $2}')
+}
+
+pram() {
+  echo " "$(free -h | awk '/^Mem:/{print $3}')
+}
+
+pload() {
+  echo ""$(uptime | awk -F '[a-z]:' '{print $2}')
+}
+
+pbrtns() {
+  echo " "$(xbacklight | sed "s/\.[0-9]*$/%/")
+}
+
+pvol() {
+  # care about balanced sounds only :D
+  echo " "$(amixer get Master | grep -G "^\s*Front Left" | awk -F "[][]" '{print $2}')
+}
+
+pbat() {
+  STAT=$(acpi -i | sed -E "s/^Battery 0:\s([a-zA-Z\s]*),.*$/\1/" | head -n1)
+  PERC=$(acpi -i | grep -m 1 "Battery 0:" | awk -F ', ' '{print $2}' | sed -E "s/([0-9]*)%/\1/")
+  if [ $STAT == "Charging" ]; then
+    echo " $PERC%" 
+  elif [ "$PERC" == "100" ]; then 
+    echo " $PERC%"
+  elif [ "$PERC" -gt "75" ]; then
+    echo " $PERC%"
+  elif [ "$PERC" -gt "50" ]; then
+    echo " $PERC%"
+  elif [ "$PERC" -gt "10" ]; then
+    echo " $PERC%"
+  elif [ "$PERC" -gt "0" ]; then
+    echo " $PERC%"
+  fi
+}
+
+pmail() {
+  notmuch new > /dev/null 
+  COUNT=$(notmuch count tag:unread)
+  echo " $COUNT"
+}
+
+render_bar() {
+  echo "$(pmail)  $(pbat)  $(pvol)  $(pbrtns)  $(pwifi)  $(ptime)"
+}
+
+main() {
+  while true; do 
+    xsetroot -name "$(render_bar)"
+    sleep 1
+  done
+}
+
+main

@@ -1,6 +1,6 @@
 #! /bin/bash 
 
-wmname LG3D & #define wm name requited to run some java program
+wmname LG3D & #wmname program to define wm name to run java program
 
 wifi() {
     ssid=$(iwgetid -r)
@@ -8,8 +8,7 @@ wifi() {
     if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
 	    echo -e "$ssid $sig"
     else
-        echo -e "📡"
-#        echo -e "?"
+        echo -e "?"
     fi
 }
 
@@ -23,7 +22,7 @@ bat() {
     battery="$(cat /sys/class/power_supply/BAT0/capacity)"
     timer="$(acpi -b | grep "Battery" | awk '{print $5}' | cut -c 1-5)"
     if [ "${status}" == 1 ]; then
-      echo -e " 🗲 $battery%"
+      echo -e " 🗲"
     else
 	for x in /sys/class/power_supply/BAT0/capacity;
 	do
@@ -39,8 +38,8 @@ bat() {
 }
 
 mem(){
-  mem=`free -h | awk '/Mem/ {printf $3 B}'`
-  echo -ne "\x09" ░▒▒░ " "$mem"B"
+  mem=`free | awk '/Mem/ {printf "%d MiB\n", $3 / 1024.0}'`
+  echo -ne "\x09" ░▒▓ " $mem"
 }
 
 cpu() {
