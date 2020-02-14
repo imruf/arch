@@ -133,7 +133,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   [ ((modMask, xK_slash), spawn $ "st" ) 
   , ((modMask, xK_p), spawn $ "pcmanfm" )
   , ((mod4Mask, xK_p), spawn $ "st -e lf" )
-  , ((modMask, xK_o), spawn $ "st -e nnn" )
+  , ((modMask, xK_o), spawn $ "st -e nnn -d" )
   , ((mod4Mask, xK_o), spawn $ "st -e ranger" )
   , ((modMask, xK_semicolon), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'" )
   , ((mod4Mask, xK_semicolon), spawn $ "rofi -show combi" )
