@@ -175,7 +175,7 @@ c.content.autoplay = False
 # c.content.xss_auditing = False
 
 c.downloads.location.directory = '~/Downloads'
-c.downloads.location.prompt = False
+c.downloads.location.prompt = True
 # c.downloads.location.remember = True
 # c.downloads.location.suggestion = 'path'
 # c.downloads.open_dispatcher = None
@@ -584,7 +584,7 @@ config.bind('<Ctrl-u>', 'undo')
 # config.bind('<Alt-D>', 'rl-kill-word', mode='prompt')
 # config.bind('<Alt-F>', 'rl-forward-word', mode='prompt')
 # config.bind('<Alt-Shift-Y>', 'prompt-yank --sel', mode='prompt')
-# config.bind('<Alt-Y>', 'prompt-yank', mode='prompt')
+config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
 # config.bind('<Ctrl-?>', 'rl-delete-char', mode='prompt')
 # config.bind('<Ctrl-A>', 'rl-beginning-of-line', mode='prompt')
 # config.bind('<Ctrl-B>', 'rl-backward-char', mode='prompt')

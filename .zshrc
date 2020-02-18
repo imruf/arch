@@ -168,8 +168,8 @@ alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
 #MAIL
-#alias newmail='mailsync'
-alias mail='mailsync && neomutt'
+alias newmail='mailsync'
+alias mail='neomutt'
 
 #TRANSMISSION
 

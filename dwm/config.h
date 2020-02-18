@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -12,7 +12,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#b58900"; /* tag color */
-static const char col_cyan[]        = "#002b36"; /* bar color */
+static const char col_cyan[]        = "#0a0f14"; /* bar color */
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
@@ -59,15 +59,12 @@ static const Rule rules[] = {
 	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
 	{ "firefox",         NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
 	{ "qutebrowser",     NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
-	{ "Surf",            NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
 	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
-	{ "Soffice",         NULL,       NULL,                      1 << 3,       0,           0,         0,        -1 },
     { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       True,                             -1 },
-    { "Galculator",      NULL,       "Galculator",              0,            True,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 	{ "libreoffice",     NULL,           NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     0,       True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 0,       True,                   1,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
 };
 
 /* layout(s) */
@@ -109,9 +106,9 @@ static const char *ipr[] = { "i3exit", "reboot", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *iph[] = { "i3exit", "shutdown", NULL };
 static const char *ipl[] = { "i3exit", "lock", NULL };
-static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *brdec[] = { "brightnessctl", "s", "5%-", NULL };
 static const char *brinc[] = { "brightnessctl", "s", "+5%", NULL };
 /* static const char *roficmd[] = { "rofi", "-show", "combi", NULL }; */
@@ -186,8 +183,9 @@ static Key keys[] = {
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
-	{ 0,                            XK_Print,          spawn,          CMD("scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'") },
-	{ ShiftMask,                    XK_Print,          spawn,          CMD("scrot -u '%Y-%d-%m_$wx$h.png' -e 'mv $f ~/shots/'") },
+	{ 0,                            XK_Print,          spawn,          CMD("maim ~/ss/$(date +%d%h%T).png") },
+	{ ShiftMask,                    XK_Print,          spawn,          CMD("maim -i $(xdotool getactivewindow) ~/ss/$(date +%d%h%T).png") },
+	{ ControlMask,                  XK_Print,          spawn,          CMD("maim -s ~/ss/$(date +%d%h%T).png") },
 };
 
 /* button definitions */
