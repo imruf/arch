@@ -60,11 +60,11 @@ static const Rule rules[] = {
 	{ "firefox",         NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
 	{ "qutebrowser",     NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
 	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
-    { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       True,                             -1 },
+    { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       1,                             -1 },
 	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
 	{ "libreoffice",     NULL,           NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 2,       True,                   1,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 2,       True,                   1,        -1 },
+    { "mpv",             NULL,       "mpv",                     1 << 1,       1,                      0,        -1 },
+    { "MPlayer",         NULL,       "MPlayer",                 1 << 1,       1,                      0,        -1 },
 };
 
 /* layout(s) */
@@ -94,24 +94,24 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "pcmanfm", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
-static const char *pmenu[] = { "powermenu", NULL };
+static const char *bcmd2[] = { "firefox", NULL };
 static const char *dweb[] = { "dweb", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
-static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *iph[] = { "i3exit", "shutdown", NULL };
 static const char *ipl[] = { "i3exit", "lock", NULL };
+static const char *pmenu[] = { "powermenu", NULL };
 static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *brdec[] = { "brightnessctl", "s", "5%-", NULL };
 static const char *brinc[] = { "brightnessctl", "s", "+5%", NULL };
-/* static const char *roficmd[] = { "rofi", "-show", "combi", NULL }; */
+static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
 /* static const char *rbang[] = { "rbang", NULL }; */
 
 #include <X11/XF86keysym.h>
@@ -124,6 +124,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fmcmd } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
+	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,             focusstack,     {.i = -1 } },
