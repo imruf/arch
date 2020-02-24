@@ -102,7 +102,6 @@ static SiteStyle styles[] = {
 static Key keys[] = {
 	/* modifier              keyval          function    arg */
 	{ MODKEY,                GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO") },
-	{ MODKEY,                GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
 	{ MODKEY,                GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
 
 	{ 0,                     GDK_KEY_Escape, stop,       { 0 } },
