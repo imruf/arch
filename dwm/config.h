@@ -12,13 +12,13 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#b58900"; /* tag color */
-static const char col_cyan[]        = "#0a0f14"; /* bar color */
+static const char col_cyan[]        = "#0a0f14"; /* bar color #0a0f14*/
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
-static const char col_y2[]          = "#fea63c";
+static const char col_y2[]          = "#fea63c"; /* #fea63c */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 
@@ -32,7 +32,7 @@ static const char *colors[][8]      = {
                      { col_cyan,  "#A77AC4",   col_gray1 },
                      { "#A77AC4", col_black,   col_black },
                      { col_cyan,  "#8be9fd",    col_gray1 },
-                     { "#FFBB00", col_black,   col_black },
+                     { "#b58900", col_black,   col_black },
 };
 
 
@@ -56,15 +56,15 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 
-	/* class             instance    title                      tags mask     isfloating   isterminal noswallow monitor */
-	{ "firefox",         NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
-	{ "qutebrowser",     NULL,       NULL,                      1 << 2,       0,           0,         0,        -1 },
-	{ "st",              NULL,       NULL,                      0,            0,           1,         1,        -1 },
-    { "firefox",         NULL,       "Firefox Preferences",     1 << 2,       1,                             -1 },
-	{ "libreoffice-startcenter",  NULL,  NULL,                  1 << 3,       0,           0,         0,        -1 },
-	{ "libreoffice",     NULL,           NULL,                  1 << 3,       0,           0,         0,        -1 },
-    { "mpv",             NULL,       "mpv",                     1 << 1,       1,                      0,        -1 },
-    { "MPlayer",         NULL,       "MPlayer",                 1 << 1,       1,                      0,        -1 },
+	/* class         instance   title     tags mask     isfloating   isterminal noswallow monitor */
+	{ "firefox",     NULL,      NULL,     1 << 2,       0,           0,         0,        -1 },
+	{ "qutebrowser", NULL,      NULL,     1 << 2,       0,           0,         0,        -1 },
+	{ "st",          NULL,      NULL,     0,            0,           1,         1,        -1 },
+    { "mpv",         NULL,      NULL,     1 << 1,       1,                      1,        -1 },
+    { "MPlayer",     NULL,      NULL,     1 << 1,       1,                      1,        -1 },
+	{ "libreoffice", NULL,      NULL,     1 << 3,       0,           0,         0,        -1 },
+    { "firefox",     NULL,     "Firefox Preferences",     1 << 2,    True,                -1 },
+	{ "libreoffice-startcenter",  NULL,  NULL, 1 << 3,  0,           0,         0,        -1 },
 };
 
 /* layout(s) */
@@ -96,8 +96,8 @@ static const Layout layouts[] = {
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
 static const char *fmcmd[] = { "pcmanfm", NULL };
-static const char *bcmd[] = { "qutebrowser", NULL };
-static const char *bcmd2[] = { "firefox", NULL };
+static const char *bcmd2[] = { "qutebrowser", NULL };
+static const char *bcmd[] = { "firefox", NULL };
 static const char *dweb[] = { "dweb", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
@@ -111,7 +111,7 @@ static const char *brdec[] = { "brightnessctl", "s", "5%-", NULL };
 static const char *brinc[] = { "brightnessctl", "s", "+5%", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_y1, "-nf", col_y2, "-sb", col_y2, "-sf", col_y1, "-i", "-p", ">>>", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-i", "-p", ">>>", NULL };
 /* static const char *rbang[] = { "rbang", NULL }; */
 
 #include <X11/XF86keysym.h>
@@ -175,6 +175,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY,                       XK_o,              spawn,          CMD("st -e nnn -d") },
+	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e ncmpcpp") },
 	{ MODKEY,                       XK_n,              spawn,          CMD("leafpad new.txt") },
 	{ MOD2,                         XK_o,              spawn,          CMD("st -e ranger") },
 	{ MOD2,                         XK_p,              spawn,          CMD("st -e lf") },
