@@ -23,9 +23,9 @@ source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-them
 #Files
 #LIST
 alias ls='ls --color=auto --group-directories-first'
-alias lsa='ls -lah --color=auto --group-directories-first'
+alias lah='ls -lah --color=auto --group-directories-first'
 #alias la='ls -a --color=auto'
-#alias lah='ls -lah --color=auto'
+#alias lsa='ls -lah --color=auto'
 #alias l='ls' 					
 #alias l.="ls -A | egrep '^\.'"      
 
@@ -78,25 +78,25 @@ alias k='fzf_kill'
 alias h='fzf_history'
 
 
-fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+#fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+
+#fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
+
+#fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
+
+#fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+
+
+
+fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+
+# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
 
 fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
 
 fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
 
-fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
-
-
-
-# fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
-
-# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
-
-# fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
-
-# fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
-
-# fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
 
 # ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
 
@@ -178,8 +178,8 @@ alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
 #MAIL
-alias newmail='mailsync'
-alias mail='neomutt'
+alias mail='mailsync && neomutt'
+alias ibx='neomutt'
 
 #TRANSMISSION
 
@@ -216,7 +216,8 @@ alias sys='sudo systemctl'
 alias vol='ncpamixer'
 alias def='sdcv'
 alias radio='curseradio'
-alias music='ncmpcpp'
+#alias music='ncmpcpp'
+alias mtag='eyeD3'
 alias sv='sudo vim'
 alias rit='rtv'
 alias keep='keepcli'
