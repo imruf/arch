@@ -274,7 +274,8 @@ alias ctorc='torsocks elinks 'https://check.torproject.org/''
 #IP/PING
 alias pnet='ping -c 3 google.com'
 alias myip='ip addr show'
-alias ip-isp='curl ifconfig.co'
+alias isp='curl ifconfig.co'
+alias ip='ip addr show'
 #curl ifconfig.co/json
 #http -b ifconfig.co
 #wget -qO- ifconfig.co
