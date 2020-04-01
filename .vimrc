@@ -10,12 +10,12 @@ call vundle#begin()		" required, all plugins must appear after this line.
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
-Plugin 'scrooloose/nerdtree'						" added nerdtree
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'chrisbra/unicode.vim'                       " unicode search
 Plugin 'PotatoesMaster/i3-vim-syntax'               " i3-syntax
 Plugin 'chrisbra/Colorizer'                         " color from rgb
 Plugin 'flazz/vim-colorschemes'                     " vim colorscheme
+Plugin 'vimwiki/vimwiki'                            " vimwiki
+Plugin 'mcchrish/nnn.vim'                           " nnn file picker
 
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -56,7 +56,7 @@ map <C-z> "+P
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	map <leader>s :setlocal spell! spelllang=en_us<CR>
 
 syntax on   
 
@@ -86,16 +86,7 @@ let g:airline_theme='solarized_flood'
 colorscheme solarized8_dark
 
 
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeShowLineNumbers=1
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI = 1
-"let g:minimap_show='<leader>mm'
-"let g:minimap_update='<leader>mu'
-"let g:minimap_close='<leader>mc'
-"let g:minimap_toggle='<leader>mt'
+map <C-n> :Np<CR>
 
 hi LineNr ctermfg=242
 hi CursorLineNr ctermfg=15
@@ -122,3 +113,7 @@ syntax on
 map <leader>h :ColorHighlight
 noremap <leader>u :w \| startinsert \| term urlview %<cr>
 ":nnoremap <leader>u :silent w\|!urlview %<CR>
+
+":vimwiki ext
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]
