@@ -259,7 +259,7 @@ c.scrolling.smooth = True
 
 # c.spellcheck.languages = []
 
-# c.statusbar.hide = False
+c.statusbar.hide = True
 # c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
 # c.statusbar.position = 'bottom'
 # c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
@@ -284,7 +284,7 @@ c.scrolling.smooth = True
 # c.tabs.pinned.shrink = True
 # c.tabs.position = 'top'
 # c.tabs.select_on_remove = 'next'
-# c.tabs.show = 'always'
+c.tabs.show = 'switching'
 # c.tabs.show_switching_delay = 800
 # c.tabs.tabs_are_windows = False
 # c.tabs.title.alignment = 'left'

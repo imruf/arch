@@ -77,27 +77,19 @@ alias f='fzf_cd'
 alias k='fzf_kill'
 alias h='fzf_history'
 
-
-#fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
-
-#fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
-
-#fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
-
-#fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
-
-
-
 fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
 
-# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
+fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
 
 fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
 
 fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
 
-fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
-
+# fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+# fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
+#fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
+# fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
 # ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
 
 #FONTS
@@ -250,20 +242,23 @@ alias gits='git status'
 alias uz='atool -x'
 alias zip='atool -a'
 
-#SURFRAW
-alias srs='sr startpage'
-alias srb='sr bing'
-alias srd='sr duckduckgo'
-alias srg='sr google'
-alias srv='sr youtube'
-alias sry='sr yahoo'
-alias sraw='sr archwiki'
-alias sraur='sr aur'
-alias srpkg='sr archpkg'
-alias srmdb='sr imdb'
-alias srgit='sr github'
-alias sru='sr urban'
-alias srpb='sr piratebay'
+#SURFRAW #Now using rsr script
+#alias srs='sr startpage'
+#alias srb='sr bing'
+#alias srd='sr duckduckgo'
+#alias srg='sr google'
+#alias srv='sr youtube'
+#alias sry='sr yahoo'
+#alias sraw='sr archwiki'
+#alias sraur='sr aur'
+#alias srpkg='sr archpkg'
+#alias srmdb='sr imdb'
+#alias srgit='sr github'
+#alias sru='sr urban'
+#alias srpb='sr piratebay'
+
+#arch-wiki-lite
+alias aw='wiki-search'
 
 #torsocks
 alias tor='sys start tor.service'
@@ -275,7 +270,6 @@ alias ctorc='torsocks elinks 'https://check.torproject.org/''
 alias pnet='ping -c 3 google.com'
 alias myip='ip addr show'
 alias isp='curl ifconfig.co'
-alias ip='ip addr show'
 #curl ifconfig.co/json
 #http -b ifconfig.co
 #wget -qO- ifconfig.co
