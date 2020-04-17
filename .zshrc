@@ -21,54 +21,22 @@ source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-them
 #ZSH_THEME=robbyrussell
 
 #Files
-#LIST
+#List
 alias ls='ls --color=auto --group-directories-first'
-alias lah='ls -lah --color=auto --group-directories-first'
+alias lah='exa -la --group-directories-first'
+#alias lah='ls -lah --color=auto --group-directories-first'
 #alias la='ls -a --color=auto'
 #alias lsa='ls -lah --color=auto'
 #alias l='ls' 					
 #alias l.="ls -A | egrep '^\.'"      
 
+#Navigation
+#setopt autocd
+alias ..='cd ..'
 alias cp="cp -v"
 alias mv="mv -iv"
-alias rm="rm -v"
+alias rm="rm -iv"
 alias mkd="mkdir -pv"
-
-#TYPO
-alias cd..='cd ..'
-alias pdw="pwd"
-
-#GREP
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-#diff
-alias diff="diff --color=auto" \
-
-#FREE
-alias free="free -mt"
-
-#USERLIST
-alias userlist="cut -d: -f1 /etc/passwd"
-
-#MERGE
-alias merge="xrdb -merge ~/.Xresources"
-
-#OUTPUT
-alias df='df -h'
-
-#CONKY
-alias kc='killall conky'
-
-#HARDWARE
-alias hw="hwinfo --short"
-
-#MICROCODE
-alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
-
-#GRUB
-#alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 #DATABASE/Search #fzf
 alias updb='sudo updatedb'
@@ -91,6 +59,35 @@ fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -$
 # fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
 # fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
 # ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
+
+#Info
+alias pdw="pwd"
+alias free="free -mt"
+alias diff="diff --color=auto" \
+#Output
+alias df='df -h'
+#Userlist
+alias userlist="cut -d: -f1 /etc/passwd"
+#HARDWARE
+alias hw="hwinfo --short"
+
+#Grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+#Merge
+alias merge="xrdb -merge ~/.Xresources"
+
+#Conky
+alias kc='killall conky'
+
+#MICROCODE
+alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
+
+#GRUB
+#alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
 
 #FONTS
 alias fc='sudo fc-cache -fv'
@@ -169,6 +166,17 @@ alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
 alias ytv='youtube-viewer -C'
 
+#Radio
+alias radio='curseradio'
+alias bbcb='mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup'
+alias bbcw='mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup'
+alias betar='mpv --quiet http://as3.digitalsynapsebd.com:8263/\;stream.mp3'
+alias bhoomi='mpv --quiet http://149.56.195.94:8545/stream'
+alias bongo='mpv --quiet http://radio.bongonet.net:8000/stream2'
+alias jago='mpv --quiet http://128.199.184.111:12496/stream'
+alias wadio='mpv --quiet http://162.254.150.34:8201/stream1'
+alias dhoni='mpv --quiet http://182.160.110.180:1020/'
+
 #MAIL
 alias mail='mailsync && neomutt'
 alias ibx='neomutt'
@@ -202,12 +210,13 @@ tsmdel() { transmission-remote -t"$1" --remove ;}           # leaves data alone
 tsminfo() { transmission-remote -t"$1" --info ;} #info
 tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
 
-#MIS
+#Systemd
 alias sys='sudo systemctl'
 #alias sys='sudo sv'
+
+#MIS
 alias vol='ncpamixer'
 alias def='sdcv'
-alias radio='curseradio'
 #alias music='ncmpcpp'
 alias mtag='eyeD3'
 alias sv='sudo vim'
@@ -218,7 +227,6 @@ alias books='pysheng'
 alias imgur='imgur_downloader'
 alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
-alias tweet='turses'
 alias pdf='zathura'
 alias img='sxiv'
 alias calc='sc-im'
@@ -227,9 +235,6 @@ alias ka='killall'
 #alias ibus='ibus-daemon -xdr'
 
 alias vim='nvim'
-
-#alias wp='QuickWall --setter feh'
-#alias wp='splash'
 
 #GIT
 alias gitc='git clone'
@@ -260,16 +265,18 @@ alias zip='atool -a'
 #arch-wiki-lite
 alias aw='wiki-search'
 
-#torsocks
-alias tor='sys start tor.service'
-alias tors='sys stop tor.service'
-alias ctorc='torsocks elinks 'https://check.torproject.org/''
+#torsocks #now using 1.1.1.1
+#alias tor='sys start tor.service'
+#alias tors='sys stop tor.service'
+#alias ctorc='torsocks elinks 'https://check.torproject.org/''
 #alias ctorb='torsocks surf https://check.torproject.org/'
 
 #IP/PING
 alias pnet='ping -c 3 google.com'
 alias myip='ip addr show'
 alias isp='curl ifconfig.co'
+alias ns='speedtest'
+alias nss='speedtest --simple --single'
 #curl ifconfig.co/json
 #http -b ifconfig.co
 #wget -qO- ifconfig.co
@@ -298,6 +305,11 @@ alias dwm='cp .xinit/dwm.xinitrc .xinitrc && gui'
 alias i3='cp .xinit/i3.xinitrc .xinitrc && gui'
 alias xfce='cp .xinit/xfce.xinitrc .xinitrc && gui'
 alias xmonad='cp .xinit/xmonad.xinitrc .xinitrc && gui'
+alias swm='cp .xinit/swm.xinitrc .xinitrc && gui'
+
+#Corona
+alias covid='curl https://corona-stats.online\?source\=2'
+alias covidbd='curl https://corona-stats.online/BD'
 
 #POWERMANAGEMENT
 #alias iph='i3exit suspend'
