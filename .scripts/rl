@@ -15,6 +15,7 @@
 # requirements: rofi mlocate
 # playlist: rofi      https://www.youtube.com/playlist?list=PLqv94xWU9zZ0LVP1SEFQsLEYjZC_SUB3m
 
-xdg-open "$(locate home | dmenu -l 5 -i -p ">>>")"
+
+FILE="$(fd -i -t f 2> /dev/null | dmenu -l 5 -i -p ">>>")" && mimeopen "$FILE"
 # xdg-open "$(locate home | rofi -threads 0 -width 100 -dmenu -i -p ">>>")"
 
