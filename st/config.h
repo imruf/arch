@@ -89,59 +89,59 @@ float alphaUnfocussed = 0.8; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#073642",  /*  0: black    */
+"#002b36",  /*  0: black    */
 "#dc322f",  /*  1: red      */
 "#859900",  /*  2: green    */
 "#b58900",  /*  3: yellow   */
 "#268bd2",  /*  4: blue     */
-"#d33682",  /*  5: magenta  */
+"#6c71c4",  /*  5: magenta  */
 "#2aa198",  /*  6: cyan     */
-"#eee8d5",  /*  7: white    */
-"#002b36",  /*  8: brblack  */
-"#cb4b16",  /*  9: brred    */
-"#586e75",  /* 10: brgreen  */
-"#657b83",  /* 11: bryellow */
-"#839496",  /* 12: brblue   */
+"#93a1a1",  /*  7: white    */
+"#657b83",  /*  8: brblack  */
+"#dc322f",  /*  9: brred    */
+"#859900",  /* 10: brgreen  */
+"#b58900",  /* 11: bryellow */
+"#268bd2",  /* 12: brblue   */
 "#6c71c4",  /* 13: brmagenta*/
-"#93a1a1",  /* 14: brcyan   */
+"#2aa198",  /* 14: brcyan   */
 "#fdf6e3",  /* 15: brwhite  */
 
 [255] = 0,
 
+"#93a1a1",
 "#002b36",
-"#839496",
-"#dc322f", /* 258 -> cursor */
+"#bf616a", /* 258 -> cursor */
 
  };
 
 static const char *altcolorname[] = {
-"#282828",
-"#cc241d",
-"#98971a",
-"#d79921",
-"#458588",
-"#b16286",
-"#689d6a",
-"#a89984",
-"#928374",
-"#fb4934",
-"#b8bb26",
-"#fabd2f",
-"#83a598",
-"#d3869b",
-"#8ec07c",
-"#ebdbb2",
+"#3b4252",
+"#bf616a",
+"#a3be8c",
+"#ebcb8b",
+"#81a1c1",
+"#b48ead",
+"#88c0d0",
+"#e5e8f0",
+"#4c566a",
+"#bf616a",
+"#a3be8c",
+"#ebcb8b",
+"#81a1c1",
+"#b48ead",
+"#8fbcbb",
+"#eceff4",
 
 [255] = 0,
 
-"#1d2021",
-"#ebdbb2",
-"#dc322f", /* 258 -> cursor */
+"#d8dee9",
+"#2e3440",
+"#d8dee9", /* 258 -> cursor */
 
- };
+};
 
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
 static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 0;
 
@@ -163,7 +163,7 @@ unsigned int defaultunderline = 7;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 6;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers

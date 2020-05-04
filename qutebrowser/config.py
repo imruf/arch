@@ -298,13 +298,14 @@ c.tabs.title.format = '{audio}{index}: {host}'
 # c.url.default_page = 'https://start.duckduckgo.com/'
 # c.url.incdec_segments = ['path', 'query']
 # c.url.open_base_url = False
-c.url.searchengines = {'DEFAULT': 'https://www.startpage.com/do/search?query={}',
-                       'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
-                       'aw': 'https://wiki.archlinux.org/?search={}',
-                       'yy': 'https://search.yahoo.com/search?p={}',
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}' ,
+                       'sp': 'https://www.startpage.com/do/search?query={}',
                        'bing': 'https://bing.com/search?q={}',
                        'ddg': 'https://duckduckgo.com/?q={}',
-                       'gg': 'https://www.google.com/search?hl=en&q={}'
+                       'yy': 'https://search.yahoo.com/search?p={}',
+                       'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
+                       'aw': 'https://wiki.archlinux.org/?search={}',
+                       'ud': 'https://www.urbandictionary.com/define.php?term={}',
                        }
 
 c.url.start_pages = ['about:blank']

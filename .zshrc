@@ -33,7 +33,7 @@ alias lah='exa -la --group-directories-first'
 #Navigation
 #setopt autocd
 alias ..='cd ..'
-alias cp="cp -v"
+alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias mkd="mkdir -pv"
@@ -45,18 +45,16 @@ alias f='fzf_cd'
 alias k='fzf_kill'
 alias h='fzf_history'
 
-fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
 
-fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
 
 fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
 
 fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
 
-# fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
-# fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
-#fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
-# fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
+# fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
+# fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
 # fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
 # ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
 
@@ -129,9 +127,11 @@ alias yinp='yay -S'
 alias yayskip='yay -S --mflags --skipinteg'
 alias upyay="yay -Syu --noconfirm"
 #trizen
+alias tzn='trizen'
 alias tinp='trizen -S'
-alias uptrizen="trizen -Syu --noconfirm"
-alias trizenskip='trizen -S --skipinteg'
+alias tznc='trizen -G'
+alias uptzn="trizen -Syu --noconfirm"
+alias tznskip='trizen -S --skipinteg'
 
 #XBPS
 #alias up='sudo xbps-install -Su'
@@ -214,6 +214,12 @@ tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sle
 alias sys='sudo systemctl'
 #alias sys='sudo sv'
 
+
+# Calculator
+alias math="mathomatic"
+alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
+alias sheet='sc-im'
+
 #MIS
 alias vol='ncpamixer'
 alias def='sdcv'
@@ -229,7 +235,6 @@ alias weather='curl wttr.in/khagrachari'
 alias e.g='tldr'
 alias pdf='zathura'
 alias img='sxiv'
-alias calc='sc-im'
 alias el='elinks'
 alias ka='killall'
 #alias ibus='ibus-daemon -xdr'

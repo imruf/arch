@@ -47,7 +47,7 @@ ino <Right> <Nop>
 "Copy paste Clipboard Access:
 
 vnoremap <C-c> "+y
-map <C-z> "+P
+map <C-p> "+P
 
 
 " Enable autocompletion:
@@ -83,7 +83,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized_flood'
 
-colorscheme solarized8_dark
+" colorscheme solarized8_dark
+colorscheme dracula
 
 
 map <C-n> :Np<CR>
@@ -108,7 +109,6 @@ syntax on
 
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
-
 
 map <leader>h :ColorHighlight
 noremap <leader>u :w \| startinsert \| term urlview %<cr>
