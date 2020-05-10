@@ -33,7 +33,7 @@ alias lah='exa -la --group-directories-first'
 #Navigation
 #setopt autocd
 alias ..='cd ..'
-alias cp="cp -iv"
+alias cp="cp -v"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias mkd="mkdir -pv"
