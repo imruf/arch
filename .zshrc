@@ -299,7 +299,7 @@ alias fsts='sudo systemctl stop sshd'
 
 #PNGLatex
 #pnglatex -h for help
-alias eq='pnglatex -b Transparent -d 300 -s 12'
+alias eq='pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png'
 
 #JavaWM
 alias jwc='wmname LG3D'
