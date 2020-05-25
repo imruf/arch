@@ -23,8 +23,8 @@ call vundle#end()		" required, all plugins must appear before this line.
 filetype plugin indent on    " required
 
 
-"Remap ESC to ii
-:imap ii <Esc>
+"Remap ESC to jj 
+:imap .. <Esc>
 
 "Disable arrow keys in Normal mode
 no <Up> <Nop>
