@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -42,6 +43,10 @@ static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
 int allowaltscreen = 1;
+
+/* allow certain non-interactive (insecure) window operations such as:
+   setting the clipboard text */
+int allowwindowops = 0;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
@@ -89,44 +94,78 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* bg opacity */
+float alpha = 0.9;           //< alpha value used when the window is focused.
+float alphaUnfocussed = 0.8; //< alpha value used when the focus is lost
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+"#002b36",  /*  0: black    */
+"#dc322f",  /*  1: red      */
+"#859900",  /*  2: green    */
+"#b58900",  /*  3: yellow   */
+"#268bd2",  /*  4: blue     */
+"#6c71c4",  /*  5: magenta  */
+"#2aa198",  /*  6: cyan     */
+"#93a1a1",  /*  7: white    */
+"#657b83",  /*  8: brblack  */
+"#dc322f",  /*  9: brred    */
+"#859900",  /* 10: brgreen  */
+"#b58900",  /* 11: bryellow */
+"#268bd2",  /* 12: brblue   */
+"#6c71c4",  /* 13: brmagenta*/
+"#2aa198",  /* 14: brcyan   */
+"#fdf6e3",  /* 15: brwhite  */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+[255] = 0,
 
-	[255] = 0,
+"#93a1a1",
+"#002b36",
+"#bf616a", /* 258 -> cursor */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+ };
+
+static const char *altcolorname[] = {
+"#3b4252",
+"#bf616a",
+"#a3be8c",
+"#ebcb8b",
+"#81a1c1",
+"#b48ead",
+"#88c0d0",
+"#e5e8f0",
+"#4c566a",
+"#bf616a",
+"#a3be8c",
+"#ebcb8b",
+"#81a1c1",
+"#b48ead",
+"#8fbcbb",
+"#eceff4",
+
+[255] = 0,
+
+"#d8dee9",
+"#2e3440",
+"#d8dee9", /* 258 -> cursor */
+
 };
 
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 0;
 
-/*
+
+/* my default
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
+static unsigned int defaultcs = 3;
+static unsigned int defaultrcs = 0;
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+
+unsigned int defaultitalic = 7;
+unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
@@ -135,7 +174,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
@@ -195,7 +234,14 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_P,           swapcolors,     {.i =  0} },
+    { Mod1Mask|ControlMask, XK_k,           kscrollup,      {.i = -1} },
+	{ Mod1Mask|ControlMask, XK_j,           kscrolldown,    {.i = -1} },
+
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
+
 
 /*
  * Special keys (change & recompile st.info accordingly)
