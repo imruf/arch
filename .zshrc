@@ -1,3 +1,9 @@
+autoload -U colors && colors	# Load colors
+
+PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16286}]%F{#586e75}$ "
+
+#PS1="%B%{$fg[yellow]%}[%n@%M %~]%{$reset_color%}$%b "
+
 #EXPORT 
 export TERM="xterm-256color"
 export TERM="st-256color"
@@ -11,7 +17,7 @@ plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 
 #SOURCE
 source $ZSH/oh-my-zsh.sh
-source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+#source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 #source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
 #Theme
@@ -329,4 +335,4 @@ alias q='exit'
 alias inf='pfetch'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+#[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
