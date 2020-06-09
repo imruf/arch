@@ -96,13 +96,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
-static const char *fcmd[] = { "st", "-e", "nnn", "-d", NULL };
+static const char *fcmd[] = { "st", "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
 static const char *fcmd3[] = { "st", "-e", "ranger", NULL };
-static const char *bcmd[] = { "dweb", NULL };
+static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *bcmd2[] = { "firefox", NULL };
 static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
-/* static const char *bcmd4[] = { "qutebrowser", NULL }; */
 static const char *dbang[] = { "dbang", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
@@ -118,7 +117,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-i", "-p", ":>_", NULL };
 /* static const char *rbang[] = { "rbang", NULL }; */
 /* static const char *roficmd[] = { "rofi", "-show", "combi", NULL }; */
-/* static const char *fcmd4[] = { "st", "-e", "lf", NULL }; */
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
