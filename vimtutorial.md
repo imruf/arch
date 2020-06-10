@@ -2,9 +2,20 @@
 
 1. NORMAL MODE
 
+ * First Thing First in VIM
+
+    * ZQ quit wihtout changes
+    * ZZ save and quit vim
+    * :x save and quit vim
+    * :q quit vim
+    * :q! quit wihtout changes
+    * :wq save and quit vim
+    * ! is force something
+    * :w !sudo tee % (save as root)
+
 A. Move in vim
 
-- k^, h<, l>, jv
+- k up ^, h left <, l right >, j down v
 
 - w  Forward to the beginning of next word
 - W  Forward to the beginning of the next WORD
@@ -53,6 +64,9 @@ A. Move in vim
 - Ctrl-Y  move view pane up
 - Ctrl-E  move view pane down
 
+- { move paragraph up
+- } move paragraph down
+
 - n   next matching search pattern
 - N   previous matching search pattern
 - \*   next whole word under cursor
@@ -68,6 +82,7 @@ A. Move in vim
 - TX  til previous 'X'
 - ;   repeat above, in same direction
 - ,   repeat above, in reverse direction
+
 
 2. INSERT MODE
 
@@ -100,8 +115,6 @@ A. Move in vim
 - n  Next result, forward
 - N  Next result, backward
 
-
-
 5. EXPERT EDITING
 
 3dw  delete 3 words
@@ -122,6 +135,17 @@ d  Delete: [range]d<motion>
     - dd  delete current line
     - dj  delete current and next line (j = down)
     - 2dj delete current and 2 lines downward
+    - dw delete word no space
+    - daw (a around)
+    - diw (i inside)
+    - d5w
+    - de delete end of word with space
+    - db delete end of previous word 
+    - d{ delete entire paragraph up
+    - d} delete entire paragraph down
+    - dap
+    - D delete cursor to endl
+    - :g/PATTERN/d delete every line begining with a pattern
 
 c  Change (Same as d but put me in insert mode)
     cw  change word
@@ -135,7 +159,15 @@ g~  Toggle case of [motion]
     g~iw  Toggle case of entire word under cursor
         tr|ue -> g~iw -> TRUE
 
-p  Paste 
+p  Paste after
+P  Paste before
+
+u undo
+U undo entirely
+Ctrl+r redo
+
+earlier 10min
+later 10min
 
 
 6. REGISTERS
@@ -167,8 +199,9 @@ p  Paste
 - to run the macro #@record_key
 - e.g 100@1 will repeat the macro 100 times
 
-10. To save a file, simply type the following command:
-- :w !sudo tee %
+10. Sort
+V to select entire line, select block of text and type
+:sort
 
 #For More
 https://github.com/shawncplus/vim-classes

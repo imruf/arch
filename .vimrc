@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
 Plugin 'chrisbra/unicode.vim'                       " unicode search
-Plugin 'PotatoesMaster/i3-vim-syntax'               " i3-syntax
 Plugin 'chrisbra/Colorizer'                         " color from rgb
 Plugin 'flazz/vim-colorschemes'                     " vim colorscheme
 Plugin 'vimwiki/vimwiki'                            " vimwiki
@@ -24,7 +23,7 @@ filetype plugin indent on    " required
 
 
 "Remap ESC to jj 
-:imap .. <Esc>
+:imap jj <Esc>
 
 "Disable arrow keys in Normal mode
 no <Up> <Nop>
@@ -84,7 +83,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized_flood'
 
 " colorscheme solarized8_dark
-colorscheme dracula
 
 
 map <C-n> :Np<CR>
