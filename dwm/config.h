@@ -10,8 +10,8 @@ static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#bf616a"; /* tag color */
-static const char col_cyan[]        = "#0a0f14"; /* bar color #0a0f14*/
+static const char col_gray4[]       = "#bf616a"; /* tag color #eeeeee #bf616a*/
+static const char col_cyan[]        = "#0a0f14"; /* bar color #005577 #0a0f14*/
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
