@@ -258,8 +258,9 @@ c.scrolling.smooth = True
 # c.session.lazy_restore = False
 
 # c.spellcheck.languages = []
+# c.statusbar.show = True (older version)
 
-c.statusbar.hide = True
+c.statusbar.show = in-mode
 # c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
 # c.statusbar.position = 'bottom'
 # c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
