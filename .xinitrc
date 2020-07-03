@@ -1,22 +1,10 @@
 #!/bin/sh
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
-[ -f ~/.xprofile ] && . ~/.xprofile
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-    for f in /etc/X11/xinit/xinitrc.d/*; do 
-        [ -x "$f" ] && . "$f" 
-    done 
-        unset f 
-fi 
+. ~/.xprofile
 
 exec dwm
-#exec startxfce4
-#exec xmonad
-#exec qtile
-#exec i3
 
-
+# dwm selfrestart
+# while :; do
+#        ssh-agent dwm
+#    done

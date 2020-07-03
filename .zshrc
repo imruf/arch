@@ -6,7 +6,7 @@ PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16
 
 #EXPORT 
 export TERM="xterm-256color"
-#export TERM="st-256color"
+export TERM="st-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
@@ -169,6 +169,7 @@ alias ytd-best="youtube-dl -f bestvideo+bestaudio "
 alias ytd='youtube-dl'
 alias ytdF='youtube-dl -F'
 alias ytdf='youtube-dl -f'
+alias ytdic='youtube-dl --ignore-config'
 alias ytv='youtube-viewer -C'
 
 #Radio
@@ -311,8 +312,8 @@ alias jwc='wmname LG3D'
 
 #DE/WM
 alias gui='startx'
-# alias dwm='cp .xinit/dwm.xinitrc .xinitrc && gui'
-# alias i3='cp .xinit/i3.xinitrc .xinitrc && gui'
+alias dwm='cp .xinit/dwm.xinitrc .xinitrc && gui'
+alias i3='cp .xinit/i3.xinitrc .xinitrc && gui'
 
 #Corona
 alias covid='curl https://corona-stats.online\?source\=2'
