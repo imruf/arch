@@ -89,7 +89,7 @@
 - Music:                  Alt+Shift+m
 - Note:                   Alt+Shift+n
 - Screenshot
-    -FullScreen:          prtsc
-    -ActiveWindow:        Shift+prtsc
-    -Selection:           Control+prtsc
+    - FullScreen:          prtsc
+    - ActiveWindow:        Shift+prtsc
+    - Selection:           Control+prtsc
 
