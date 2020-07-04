@@ -28,11 +28,11 @@
     
 - Move Stack
     - Up:
-            - Alt+Shift+k
-            - Super+k
+       - Alt+Shift+k
+       - Super+k
     - Down:
-            - Alt+Shift+j
-            - Super+j
+       - Alt+Shift+j
+       - Super+j
                          
 - Zoom/NxtMaster:         Alt+Enter
 
@@ -63,12 +63,12 @@
 
 ## System
 - Brightness
-    -Inc:                 Fn+BrightnessUp
-    -Dec:                 Fn+BrightnessDown
+    - Inc:                 Fn+BrightnessUp
+    - Dec:                 Fn+BrightnessDown
 - Volume
-    -Inc:                 Fn+VolumeUp
-    -Dec:                 Fn+VolumeDown
-    -Mute:                Fn+Mute
+    - Inc:                 Fn+VolumeUp
+    - Dec:                 Fn+VolumeDown
+    - Mute:                Fn+Mute
     
 ## App Bindings
 
