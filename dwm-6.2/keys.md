@@ -2,10 +2,11 @@
 
 ## Mod Key
     Mod1, i.e Alt
+    
 ## Additional Mod Key
     Mod4, i.e Super
 
-### Dwm Bindings
+## Dwm Bindings
 
 - Bar toggle:             Alt+b
 
@@ -26,17 +27,20 @@
     - Dec:                Atl+Shift+d
     
 - Move Stack
-    - Up:                 Alt+Shift+k
-                          Super+k
-    - Down:               Alt+Shift+j
-                          Super+j
+    - Up:
+            - Alt+Shift+k
+            - Super+k
+    - Down:
+            - Alt+Shift+j
+            - Super+j
                          
 - Zoom/NxtMaster:         Alt+Enter
 
 ## Tag
 - Switch Tag:             Alt+[1-0]
-- Switch Last Tag:        Alt+Tab
-                          Control+Space
+- Switch Last Tag:
+            - Alt+Tab
+            - Control+Space
 - Next Tag:               Alt+Control+l
 - Previous Tag:           Alt+Control+h
 
