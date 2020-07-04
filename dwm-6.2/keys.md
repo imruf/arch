@@ -39,8 +39,8 @@
 ## Tag
 - Switch Tag:             Alt+[1-0]
 - Switch Last Tag:
-            - Alt+Tab
-            - Control+Space
+  - Alt+Tab
+  - Control+Space
 - Next Tag:               Alt+Control+l
 - Previous Tag:           Alt+Control+h
 
