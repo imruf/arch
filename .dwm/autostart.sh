@@ -1,10 +1,10 @@
 #! /bin/bash 
 
-wmname LG3D & #define wm name requited to run some java program
+#wmname LG3D & #define wm name requited to run some java program
 
 wifi() {
     ssid=$(iwgetid -r)
-    sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }')
+    sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print " ", int($3 * 100 / 70) "%" }')
     if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
 	    echo -e "$ssid $sig"
     else
@@ -14,7 +14,7 @@ wifi() {
 }
 
 dte() {
-  dte="$(date +" %d %b, %a|%H:%M ")"
+  dte="$(date +"  %a, %d %b|%H:%M  ")"
   echo -e "$dte"
 }
 
@@ -23,17 +23,17 @@ bat() {
     battery="$(cat /sys/class/power_supply/BAT0/capacity)"
     timer="$(acpi -b | grep "Battery" | awk '{print $5}' | cut -c 1-5)"
     if [ "${status}" == 1 ]; then
-      echo -e "  $battery%"
+      echo -e "    $battery%"
       #echo -e " 🗲 $battery%"
     else
 	for x in /sys/class/power_supply/BAT0/capacity;
 	do
 	case "$(cat $x)" in
-		100|9[0-9])	echo -e " $battery%" ;;
-		8[0-9]|7[0-9])	echo -e " $battery%" ;;
-		6[0-9]|5[0-9])	echo -e " $battery%" ;;
-		4[0-9]|3[0-9])	echo -e " $battery%" ;;
-		*)		echo -e " $battery%" ;;
+		100|9[0-9])	echo -e "  $battery%" ;;
+		8[0-9]|7[0-9])	echo -e "  $battery%" ;;
+		6[0-9]|5[0-9])	echo -e "  $battery%" ;;
+		4[0-9]|3[0-9])	echo -e "  $battery%" ;;
+		*)		echo -e "  🔌 $battery%" ;;
 	esac
 	done
     fi
@@ -41,7 +41,7 @@ bat() {
 
 mem(){
   mem=`free -h | awk '/Mem/ {printf $3 B}'`
-  echo -ne "\x09" ░▒▒░ " "$mem"B"
+  echo -ne "\x02"░▒▒░ "  "$mem"B"
 }
 
 cpu() {
@@ -51,7 +51,7 @@ cpu() {
   read cpu a b c idle rest < /proc/stat
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-  echo -e "$cpu% "
+  echo -e "$cpu%  "
 }
 
 vol() {
@@ -61,7 +61,7 @@ vol() {
 
 blight() {
     light=`brightnessctl | awk '/Current brightness:/ {print $4}'`
-    echo -e " $light"
+    echo -e "  $light"
 }
 
 mybar() {

@@ -7,10 +7,10 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#bf616a"; /* tag color #eeeeee #bf616a*/
+static const char col_gray4[]       = "silver"; /* tag color #eeeeee #bf616a*/
 static const char col_cyan[]        = "#0a0f14"; /* bar color #005577 #0a0f14*/
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
@@ -18,18 +18,21 @@ static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
 static const char col_y1[]          = "#191919";
 static const char col_y2[]          = "#fea63c"; /* #fea63c */
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 
-static const char *colors[][8]      = {
+static const char *colors[][3]      = {
 	/*					fg         bg          border   */
-	[SchemeNorm] =	 { col_gray3, col_gray1,   col_gray2 },
-	[SchemeSel]  =	 { col_gray4, col_cyan,    col_cyan },
-	[SchemeWarn] =	 { col_black, col_yellow,  col_red },
-	[SchemeUrgent]=	 { col_cyan,  "#7197e7",   col_gray1 },
-                     { "#7197e7", col_black,   col_black },
-                     { col_cyan,  "#A77AC4",   col_gray1 },
-                     { "#A77AC4", col_black,   col_black },
-                     { col_cyan,  "#8be9fd",    col_gray1 },
-                     { "#bf616a", col_black,   col_black },
+	[SchemeNorm] =	 { col_gray3, col_gray1,  col_gray2 },
+	[SchemeSel]  =	 { col_gray4, col_gray1,   col_gray1 },
+	[SchemeWarn] =	 { col_black, col_yellow, col_red },
+	[SchemeUrgent]=	 { col_yellow, col_red,    col_red },
+};
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -44,12 +47,12 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "firefox", NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
 	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ "qutebrowser", NULL,      NULL,     1 << 1,       0,           0,         0,        -1 },
     { "mpv",         NULL,      NULL,     1 << 2,       1,                      1,        -1 },
     { "MPlayer",     NULL,      NULL,     1 << 2,       1,                      1,        -1 },
-	{ "libreoffice", NULL,      NULL,     1 << 3,       0,           0,         0,        -1 },
+	{ "libreoffice-writer", NULL,      NULL,     1 << 3,       0,           0,         0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
@@ -75,6 +78,7 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define CMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
