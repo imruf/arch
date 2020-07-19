@@ -1,11 +1,7 @@
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
-
 # c.auto_save.interval = 15000
-
 # c.auto_save.session = False
-
 # c.backend = 'webengine'
-
 # c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
 
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
@@ -140,13 +136,13 @@ c.content.autoplay = False
 # c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 # c.content.host_blocking.whitelist = []
 # c.content.hyperlink_auditing = False
-# c.content.images = True
+c.content.images = False
 
 # c.content.javascript.alert = True
 # c.content.javascript.can_access_clipboard = False
 # c.content.javascript.can_close_tabs = False
 # c.content.javascript.can_open_tabs_automatically = False
-# c.content.javascript.enabled = True
+c.content.javascript.enabled = False
 # c.content.javascript.log = {'unknown': 'debug', 'info': 'debug', 'warning': 'debug', 'error': 'debug'}
 # c.content.javascript.modal_dialog = False
 # c.content.javascript.prompt = True
@@ -476,7 +472,12 @@ config.bind('<Ctrl-m>', 'quickmark-save')
 # config.bind('tsH', 'config-cycle -p -t -u *://*.{url:host}/* content.javascript.enabled ;; reload')
 # config.bind('tsh', 'config-cycle -p -t -u *://{url:host}/* content.javascript.enabled ;; reload')
 # config.bind('tsu', 'config-cycle -p -t -u {url} content.javascript.enabled ;; reload')
+
+config.bind('tit', 'config-cycle -p -t content.images')
+config.bind('tjt', 'config-cycle -p -t content.javascript.enabled')
+
 config.bind('<Ctrl-u>', 'undo')
+
 # config.bind('v', 'enter-mode caret')
 # config.bind('wB', 'set-cmd-text -s :bookmark-load -w')
 # config.bind('wO', 'set-cmd-text :open -w {url:pretty}')
