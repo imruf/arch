@@ -1,3 +1,49 @@
+c.content.autoplay = False
+c.content.images = True
+c.content.javascript.enabled = True
+
+c.downloads.location.directory = ''
+c.downloads.location.prompt = True
+c.downloads.location.remember = True
+
+c.scrolling.smooth = True
+
+c.statusbar.show = 'in-mode'
+
+c.tabs.show = 'multiple' #always, never, multiple, switching
+c.tabs.title.format = '{audio}{index}: {host}'
+
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
+                       'gg': 'https://www.google.com/search?hl=en&q={}' ,
+                       'sp': 'https://www.startpage.com/do/search?query={}',
+                       'bing': 'https://bing.com/search?q={}',
+                       'ddg': 'https://duckduckgo.com/?q={}',
+                       'yy': 'https://search.yahoo.com/search?p={}',
+                       'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
+                       'aw': 'https://wiki.archlinux.org/?search={}',
+                       'ud': 'https://www.urbandictionary.com/define.php?term={}',
+                       }
+
+c.url.start_pages = ['about:blank']
+
+c.window.hide_decoration = True
+c.window.title_format = '{perc}{host}'
+
+config.bind('X', 'spawn mpv {url}')
+config.bind('x', 'hint links spawn mpv {hint-url}')
+config.bind('an', 'config-cycle content.user_stylesheets ~/solarized-dark-all-sites.css ""')
+config.bind('q', 'quit')
+config.bind("'", 'hint all')
+config.bind('H', 'back')
+config.bind('u', 'back')
+config.bind('L', 'forward')
+config.bind('m', 'forward')
+config.bind('<Ctrl-m>', 'quickmark-save')
+config.bind('tp', 'config-cycle -p -t content.images')
+config.bind('tj', 'config-cycle -p -t content.javascript.enabled')
+config.bind('<Ctrl-u>', 'undo')
+config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
+
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 # c.auto_save.interval = 15000
 # c.auto_save.session = False
@@ -110,7 +156,6 @@
 
 # c.confirm_quit = ['never']
 
-c.content.autoplay = False
 
 # c.content.cache.appcache = True
 # c.content.cache.maximum_pages = 0
@@ -136,13 +181,11 @@ c.content.autoplay = False
 # c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 # c.content.host_blocking.whitelist = []
 # c.content.hyperlink_auditing = False
-c.content.images = False
 
 # c.content.javascript.alert = True
 # c.content.javascript.can_access_clipboard = False
 # c.content.javascript.can_close_tabs = False
 # c.content.javascript.can_open_tabs_automatically = False
-c.content.javascript.enabled = False
 # c.content.javascript.log = {'unknown': 'debug', 'info': 'debug', 'warning': 'debug', 'error': 'debug'}
 # c.content.javascript.modal_dialog = False
 # c.content.javascript.prompt = True
@@ -164,15 +207,12 @@ c.content.javascript.enabled = False
 # c.content.proxy = 'system'
 # c.content.register_protocol_handler = 'ask'
 # c.content.ssl_strict = 'ask'
-# c.content.user_stylesheets = ['/home/masud/solarized-dark-all-sites.css']
+# c.content.user_stylesheets = ['/home/masud/solarized.css']
 # c.content.webgl = True
 # c.content.webrtc_ip_handling_policy = 'all-interfaces'
 # c.content.windowed_fullscreen = False
 # c.content.xss_auditing = False
 
-c.downloads.location.directory = ''
-c.downloads.location.prompt = True
-c.downloads.location.remember = True
 # c.downloads.location.suggestion = 'path'
 # c.downloads.open_dispatcher = None
 # c.downloads.position = 'top'
@@ -247,14 +287,12 @@ c.downloads.location.remember = True
 # c.qt.process_model = 'process-per-site-instance'
 
 # c.scrolling.bar = 'when-searching'
-c.scrolling.smooth = True
 # c.search.ignore_case = 'smart'
 # c.search.incremental = True
 # c.session.default_name = None
 # c.session.lazy_restore = False
 
 # c.spellcheck.languages = []
-c.statusbar.show = 'in-mode'
 
 # c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
 # c.statusbar.position = 'bottom'
@@ -280,11 +318,9 @@ c.statusbar.show = 'in-mode'
 # c.tabs.pinned.shrink = True
 # c.tabs.position = 'top'
 # c.tabs.select_on_remove = 'next'
-c.tabs.show = 'multiple' #always, never, multiple, switching
 # c.tabs.show_switching_delay = 800
 # c.tabs.tabs_are_windows = False
 # c.tabs.title.alignment = 'left'
-c.tabs.title.format = '{audio}{index}: {host}'
 # c.tabs.title.format_pinned = '{index}'
 # c.tabs.undo_stack_size = 100
 # c.tabs.width = '20%'
@@ -294,21 +330,8 @@ c.tabs.title.format = '{audio}{index}: {host}'
 # c.url.default_page = 'https://start.duckduckgo.com/'
 # c.url.incdec_segments = ['path', 'query']
 # c.url.open_base_url = False
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}' ,
-                       'sp': 'https://www.startpage.com/do/search?query={}',
-                       'bing': 'https://bing.com/search?q={}',
-                       'ddg': 'https://duckduckgo.com/?q={}',
-                       'yy': 'https://search.yahoo.com/search?p={}',
-                       'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
-                       'aw': 'https://wiki.archlinux.org/?search={}',
-                       'ud': 'https://www.urbandictionary.com/define.php?term={}',
-                       }
-
-c.url.start_pages = ['about:blank']
 # c.url.yank_ignored_parameters = ['ref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
 
-c.window.hide_decoration = True
-c.window.title_format = '{perc}{host}'
 
 # c.zoom.default = '100%'
 # c.zoom.levels = ['25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%', '125%', '150%', '175%', '200%', '250%', '300%', '400%', '500%']
@@ -316,10 +339,6 @@ c.window.title_format = '{perc}{host}'
 # c.zoom.text_only = False
 
 ## Bindings for normal mode
-config.bind('X', 'spawn mpv {url}')
-config.bind('x', 'hint links spawn mpv {hint-url}')
-config.bind('an', 'config-cycle content.user_stylesheets ~/solarized-dark-all-sites.css ""')
-config.bind('q', 'quit')
 # config.bind('"', 'enter-mode jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
@@ -331,7 +350,6 @@ config.bind('q', 'quit')
 # config.bind(';R', 'hint --rapid links window')
 # config.bind(';Y', 'hint links yank-primary')
 # config.bind(';b', 'hint all tab-bg')
-config.bind("'", 'hint all')
 # config.bind(';d', 'hint links download')
 # config.bind(';f', 'hint all tab-fg')
 # config.bind(';h', 'hint all hover')
@@ -388,12 +406,8 @@ config.bind("'", 'hint all')
 # config.bind('D', 'tab-close -o')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
-config.bind('H', 'back')
-config.bind('u', 'back')
 # config.bind('J', 'tab-next')
 # config.bind('K', 'tab-prev')
-config.bind('L', 'forward')
-config.bind('m', 'forward')
 # config.bind('M', 'bookmark-add')
 # config.bind('N', 'search-prev')
 # config.bind('O', 'set-cmd-text -s :open -t')
@@ -441,7 +455,6 @@ config.bind('m', 'forward')
 # config.bind('j', 'scroll down')
 # config.bind('k', 'scroll up')
 # config.bind('l', 'scroll right')
-config.bind('<Ctrl-m>', 'quickmark-save')
 # config.bind('n', 'search-next')
 # config.bind('o', 'set-cmd-text -s :open')
 # config.bind('pP', 'open -- {primary}')
@@ -473,10 +486,6 @@ config.bind('<Ctrl-m>', 'quickmark-save')
 # config.bind('tsh', 'config-cycle -p -t -u *://{url:host}/* content.javascript.enabled ;; reload')
 # config.bind('tsu', 'config-cycle -p -t -u {url} content.javascript.enabled ;; reload')
 
-config.bind('tit', 'config-cycle -p -t content.images')
-config.bind('tjt', 'config-cycle -p -t content.javascript.enabled')
-
-config.bind('<Ctrl-u>', 'undo')
 
 # config.bind('v', 'enter-mode caret')
 # config.bind('wB', 'set-cmd-text -s :bookmark-load -w')
@@ -586,7 +595,6 @@ config.bind('<Ctrl-u>', 'undo')
 # config.bind('<Alt-D>', 'rl-kill-word', mode='prompt')
 # config.bind('<Alt-F>', 'rl-forward-word', mode='prompt')
 # config.bind('<Alt-Shift-Y>', 'prompt-yank --sel', mode='prompt')
-config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
 # config.bind('<Ctrl-?>', 'rl-delete-char', mode='prompt')
 # config.bind('<Ctrl-A>', 'rl-beginning-of-line', mode='prompt')
 # config.bind('<Ctrl-B>', 'rl-backward-char', mode='prompt')
