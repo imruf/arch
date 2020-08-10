@@ -184,7 +184,7 @@ alias wadio='mpv --quiet http://162.254.150.34:8201/stream1'
 alias dhoni='mpv --quiet http://182.160.110.180:1020/'
 
 #MAIL
-alias mail='mailsync && neomutt'
+alias mail='mbsync -a; neomutt'
 alias ibx='neomutt'
 
 #TRANSMISSION
