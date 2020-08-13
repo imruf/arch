@@ -5,7 +5,8 @@
 wifi() {
     ssid=$(iwgetid -r)
     sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print " ", int($3 * 100 / 70) "%" }')
-    if [ "${ssid}" == is@wp ] || [ "${ssid}" == R4X ]; then
+    wlp=$(cat /sys/class/net/wlp4s0/operstate 2>/dev/null)
+    if [ "${wlp}" == up ]; then
 	    echo -e "$ssid $sig"
     else
         echo -e "📡"
@@ -14,7 +15,7 @@ wifi() {
 }
 
 dte() {
-  dte="$(date +"  %a, %d %b|%H:%M  ")"
+  dte="$(date +" %a %d %b|%H:%M  ")"
   echo -e "$dte"
 }
 
@@ -40,8 +41,9 @@ bat() {
 }
 
 mem(){
-  mem=`free -h | awk '/Mem/ {printf $3 B}'`
-  echo -ne "\x02"░▒▒░ "  "$mem"B"
+  mem=`free -h | awk '/Mem/ {printf $3"B"}'`
+  # mem=`free -h | awk '/Mem/ {printf $3"B" "/" $2"B"}'`
+  echo -ne "░▒▒░" "  "$mem""
 }
 
 cpu() {
@@ -61,7 +63,7 @@ vol() {
 
 blight() {
     light=`brightnessctl | awk '/Current brightness:/ {print $4}'`
-    echo -e "  $light"
+    echo -e " $light"
 }
 
 mybar() {
