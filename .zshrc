@@ -13,10 +13,15 @@ export QT_IM_MODULE=ibus
 export ZSH="/home/masud/.oh-my-zsh"
 
 #PLUGINS
-plugins=(git extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions vi-mode)
+plugins=(git-prompt zsh-autosuggestions zsh-syntax-highlighting zsh-completions vi-mode)
 
 #SOURCE
+
 source $ZSH/oh-my-zsh.sh
+#source /home/masud/.config/zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /home/masud/.config/zsh/plugin/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /home/masud/.config/zsh/plugin/zsh-completions/zsh-completions.plugin.zsh
+#source /home/masud/.config/zsh/plugin/vi-mode/vi-mode.plugin.zsh
 #source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 #source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
