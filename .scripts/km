@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#keymap
+# This script is called on startup to remap keys.
+# Increase key speed via a rate change
+xset r rate 300 50
+# Map the caps lock key to escape, use swapescape to swap keys
+setxkbmap -option caps:escape

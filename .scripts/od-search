@@ -1,4 +1,5 @@
 #!/bin/bash
+# od-search video The+Good+The+Bad+And+The+Ugly
 
 SEARCH_URL="https://www.google.com/search?q="
 VIDEO_EXT='(avi%7Cmkv%7Cmov%7Cmp4%7Cmpg%7Cwmv)'

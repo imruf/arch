@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+url="$*"
+
+echo "Fetching Code..."
+youtube-dl -F "$url"
+read -p "Enter Code: " FORMAT
+
+echo "Streaming..."
+mpv --loop=inf --ytdl-format=$FORMAT "$url"

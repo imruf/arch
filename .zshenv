@@ -5,10 +5,10 @@ export NNN_NO_AUTOSELECT=1
 export NNN_CONTEXT_COLORS="3465"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_BMS='h:~/;d:~/Downloads;c:~/Downloads/Drive;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud'
-export NNN_PLUG='p:preview-tabbed;w:setbg'
+export NNN_PLUG='p:preview-tabbed;w:setbg;d:drop'
 
 #Default Browser
-export BROWSER="elinks"
+export BROWSER="qutebrowser"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"

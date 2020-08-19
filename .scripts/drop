@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+# use to drag and drop file using dragon mwh/dragon
+
+[ ! -z "$1" ] && dragon -x "$1"

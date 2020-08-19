@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+# author: unknown
+# sentby: MoreChannelNoise (https://www.youtube.com/user/MoreChannelNoise)
+# editby: gotbletu (https://www.youtube.com/user/gotbletu)
+
+# demo: https://www.youtube.com/watch?v=kxJClZIXSnM
+#       saves us the trouble of binding multiple hotkeys for each script,
+#       when we can just use one hotkey for everything.
+
+declare -A LABELS
+declare -A COMMANDS
+
+###
+# List of defined 'bangs'
+
+# Go to web page
+COMMANDS["Web"]="dweb"
+LABELS["Web"]=""
+
+# Open custom web searches using surfraw
+COMMANDS["SurfRaw"]="dsr"
+LABELS["SurfRaw"]=""
+
+# Open surfraw bookmarks
+COMMANDS["Bookmarks"]="db"
+LABELS["Bookmarks"]=""
+
+# Search/Find/Locate local files
+COMMANDS["Find"]="dl"
+LABELS["Find"]=""
+
+# Calculator/menu-calc dmneu rofi script from AUR
+COMMANDS["Calc"]="= --dmenu=dmenu -- -l 3 -c"
+LABELS["Calc"]=""
+
+# Powermenu
+COMMANDS["power"]="powermenu"
+LABELS["power"]=""
+
+# launch programs
+#COMMANDS["apps"]="dmenu_run"
+#LABELS["apps"]=""
+
+function print_menu()
+{
+    for key in ${!LABELS[@]}
+    do
+  echo "$key    ${LABELS}"
+     #   echo "$key    ${LABELS[$key]}"
+     # my top version just shows the first field in labels row, not two words side by side
+    done
+}
+
+function start()
+{
+    print_menu | dmenu -i -p ":>_"
+
+}
+
+
+# Run it
+value="$(start)"
+
+# Split input.
+# grab upto first space.
+choice=${value%%\ *}
+# graph remainder, minus space.
+input=${value:$((${#choice}+1))}
+
+##
+# Cancelled? bail out
+##
+if test -z ${choice}
+then
+    exit
+fi
+
+# check if choice exists
+if test ${COMMANDS[$choice]+isset}
+then
+    # Execute the choice
+    #eval echo "Executing: ${COMMANDS[$choice]}"
+    eval ${COMMANDS[$choice]}
+else
+ eval  $choice | dmenu
+fi
