@@ -16,19 +16,29 @@ static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
-static const char col_y1[]          = "#191919";
-static const char col_y2[]          = "#fea63c"; /* #fea63c */
+static const char col_y1[]          = "#bf616a";
+static const char col_y2[]          = "#02143f"; /* #fea63c */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_y1, col_black,  col_cyan  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
+typedef struct {
+	const char *name;
+	const void *cmd;
+} Sp;
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x16", NULL };
+static Sp scratchpads[] = {
+	/* name          cmd  */
+	{"spterm",      spcmd1},
 };
 
 /* tagging */
@@ -41,15 +51,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "firefox", NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
-	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
-	{ "qutebrowser", NULL,      NULL,     1 << 1,       0,           0,         0,        -1 },
-    { "mpv",         NULL,      NULL,     1 << 2,       1,                      1,        -1 },
-    { "MPlayer",     NULL,      NULL,     1 << 2,       1,                      1,        -1 },
-	{ "libreoffice-writer", NULL,      NULL,     1 << 3,       0,           0,         0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
+  /* class               instance  title  tags mask  isfloating  isterminal  noswallow  monitor */
+{ "Gimp",                NULL,     NULL,  0,         1,          0,           0,        -1 },
+{ "firefox",             NULL,     NULL,  1 << 1,    0,          0,          -1,        -1 },
+/* { "st",                  NULL,     NULL,  0,         0,          1,          -1,        -1 }, */
+{ "qutebrowser",         NULL,     NULL,  1 << 1,    0,          0,           0,        -1 },
+{ "mpv",                 NULL,     NULL,  1 << 2,    1,                       1,        -1 },
+{ "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
+{ "libreoffice-writer",  NULL,     NULL,  1 << 3,    0,                       0,        -1 },
+{ NULL,		             "spterm", NULL,  SPTAG(0),	 1,			                        -1 },
 };
 
 /* layout(s) */
@@ -84,7 +94,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *fcmd[] = { "st", "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
 static const char *fcmd3[] = { "st", "-e", "ranger", NULL };
-static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *bcmd[] = { "dweb", NULL };
 static const char *bcmd2[] = { "firefox", NULL };
 static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
@@ -106,10 +116,12 @@ static const char *dmenucmd[] = { "dmenu_run", "-i", "-p", ":>_", NULL };
 #include <X11/XF86keysym.h>
 #include "movestack.c"
 
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
+	{ MOD2,            			    XK_slash,         togglescratch,  {.ui = 0 } },
 	{ MODKEY,                       XK_o,             spawn,          {.v = fcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 } },
 	{ MOD2,                         XK_o,             spawn,          {.v = fcmd3 } },
@@ -163,6 +175,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
 	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_n,              spawn,          CMD("leafpad new.txt") },
+	{ ShiftMask,                    XK_KP_Insert,      spawn,          CMD("clipmenu") }, 
     { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc } },
     { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec } },
 	{ 0,                            XF86XK_Calculator, spawn,          CMD("= --dmenu=dmenu -- -l 3 -c") }, /* menu-calc script */
@@ -184,7 +197,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
