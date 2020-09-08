@@ -1,0 +1,306 @@
+#!/bin/sh
+
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# EDITOR
+alias \
+ v="$EDITOR" \
+ q="exit" 
+
+# Files
+#List
+alias \
+ ls="ls --color=auto --group-directories-first" \
+ lah="exa -la --group-directories-first"
+
+#Nav
+alias \
+ ..="cd .." \
+ cp="cp -v" \
+ mv="mv -iv" \
+ rm="rm -iv" \
+ mkd="mkdir -pv"
+
+#db
+alias \
+ updb="sudo updatedb" \
+ e="fzf_file" \
+ f="fzf_cd" \
+ k="fzf_kill" \
+ h="fzf_history"
+
+#Info
+alias \
+ pdw="pwd" \
+ free="free -mt" \
+ diff="diff --color=auto" \
+ df="df -h"
+
+#Userlist
+alias \
+ userlist="cut -d: -f1 /etc/passwd"
+
+#HARDWARE
+alias \
+ hw="hwinfo --short"
+
+#Grep
+alias \
+ grep="grep --color=auto" \
+ egrep="egrep --color=auto" \
+ fgrep="fgrep --color=auto"
+
+#Merge
+alias \
+ merge="xrdb -merge ~/.Xresources"
+
+#Conky
+# kc="killall conky"
+
+#MICROCODE
+# microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
+
+#GRUB
+# update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#FONTS
+alias \
+ fc="sudo fc-cache -fv"
+
+#WGET
+alias \
+ wget="wget -c"
+
+#MIRROR
+alias \
+ mirror="sudo reflector -f 10 -l 10 --number 10 --verbose --save /etc/pacman.d/mirrorlist" \
+ mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" \
+ mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" \
+ mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" \
+ mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist"
+
+#PACMAN
+alias \
+ pac="sudo pacman --color auto" \
+ update="sudo pacman -Syyu" \
+ up="sudo pacman -Syu" \
+ pacs="pacman -Ss" \
+ inp="sudo pacman -S" \
+ rmv="sudo pacman -Rns" \
+
+alias \
+ unlock="sudo rm /var/lib/pacman/db.lck" \
+ armv="sudo pacman -Rns $(pacman -Qtdq)" \
+ cc="sudo pacman -Sc" \
+ nrp="pacman -Qdt" \
+ lfp="pacman -Qqm" \
+ fp="pacman -Qm" \
+ efp="pacman -Qqe" \
+
+alias \
+ rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+
+#AUR
+alias \
+ inpkg="makepkg -si"
+
+#yay
+# yinp="yay -S"
+# yayskip="yay -S --mflags --skipinteg"
+# upyay="yay -Syu --noconfirm"
+
+#trizen
+alias \
+ tzn="trizen" \
+ tinp="trizen -S" \
+ tznc="trizen -G" \
+ uptzn="trizen -Syu --noconfirm" \
+ tznskip="trizen -S --skipinteg"
+
+#XBPS
+# up="sudo xbps-install -Su"
+# pacs="xbps-query -Rs"
+# inp="sudo xbps-install -Su"
+# rmv="sudo xbps-remove -R"
+# armv="sudo xbps-remove -o"
+# ccache="sudo pacman -O"
+
+#wpa_supplicant
+# wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0"
+
+#MOUNT
+alias \
+ mount="udisksctl mount -b" \
+ usb="udisksctl mount -b /dev/sdb1" \
+ uusb="udisksctl unmount -b /dev/sdb1" \
+ eusb="udisksctl power-off -b /dev/sdb1" \
+ sdx="mountjutsu"
+
+#youtube-dl
+alias \
+ ytd-aac="youtube-dl --extract-audio --audio-format aac" \
+ ytd-best="youtube-dl --extract-audio --audio-format best" \
+ ytd-flac="youtube-dl --extract-audio --audio-format flac" \
+ ytd-m4a="youtube-dl --extract-audio --audio-format m4a" \
+ ytd-mp3="youtube-dl --extract-audio --audio-format mp3" \
+ ytd-opus="youtube-dl --extract-audio --audio-format opus" \
+ ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis" \
+ ytd-wav="youtube-dl --extract-audio --audio-format wav" \
+ ytd-best="youtube-dl -f bestvideo+bestaudio " \
+ ytd="youtube-dl" \
+ ytdF="youtube-dl -F" \
+ ytdf="youtube-dl -f" \
+ ytv="youtube-viewer -C"
+
+#Radio
+alias \
+ radio="curseradio" \
+ bbcb="mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup" \
+ bbcw="mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup" \
+ betar="mpv --quiet http://as3.digitalsynapsebd.com:8263/\;stream.mp3" \
+ bhoomi="mpv --quiet http://149.56.195.94:8545/stream" \
+ bongo="mpv --quiet http://radio.bongonet.net:8000/stream2" \
+ jago="mpv --quiet http://128.199.184.111:12496/stream" \
+ wadio="mpv --quiet http://162.254.150.34:8201/stream1" \
+ dhoni="mpv --quiet http://182.160.110.180:1020/" \
+
+#MAIL
+alias \
+ mail="mbsync -a; neomutt" \
+ ibx="neomutt"
+
+#TRANSMISSION
+alias \
+ pfx="peerflix -k -f /home/masud/Videos/ptfx" \
+ tfx="torrentflix"
+
+
+#Systemd
+alias \
+ sys="sudo systemctl"
+# sys="sudo sv"
+
+# Calculator
+alias \
+ math="mathomatic" \
+ calc="python -ic 'from __future__ import division; from math import *; from random import *'" \
+ sheet="sc-im"
+
+#MIS
+alias \
+ vol="ncpamixer" \
+ def="sdcv" \
+ mtag="eyeD3" \
+ sv="sudo vim" \
+ rt="tuir" \
+ keep="keepcli" \
+ drive="gdrive" \
+ books="pysheng" \
+ imgur="imgur_downloader" \
+ weather="curl wttr.in/khagrachari" \
+ e.g="tldr" \
+ pdf="zathura" \
+ pics="sxiv" \
+ el="elinks" \
+ ka="killall" \
+ xp='xclip -o' \
+ c2='units'
+
+# ibus="ibus-daemon -xdr"
+# music="ncmpcpp"
+# vim="nvim"
+
+#GIT
+alias \
+ gitc="git clone" \
+ gitu="git push -u origin master" \
+ gitca="git commit -a" \
+ gita="git add" \
+ gits="git status"
+
+#ARCHIVE
+alias \
+ uz="atool -x" \
+ zip="atool -a"
+
+#SURFRAW #Now using rsr script
+# srs="sr startpage"
+# srb="sr bing"
+# srd="sr duckduckgo"
+# srg="sr google"
+# srv="sr youtube"
+# sry="sr yahoo"
+# sraw="sr archwiki"
+# sraur="sr aur"
+# srpkg="sr archpkg"
+# srmdb="sr imdb"
+# srgit="sr github"
+# sru="sr urban"
+# srpb="sr piratebay"
+
+#arch-wiki-lite
+alias \
+ aw="wiki-search"
+
+#torsocks #now using 1.1.1.1
+# tor="sys start tor.service"
+# tors="sys stop tor.service"
+# ctorc="torsocks elinks "https://check.torproject.org/""
+# ctorb="torsocks surf https://check.torproject.org/"
+
+#IP/PING
+alias \
+ pn="ping -c 3 google.com" \
+ myip="ip addr show" \
+ isp="curl ifconfig.co" \
+ ns="speedtest" \
+ nss="speedtest --simple --single"
+#curl ifconfig.co/json
+#http -b ifconfig.co
+#wget -qO- ifconfig.co
+#fetch -qo- https://ifconfig.co
+#bat -print=b ifconfig.co/ip
+#curl ifconfig.co/country
+#curl ifconfig.co/country-iso
+#curl ifconfig.co/city
+#curl ifconfig.co/asn
+
+#SSH
+alias \
+ fst="sudo systemctl start sshd" \
+ fsts="sudo systemctl stop sshd"
+# termux="ssh -p 8022 u0_a127@192.168.137.234"
+
+#PNGLatex
+#pnglatex -h for help
+alias \
+ eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png"
+
+#JavaWM
+alias \
+ jwc="wmname LG3D"
+
+#DE/WM
+alias \
+ gui="startx" \
+ dwm="cp .xinit/dwm.xinitrc .xinitrc && gui" \
+
+#Corona
+alias \
+ covid="curl https://corona-stats.online\?source\=2" \
+ covidbd="curl https://corona-stats.online/BD"
+
+#POWERMANAGEMENT
+# iph="i3exit suspend"
+# ipl="i3exit lock"
+# ips="i3exit shutdown"
+# ipr="i3exit reboot"
+# bat="cat /sys/class/power_supply/BAT?/capacity" 
+
+
+#Bind
+#bindkey -v
+
+#FETCH
+alias \
+ inf="pfetch"
