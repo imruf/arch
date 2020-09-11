@@ -11,7 +11,7 @@
 
 browser='qutebrowser'
 engine='https://www.google.com/search?hl=en&q=%s'
-bookmarks="$HOME/.bookmarks"
+bookmarks="$HOME/.surf/bookmarks"
 
 gotourl() {
 	if [ "$nbrowser" = surf ]

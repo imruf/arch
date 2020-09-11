@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+url="$*"
+
+echo "Streaming..."
+mpv --ytdl-format='bestvideo[height<=480]+bestaudio/best[height<=360]' --loop=inf --autofit=640x480 "$url"
