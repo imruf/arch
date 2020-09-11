@@ -8,7 +8,7 @@ export NNN_BMS='h:~/;d:~/Downloads;c:~/Downloads/Drive;n:~/Documents;p:~/Picture
 export NNN_PLUG='p:preview-tabbed;w:setbg;d:drop'
 
 #Default Browser
-export BROWSER="qutebrowser"
+export BROWSER="elinks"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"

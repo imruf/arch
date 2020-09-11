@@ -4,7 +4,7 @@ PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16
 #PS1="%B%{$fg[yellow]%}[%n@%M %~]%{$reset_color%}$%b "
 
 #EXPORT 
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 export TERM="st-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
