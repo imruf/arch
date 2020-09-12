@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=9:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -36,9 +36,11 @@ typedef struct {
 	const void *cmd;
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x16", NULL };
+const char *spcmd2[] = {"com.github.lainsce.notejot", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
+	{"com.github.lainsce.notejot",      spcmd2},
 };
 
 /* tagging */
@@ -54,12 +56,13 @@ static const Rule rules[] = {
   /* class               instance  title  tags mask  isfloating  isterminal  noswallow  monitor */
 { "Gimp",                NULL,     NULL,  0,         1,          0,           0,        -1 },
 { "firefox",             NULL,     NULL,  1 << 1,    0,          0,          -1,        -1 },
-/* { "st",                  NULL,     NULL,  0,         0,          1,          -1,        -1 }, */
+{ "st",                  NULL,     NULL,  0,         0,          1,          -1,        -1 },
 { "qutebrowser",         NULL,     NULL,  1 << 1,    0,          0,           0,        -1 },
 { "mpv",                 NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "libreoffice-writer",  NULL,     NULL,  1 << 3,    0,                       0,        -1 },
 { NULL,		             "spterm", NULL,  SPTAG(0),	 1,			                        -1 },
+{ "Com.github.lainsce.notejot",   NULL, NULL,  SPTAG(1),	 1,	                        -1 },
 };
 
 /* layout(s) */
@@ -95,8 +98,7 @@ static const char *fcmd[] = { "st", "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
 static const char *fcmd3[] = { "st", "-e", "ranger", NULL };
 static const char *bcmd[] = { "dweb", NULL };
-static const char *bcmd2[] = { "firefox", NULL };
-static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
+static const char *bcmd2[] = { "st", "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
 static const char *ips[] = { "i3exit", "suspend", NULL };
 static const char *ipr[] = { "i3exit", "reboot", NULL };
@@ -122,12 +124,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MOD2,            			    XK_slash,         togglescratch,  {.ui = 0 } },
+	{ MODKEY,                       XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_o,             spawn,          {.v = fcmd } },
 	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 } },
 	{ MOD2,                         XK_o,             spawn,          {.v = fcmd3 } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
-	{ MODKEY,                       XK_n,             spawn,          {.v = bcmd3 } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
