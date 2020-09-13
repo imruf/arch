@@ -6,7 +6,7 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=9:antialias=true:autohint=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true" "JoyPixels:size=9:antialias=true:autohint=true"  };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
