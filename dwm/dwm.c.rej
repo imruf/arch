@@ -1,26 +1,11 @@
 --- dwm.c
 +++ dwm.c
-@@ -266,7 +258,6 @@ static Display *dpy;
- static Drw *drw;
- static Monitor *mons, *selmon;
- static Window root;
--static Bar eb;
- 
- /* configuration, allows nested code to access above variables */
- #include "config.h"
-@@ -579,7 +568,6 @@ configurenotify(XEvent *e)
- 			updatebars();
- 			for (m = mons; m; m = m->next)
- 				XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
--			XMoveResizeWindow(dpy, eb.win, mons->wx, eb.y, mons->ww, bh);
- 			focus(NULL);
- 			arrange(NULL);
- 		}
-@@ -1560,7 +1545,6 @@ setup(void)
- 	root = RootWindow(dpy, screen);
- 	drw = drw_create(dpy, screen, root, sw, sh);
- 	drw_load_fonts(drw, fonts, LENGTH(fonts));
--	eb.show = extrabar;
- 	if (!drw->fontcount)
- 		die("no fonts could be loaded.\n");
- 	bh = drw->fonts[0]->h + 2;
+@@ -93,7 +94,7 @@ struct Client {
+ 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
+ 	int bw, oldbw;
+ 	unsigned int tags;
+-	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;
++	int isfixed, isfloating, wasfloating, isurgent, neverfocus, oldstate, isfullscreen;
+ 	Client *next;
+ 	Client *snext;
+ 	Monitor *mon;
