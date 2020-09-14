@@ -160,6 +160,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period,        tagmon,         {.i = +1 } },
     { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
     { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
+	{ MOD2,                       XK_q,      moveplace,      {.ui = WIN_NW }},
+	{ MOD2,                       XK_w,      moveplace,      {.ui = WIN_N  }},
+	{ MOD2,                       XK_e,      moveplace,      {.ui = WIN_NE }},
+	{ MOD2,                       XK_a,      moveplace,      {.ui = WIN_W  }},
+	{ MOD2,                       XK_s,      moveplace,      {.ui = WIN_C  }},
+	{ MOD2,                       XK_d,      moveplace,      {.ui = WIN_E  }},
+	{ MOD2,                       XK_z,      moveplace,      {.ui = WIN_SW }},
+	{ MOD2,                       XK_x,      moveplace,      {.ui = WIN_S  }},
+	{ MOD2,                       XK_c,      moveplace,      {.ui = WIN_SE }},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
