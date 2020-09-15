@@ -13,6 +13,7 @@
 * Select All: a
 * Copy: p
 * Paste: v
+* Copy and Rename: w
 * Delete: x
 * Rename: Ctrl+r
 * Rename All: r
