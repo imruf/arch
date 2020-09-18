@@ -6,7 +6,7 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=9:antialias=true:autohint=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -123,14 +123,14 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
-	{ MOD2,            			    XK_slash,         togglescratch,  {.ui = 0 } },
-	{ MODKEY,                       XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_o,             spawn,          {.v = fcmd } },
-	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 } },
+	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 }},
 	{ MOD2,                         XK_o,             spawn,          {.v = fcmd3 } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
+	{ MODKEY,                       XK_n,             togglescratch,  {.ui = 0 } },
+	{ ControlMask,     			    XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,             focusstack,     {.i = -1 } },

@@ -203,5 +203,8 @@ later 10min
 V to select entire line, select block of text and type
 :sort
 
+11. Vsplit
+:vs vertical split
+:sp horizontal split
 #For More
 https://github.com/shawncplus/vim-classes

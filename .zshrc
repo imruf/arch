@@ -1,4 +1,4 @@
-autoload -U colors && colors	# Load colors
+#autoload -U colors && colors	# Load colors
 
 PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16286}]%F{#586e75}$%b "
 #PS1="%B%{$fg[yellow]%}[%n@%M %~]%{$reset_color%}$%b "
@@ -16,8 +16,9 @@ plugins=(git-prompt zsh-autosuggestions zsh-syntax-highlighting zsh-completions 
 
 #SOURCE
 source $ZSH/oh-my-zsh.sh
+#source ~/.local/share/icons-in-terminal/icons_bash.sh
+
 #source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-#source /home/masud/powerlevel10k/powerlevel10k.zsh-theme
 
 #Theme
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes

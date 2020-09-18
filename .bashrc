@@ -21,7 +21,10 @@ export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
 export HISTCONTROL=ignoreboth:erasedups
 
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+PS1="[\u@\h \w]\$ "
+export PS1
+
+#export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 
 #LIST
@@ -265,3 +268,5 @@ alias eq='pnglatex -b Transparent -d 300 -s 12'
 #alias ipr='i3exit reboot'
 
 alias q='exit'
+
+source /home/masud/.config/broot/launcher/bash/br

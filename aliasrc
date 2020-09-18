@@ -116,6 +116,10 @@ alias \
  tznc="trizen -G" \
  uptzn="trizen -Syu --noconfirm" \
  tznskip="trizen -S --skipinteg"
+#c make install
+alias \
+    cinp="sudo make clean install" \
+    crmv="sudo make clean uninstall"
 
 #XBPS
 # up="sudo xbps-install -Su"

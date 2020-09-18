@@ -22,6 +22,9 @@ c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
                        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
                        'aw': 'https://wiki.archlinux.org/?search={}',
                        'ud': 'https://www.urbandictionary.com/define.php?term={}',
+                       'b2b': 'https://www.english-bangla.com/bntobn/index/{}',
+                       'b2e': 'https://www.english-bangla.com/bntoen/index/{}',
+                       'e2b': 'https://www.english-bangla.com/dictionary/{}',
                        }
 
 c.url.start_pages = ['about:blank']
@@ -31,7 +34,7 @@ c.window.title_format = '{perc}{host}'
 
 config.bind('X', 'spawn mpv {url}')
 config.bind('x', 'hint links spawn mpv {hint-url}')
-config.bind('an', 'config-cycle content.user_stylesheets ~/solarized-dark-all-sites.css ""')
+config.bind('an', 'config-cycle content.user_stylesheets ~/.surf/styles/solarized.css ""')
 config.bind('q', 'quit')
 config.bind("'", 'hint all')
 config.bind('H', 'back')

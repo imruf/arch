@@ -5,8 +5,16 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+
 static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true" };
+
+/* 
+static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font:pixelsize=20:antialias=true:autohint=true"; 
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
+*/
+
 static int borderpx = 0;
 
 /*
@@ -125,29 +133,29 @@ static const char *colorname[] = {
  };
 
 static const char *altcolorname[] = {
-"#3b4252",
-"#bf616a",
-"#a3be8c",
-"#ebcb8b",
-"#81a1c1",
-"#b48ead",
-"#88c0d0",
-"#e5e8f0",
-"#4c566a",
-"#bf616a",
-"#a3be8c",
-"#ebcb8b",
-"#81a1c1",
-"#b48ead",
-"#8fbcbb",
-"#eceff4",
+"black",
+"red3",
+"green3",
+"yellow3",
+"blue2",
+"magenta3",
+"cyan3",
+"gray90",
+
+"gray50",
+"red",
+"green",
+"yellow",
+"#5c5cff",
+"magenta",
+"cyan",
+"white",
 
 [255] = 0,
 
-"#d8dee9",
-"#2e3440",
-"#d8dee9", /* 258 -> cursor */
-
+"#cccccc",
+"black",
+"#555555",
 };
 
 unsigned int defaultfg = 256;
@@ -170,7 +178,7 @@ unsigned int bg = 257, bgUnfocused = 257;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorstyle = 3;
+static unsigned int cursorstyle = 5;
 static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
