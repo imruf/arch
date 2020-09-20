@@ -1,7 +1,9 @@
-#autoload -U colors && colors	# Load colors
+autoload -U colors && colors	# Load colors
+setopt prompt_subst
 
-PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16286}]%F{#586e75}$%b "
-#PS1="%B%{$fg[yellow]%}[%n@%M %~]%{$reset_color%}$%b "
+PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} ➜%b "
+RPROMPT='$(vcs_super_info)'
+# PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16286}]%F{#586e75}$%b "
 
 #EXPORT 
 #export TERM="xterm-256color"
@@ -9,59 +11,61 @@ export TERM="st-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
-export ZSH="/home/masud/.oh-my-zsh"
 
-#PLUGINS
-plugins=(git-prompt zsh-autosuggestions zsh-syntax-highlighting zsh-completions vi-mode)
+# History in cache directory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
 
-#SOURCE
-source $ZSH/oh-my-zsh.sh
-#source ~/.local/share/icons-in-terminal/icons_bash.sh
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
-#source /home/masud/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
 
-#Theme
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME=powerlevel10k/powerlevel10k
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 #Alias
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshfnrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshfnrc"
 
-#Functions
 
-fzf_file() { zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
-fzf_cd() { zle -I; DIR=$(fd -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
-fzf_history() { zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; }; zle -N fzf_history; bindkey '^H' fzf_history
-fzf_kill() { zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; }; zle -N fzf_kill; bindkey '^K' fzf_kill
-
-# fzf_file() { zle -I; FILE=$(find ${1:-.} -type f -print 2> /dev/null | fzf +m) && vim "$FILE" ; }; zle -N fzf_file;
-# fzf_cd() { zle -I; DIR=$(find ${1:-.} -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N fzf_cd; bindkey '^F' fzf_cd
-# fzf_config() { zle -I; du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR }; zle -N fzf_config; bindkey '^E' fzf_config
-# ffd() { zle -I; DIR=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$DIR" ; }; zle -N ffd; bindkey '^F' ffd
-
-tsmcc() {
-        transmission-remote -l | grep 100% | grep Done | \
-        awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;} #clearcompleted
-tsm() { transmission-remote --list ;}
-        # numbers of ip being blocked by the blocklist
-        # credit: smw from irc #transmission-status
-tsmcnt() { echo "Blocklist rules:" $(curl -s --data \
-        '{"method": "session-get"}' localhost:9091/transmission/rpc -H \
-        "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
-        | cut -d: -f 11 | cut -d, -f1) ;} #tsm-count
-tsmbl() { $PATH_SCRIPTS/blocklist.sh ;}         # update blocklist
-tsmdmn() { transmission-daemon ;} #tsm-daemon
-tsmquit() { killall transmission-daemon ;} #killtsm
-tsmaspd() { transmission-remote --alt-speed ;}       # limit bandwidth
-tsmnaspd() { transmission-remote --no-alt-speed ;}   # dont limit bandwidth
-tsmadd() { transmission-remote --add "$1" ;} #add torrent
-tsmaskp() { transmission-remote -t"$1" --reannounce ;} #ask more peers
-tsmstop() { transmission-remote -t"$1" --stop ;}              # stop <id> or all 
-tsmstart() { transmission-remote -t"$1" --start ;}             # start <id> or all
-tsmpurge() { transmission-remote -t"$1" --remove-and-delete ;} # delete data also
-tsmdel() { transmission-remote -t"$1" --remove ;}           # leaves data alone
-tsminfo() { transmission-remote -t"$1" --info ;} #info
-tsmspeed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-vcs-prompt/zshrc.sh 2>/dev/null
+source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-completions/zsh-completions.plugin.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
