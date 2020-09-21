@@ -1,9 +1,9 @@
 autoload -U colors && colors	# Load colors
 setopt prompt_subst
 
-PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} ➜%b "
+PS1="%B%F{blue}$(print -P '\uF303';) %F{yellow}%C%F{green} $(print -P '\uf120';)%b "
+# PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
 RPROMPT='$(vcs_super_info)'
-# PS1="%B%F{#b16286}[%F{#d2691e%}%n%F{#b16286}@%F{#cd5555%}%M %F{#8e388e}%~%F{#b16286}]%F{#586e75}$%b "
 
 #EXPORT 
 #export TERM="xterm-256color"
