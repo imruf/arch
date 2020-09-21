@@ -193,9 +193,9 @@ static Key keys[] = {
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
-	{ 0,                            XK_Print,          spawn,          CMD("maim ~/ss/$(date +%d%h%T).png") },
-	{ ShiftMask,                    XK_Print,          spawn,          CMD("maim -i $(xdotool getactivewindow) ~/ss/$(date +%d%h%T).png") },
-	{ ControlMask,                  XK_Print,          spawn,          CMD("maim -s ~/ss/$(date +%d%h%T).png") },
+	{ 0,                            XK_Print,          spawn,          CMD("maim ~/Pictures/ss/$(date +%d%h%T).png") },
+	{ ShiftMask,                    XK_Print,          spawn,          CMD("maim -i $(xdotool getactivewindow) ~/Pictures/ss/$(date +%d%h%T).png") },
+	{ ControlMask,                  XK_Print,          spawn,          CMD("maim -s ~/Pictures/ss/$(date +%d%h%T).png") },
 };
 
 /* button definitions */
