@@ -5653,3 +5653,19 @@ Sep 18 14:18 : update: removing A Emon Porichay.mp3
 Sep 18 14:18 : update: added /E Emon Porichay.mp3
 Sep 18 14:18 : update: added /Ei Sahara.mp3
 Sep 18 14:18 : update: added /Ei Monta.mp3
+Sep 21 00:16 : player: played "Aarshi Nogor_3.mp3"
+Sep 21 00:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 00:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 00:48 : player: played "Annie's song.mp3"
+Sep 21 11:10 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 11:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 20:03 : player: played "Annie's song.mp3"
+Sep 21 20:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 20:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 23:34 : avahi: Client Disconnected, will reconnect shortly
+Sep 21 23:35 : player: played "Annie's song.mp3"
+Sep 21 23:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 23:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 22 00:30 : player: played "Annie's song.mp3"
+Sep 22 23:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 22 23:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

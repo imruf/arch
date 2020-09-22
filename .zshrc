@@ -1,9 +1,10 @@
 autoload -U colors && colors	# Load colors
+
 setopt prompt_subst
 
-PS1="%B%F{blue}$(print -P '\uF303';) %F{yellow}%C%F{green} $(print -P '\uf120';)%b "
+PS1="%B%F{blue}$(print -P '\uF303';) %F{yellow}%~%F{green} »%b "
+RPS1='$(vcs_super_info)'
 # PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
-RPROMPT='$(vcs_super_info)'
 
 #EXPORT 
 #export TERM="xterm-256color"
@@ -19,7 +20,8 @@ HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
@@ -33,6 +35,9 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
 bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
@@ -58,14 +63,16 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+# bindkey '^e' edit-command-line
 
 #Alias
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshfnrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshfnrc"
 
 
-source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-vcs-prompt/zshrc.sh 2>/dev/null
-source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source ${XDG_CONFIG_HOME:-$HOME/.config/zsh}/zsh-completions/zsh-completions.plugin.zsh
+source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-vcs-prompt/zshrc.sh 2>/dev/null
+source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-completions/zsh-completions.plugin.zsh
+source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history-substring-search/history-substring-search.zsh
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
