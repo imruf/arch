@@ -2,7 +2,7 @@ autoload -U colors && colors	# Load colors
 
 setopt prompt_subst
 
-PS1="%B%F{blue}$(print -P '\uF303';) %F{yellow}%~%F{green} »%b "
+PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
 RPS1='$(vcs_super_info)'
 # PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
 
