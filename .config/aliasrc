@@ -170,7 +170,7 @@ alias \
 
 #MAIL
 alias \
- mail="mbsync -a; neomutt" \
+ mail="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc -a; neomutt" \
  ibx="neomutt"
 
 #TRANSMISSION
@@ -208,7 +208,7 @@ alias \
  el="elinks" \
  ka="killall" \
  xp='xclip -o' \
- c2='units'
+ c2='units' \
 
 # ibus="ibus-daemon -xdr"
 # music="ncmpcpp"
@@ -269,10 +269,12 @@ alias \
 #curl ifconfig.co/city
 #curl ifconfig.co/asn
 
-#SSH
+#SSH/FTP
 alias \
- fst="sudo systemctl start sshd" \
- fsts="sudo systemctl stop sshd"
+ sftpu="sudo systemctl start sshd" \
+ sftpd="sudo systemctl stop sshd" \
+ ftpu="sudo systemctl start vsftpd" \
+ ftpd="sudo systemctl stop vsftpd"
 # termux="ssh -p 8022 u0_a127@192.168.137.234"
 
 #PNGLatex
