@@ -167,7 +167,7 @@ static struct key bindings[] = {
 	{ 'z',            SEL_ARCHIVE },
 	{ 't',            SEL_SORT },
 	{ CONTROL('L'),   SEL_REDRAW },
-	{ CONTROL('J'),   SEL_SEL },
+	{ CONTROL('J'),   SEL_NEXT },
 	{ ' ',            SEL_SEL },
 	{ 'm',            SEL_SELMUL },
 	{ 'a',            SEL_SELALL },
