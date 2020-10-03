@@ -73,6 +73,9 @@
 ## App Bindings
 
 - Terminal:               Alt+/
+- Scratchpad:
+    - dropdown            Alt+n
+    - notejot             Alt+Shift+n
 - dmenu 
     - dmenu:              Alt+;
     - dbang:              Super+;
