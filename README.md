@@ -96,7 +96,7 @@
 
 - Files
     - nnn:                Alt+o
-    - ranger:             Super+o
+    - lf:             Super+o
     - pcmanfm:            Alp+p
 
 - Browser
