@@ -106,7 +106,7 @@
 
 - Music:                  Alt+Shift+m
 
-- Screenshot
+- Screenshot:
     - FullScreen:          prtsc
     - ActiveWindow:        Shift+prtsc
     - Selection:           Control+prtsc
@@ -128,7 +128,7 @@
 
 - Color:                    Ctrl+Shift+p
 
--Zoom
+- Zoom
     - In:                   Ctrl+Shift+pgup
     - Out:                  Ctrl+Shift+pgdn
     - Reset:                Ctrl+Shift+home
@@ -137,7 +137,7 @@
     - Up:                   Alt+Ctrl+k
     - Down:                 Alt+Ctrl+j
 
--Url
+- Url
     - Select:                Super+l
     - Open:                  Super+u
 
