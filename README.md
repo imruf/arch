@@ -96,7 +96,7 @@
 
 - Files
     - nnn:                Alt+o
-    - lf:             Super+o
+    - lf:                 Super+o
     - pcmanfm:            Alp+p
 
 - Browser
@@ -172,12 +172,12 @@
 ### qutebrowser
 ---
 
-- Url:
+- Url
     - Open:                  o
     - Open In New Tab:       O
     - Open In New Window:    Ctrl+n
 
-- Navigation:
+- Navigation
     - Page Down:              space
     - Page Down:              Ctrl+F
     - Up:                     k
@@ -202,45 +202,45 @@
     - Download:               gd
     - View Source:            gf
 
-- Download:
+- Download
     - Cancel Download:                  ad
     - Clear Download:                   cd
     - Copy Download Link Prompt:        Ctrl+c
 
-- Search:
+- Search
     - gg, sp, ddg, yy, aur, aw, ud, b2b, b2e, e2b
 
 - Play Media:                X
 - Play Hint Media:           x
 
-- Toggle:
+- Toggle
     - Toggle Hint:           t
     - Images:                tp
     - Javascript:            tj
 
-- Zoom:
+- Zoom
     - In:                     +
     - Out:                    -
     - Reset:                  =
 
-- Search In Page:
+- Search In Page
     - Text:                   /
     - Next:                   n
-    - Previous                N
+    - Previous:               N
 
-- Quit:                       ;/q
+- Quit:                       ; q
 
 ---
 ### elinks
 ---
 
-- Navigation:
+- Navigation
     - Page Down:              Ctrl+f
     - Page up:                Ctrl+b
     - Up:                     k
     - Down:                   j
     - Left:                   h
-    - Right:                  l/Right
+    - Right:                  l Right
     - Top:                    g
     - Bottom:                 G
     - Open Link:              l
@@ -261,9 +261,9 @@
     - External Passing:       v
     - View Image:             i
 
-- Url:
+- Url
     - Open:                         u
     - Open In New Tab:              T
     - Open New Tab In Background:   Ctrl+T
 
-- Quit:                       ;/q
+- Quit                       ; q
