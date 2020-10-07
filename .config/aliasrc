@@ -156,18 +156,6 @@ alias \
  ytdf="youtube-dl -f" \
  ytv="youtube-viewer -C"
 
-#Radio
-alias \
- radio="curseradio" \
- bbcb="mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup" \
- bbcw="mpv --quiet http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup" \
- betar="mpv --quiet http://as3.digitalsynapsebd.com:8263/\;stream.mp3" \
- bhoomi="mpv --quiet http://149.56.195.94:8545/stream" \
- bongo="mpv --quiet http://radio.bongonet.net:8000/stream2" \
- jago="mpv --quiet http://128.199.184.111:12496/stream" \
- wadio="mpv --quiet http://162.254.150.34:8201/stream1" \
- dhoni="mpv --quiet http://182.160.110.180:1020/" \
-
 #MAIL
 alias \
  mail="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc -a; neomutt" \
@@ -195,7 +183,7 @@ alias \
  vol="ncpamixer" \
  def="sdcv" \
  mtag="eyeD3" \
- sv="sudo vim" \
+ sv="sudo nvim" \
  rt="tuir" \
  keep="keepcli" \
  drive="gdrive" \

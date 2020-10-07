@@ -186,7 +186,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
-	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e ncmpcpp") },
+	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e cmus") },
 	{ ShiftMask,                    XK_KP_Insert,      spawn,          CMD("clipmenu") }, 
     { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc } },
     { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec } },
