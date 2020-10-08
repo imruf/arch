@@ -201,7 +201,7 @@ bind common ^C echo Type :quit<enter> to exit cmus.
 bind common ^L refresh
 
 bind common q quit -i
-bind common ; quit -i
+bind common ; quit
 
 bind common u update-cache
 fset 90s=date>=1990&date<2000
