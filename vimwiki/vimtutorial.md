@@ -83,6 +83,12 @@ A. Move in vim
 - ;   repeat above, in same direction
 - ,   repeat above, in reverse direction
 
+B. Mark in vim
+- To mark press m and any letter for marking position.
+- To go to marking position press ' follow by marking position letter.
+- e.g ma mark this position to letter a.
+- 'a come to the previous line from anywhere in this document
+
 
 2. INSERT MODE
 
