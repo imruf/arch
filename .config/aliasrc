@@ -67,9 +67,11 @@ alias \
 alias \
  fc="sudo fc-cache -fv"
 
-#WGET
+#downloader
 alias \
- wget="wget -c"
+ wget="wget -c" \
+ a2="aria2c" \
+ a2p="aria2p"
 
 #MIRROR
 alias \
