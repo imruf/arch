@@ -71,8 +71,8 @@ alias \
 alias \
  wget="wget -c" \
  a2="aria2c" \
- a2p="aria2p"
- a2s="a2pd start"
+ a2p="aria2p" \
+ a2s="a2pd start" \
  a2d="a2pd stop"
 
 #MIRROR
