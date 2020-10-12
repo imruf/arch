@@ -207,8 +207,8 @@
     - Clear Download:                   cd
     - Copy Download Link Prompt:        Ctrl+c
 
-- Search
-    - gg, sp, ddg, yy, aur, aw, ud, b2b, b2e, e2b
+- Search Elvi
+    - aur, aw, b2b, b2e, bing, ddg, e2b, gg, git, pkg, sp, ud, ytv, yy
 
 - Play Media:                X
 - Play Hint Media:           x
