@@ -47,6 +47,13 @@ config.bind('tj', 'config-cycle -p -t content.javascript.enabled')
 config.bind('<Ctrl-u>', 'undo')
 config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
 
+config.bind('gb', 'open qute://bookmarks#bookmarks')
+config.bind('gh', 'open qute://history')
+config.bind('gq', 'open qute://bookmarks')
+config.bind('gx', 'open qute://settings')
+config.bind('gd', 'download')
+config.bind('gs', 'view-source')
+
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 # c.auto_save.interval = 15000
 # c.auto_save.session = False

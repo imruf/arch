@@ -196,11 +196,11 @@
     - Undo:                   Ctrl+u
     - Reload:                 r/R
     - Stop:                   Ctrl+s
-    - Bookmarks:              Sb
-    - History:                Sh
-    - Settings:               Ss
+    - Bookmarks:              gb
+    - History:                gh
+    - Settings:               gx
     - Download:               gd
-    - View Source:            gf
+    - View Source:            gs
 
 - Download
     - Cancel Download:                  ad
