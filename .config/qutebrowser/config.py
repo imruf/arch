@@ -14,17 +14,20 @@ c.tabs.show = 'multiple' #always, never, multiple, switching
 c.tabs.title.format = '{audio}{index}: {host}'
 
 c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
-                       'gg': 'https://www.google.com/search?hl=en&q={}' ,
-                       'sp': 'https://www.startpage.com/do/search?query={}',
-                       'bing': 'https://bing.com/search?q={}',
-                       'ddg': 'https://duckduckgo.com/?q={}',
-                       'yy': 'https://search.yahoo.com/search?p={}',
                        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
                        'aw': 'https://wiki.archlinux.org/?search={}',
-                       'ud': 'https://www.urbandictionary.com/define.php?term={}',
                        'b2b': 'https://www.english-bangla.com/bntobn/index/{}',
                        'b2e': 'https://www.english-bangla.com/bntoen/index/{}',
+                       'bing': 'https://bing.com/search?q={}',
+                       'ddg': 'https://duckduckgo.com/?q={}',
                        'e2b': 'https://www.english-bangla.com/dictionary/{}',
+                       'gg': 'https://www.google.com/search?hl=en&q={}' ,
+                       'git': 'https://github.com/search?q={}' ,
+                       'pkg': 'https://www.archlinux.org/packages/?q={}' ,
+                       'sp': 'https://www.startpage.com/do/search?query={}',
+                       'ud': 'https://www.urbandictionary.com/define.php?term={}',
+                       'ytv': 'https://www.youtube.com/results?search_query={}',
+                       'yy': 'https://search.yahoo.com/search?p={}',
                        }
 
 c.url.start_pages = ['about:blank']
