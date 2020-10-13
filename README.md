@@ -267,3 +267,39 @@
     - Open New Tab In Background:   Ctrl+T
 
 - Quit                       ; q
+
+---
+### cmus
+---
+* 1-7 view mode
+* Vim Key Navigation
+* Quit q
+ 
+- Volume:
+    - Up:                    +
+    - Down:                  -
+    - Left Up:               [
+    - Left Down:             {
+    - Right Up:              ]
+    - Right Down:            }
+
+- Player
+    - Play:                  P
+    - Play Track:            Enter
+    - Stop:                  S
+    - Pause:                 p
+    - Seek +1m:              .
+    - Seek -1m:              ,
+    - Seek +5:               right
+    - Seek -5:               left
+    - Shuffle:               s
+    - Repeat:                ^R
+    - Repeat Album/Artist:    r
+
+- Playlists:
+    - Add To Library:         a
+    - Add To Queue:           q
+    - Add To Queue:           e
+    - Add Before:             y
+    - Add After:              E
+    - Delete Track:           D
