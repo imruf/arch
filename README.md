@@ -298,8 +298,7 @@
 
 - Playlists
     - Add To Library:         a
-    - Add To Queue:           q
-    - Add To Queue:           e
-    - Add Before:             y
-    - Add After:              E
+    - Add To Queue After:     e
+    - Add To Playlist:        y
+    - Add To Queue Before:    E
     - Delete Track:           D
