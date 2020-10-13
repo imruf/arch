@@ -275,7 +275,7 @@
 * Vim Key Navigation
 * Quit q
  
-- Volume:
+- Volume
     - Up:                    +
     - Down:                  -
     - Left Up:               [
@@ -296,7 +296,7 @@
     - Repeat:                ^R
     - Repeat Album/Artist:    r
 
-- Playlists:
+- Playlists
     - Add To Library:         a
     - Add To Queue:           q
     - Add To Queue:           e
