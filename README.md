@@ -84,7 +84,7 @@
 - Terminal:               Alt+/
 
 - Scratchpad:
-    - dropdown            Alt+n
+    - dropdown            Super+/
     - notejot             Alt+Shift+n
 
 - dmenu 
@@ -102,7 +102,7 @@
 - Browser
     - qutebrowsr:         Alt+i
     - firefox:            Super+i
-    - elinks:             Super+n
+    - elinks:             Alt+n
 
 - Music:                  Alt+Shift+m
 
