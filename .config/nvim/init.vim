@@ -17,6 +17,7 @@ Plug 'chrisbra/Colorizer'                         " color from rgb
 Plug 'flazz/vim-colorschemes'                     " vim colorscheme
 Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'mcchrish/nnn.vim'                           " nnn file picker
+Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 
 call plug#end()
 
@@ -88,9 +89,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized_flood'
 
 " colorscheme solarized8_dark
-
-
-map <C-n> :Np<CR>
 
 hi LineNr ctermfg=242
 hi CursorLineNr ctermfg=15
