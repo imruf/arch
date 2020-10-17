@@ -57,6 +57,8 @@ config.bind('gx', 'open qute://settings')
 config.bind('gd', 'download')
 config.bind('gs', 'view-source')
 
+config.set("colors.webpage.darkmode.enabled", True)
+
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 # c.auto_save.interval = 15000
 # c.auto_save.session = False
