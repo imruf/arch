@@ -6,10 +6,7 @@
 
 case "$1" in
     lock)
-        blurlock
-        ;;
-    logout)
-        i3-msg exit
+        slock
         ;;
     suspend)
         blurlock && $logind suspend

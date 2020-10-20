@@ -1,19 +1,12 @@
 #!/bin/bash
 # switch power state using dmenu(1)
 
-#selection=$(printf 'lock\nlock-suspend\npoweroff\nreboot\nsuspend' \
-#		| dmenu -f -i -l 5 -p Action: \
-#			-fn monospace:size=12)
-
 selection=$(printf 'lock\nsuspend\nshutdown\nreboot' \
 		| dmenu  -i -p ":>_" \
 )
 
 case "${selection}" in
-	lock)
-		i3exit ${selection}
-		;;
-	shutdown|reboot|suspend)
-		i3exit ${selection}
+	lock|shutdown|reboot|suspend)
+		dwmexit ${selection}
 		;;
 esac

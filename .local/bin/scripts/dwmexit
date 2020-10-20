@@ -1,0 +1,23 @@
+#!/bin/sh
+# /usr/bin/dwmexit
+
+case "$1" in
+    lock)
+        slock
+        ;;
+    suspend)
+        systemctl suspend; slock
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "== missing or invalid argument ! =="
+        echo "Try again with: lock | suspend | reboot | shutdown"
+        exit 2
+esac
+
+exit 0

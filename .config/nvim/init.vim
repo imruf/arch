@@ -10,14 +10,15 @@ endif
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 
 
-Plug 'vim-airline/vim-airline'					" Airline
-Plug 'vim-airline/vim-airline-themes'				" Airline Themes
-Plug 'chrisbra/unicode.vim'                       " unicode search
+Plug 'itchyny/lightline.vim'                      " Vim Lightline
 Plug 'chrisbra/Colorizer'                         " color from rgb
-Plug 'flazz/vim-colorschemes'                     " vim colorscheme
 Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
+" Plug 'vim-airline/vim-airline'					  " Airline
+" Plug 'vim-airline/vim-airline-themes'			  " Airline Themes
+" Plug 'flazz/vim-colorschemes'                     " vim colorscheme
+" Plug 'chrisbra/unicode.vim'                       " unicode search
 
 call plug#end()
 
@@ -65,7 +66,6 @@ map <C-p> "+P
 
 syntax on   
 
-set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
 set encoding=utf-8
@@ -82,13 +82,20 @@ set hlsearch
 set splitbelow splitright
 
 let g:rehash256 = 1
-let g:Powerline_symbols='unicode'
-let g:Powerline_theme='long'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized_flood'
 
-" colorscheme solarized8_dark
+let g:lightline = {
+      \ 'colorscheme': 'OldHope',
+      \ }
+
+" nnn
+let g:nnn#set_default_mappings = 0
+nnoremap <silent> <leader>nnn :NnnPicker<CR>
+let g:nnn#action = {
+            \ '<c-t>': 'tab split',
+            \ '<c-x>': 'split',
+            \ '<c-v>': 'vsplit'
+            \ }
+
 
 hi LineNr ctermfg=242
 hi CursorLineNr ctermfg=15
