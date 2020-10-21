@@ -4,13 +4,13 @@
 
 fzf_file() 
         { 
-            zle -I; FILE=$(fd -H -t f 2> /dev/null | fzf +m) && vim "$FILE" ; 
+            zle -I; FILE=$(find -type f 2> /dev/null | fzf +m) && vim "$FILE" ; 
         }; 
     zle -N fzf_file;
 
 fzf_cd() 
         { 
-            zle -I; DIR=$(fd . ~/ -H -t d 2> /dev/null | fzf +m) && cd "$DIR" ; 
+            zle -I; DIR=$(find ~/ -type d 2> /dev/null | fzf +m) && cd "$DIR" ; 
         }; 
     zle -N fzf_cd;
 
