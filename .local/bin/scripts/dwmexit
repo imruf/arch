@@ -1,5 +1,5 @@
 #!/bin/sh
-# /usr/bin/dwmexit
+# power script for dwm
 
 case "$1" in
     lock)
