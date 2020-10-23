@@ -266,6 +266,7 @@ alias \
 alias \
  fwe="sudo ufw enable" \
  fwd="sudo ufw disable" \
+ fws="sudo ufw status" \
 
 #SSH/FTP
 alias \
