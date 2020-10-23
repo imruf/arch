@@ -196,7 +196,8 @@ alias \
  weather="curl wttr.in/khagrachari" \
  e.g="tldr" \
  pdf="zathura" \
- pics="sxiv" \
+ img="sxiv" \
+ uc="ucollage" \
  el="elinks" \
  ka="killall" \
  xp='xclip -o' \
@@ -260,6 +261,11 @@ alias \
 #curl ifconfig.co/country-iso
 #curl ifconfig.co/city
 #curl ifconfig.co/asn
+
+#Firewall
+alias \
+ fwe="sudo ufw enable" \
+ fwd="sudo ufw disable" \
 
 #SSH/FTP
 alias \
