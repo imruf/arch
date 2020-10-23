@@ -101,6 +101,7 @@ static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *bcmd2[] = { "firefox", NULL };
 static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
+static const char *dweb[] = { "dweb", NULL };
 static const char *ips[] = { "dwmexit", "suspend", NULL };
 static const char *ipr[] = { "dwmexit", "reboot", NULL };
 static const char *iph[] = { "dwmexit", "shutdown", NULL };
@@ -130,6 +131,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
 	{ MODKEY,                       XK_n,             spawn,          {.v = bcmd3 } },
+	{ MODKEY,                       XK_bracketleft,   spawn,          {.v = dweb } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
 	{ MOD2,                         XK_slash,         togglescratch,  {.ui = 0 } },
 	{ MODKEY|ShiftMask, 			XK_n,             togglescratch,  {.ui = 1 } },
@@ -162,15 +164,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period,        tagmon,         {.i = +1 } },
     { MODKEY|ControlMask,           XK_l,             shiftview,      { .i = +1 } },
     { MODKEY|ControlMask,           XK_h,             shiftview,      { .i = -1 } },
-	{ MOD2,                       XK_q,      moveplace,      {.ui = WIN_NW }},
-	{ MOD2,                       XK_w,      moveplace,      {.ui = WIN_N  }},
-	{ MOD2,                       XK_e,      moveplace,      {.ui = WIN_NE }},
-	{ MOD2,                       XK_a,      moveplace,      {.ui = WIN_W  }},
-	{ MOD2,                       XK_s,      moveplace,      {.ui = WIN_C  }},
-	{ MOD2,                       XK_d,      moveplace,      {.ui = WIN_E  }},
-	{ MOD2,                       XK_z,      moveplace,      {.ui = WIN_SW }},
-	{ MOD2,                       XK_x,      moveplace,      {.ui = WIN_S  }},
-	{ MOD2,                       XK_c,      moveplace,      {.ui = WIN_SE }},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

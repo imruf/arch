@@ -129,7 +129,7 @@ static const char *colorname[] = {
 
 "#002b36",  /*  8: brblack  */
 "#93a1a1",  /*  7: white    */
-"#657b83",  /*  8: brblack  */
+"#6c71c4",  /*  5: magenta  */
 };
 
 static const char *altcolorname[] = {

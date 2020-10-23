@@ -90,6 +90,7 @@
 - dmenu 
     - dmenu:              Alt+;
     - dbang:              Super+;
+    - dweb:               Alt+[
     - calc:               Fn+Keypad_Enter
     - powermenu:          Alt+Shift+x4
     - clipmenu:           Shift+Insert
