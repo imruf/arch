@@ -85,7 +85,7 @@
 
 - Scratchpad:
     - dropdown            Super+/
-    - notejot             Alt+Shift+n
+    - gnote             Alt+Shift+n
 
 - dmenu 
     - dmenu:              Alt+;
@@ -111,6 +111,12 @@
     - FullScreen:          prtsc
     - ActiveWindow:        Shift+prtsc
     - Selection:           Control+prtsc
+
+---
+### dmenu
+---
+
+* Use ctrl+vim keys to select suggestions.
 
 ---
 ### st

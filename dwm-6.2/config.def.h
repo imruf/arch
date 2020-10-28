@@ -36,11 +36,11 @@ typedef struct {
 	const void *cmd;
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "110x18", NULL };
-const char *spcmd2[] = {"com.github.lainsce.notejot", NULL };
+const char *spcmd2[] = {"gnote", "--open-note=mynotes", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
-	{"com.github.lainsce.notejot",      spcmd2},
+	{"gnote",      spcmd2},
 };
 
 /* tagging */
@@ -62,7 +62,7 @@ static const Rule rules[] = {
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "libreoffice-writer",  NULL,     NULL,  1 << 3,    0,                       0,        -1 },
 { NULL,		             "spterm", NULL,  SPTAG(0),	 1,			                        -1 },
-{ "Com.github.lainsce.notejot",   NULL, NULL,  SPTAG(1),	 1,	                        -1 },
+{ "Gnote",                NULL,     NULL,  SPTAG(1),	 1,	                        -1 },
 };
 
 /* layout(s) */
