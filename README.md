@@ -90,7 +90,7 @@
 - dmenu 
     - dmenu:              Alt+;
     - dbang:              Super+;
-    - dweb:               Alt+[
+    - dweb:               Alt+p
     - calc:               Fn+Keypad_Enter
     - powermenu:          Alt+Shift+x4
     - clipmenu:           Shift+Insert
@@ -98,7 +98,7 @@
 - Files
     - nnn:                Alt+o
     - lf:                 Super+o
-    - pcmanfm:            Alp+p
+    - pcmanfm:            Alt+Shift+o
 
 - Browser
     - qutebrowsr:         Alt+i

@@ -35,7 +35,7 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x16", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "110x18", NULL };
 const char *spcmd2[] = {"com.github.lainsce.notejot", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -126,12 +126,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_o,             spawn,          {.v = fcmd } },
-	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 }},
+	{ MODKEY|ShiftMask,             XK_o,             spawn,          {.v = fcmd2 }},
 	{ MOD2,                         XK_o,             spawn,          {.v = fcmd3 } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
 	{ MODKEY,                       XK_n,             spawn,          {.v = bcmd3 } },
-	{ MODKEY,                       XK_bracketleft,   spawn,          {.v = dweb } },
+	{ MODKEY,                       XK_p,             spawn,          {.v = dweb } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
 	{ MOD2,                         XK_slash,         togglescratch,  {.ui = 0 } },
 	{ MODKEY|ShiftMask, 			XK_n,             togglescratch,  {.ui = 1 } },
