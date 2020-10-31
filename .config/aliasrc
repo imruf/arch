@@ -7,6 +7,11 @@ alias \
  v="$EDITOR" \
  q="exit" 
 
+alias \
+ t="tmux" \
+ ta="tmux attach-session -t" \
+ tl="tmux ls" 
+
 # Files
 #List
 alias \
@@ -27,7 +32,8 @@ alias \
  e="fzf_file" \
  f="fzf_cd" \
  k="fzf_kill" \
- h="fzf_history"
+ h="fzf_history" \
+ s="fzf_sr"
 
 #Info
 alias \
@@ -162,8 +168,12 @@ alias \
 
 #MAIL
 alias \
+ ibx="neomutt" \
  mail="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc -a; neomutt" \
- ibx="neomutt"
+ ib="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc ib; neomutt" \
+ mp="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc mp; neomutt" \
+ rry="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc rry; neomutt" \
+ lic="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc lic; neomutt"
 
 #TRANSMISSION
 alias \
@@ -220,21 +230,6 @@ alias \
  uz="atool -x" \
  zip="atool -a"
 
-#SURFRAW #Now using rsr script
-# srs="sr startpage"
-# srb="sr bing"
-# srd="sr duckduckgo"
-# srg="sr google"
-# srv="sr youtube"
-# sry="sr yahoo"
-# sraw="sr archwiki"
-# sraur="sr aur"
-# srpkg="sr archpkg"
-# srmdb="sr imdb"
-# srgit="sr github"
-# sru="sr urban"
-# srpb="sr piratebay"
-
 #arch-wiki-lite
 alias \
  aw="wiki-search"
@@ -275,6 +270,12 @@ alias \
  ftpu="sudo systemctl start vsftpd" \
  ftpd="sudo systemctl stop vsftpd"
 # termux="ssh -p 8022 u0_a127@192.168.137.234"
+
+#simple-mtpfs
+alias \
+ phn="simple-mtpfs -l" \
+ mphn="simple-mtpfs --device" 
+
 
 #PNGLatex
 #pnglatex -h for help

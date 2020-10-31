@@ -26,6 +26,13 @@ fzf_kill()
         }; 
     zle -N fzf_kill;
 
+fzf_sr()
+       {
+            term="$*"
+            zle -I; elvi=$(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | fzf +m) && sr "$elvi" "$term" ;
+       };
+    zle -N fzf_sr;
+
 # nnn quitcd
 
 n ()
