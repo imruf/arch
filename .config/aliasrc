@@ -189,7 +189,7 @@ alias \
 # Calculator
 alias \
  math="mathomatic" \
- pcalc="python -ic 'from __future__ import division; from math import *; from random import *'" \
+ pc="python -ic 'from __future__ import division; from math import *; from random import *'" \
  sheet="sc-im"
 
 #MIS
