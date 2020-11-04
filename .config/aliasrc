@@ -212,6 +212,7 @@ alias \
  ka="killall" \
  xp='xclip -o' \
  c2='units' \
+ m='cmus'
 
 # ibus="ibus-daemon -xdr"
 # music="ncmpcpp"
