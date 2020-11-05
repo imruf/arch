@@ -1,95 +1,102 @@
 #!/bin/sh
 
+# vim to nvim
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # EDITOR
 alias \
  v="$EDITOR" \
- q="exit" 
+ q="exit" \
 
+# tmux
 alias \
  t="tmux" \
+ ta0="tmux attach-session -t 0" \
  ta="tmux attach-session -t" \
- tl="tmux ls" 
+ tl="tmux ls" \
 
 # Files
-#List
+
+# List
 alias \
  ls="ls --color=auto --group-directories-first" \
- lah="exa -la --group-directories-first"
+ lah="exa -la --group-directories-first" \
 
-#Nav
+# Navigation
 alias \
  ..="cd .." \
  cp="cp -v" \
- mv="mv -iv" \
- rm="rm -iv" \
- mkd="mkdir -pv"
+ mv="mv -v" \
+ rm="rm -v" \
+ mkd="mkdir -pv" \
 
-#db
+# fzf
 alias \
- updb="sudo updatedb" \
  e="fzf_file" \
  f="fzf_cd" \
  k="fzf_kill" \
  h="fzf_history" \
- s="fzf_sr"
+ s="fzf_sr" \
 
-#Info
+# Database
+alias \
+ updb="sudo updatedb" \
+
+# Info
 alias \
  pdw="pwd" \
  free="free -mt" \
  diff="diff --color=auto" \
- df="df -h"
+ df="df -h" \
 
-#Userlist
+# Userlist
 alias \
- userlist="cut -d: -f1 /etc/passwd"
+ userlist="cut -d: -f1 /etc/passwd" \
 
-#HARDWARE
+# HARDWARE
 alias \
- hw="hwinfo --short"
+ hw="hwinfo --short" \
 
-#Grep
+# Grep
 alias \
  grep="grep --color=auto" \
  egrep="egrep --color=auto" \
- fgrep="fgrep --color=auto"
+ fgrep="fgrep --color=auto" \
 
-#Merge
+# Merge
+# alias \
+# merge="xrdb -merge ~/.Xresources" \
+
+# Conky
+# alias \
+# kc="killall conky" \
+
+# MICROCODE
+# alias \
+# microcode="grep . /sys/devices/system/cpu/vulnerabilities/*" \
+
+# GRUB
+# alias \
+# update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
+
+# FONTS
 alias \
- merge="xrdb -merge ~/.Xresources"
+ fc="sudo fc-cache -fv" \
 
-#Conky
-# kc="killall conky"
-
-#MICROCODE
-# microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
-
-#GRUB
-# update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-#FONTS
+# Systemd
 alias \
- fc="sudo fc-cache -fv"
+ sys="sudo systemctl"
+# sys="sudo sv"
 
-#downloader
-alias \
- wget="wget -c" \
- a2="aria2c" \
- a2p="aria2p" \
- a2s="a2pd start" \
- a2d="a2pd stop"
-
-#MIRROR
+# MIRROR
 alias \
  mirror="sudo reflector -f 10 -l 10 --number 10 --verbose --save /etc/pacman.d/mirrorlist" \
  mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" \
  mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" \
- mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist"
+ mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist" \
 
-#PACMAN
+# PACMAN
 alias \
  pac="sudo pacman --color auto" \
  update="sudo pacman -Syyu" \
@@ -108,138 +115,117 @@ alias \
  efp="pacman -Qqe" \
 
 alias \
- rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+ rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100" \
 
-#AUR
+# AUR
 alias \
- inpkg="makepkg -si"
+ inpkg="makepkg -si" \
 
-#yay
-# yinp="yay -S"
-# yayskip="yay -S --mflags --skipinteg"
-# upyay="yay -Syu --noconfirm"
-
-#trizen
+# trizen
 alias \
  tzn="trizen" \
  tinp="trizen -S" \
  tznc="trizen -G" \
  uptzn="trizen -Syu --noconfirm" \
- tznskip="trizen -S --skipinteg"
-#c make install
+ tznskip="trizen -S --skipinteg" \
+
+# yay
+# alias \
+# yinp="yay -S" \
+# yayskip="yay -S --mflags --skipinteg" \
+# upyay="yay -Syu --noconfirm" \
+
+# c source
 alias \
     cinp="sudo make clean install" \
-    crmv="sudo make clean uninstall"
+    crmv="sudo make clean uninstall" \
 
-#XBPS
-# up="sudo xbps-install -Su"
-# pacs="xbps-query -Rs"
-# inp="sudo xbps-install -Su"
-# rmv="sudo xbps-remove -R"
-# armv="sudo xbps-remove -o"
-# ccache="sudo pacman -O"
+# wpa_supplicant
+# alias \
+# wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0" \
 
-#wpa_supplicant
-# wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0"
-
-#MOUNT
+# MOUNT
 alias \
  mount="udisksctl mount -b" \
  usb="udisksctl mount -b /dev/sdb1" \
  uusb="udisksctl unmount -b /dev/sdb1" \
  eusb="udisksctl power-off -b /dev/sdb1" \
- sdx="mountjutsu"
+ sdx="mountjutsu" \
 
-#youtube-dl
-alias \
- ytd-aac="youtube-dl --extract-audio --audio-format aac" \
- ytd-best="youtube-dl --extract-audio --audio-format best" \
- ytd-flac="youtube-dl --extract-audio --audio-format flac" \
- ytd-m4a="youtube-dl --extract-audio --audio-format m4a" \
- ytd-mp3="youtube-dl --extract-audio --audio-format mp3" \
- ytd-opus="youtube-dl --extract-audio --audio-format opus" \
- ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis" \
- ytd-wav="youtube-dl --extract-audio --audio-format wav" \
- ytd-best="youtube-dl -f bestvideo+bestaudio " \
- ytd="youtube-dl" \
- ytdF="youtube-dl -F" \
- ytdf="youtube-dl -f" \
- ytv="youtube-viewer -C"
-
-#MAIL
+# MAIL
 alias \
  ibx="neomutt" \
  mail="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc -a; neomutt" \
  ib="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc ib; neomutt" \
  mp="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc mp; neomutt" \
  rry="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc rry; neomutt" \
- lic="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc lic; neomutt"
+ lic="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc lic; neomutt" \
 
-#TRANSMISSION
+# TRANSMISSION
 alias \
  pfx="peerflix -k -f /home/masud/Videos/ptfx" \
- tfx="torrentflix"
+ tfx="torrentflix" \
 
-
-#Systemd
-alias \
- sys="sudo systemctl"
-# sys="sudo sv"
 
 # Calculator
 alias \
  math="mathomatic" \
  pc="python -ic 'from __future__ import division; from math import *; from random import *'" \
- sheet="sc-im"
+ c2='units' \
+ sheet="sc-im" \
 
-#MIS
+# Misc. App
 alias \
+ sv="sudo nvim" \
+ m="cmus" \
  vol="ncpamixer" \
  def="sdcv" \
- mtag="eyeD3" \
- sv="sudo nvim" \
  rt="tuir" \
  keep="keepcli" \
- drive="gdrive" \
- books="pysheng" \
- imgur="imgur_downloader" \
- weather="curl wttr.in/khagrachari" \
- e.g="tldr" \
  pdf="zathura" \
  img="sxiv" \
- uc="ucollage" \
  el="elinks" \
  ka="killall" \
- xp='xclip -o' \
- c2='units' \
- m='cmus'
+ weather="curl wttr.in/khagrachari" \
+ xp="xclip -o" \
+ uc="ucollage" \
 
-# ibus="ibus-daemon -xdr"
-# music="ncmpcpp"
-# vim="nvim"
+# books="pysheng" \
+# drive="gdrive" \
+# imgur="imgur_downloader" \
+# e.g="tldr" \
 
-#GIT
+# ibus="ibus-daemon -xdr" \
+# music="ncmpcpp" \
+# vim="nvim" \
+
+# GIT
 alias \
  gitc="git clone" \
  gitu="git push -u origin master" \
  gitca="git commit -a" \
  gita="git add" \
- gits="git status"
+ gits="git status" \
 
-#ARCHIVE
+# ARCHIVE
 alias \
  uz="atool -x" \
  zip="atool -a"
 
-#arch-wiki-lite
+# arch-wiki-lite
 alias \
  aw="wiki-search"
 
-#torsocks #now using 1.1.1.1
-# tor="sys start tor.service"
-# tors="sys stop tor.service"
-# ctorc="torsocks elinks "https://check.torproject.org/""
-# ctorb="torsocks surf https://check.torproject.org/"
+# tor/vpn
+alias \
+    vpn="sudo openvpn --config ~/Downloads/opnevpn/def.ovpn" \
+
+
+# torsocks #now using 1.1.1.1 \
+# tor="sys start tor.service" \
+# tors="sys stop tor.service" \
+# ctorc="torsocks elinks "https://check.torproject.org/"" \
+# ctorb="torsocks surf https://check.torproject.org/" \
 
 #IP/PING
 alias \
@@ -247,7 +233,8 @@ alias \
  myip="ip addr show" \
  isp="curl ifconfig.co" \
  ns="speedtest" \
- nss="speedtest --simple --single"
+ nss="speedtest --simple --single" \
+
 #curl ifconfig.co/json
 #http -b ifconfig.co
 #wget -qO- ifconfig.co
@@ -269,45 +256,65 @@ alias \
  sftpu="sudo systemctl start sshd" \
  sftpd="sudo systemctl stop sshd" \
  ftpu="sudo systemctl start vsftpd" \
- ftpd="sudo systemctl stop vsftpd"
-# termux="ssh -p 8022 u0_a127@192.168.137.234"
+ ftpd="sudo systemctl stop vsftpd" \
+# termux="ssh -p 8022 u0_a127@192.168.137.234" \
+
+# downloader
+alias \
+ wget="wget -c" \
+ a2="aria2c" \
+ a2p="aria2p" \
+ a2s="a2pd start" \
+ a2d="a2pd stop" \
+
+# youtube-dl
+alias \
+ ytd-aac="youtube-dl --extract-audio --audio-format aac" \
+ ytd-best="youtube-dl --extract-audio --audio-format best" \
+ ytd-flac="youtube-dl --extract-audio --audio-format flac" \
+ ytd-m4a="youtube-dl --extract-audio --audio-format m4a" \
+ ytd-mp3="youtube-dl --extract-audio --audio-format mp3" \
+ ytd-opus="youtube-dl --extract-audio --audio-format opus" \
+ ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis" \
+ ytd-wav="youtube-dl --extract-audio --audio-format wav" \
+ ytd-best="youtube-dl -f bestvideo+bestaudio " \
+ ytd="youtube-dl" \
+ ytdF="youtube-dl -F" \
+ ytdf="youtube-dl -f" \
+ ytv="youtube-viewer -C" \
 
 #simple-mtpfs
-alias \
- phn="simple-mtpfs -l" \
- mphn="simple-mtpfs --device" 
+#alias \
+# phn="simple-mtpfs -l" \
+# mphn="simple-mtpfs --device" 
 
 
 #PNGLatex
 #pnglatex -h for help
 alias \
- eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png"
+ eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png" \
 
-#JavaWM
-alias \
- jwc="wmname LG3D"
+# JavaWM
+# alias \
+# jwc="wmname LG3D"
 
-#DE/WM
+# DE/WM
 alias \
  gui="startx" \
- dwm="cp .xinit/dwm.xinitrc .xinitrc && gui" \
+# dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
 
-#Corona
+# Corona
 alias \
  covid="curl https://corona-stats.online\?source\=2" \
  covidbd="curl https://corona-stats.online/BD"
 
-#POWERMANAGEMENT
-# iph="i3exit suspend"
-# ipl="i3exit lock"
-# ips="i3exit shutdown"
-# ipr="i3exit reboot"
-# bat="cat /sys/class/power_supply/BAT?/capacity" 
+# POWERMANAGEMENT
+# iph="i3exit suspend" \
+# ipl="i3exit lock"    \
+# ips="i3exit shutdown" \
+# ipr="i3exit reboot"  \
+# bat="cat /sys/class/power_supply/BAT?/capacity" \ 
 
-
-#Bind
-#bindkey -v
-
-#FETCH
+# FETCH
 alias \
- inf="pfetch"
+ inf="pfetch" \
