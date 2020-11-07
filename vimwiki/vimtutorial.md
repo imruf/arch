@@ -136,6 +136,7 @@ c i (
 ` change
 
 
+U merge two lines into one
 
 d  Delete: [range]d<motion>
     - dd  delete current line
