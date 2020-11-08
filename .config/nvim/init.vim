@@ -50,6 +50,14 @@ ino <Right> <Nop>
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
+" tab management
+map <leader>te :tabe
+map <leader>tn :tabnew<cr>
+map <leader>tx :tabnext
+map <leader>tm :tabmove
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+
 "Copy paste Clipboard Access:
 
 vnoremap <C-c> "+y
