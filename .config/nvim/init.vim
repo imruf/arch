@@ -50,6 +50,9 @@ ino <Right> <Nop>
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
+map <leader>sp :sp
+map <leader>sv :vsp
+
 " tab management
 map <leader>te :tabe
 map <leader>tn :tabnew<cr>
