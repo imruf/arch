@@ -4,7 +4,6 @@ application/x-bittorrent=torrent.desktop;
 x-scheme-handler/mailto=mail.desktop;
 text/x-shellscript=text.desktop;
 application/postscript=pdf.desktop;
-image/gif=img.desktop;
 application/rss+xml=rss.desktop
 
 [Added Associations]
@@ -17,6 +16,7 @@ text/x-tex=nvim.desktop;
 text/x-troff-ms=nvim.desktop;
 image/png=sxiv-rifle.desktop;
 image/jpeg=sxiv-rifle.desktop;
+image/gif=sxiv.desktop;
 audio/mpeg=mpv.desktop;
 video/x-flv=mpv.desktop;
 video/mpeg=mpv.desktop;
