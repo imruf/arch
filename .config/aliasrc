@@ -210,7 +210,7 @@ alias \
 # ARCHIVE
 alias \
  uz="atool -x" \
- zip="atool -a"
+ z="atool -a"
 
 # arch-wiki-lite
 alias \
