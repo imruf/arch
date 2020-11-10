@@ -122,6 +122,13 @@ let g:lightline = {
 set rtp+=/usr/bin/fzf
 nnoremap <silent> <leader>f :AF<CR>
 
+if exists('$TMUX')
+  let g:fzf_layout = { 'tmux': '-p90%,60%' }
+else
+  let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+endif
+
+
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
@@ -129,7 +136,7 @@ let g:fzf_action = {
 
 command! -nargs=? -complete=dir AF
  \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
-  \   'source': 'find ~/ -type f '.expand(<q-args>)
+  \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
   \ })))
 
 ":vimwiki ext
