@@ -17,12 +17,16 @@
 #           surfraw   https://www.youtube.com/playlist?list=PLqv94xWU9zZ2e-lDbmBpdASA6A6JF4Nyz
 
 # set your browser (uncomment if needed, some GUI does not detect browser variable)
-BROWSER=elinks
 
+selection=$(printf 'cli\ngui' \
+		| dmenu  -i -p ":>_" \
+)
 
-st -e surfraw -browser=$BROWSER $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
-
-# surfraw -browser=$BROWSER $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
+    if [ "${selection}" == cli ]; then
+        st -e surfraw -browser=$BROWSERCLI $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
+    else 
+     surfraw -browser=$BROWSER $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
+    fi
 
 # st -e surfraw -browser=$BROWSER $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | rofi -dmenu -i -p ">>>")
 

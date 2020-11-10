@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+url="$*"
+
+echo "Streaming..."
+mpv --ytdl-format='bestvideo+bestaudio/best[height<=360]' --loop=inf "$url" --stream-record=1.ts
