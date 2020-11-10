@@ -144,5 +144,3 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ '<c-x>': 'split',
 "             \ '<c-v>': 'vsplit'
 "             \ }
-
-
