@@ -298,6 +298,9 @@ function get_key(evt){
 
 
 
+
+
+
 function guarantee_stylesheet(){
  var thehead = document.getElementsByTagName('head')[0];
  if (document.getElementsByTagName('style').length < 1){
