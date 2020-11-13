@@ -52,6 +52,14 @@
 - Next Tag:               Alt+Control+l
 - Previous Tag:           Alt+Control+h
 
+- Manage Tag:
+    - Tag Another To Current:
+        - Alt+Control+Tag Number
+    - View All Tag And And Open Windows:
+        - Alt+0
+    - Tag Current To All:
+        - Alt+Shift+0
+
 ##### Layouts
 - Tile:                   Alt+t
 - Tile(Bstack):           Alt+Shift+t

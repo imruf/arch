@@ -13,6 +13,10 @@ c.statusbar.show = 'in-mode'
 c.tabs.show = 'multiple' #always, never, multiple, switching
 c.tabs.title.format = '{audio}{index}: {host}'
 
+# c.colors.webpage.darkmode.enabled = False
+# c.colors.webpage.darkmode.algorithm = 'lightness-cielab' #lightness/brightness-cielab/hsl/rgb
+# c.colors.webpage.darkmode.grayscale.all = True
+
 c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
                        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
                        'aw': 'https://wiki.archlinux.org/?search={}',
@@ -35,18 +39,24 @@ c.url.start_pages = ['about:blank']
 c.window.hide_decoration = True
 c.window.title_format = '{perc}{host}'
 
-config.bind('X', 'spawn mpv {url}')
-config.bind('x', 'hint links spawn mpv {hint-url}')
+# config.bind('X', 'hint links spawn mpv {url}')
+config.bind('x', 'hint links spawn 4p {hint-url}')
+config.bind('X', 'hint links spawn mpv {hint-url}')
+config.bind('d', 'hint links spawn aria2p add {hint-url}')
 config.bind('an', 'config-cycle content.user_stylesheets ~/.surf/styles/solarized.css ""')
 config.bind('q', 'quit')
 config.bind("'", 'hint all')
+config.bind('f', 'hint')
+config.bind('af', 'hint all tab')
+config.bind('F', 'hint all tab')
 config.bind('H', 'back')
 config.bind('u', 'back')
 config.bind('L', 'forward')
 config.bind('m', 'forward')
 config.bind('<Ctrl-m>', 'quickmark-save')
-config.bind('tp', 'config-cycle -p -t content.images')
-config.bind('tj', 'config-cycle -p -t content.javascript.enabled')
+config.bind('tp', 'config-cycle -p content.images')
+config.bind('tj', 'config-cycle -p content.javascript.enabled')
+config.bind('tdm', 'config-cycle -p colors.webpage.darkmode.enabled')
 config.bind('<Ctrl-u>', 'undo')
 config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
 
@@ -57,7 +67,6 @@ config.bind('gx', 'open qute://settings')
 config.bind('gd', 'download')
 config.bind('gs', 'view-source')
 
-config.set("colors.webpage.darkmode.enabled", True)
 
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 # c.auto_save.interval = 15000
@@ -419,7 +428,6 @@ config.set("colors.webpage.darkmode.enabled", True)
 # config.bind('@', 'run-macro')
 # config.bind('B', 'set-cmd-text -s :quickmark-load -t')
 # config.bind('D', 'tab-close -o')
-# config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('J', 'tab-next')
 # config.bind('K', 'tab-prev')
@@ -444,7 +452,6 @@ config.set("colors.webpage.darkmode.enabled", True)
 # config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
 # config.bind('d', 'tab-close')
-# config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
 # config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
