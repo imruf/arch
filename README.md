@@ -204,10 +204,10 @@
     - Forward:                L/m
     - Back:                   H/u
     - Follow Link:            f
-    - Follow Link In New Tab: F
+    - Follow Link In New Tab: F, af
     - Tab Next:               J
     - Tab Previous:           K
-    - Hint:                   ;
+    - Hint Menu:              ;
     - Undo:                   Ctrl+u
     - Reload:                 r/R
     - Stop:                   Ctrl+s
@@ -221,12 +221,13 @@
     - Cancel Download:                  ad
     - Clear Download:                   cd
     - Copy Download Link Prompt:        Ctrl+c
+    - Download Hinted Links With ari2p: d
 
 - Search Elvi
     - aur, aw, b2b, b2e, bing, ddg, e2b, gg, git, pkg, sp, ud, ytv, yy
 
-- Play Media:                X
-- Play Hint Media:           x
+- Play Hinted Media In mpv:                X
+- Play Hinted Media With 4p Script:        x
 
 - Toggle
     - Toggle Hint:           t
