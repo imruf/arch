@@ -42,7 +42,7 @@ c.window.title_format = '{perc}{host}'
 # config.bind('X', 'hint links spawn mpv {url}')
 config.bind('x', 'hint links spawn 4p {hint-url}')
 config.bind('X', 'hint links spawn mpv {hint-url}')
-config.bind('d', 'hint links spawn aria2p add {hint-url}')
+config.bind('ca', 'hint links spawn aria2p add {hint-url}')
 config.bind('an', 'config-cycle content.user_stylesheets ~/.surf/styles/solarized.css ""')
 config.bind('q', 'quit')
 config.bind("'", 'hint all')

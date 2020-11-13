@@ -207,6 +207,7 @@
     - Follow Link In New Tab: F, af
     - Tab Next:               J
     - Tab Previous:           K
+    - Delete Current Tab:     d
     - Hint Menu:              ;
     - Undo:                   Ctrl+u
     - Reload:                 r/R
@@ -221,7 +222,7 @@
     - Cancel Download:                  ad
     - Clear Download:                   cd
     - Copy Download Link Prompt:        Ctrl+c
-    - Download Hinted Links With ari2p: d
+    - Download Hinted Links With ari2p: ca
 
 - Search Elvi
     - aur, aw, b2b, b2e, bing, ddg, e2b, gg, git, pkg, sp, ud, ytv, yy
