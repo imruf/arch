@@ -155,11 +155,6 @@ alias \
 # MAIL
 alias \
  ibx="neomutt" \
- mail="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc -a; neomutt" \
- ib="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc ib; neomutt" \
- mp="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc mp; neomutt" \
- rry="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc rry; neomutt" \
- lic="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc lic; neomutt" \
 
 # TRANSMISSION
 alias \
