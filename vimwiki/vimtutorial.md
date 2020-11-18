@@ -213,5 +213,18 @@ V to select entire line, select block of text and type
 11. Vsplit
 :vs vertical split
 :sp horizontal split
+
+12. Tab
+gt (or :tabn) to go to next tab
+gT (or :tabp or :tabN) to go to previous tab
+#gt (or :tabn #) to go to #th tab
+:tabr to go to first tab
+:tabl to go to last tab
+:tabnext # (-1, +1) to got to #th tab
+:tabm to move the current tab to the last position
+:tabm # (-1, +1) to move the current tab to the #th position
+:tabe to open a file in new tab
+
+
 #For More
 https://github.com/shawncplus/vim-classes
