@@ -52,6 +52,11 @@ map <C-l> <C-w>l
 map <leader>sp :sp
 map <leader>sv :vsp
 
+" buffer management
+map gz :bdelete<cr>
+map gb :bnext<cr>
+map gB :bprev<cr>
+
 " tab management
 map <leader>te :tabe
 map <leader>tn :tabnew<cr>
