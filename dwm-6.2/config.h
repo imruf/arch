@@ -7,7 +7,7 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "Material Design Icons Desktop:Regular:pixelsize=14:antialias=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -73,10 +73,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ "[B]",      bstack },
+	{ "󰙀",      tile },    /* first entry is default */
+	{ "󱂬",      NULL },    /* no layout function means floating behavior */
+	{ "󰊓",      monocle },
+	{ "󰕴",      bstack },
 };
 
 /* key definitions */
