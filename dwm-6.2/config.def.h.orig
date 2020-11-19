@@ -6,7 +6,7 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=9:antialias=true:autohint=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -35,12 +35,12 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "80x16", NULL };
-const char *spcmd2[] = {"com.github.lainsce.notejot", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "110x18", NULL };
+const char *spcmd2[] = {"gnote", "--open-note=mynotes", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
-	{"com.github.lainsce.notejot",      spcmd2},
+	{"gnote",      spcmd2},
 };
 
 /* tagging */
@@ -62,7 +62,7 @@ static const Rule rules[] = {
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "libreoffice-writer",  NULL,     NULL,  1 << 3,    0,                       0,        -1 },
 { NULL,		             "spterm", NULL,  SPTAG(0),	 1,			                        -1 },
-{ "Com.github.lainsce.notejot",   NULL, NULL,  SPTAG(1),	 1,	                        -1 },
+{ "Gnote",                NULL,     NULL,  SPTAG(1),	 1,	                        -1 },
 };
 
 /* layout(s) */
@@ -96,14 +96,16 @@ static const Layout layouts[] = {
 static const char *termcmd[]  = { "st", NULL };
 static const char *fcmd[] = { "st", "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
-static const char *fcmd3[] = { "st", "-e", "ranger", NULL };
-static const char *bcmd[] = { "dweb", NULL };
-static const char *bcmd2[] = { "st", "-e", "elinks", NULL };
+static const char *fcmd3[] = { "st", "-e", "lf", NULL };
+static const char *bcmd[] = { "qutebrowser", NULL };
+static const char *bcmd2[] = { "firefox", NULL };
+static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
-static const char *ips[] = { "i3exit", "suspend", NULL };
-static const char *ipr[] = { "i3exit", "reboot", NULL };
-static const char *iph[] = { "i3exit", "shutdown", NULL };
-static const char *ipl[] = { "i3exit", "lock", NULL };
+static const char *dweb[] = { "dweb", NULL };
+static const char *ips[] = { "dwmexit", "suspend", NULL };
+static const char *ipr[] = { "dwmexit", "reboot", NULL };
+static const char *iph[] = { "dwmexit", "shutdown", NULL };
+static const char *ipl[] = { "dwmexit", "lock", NULL };
 static const char *pmenu[] = { "powermenu", NULL };
 static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
@@ -123,14 +125,16 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_semicolon,     spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_slash,         spawn,          {.v = termcmd } },
-	{ MOD2,            			    XK_slash,         togglescratch,  {.ui = 0 } },
-	{ MODKEY,                       XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_o,             spawn,          {.v = fcmd } },
-	{ MODKEY,                       XK_p,             spawn,          {.v = fcmd2 } },
+	{ MODKEY|ShiftMask,             XK_o,             spawn,          {.v = fcmd2 }},
 	{ MOD2,                         XK_o,             spawn,          {.v = fcmd3 } },
 	{ MODKEY,                       XK_i,             spawn,          {.v = bcmd } },
 	{ MOD2,                         XK_i,             spawn,          {.v = bcmd2 } },
+	{ MODKEY,                       XK_n,             spawn,          {.v = bcmd3 } },
+	{ MODKEY,                       XK_p,             spawn,          {.v = dweb } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
+	{ MOD2,                         XK_slash,         togglescratch,  {.ui = 0 } },
+	{ MODKEY|ShiftMask, 			XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,             focusstack,     {.i = -1 } },
@@ -175,8 +179,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },
 	{ MODKEY|ShiftMask,             XK_h,              spawn,          {.v = iph } },
 	{ MODKEY|ShiftMask,             XK_l,              spawn,          {.v = ipl } },
-	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e ncmpcpp") },
-	{ MODKEY|ShiftMask,             XK_n,              spawn,          CMD("leafpad new.txt") },
+	{ MODKEY|ShiftMask,             XK_m,              spawn,          CMD("st -e cmus") },
 	{ ShiftMask,                    XK_KP_Insert,      spawn,          CMD("clipmenu") }, 
     { 0,                     XF86XK_MonBrightnessUp,   spawn,          {.v = brinc } },
     { 0,                     XF86XK_MonBrightnessDown, spawn,          {.v = brdec } },
@@ -184,9 +187,9 @@ static Key keys[] = {
     { 0,                     XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
     { 0,                     XF86XK_AudioMute,         spawn,          {.v = mutevol } },
     { 0,                     XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
-	{ 0,                            XK_Print,          spawn,          CMD("maim ~/ss/$(date +%d%h%T).png") },
-	{ ShiftMask,                    XK_Print,          spawn,          CMD("maim -i $(xdotool getactivewindow) ~/ss/$(date +%d%h%T).png") },
-	{ ControlMask,                  XK_Print,          spawn,          CMD("maim -s ~/ss/$(date +%d%h%T).png") },
+	{ 0,                            XK_Print,          spawn,          CMD("maim ~/Pictures/ss/$(date +%d%h%T).png") },
+	{ ShiftMask,                    XK_Print,          spawn,          CMD("maim -i $(xdotool getactivewindow) ~/Pictures/ss/$(date +%d%h%T).png") },
+	{ ControlMask,                  XK_Print,          spawn,          CMD("maim -s ~/Pictures/ss/$(date +%d%h%T).png") },
 };
 
 /* button definitions */
