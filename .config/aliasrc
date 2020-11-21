@@ -155,6 +155,11 @@ alias \
 # MAIL
 alias \
  ibx="neomutt" \
+ mail="mw -Y; neomutt" \
+ mp="mw -y mparvz@gmail.com; neomutt" \
+ ib="mw -y imrufbd@gmail.com; neomutt" \
+ rry="mw -y riponridwan@yahoo.com; neomutt" \
+ lic="mw -y riprid@cock.li; neomutt" \
 
 # TRANSMISSION
 alias \
