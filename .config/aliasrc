@@ -37,6 +37,7 @@ alias \
  k="fzf_kill" \
  h="fzf_history" \
  s="fzf_sr" \
+ bm="fzf_srbr" \
 
 # Database
 alias \
