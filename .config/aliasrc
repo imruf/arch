@@ -254,8 +254,8 @@ alias \
 
 #SSH/FTP
 alias \
- sftpu="sudo systemctl start sshd" \
- sftpd="sudo systemctl stop sshd" \
+ sfu="sudo systemctl start sshd" \
+ sfd="sudo systemctl stop sshd" \
  ftpu="sudo systemctl start vsftpd" \
  ftpd="sudo systemctl stop vsftpd" \
 # termux="ssh -p 8022 u0_a127@192.168.137.234" \
