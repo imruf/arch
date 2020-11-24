@@ -1,5 +1,7 @@
 ctor            https://check.torproject.org/       #Linux
 suckless        https://suckless.org/       #Linux
+st              https://st.suckless.org/       #Linux
+dwm             https://dwm.suckless.org/       #Linux
 LinuxApps       https://wiki.archlinux.org/index.php/List_of_applications       #Linux
 ArchWiki        https://wiki.archlinux.org/     #Linux
 mydot           https://github.com/imrufbd/arch     #Linux
