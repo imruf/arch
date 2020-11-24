@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+id="$*"
+
+echo "Downloading..."
+gdown https://drive.google.com/uc?id="$id"

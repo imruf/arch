@@ -14,6 +14,16 @@ wifi() {
     fi
 }
 
+net() {
+    nett=$(nettraf)
+    echo -e "$nett"
+}
+
+#weather() {
+#    wet=$(forecast)
+#    echo -e "$wet"
+#}
+
 dte() {
   dte="$(date +" %a %d %b|%H:%M  ")"
   echo -e "$dte"
@@ -67,13 +77,13 @@ blight() {
 }
 
 mybar() {
-    echo "$(mem)|$(cpu)|$(blight)|$(vol)|$(bat)|$(dte)|$(wifi)"
+    echo "$(mem)|$(cpu)|$(blight)|$(vol)|$(bat)|$(dte)|$(net)|$(wifi)"
 }
 
 main() {
     while true; do
     xsetroot -name "$(mybar)"
-    sleep 60    # Update time every ten seconds
+    sleep 30    # Update time every given seconds
 done &
 }
 
