@@ -3,11 +3,11 @@
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 2;        /* gap pixel between windows */
-static const unsigned int snap      = 22;       /* snap pixel */
+static const unsigned int snap      = 28;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "Material Design Icons Desktop:Regular:pixelsize=14:antialias=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=10:antialias=true:autohint=true", "Material Design Icons Desktop:Regular:pixelsize=14:antialias=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -22,6 +22,14 @@ static const char col_y2[]          = "#02143f"; /* #fea63c */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
+
+/*    some font name */
+/* Material Design Icons Desktop:Regular */
+/* UbuntuMono Nerd Font Mono             */
+/* mononoki Nerd Font Mono               */
+/* UbuntuMono Nerd Font                  */
+/* mononoki Nerd Font                    */
+
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_y1, col_black,  col_cyan  },
