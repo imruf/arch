@@ -1,0 +1,4 @@
+#!/bin/sh
+
+light=`brightnessctl | awk '/Current brightness:/ {print $4}'`
+echo -e "$light"

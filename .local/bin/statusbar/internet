@@ -1,0 +1,11 @@
+#!/bin/sh
+
+ssid=$(iwgetid -r)
+sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print " ", int($3 * 100 / 70) "%" }')
+wlp=$(cat /sys/class/net/wlp4s0/operstate 2>/dev/null)
+if [ "${wlp}" == up ]; then
+    echo -e "$ssid $sig"
+else
+    echo -e "📡"
+     echo -e "?"
+fi

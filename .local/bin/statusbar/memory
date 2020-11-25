@@ -1,0 +1,5 @@
+#! /bin/bash 
+
+mem=`free -h | awk '/Mem/ {printf $3"B"}'`
+# mem=`free -h | awk '/Mem/ {printf $3"B" "/" $2"B"}'`
+echo -ne " $mem"
