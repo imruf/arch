@@ -22,6 +22,14 @@ static const char col_y2[]          = "#02143f"; /* #fea63c */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
+
+/*    some font name */
+/* Material Design Icons Desktop:Regular */
+/* UbuntuMono Nerd Font Mono             */
+/* mononoki Nerd Font Mono               */
+/* UbuntuMono Nerd Font                  */
+/* mononoki Nerd Font                    */
+
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_y1, col_black,  col_cyan  },
