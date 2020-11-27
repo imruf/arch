@@ -1,5 +1,5 @@
 #!/bin/sh
 
-. ~/.xprofile
+#. ~/.xprofile
 
-exec dwm
+#exec dwm
