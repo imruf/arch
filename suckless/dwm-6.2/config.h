@@ -1,16 +1,16 @@
 /* See LICENSE file for copyright and license details. */
+
 #define TERMINAL "st"
 #define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gap pixel between windows */
 static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static const char col_gray1[]       = "#222222"; /* border color #073642 #222222*/
+static const char col_gray1[]       = "#011111"; /* border color #073642 #222222*/
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "silver"; /* tag color #eeeeee #bf616a*/
@@ -62,7 +62,7 @@ static const Rule rules[] = {
 { "Gimp",                NULL,     NULL,  0,         1,          0,           0,        -1 },
 { "firefox",             NULL,     NULL,  1 << 1,    0,          0,          -1,        -1 },
 { TERMCLASS,             NULL,     NULL,  0,         0,          1,          -1,        -1 },
-{ "Alacritty",           NULL,     NULL,  0,         1,          1,          -1,        -1 },
+{ "Alacritty",           "fact",   NULL,  0,         1,          1,          -1,        -1 },
 { "qutebrowser",         NULL,     NULL,  1 << 1,    0,          0,           0,        -1 },
 { "mpv",                 NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },

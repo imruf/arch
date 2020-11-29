@@ -68,8 +68,8 @@ static const struct arg args[] = {
 	{ netspeed_rx,   "  %sB|",    "wlp4s0" },
 	{ ram_used,   " %s|",             NULL },
 	{ cpu_perc,   " %s%%|",           NULL },
-	{ run_command, "%s|",         "battery" },
-	{ run_command, "%s|",          "volume" },
-	{ run_command, "%s|",           "clock" },
+	{ run_command, "%s|",         "dwmbattery" },
+	{ run_command, "%s|",          "dwmvolume" },
+	{ run_command, "%s|",           "dwmclock" },
 	{ wifi_perc,   "📶%s%%",       "wlp4s0" },
 };
