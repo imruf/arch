@@ -1,4 +1,6 @@
 /* See LICENSE file for copyright and license details. */
+#define TERMINAL "st"
+#define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
@@ -7,7 +9,7 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "Material Design Icons Desktop:Regular:pixelsize=14:antialias=true" };
+static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#073642"; /* border color #bbbbbb */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -21,19 +23,13 @@ static const char col_y1[]          = "#bf616a";
 static const char col_y2[]          = "#02143f"; /* #fea63c */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-static const char *colors[][3]      = {
 
-/*    some font name */
-/* Material Design Icons Desktop:Regular */
-/* UbuntuMono Nerd Font Mono             */
-/* mononoki Nerd Font Mono               */
-/* UbuntuMono Nerd Font                  */
-/* mononoki Nerd Font                    */
-
+static const char *colors[][13]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_y1, col_black,  col_cyan  },
+	[SchemeNorm] =	 { col_gray4, col_gray1,  col_gray2 },
+	[SchemeSel]  =	 { col_y1, col_black,   col_cyan },
 };
+
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
@@ -44,7 +40,7 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "110x18", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "110x18", NULL };
 const char *spcmd2[] = {"gnote", "--open-note=mynotes", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -65,7 +61,8 @@ static const Rule rules[] = {
   /* class               instance  title  tags mask  isfloating  isterminal  noswallow  monitor */
 { "Gimp",                NULL,     NULL,  0,         1,          0,           0,        -1 },
 { "firefox",             NULL,     NULL,  1 << 1,    0,          0,          -1,        -1 },
-{ "st",                  NULL,     NULL,  0,         0,          1,          -1,        -1 },
+{ TERMCLASS,             NULL,     NULL,  0,         0,          1,          -1,        -1 },
+{ "Alacritty",           NULL,     NULL,  0,         1,          1,          -1,        -1 },
 { "qutebrowser",         NULL,     NULL,  1 << 1,    0,          0,           0,        -1 },
 { "mpv",                 NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
@@ -81,10 +78,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "󰙀",      tile },    /* first entry is default */
-	{ "󱂬",      NULL },    /* no layout function means floating behavior */
-	{ "󰊓",      monocle },
-	{ "󰕴",      bstack },
+	{ "[T]",      tile },    /* first entry is default */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
+	{ "[M]",      monocle },
+	{ "[B]",      bstack },
 };
 
 /* key definitions */
@@ -102,13 +99,13 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { "st", NULL };
-static const char *fcmd[] = { "st", "-e", "nnn", NULL };
+static const char *termcmd[]  = { TERMINAL, NULL };
+static const char *fcmd[] = { TERMINAL, "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
-static const char *fcmd3[] = { "st", "-e", "lf", NULL };
+static const char *fcmd3[] = { TERMINAL, "-e", "lf", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *bcmd2[] = { "firefox", NULL };
-static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
+static const char *bcmd3[] = { TERMINAL, "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
 static const char *dweb[] = { "dweb", NULL };
 static const char *ips[] = { "dwmexit", "suspend", NULL };
@@ -208,7 +205,9 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
+	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
+	{ ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
@@ -217,4 +216,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
