@@ -1,12 +1,21 @@
-#!/bin/bash
-# switch power state using dmenu(1)
+#!/bin/sh
 
-selection=$(printf 'lock\nsuspend\nshutdown\nreboot' \
-		| dmenu  -i -p ":>_" \
-)
+# A dmenu wrapper script for system functions.
 
-case "${selection}" in
-	lock|shutdown|reboot|suspend)
-		dwmexit ${selection}
-		;;
+# For non-systemd init systems.
+case "$(readlink -f /sbin/init)" in
+	*runit*) hib="sudo -A zzz" ;;
+	*openrc*) reb="sudo -A openrc-shutdown -r"; shut="sudo -A openrc-shutdown -p" ;;
 esac
+
+cmds="\
+🔒 lock		slock
+🚪 leave dwm	kill -TERM $(pgrep -u $USER "\bdwm$")
+♻ renew dwm	kill -HUP $(pgrep -u $USER "\bdwm$")
+🐻 suspend	slock ${hib:-systemctl suspend-then-hibernate -i}
+🔃 reboot	${reb:-sudo -A reboot}
+🖥 shutdown	${shut:-sudo -A shutdown -h now}"
+
+choice="$(echo "$cmds" | cut -d'	' -f 1 | dmenu -p ">_")" || exit 1
+
+`echo "$cmds" | grep "^$choice	" | cut -d '	' -f2-`

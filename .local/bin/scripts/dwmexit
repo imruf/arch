@@ -6,13 +6,13 @@ case "$1" in
         slock
         ;;
     suspend)
-        systemctl suspend; slock
+        slock $(systemctl suspend-then-hibernate -i)
         ;;
     reboot)
-        systemctl reboot
+        sudo -A reboot
         ;;
     shutdown)
-        systemctl poweroff
+        sudo -A shutdown -h now
         ;;
     *)
         echo "== missing or invalid argument ! =="

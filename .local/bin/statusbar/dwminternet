@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) alacritty -d 140 18 -e nmtui; pkill -RTMIN+4 dwmblocks ;;
+	3) notify-send "🌐 Internet module" "\- Click to connect
+📡: no wifi connection
+📶: wifi connection with quality
+❎: no ethernet
+🌐: ethernet working
+🔒: vpn is active
+" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+icon="📡"
+wlp=$(cat /sys/class/net/wlp4s0/operstate 2>/dev/null)
+sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "📶", int($3 * 100 / 70) "%" }')
+
+if [ "${wlp}" == up ]; then
+printf "%s" "$sig"
+else
+printf "%s" $icon
+fi

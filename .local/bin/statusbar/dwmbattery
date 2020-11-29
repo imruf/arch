@@ -1,0 +1,26 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	3) notify-send "🔋 Battery module" "🔋: discharging
+🛑: not charging
+♻: stagnant charge
+🔌: charging
+⚡: charged
+❗: battery very low!
+- Scroll to change adjust xbacklight." ;;
+	4) xbacklight -inc 10 ;;
+	5) xbacklight -dec 10 ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+for battery in /sys/class/power_supply/BAT0
+do
+capacity=$(cat "$battery"/capacity 2>/dev/null) || break
+	status=$(sed "s/[Dd]ischarging/🔋/;s/[Nn]ot charging/🛑/;s/[Cc]harging/🔌/;s/[Uu]nknown/♻️ /;s/[Ff]ull/⚡ /" "$battery"/status)
+	bicon="$(sed "s/10[0-9]/ /;s/9[0-9]/ /;s/8[0-9]/ /;s/7[0-9]/ /;s/6[0-9]/ /;s/5[0-9]/ /;s/4[0-9]/ /;s/3[0-9]/ /;s/2[0-9]/ /;s/1[0-9]/ /;s/[0-9]/ /" "$battery"/capacity)"
+
+ [ "$capacity" -le 20 ] && [ "$status" = "🔋" ] && warn="❗"
+ 
+	printf "%s%s%s%s%% " "$status " "$bicon " "$warn" "$capacity"
+ 	unset warn
+ done | sed 's/ *$//'

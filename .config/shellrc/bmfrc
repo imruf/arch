@@ -1,6 +1,6 @@
 # You can add comments to these files with #
 
-fcv	${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim
-cfz	$ZDOTDIR/.zshrc
-fca	${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc
-fcp	${XDG_CONFIG_HOME:-$HOME}/.zprofile
+fcv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim
+cfz $ZDOTDIR/.zshrc
+fca ${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc
+fcp ${XDG_CONFIG_HOME:-$HOME}/.zprofile
