@@ -177,6 +177,7 @@
 * Rename All: r
 * Remote Directory Key: C
 * Unmount Remote: u
+* Mark: b
 * Search: /
 * Search And Navigate: i/Ctrl+n
 * Plugin: c

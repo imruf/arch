@@ -6,12 +6,13 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 
-static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
-static char *font2[] = { "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true" };
+static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
+static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
 
 /* 
 static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
 static char *font = "mononoki Nerd Font:pixelsize=20:antialias=true:autohint=true"; 
+static char *font = "Hack Nerd Font:pixelsize=20:antialias=true:autohint=true"; 
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
 */
 
@@ -103,7 +104,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1.0, alphaUnfocused = 0.9;
+float alpha = 0.8, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {

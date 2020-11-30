@@ -7,7 +7,7 @@ RPS1='$(vcs_super_info)'
 # PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
 
 #EXPORT 
-#export TERM="xterm-256color"
+export TERM="xterm-256color"
 export TERM="st-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=dbus

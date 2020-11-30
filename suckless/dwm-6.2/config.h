@@ -1,7 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-#define TERMINAL "st"
-#define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
@@ -9,11 +7,11 @@ static const unsigned int snap      = 22;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "mononoki Nerd Font:size=9:antialias=true:autohint=true", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#011111"; /* border color #073642 #222222*/
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "silver"; /* tag color #eeeeee #bf616a*/
+static const char col_gray4[]       = "#999999"; /* tag color status text color #eeeeee #bf616a*/
 static const char col_cyan[]        = "#0a0f14"; /* bar color #005577 #0a0f14*/
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
@@ -40,12 +38,12 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "110x18", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "110x18", NULL };
 const char *spcmd2[] = {"gnote", "--open-note=mynotes", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
-	{"gnote",      spcmd2},
+	{"gnote",       spcmd2},
 };
 
 /* tagging */
@@ -61,14 +59,14 @@ static const Rule rules[] = {
   /* class               instance  title  tags mask  isfloating  isterminal  noswallow  monitor */
 { "Gimp",                NULL,     NULL,  0,         1,          0,           0,        -1 },
 { "firefox",             NULL,     NULL,  1 << 1,    0,          0,          -1,        -1 },
-{ TERMCLASS,             NULL,     NULL,  0,         0,          1,          -1,        -1 },
-{ "Alacritty",           "fact",   NULL,  0,         1,          1,          -1,        -1 },
+{ "st",                  NULL,     NULL,  0,         0,          1,          -1,        -1 },
+{ NULL,                  "spf",    NULL,  0,         1,                                 -1 },
 { "qutebrowser",         NULL,     NULL,  1 << 1,    0,          0,           0,        -1 },
 { "mpv",                 NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "MPlayer",             NULL,     NULL,  1 << 2,    1,                       1,        -1 },
 { "libreoffice-writer",  NULL,     NULL,  1 << 3,    0,                       0,        -1 },
 { NULL,		             "spterm", NULL,  SPTAG(0),	 1,			                        -1 },
-{ "Gnote",                NULL,     NULL,  SPTAG(1),	 1,	                        -1 },
+{ "Gnote",               NULL,     NULL,  SPTAG(1),	 1,	                                -1 },
 };
 
 /* layout(s) */
@@ -99,13 +97,13 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *fcmd[] = { TERMINAL, "-e", "nnn", NULL };
+static const char *termcmd[]  = { "st", NULL };
+static const char *fcmd[] = { "st", "-e", "nnn", NULL };
 static const char *fcmd2[] = { "pcmanfm", NULL };
-static const char *fcmd3[] = { TERMINAL, "-e", "lf", NULL };
+static const char *fcmd3[] = { "st", "-e", "lf", NULL };
 static const char *bcmd[] = { "qutebrowser", NULL };
 static const char *bcmd2[] = { "firefox", NULL };
-static const char *bcmd3[] = { TERMINAL, "-e", "elinks", NULL };
+static const char *bcmd3[] = { "st", "-e", "elinks", NULL };
 static const char *dbang[] = { "dbang", NULL };
 static const char *dweb[] = { "dweb", NULL };
 static const char *ips[] = { "dwmexit", "suspend", NULL };
@@ -125,6 +123,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-i", "-p", ":>_", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
+#include "shiftview.c"
 
 
 static Key keys[] = {
@@ -180,6 +179,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,              quit,           {0} },
+	{ MOD2|ShiftMask,               XK_e,              quit,           {1} }, 
 	{ MODKEY|ShiftMask,             XK_x,              spawn,          {.v = pmenu } },
 	{ MODKEY|ShiftMask,             XK_s,              spawn,          {.v = ips } },
 	{ MODKEY|ShiftMask,             XK_r,              spawn,          {.v = ipr } },

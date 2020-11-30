@@ -9,14 +9,15 @@ static const Block blocks[] = {
 	/* {"",	"news",		0,	6}, */
 	/* {"",	"pacpackages",	0,	8}, */
 	/* {"", "cat /tmp/recordingicon 2>/dev/null",	0,	9}, */
+	/* {"",     "dwmkb",       0,     30}, */
 	{"",	"dwmforecast",	10800,	5},
-	{"",	"dwmmemory",	10,	14},
-	{"",	"dwmcpu",		10,	18},
-	{"",	"dwmnettraf",	1,	16},
-	{"",	"dwmvolume",	0,	10},
-	{"",	"dwmbattery",	5,	3},
-	{"",	"dwmclock",	60,	1},
-	{"",	"dwminternet",	5,	4},
+	{"",	"dwmmemory",	10,	   14},
+	{"",	"dwmcpu",		10,	   18},
+	{"",	"dwmnettraf",	1,	   16},
+	{"",	"dwmvolume",	0,	   10},
+	{"",	"dwmbattery",	5,	    3},
+	{"",	"dwmclock",	    60,	    1},
+	{"",	"dwminternet",	5,	    4},
 };
 
 //Sets delimiter between status commands. NULL character ('\0') means no delimiter.

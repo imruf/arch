@@ -4,7 +4,7 @@
 # When clicked, brings up `newsboat`.
 
 case $BLOCK_BUTTON in
-        1) setsid alacritty -d 140 18 -e newsboat ;;
+        1) setsid "$TERMINAL" -n spf -g 110x18 -e newsboat ;;
 	2) setsid -f newsup >/dev/null exit ;;
         3) notify-send "📰 News module" "\- Shows unread news items
 - Shows 🔃 if updating with \`newsup\`

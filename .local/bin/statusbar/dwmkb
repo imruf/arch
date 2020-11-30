@@ -1,0 +1,20 @@
+#!/bin/sh
+# works on any init system
+
+layout="$(ibus read-config | awk '/engines-order/ {print $3}' | sed "s/'m17n:bn:unijoy']/en:us/;s/'xkb:us::eng']/bn:bd/")"
+kicon="⌨"
+
+
+case $BLOCK_BUTTON in
+	1) cmds="\
+en:us	ibus engine xkb:us::eng
+bn:bd	ibus engine m17n:bn:unijoy"
+choice="$(echo "$cmds" | cut -d'	' -f 1 | dmenu -p ">_")" || exit 1
+`echo "$cmds" | grep "^$choice	" | cut -d '	' -f2-` ;;
+    3) notify-send "⌨  Keyboard/language module" "$(printf "%s" "\- Current layout:$layout ")
+- Left click to change keyboard.";;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+
+printf "%s %s" $kicon "$layout"
