@@ -13,7 +13,7 @@ c.statusbar.show = 'in-mode'
 c.tabs.show = 'multiple' #always, never, multiple, switching
 c.tabs.title.format = '{audio}{index}: {host}'
 
-# c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 # c.colors.webpage.darkmode.algorithm = 'lightness-cielab' #lightness/brightness-cielab/hsl/rgb
 # c.colors.webpage.darkmode.grayscale.all = True
 
@@ -59,6 +59,7 @@ config.bind('tj', 'config-cycle -p content.javascript.enabled')
 config.bind('tdm', 'config-cycle -p colors.webpage.darkmode.enabled')
 config.bind('<Ctrl-u>', 'undo')
 config.bind('<Alt-C>', 'prompt-yank', mode='prompt')
+config.bind('tqr', 'restart')
 
 config.bind('gb', 'open qute://bookmarks#bookmarks')
 config.bind('gh', 'open qute://history')
