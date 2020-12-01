@@ -25,7 +25,7 @@ selection=$(printf 'cli\ngui' \
     if [ "${selection}" == cli ]; then
         st -e surfraw -browser=elinks $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
     else 
-     surfraw -browser=/usr/bin/qutebrowser $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
+     surfraw -browser=qutebrowser $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_")
     fi
 
 # st -e surfraw -browser=$BROWSER $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | rofi -dmenu -i -p ">>>")

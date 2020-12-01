@@ -6,7 +6,7 @@ case "$1" in
         slock
         ;;
     suspend)
-        slock $(systemctl suspend-then-hibernate -i)
+        slock $(systemctl suspend -i)
         ;;
     reboot)
         sudo -A reboot
