@@ -16,7 +16,7 @@ esac done
 
 [ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/imrufbd/arch.git"
 [ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/imrufbd/arch/master/.config/progs.csv"
-[ -z "$aurhelper" ] && aurhelper="trizen"
+[ -z "$aurhelper" ] && aurhelper="yay"
 [ -z "$repobranch" ] && repobranch="master"
 
 ### FUNCTIONS ###
