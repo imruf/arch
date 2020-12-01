@@ -93,7 +93,7 @@
 
 - Scratchpad:
     - dropdown            Super+/
-    - gnote               Alt+Shift+n
+    - gnote               Super+n
 
 - dmenu 
     - dmenu:              Alt+;

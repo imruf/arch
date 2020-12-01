@@ -139,7 +139,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,             spawn,          {.v = dweb } },
 	{ MOD2,                         XK_semicolon,     spawn,          {.v = dbang } },
 	{ MOD2,                         XK_slash,         togglescratch,  {.ui = 0 } },
-	{ MODKEY|ShiftMask, 			XK_n,             togglescratch,  {.ui = 1 } },
+	{ MOD2, 			            XK_n,             togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_b,             togglebar,      {0} },
 	{ MODKEY,                       XK_j,             focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,             focusstack,     {.i = -1 } },
