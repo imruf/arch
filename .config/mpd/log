@@ -5669,3 +5669,2813 @@ Sep 21 23:36 : exception: OutputThread could not get realtime scheduling, contin
 Sep 22 00:30 : player: played "Annie's song.mp3"
 Sep 22 23:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Sep 22 23:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 01:43 : exception: Failed to create /home/masud/.mpd/state: No such file or directory
+Sep 23 01:43 : player: played "Annie's song.mp3"
+Sep 23 12:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 12:34 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 02 23:33 : client: [0] opened from [::1]:54826
+Oct 02 23:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 02 23:34 : client: [0] closed
+Oct 03 13:11 : player: played "Annie's song.mp3"
+Oct 03 13:53 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 03 13:53 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 03 19:52 : player: played "Annie's song.mp3"
+Oct 03 20:08 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 03 20:08 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 21:05 : client: [0] opened from [::1]:36746
+Oct 06 21:05 : client: [0] closed
+Oct 07 00:04 : update: updating /Aare Felai Ghorer Manus.mp3
+Oct 07 00:11 : update: removing Aaj Ke Naam.mp3
+Oct 07 00:13 : update: updating /Aaj Theke Aar Kokhono.mp3
+Oct 07 00:28 : update: updating /Here Without You.mp3
+Oct 07 00:28 : update: updating /Rakheni Amaye Keo.mp3
+Oct 07 00:28 : update: updating /Aj Mon Amar.mp3
+Oct 07 00:28 : update: updating /Hotel California(Live).mp3
+Oct 07 00:28 : update: updating /Kailash Kher.mp3
+Oct 07 00:28 : update: updating /Bheegi Bheegi James.mp3
+Oct 07 00:28 : update: updating /Sarothe.mp3
+Oct 07 00:28 : update: updating /Lutpat.mp3
+Oct 07 00:28 : update: updating /Alo Amar Alo.mp3
+Oct 07 00:28 : update: updating /Don't Want U Back.mp3
+Oct 07 00:28 : update: updating /Khula Dakho Mon Ta.mp3
+Oct 07 00:28 : update: updating /Bhalobasha Dibosh'99.mp3
+Oct 07 00:28 : update: updating /Bangla Charo.mp3
+Oct 07 00:28 : update: updating /Bondhu Tomay.mp3
+Oct 07 00:28 : update: updating /Ore Nil Doriya.mp3
+Oct 07 00:28 : update: updating /Zaara Zara.mp3
+Oct 07 00:28 : update: updating /Bhalobastey Hobe.mp3
+Oct 07 00:28 : update: updating /Bristi Nemeche.mp3
+Oct 07 00:28 : update: updating /Mone Robe Kina.mp3
+Oct 07 00:28 : update: updating /Olpo Aktu Akash Dau Amai.mp3
+Oct 07 00:28 : update: updating /Eso Prio Mono Rangai.mp3
+Oct 07 00:28 : update: updating /Mon Ki Je Chai.mp3
+Oct 07 00:28 : update: updating /Aaj Theke Aar Kokhono.mp3
+Oct 07 00:28 : update: updating /Akta Gaan Dau.mp3
+Oct 07 00:28 : update: updating /Borsa.mp3
+Oct 07 00:28 : update: updating /Aasan Nahin Yahan.mp3
+Oct 07 00:28 : update: updating /Ghumonto Sohore.mp3
+Oct 07 00:28 : update: updating /Mon Nodi 2.mp3
+Oct 07 00:28 : update: updating /Khachar Vitor Ochin Pakhi.mp3
+Oct 07 00:28 : update: updating /Ay Brishti Veja.mp3
+Oct 07 00:28 : update: updating /Jodi Tor Daak Shune Keu.mp3
+Oct 07 00:28 : update: updating /Paatshala.mp3
+Oct 07 00:28 : update: updating /Khiyo-Amar Shonar Bangla.mp3
+Oct 07 00:28 : update: updating /Apon Deshe Cholo.mp3
+Oct 07 00:28 : update: updating /Polashir Prantor.mp3
+Oct 07 00:28 : update: updating /Amar Parthona.mp3
+Oct 07 00:28 : update: updating /Crawling.mp3
+Oct 07 00:28 : update: updating /Tajmohol AB.mp3
+Oct 07 00:28 : update: updating /Five Hundred Miles.mp3
+Oct 07 00:28 : update: updating /Ei Podda Ei Meghna.mp3
+Oct 07 00:28 : update: updating /Bijli.mp3
+Oct 07 00:28 : update: updating /Milne Hai Mujhse Aayi.mp3
+Oct 07 00:28 : update: updating /Dhere Dhere Se.mp3
+Oct 07 00:28 : update: updating /Moushumi 2.mp3
+Oct 07 00:28 : update: updating /No Matter What.mp3
+Oct 07 00:28 : update: updating /Bondho Janala.mp3
+Oct 07 00:28 : update: updating /Ohona.mp3
+Oct 07 00:28 : update: updating /E Emon Porichay.mp3
+Oct 07 00:28 : update: updating /Cholona Ghure Aashi.mp3
+Oct 07 00:28 : update: updating /Arabic.mp3
+Oct 07 00:28 : update: updating /Dekha Hobe.mp3
+Oct 07 00:28 : update: updating /Nilgiri.mp3
+Oct 07 00:28 : update: updating /Cholo Bodle Jay.mp3
+Oct 07 00:28 : update: updating /Eto Koshto Keno Bhalobashai.mp3
+Oct 07 00:28 : update: updating /Tui Se Amar Mon.mp3
+Oct 07 00:28 : update: updating /Ami Auppeeay.mp3
+Oct 07 00:28 : update: updating /Prithibir Joto Shuk.mp3
+Oct 07 00:28 : update: updating /Dhakar Prem.mp3
+Oct 07 00:28 : update: updating /Janebar Age.mp3
+Oct 07 00:28 : update: updating /Manena Mon.mp3
+Oct 07 00:28 : update: updating /Rahur Grash.mp3
+Oct 07 00:28 : update: updating /Ei Je Dunia.mp3
+Oct 07 00:28 : update: updating /Ghate Lagaiya Dinga.mp3
+Oct 07 00:28 : update: updating /Joto Dure Jao.mp3
+Oct 07 00:28 : update: updating /Vhul Koreo.mp3
+Oct 07 00:28 : update: updating /Baduein.mp3
+Oct 07 00:28 : update: updating /Manush Manusher Jonno.mp3
+Oct 07 00:28 : update: updating /Shahjalal Shahporan.mp3
+Oct 07 00:28 : update: updating /Ami Kan Pete Roi.mp3
+Oct 07 00:28 : update: updating /Black Cloud.mp3
+Oct 07 00:28 : update: updating /Dilli Se Nizamuddin.mp3
+Oct 07 00:28 : update: updating /Bhalobasa Mane Anjon Dutta.mp3
+Oct 07 00:28 : update: updating /They Don't Care About Us.mp3
+Oct 07 00:28 : update: updating /Nobina.mp3
+Oct 07 00:28 : update: updating /Path Chola.mp3
+Oct 07 00:28 : update: updating /Jibone Ki Koto Lokshan.mp3
+Oct 07 00:28 : update: updating /Gontobbohin.mp3
+Oct 07 00:28 : update: updating /Lais Feta Lais.mp3
+Oct 07 00:28 : update: updating /Ekaki Prohor.mp3
+Oct 07 00:28 : update: updating /Ami To More Jabo.mp3
+Oct 07 00:28 : update: updating /Ekta Chele.mp3
+Oct 07 00:28 : update: updating /Aare Felai Ghorer Manus.mp3
+Oct 07 00:28 : update: updating /Kajra Re.mp3
+Oct 07 00:28 : update: updating /Sunn Raha Hai.mp3
+Oct 07 00:28 : update: updating /Jodi Tumi Fire Na Asho.mp3
+Oct 07 00:28 : update: updating /All Rise.mp3
+Oct 07 00:28 : update: updating /Ei Kothata.mp3
+Oct 07 00:28 : update: updating /Tumi Na Thakle.mp3
+Oct 07 00:28 : update: updating /Jesus To A Child.mp3
+Oct 07 00:28 : update: updating /Jell Theke Bolche.mp3
+Oct 07 00:28 : update: updating /Ektuku Choa Lage.mp3
+Oct 07 00:28 : update: updating /Srabon.mp3
+Oct 07 00:28 : update: updating /Kothai Haraley.mp3
+Oct 07 00:28 : update: updating /Amai Vshailire Ornob.mp3
+Oct 07 00:28 : update: updating /Joi Joganondon.mp3
+Oct 07 00:28 : update: updating /Tara Vora Rate.mp3
+Oct 07 00:28 : update: updating /Jiye To Jiye.mp3
+Oct 07 00:28 : update: updating /Kochpana Kare Koi.mp3
+Oct 07 00:28 : update: updating /Dhitang Dhitang Bole.mp3
+Oct 07 00:28 : update: updating /Rongdhonu.mp3
+Oct 07 00:28 : update: updating /Abar Abar Jigay.mp3
+Oct 07 00:28 : update: updating /Korimana.mp3
+Oct 07 00:28 : update: updating /Jekir.mp3
+Oct 07 00:28 : update: updating /Sritisarak.mp3
+Oct 07 00:28 : update: updating /Bolai Dadar Gamcha.mp3
+Oct 07 00:28 : update: updating /Madhobe.mp3
+Oct 07 00:28 : update: updating /Ei Sahara.mp3
+Oct 07 00:28 : update: updating /Ki Jala.mp3
+Oct 07 00:28 : update: updating /By My Self.mp3
+Oct 07 00:28 : update: updating /Mora Ekti Phul Ke Bachabo Bole.mp3
+Oct 07 00:28 : update: updating /Taray Taray.mp3
+Oct 07 00:28 : update: updating /Hriday Jure.mp3
+Oct 07 00:28 : update: updating /Jhorer Rate.mp3
+Oct 07 00:28 : update: updating /Jiboner Ba Pashe.mp3
+Oct 07 00:28 : update: updating /Aaj Tomake.mp3
+Oct 07 00:28 : update: updating /Baro Asha Kore.mp3
+Oct 07 00:28 : update: updating /Moushumi.mp3
+Oct 07 00:28 : update: updating /Chithi Chupi Chupi.mp3
+Oct 07 00:28 : update: updating /JatraBala.mp3
+Oct 07 00:28 : update: updating /Tere Bina Jindegi.mp3
+Oct 07 00:28 : update: updating /Jatri.mp3
+Oct 07 00:28 : update: updating /Ichcher Palok.mp3
+Oct 07 00:28 : update: updating /Shey Je Boshe Ache.mp3
+Oct 07 00:28 : update: updating /Kachar Vitor Ochin Pakhi.mp3
+Oct 07 00:28 : update: updating /Haste dakho.mp3
+Oct 07 00:28 : update: updating /Bullshit.mp3
+Oct 07 00:28 : update: updating /Gotkal Rate.mp3
+Oct 07 00:28 : update: updating /Kaade Krishnomon [Cry Krishna].mp3
+Oct 07 00:28 : update: updating /Obishap Dile.mp3
+Oct 07 00:28 : update: updating /Deshlai.mp3
+Oct 07 00:28 : update: updating /Na Chahile Jare.mp3
+Oct 07 00:28 : update: updating /Amake Khujte Tumi.mp3
+Oct 07 00:28 : update: updating /Bullet.mp3
+Oct 07 00:28 : update: updating /Ei Ki Beshi Na.mp3
+Oct 07 00:28 : update: updating /Sesh Chiti.mp3
+Oct 07 00:28 : update: updating /Prematal.mp3
+Oct 07 00:28 : update: updating /Janala Vora.mp3
+Oct 07 00:28 : update: updating /Dukkho Pelam.mp3
+Oct 07 00:28 : update: updating /Chorom Bastobota.mp3
+Oct 07 00:28 : update: updating /Ma.mp3
+Oct 07 00:28 : update: updating /Ei Akash Tomari.mp3
+Oct 07 00:28 : update: updating /Je Amake Prem Shikalo.mp3
+Oct 07 00:28 : update: updating /Glass Beat.mp3
+Oct 07 00:28 : update: updating /Bangladesh AB.mp3
+Oct 07 00:28 : update: updating /Chrite Niay.mp3
+Oct 07 00:28 : update: updating /Vromor Koi O Gia.mp3
+Oct 07 00:28 : update: updating /Pori.mp3
+Oct 07 00:28 : update: updating /Dhukho Ola.mp3
+Oct 07 00:28 : update: updating /Mon Niye Jontrona.mp3
+Oct 07 00:28 : update: updating /Ami Tomar Kache.mp3
+Oct 07 00:28 : update: updating /Tui Ki Janish Na2.mp3
+Oct 07 00:28 : update: updating /Raj Kumar.mp3
+Oct 07 00:28 : update: updating /Se Je Bose Ache.mp3
+Oct 07 00:28 : update: updating /Aber Surote.mp3
+Oct 07 00:28 : update: updating /Chole Gechi Tate Ki (Reply).mp3
+Oct 07 00:28 : update: updating /Meri En.mp3
+Oct 07 00:28 : update: updating /Nilanjana.mp3
+Oct 07 00:28 : update: updating /Bokul Ful.mp3
+Oct 07 00:28 : update: updating /Delhite Nizamuddin-Arman Fakir.mp3
+Oct 07 00:28 : update: updating /Kotota Kosta Achi.mp3
+Oct 07 00:28 : update: updating /Amar Kisu Sapno.mp3
+Oct 07 00:28 : update: updating /Ferare Mon.mp3
+Oct 07 00:28 : update: updating /A Place For My Head.mp3
+Oct 07 00:28 : update: updating /Piya Aaye Na.mp3
+Oct 07 00:28 : update: updating /Kar Chobi.mp3
+Oct 07 00:28 : update: updating /Dupchaya.mp3
+Oct 07 00:28 : update: updating /Ami Chailam Jare.mp3
+Oct 07 00:28 : update: updating /Easier To Run.mp3
+Oct 07 00:28 : update: updating /You Are Not Alone.mp3
+Oct 07 00:28 : update: updating /Samay Aar Katena.mp3
+Oct 07 00:28 : update: updating /Foreword.mp3
+Oct 07 00:28 : update: updating /Disco Bandor.mp3
+Oct 07 00:28 : update: updating /Ganga.mp3
+Oct 07 00:28 : update: updating /Ekti Rangin Chadar.mp3
+Oct 07 00:28 : update: updating /Rupali Gitar.mp3
+Oct 07 00:28 : update: updating /Lalpahari.mp3
+Oct 07 00:28 : update: updating /Ami Sunechi Shedin Tumi.mp3
+Oct 07 00:28 : update: updating /From The Inside.mp3
+Oct 07 00:28 : update: updating /Smooth Criminal.mp3
+Oct 07 00:28 : update: updating /Vhalobasi Vhalovasi.mp3
+Oct 07 00:28 : update: updating /Duti Mon Aaj.mp3
+Oct 07 00:28 : update: updating /Morile Kandisna Amar Dai.mp3
+Oct 07 00:28 : update: updating /Careless Whisper.mp3
+Oct 07 00:28 : update: updating /Bangladesh.mp3
+Oct 07 00:28 : update: updating /Sweti.mp3
+Oct 07 00:28 : update: updating /Valobese.mp3
+Oct 07 00:28 : update: updating /Modhur Modhur Chaoni.mp3
+Oct 07 00:28 : update: updating /Kosto Pete Bhalobashi.mp3
+Oct 07 00:28 : update: updating /Hand To Mouth.mp3
+Oct 07 00:28 : update: updating /Atel Totto.mp3
+Oct 07 00:28 : update: updating /Bicharpoti.mp3
+Oct 07 00:28 : update: updating /Prothom Sporso.mp3
+Oct 07 00:28 : update: updating /Klanti Amai Khoma.mp3
+Oct 07 00:28 : update: updating /Vaabte Kemon Obak Lage.mp3
+Oct 07 00:28 : update: updating /Akash Churi.mp3
+Oct 07 00:28 : update: updating /Jokhon Porbe Na Mor.mp3
+Oct 07 00:28 : update: updating /Amra Korbo.mp3
+Oct 07 00:28 : update: updating /Amar Jabar Somoy Holo Firoza.mp3
+Oct 07 00:28 : update: updating /Aaj Dukho volar Din.mp3
+Oct 07 00:28 : update: updating /Barshar Prothom Dinay.mp3
+Oct 07 00:28 : update: updating /Ghune Khaoya Rod.mp3
+Oct 07 00:28 : update: updating /Eri Majhe.mp3
+Oct 07 00:28 : update: updating /Ei Rangamatir Pothe-Indrani.mp3
+Oct 07 00:28 : update: updating /Joy Bangla Banglar Joy.mp3
+Oct 07 00:28 : update: updating /Pare Loiya Jau Amai.mp3
+Oct 07 00:28 : update: updating /Dure Achi Tai.mp3
+Oct 07 00:28 : update: updating /Purnimar Chad.mp3
+Oct 07 00:28 : update: updating /Faith.mp3
+Oct 07 00:28 : update: updating /Moharaj.mp3
+Oct 07 00:28 : update: updating /Gache Kathal Gofe Tel.mp3
+Oct 07 00:28 : update: updating /Chader Jonno Gan.mp3
+Oct 07 00:28 : update: updating /Here Comes The Sun.mp3
+Oct 07 00:28 : update: updating /Krithem Manush.mp3
+Oct 07 00:28 : update: updating /Tui Ki Janish Na.mp3
+Oct 07 00:28 : update: updating /Prem Tumi Ki.mp3
+Oct 07 00:28 : update: updating /Bristi Jhore Jai.mp3
+Oct 07 00:28 : update: updating /Khelicho E Bisho.mp3
+Oct 07 00:28 : update: updating /Sohena Jatona.mp3
+Oct 07 00:28 : update: updating /Amra Sobai Raza.mp3
+Oct 07 00:28 : update: updating /Ami Tomer Sange.mp3
+Oct 07 00:28 : update: updating /Venge poth.mp3
+Oct 07 00:28 : update: updating /Nisongota.mp3
+Oct 07 00:28 : update: updating /Muche Jawa Din Guli.mp3
+Oct 07 00:28 : update: updating /Panjabiola.mp3
+Oct 07 00:28 : update: updating /Ai Khukhu Ai.mp3
+Oct 07 00:28 : update: updating /Dekhna Mon.mp3
+Oct 07 00:28 : update: updating /Gari Cholena.mp3
+Oct 07 00:28 : update: updating /Dukha Keno Karo.mp3
+Oct 07 00:28 : update: updating /Pagla Hawa.mp3
+Oct 07 00:28 : update: updating /Din Furailo (Lalon Bondona).mp3
+Oct 07 00:28 : update: updating /Bhalobeshe Sokhi.mp3
+Oct 07 00:28 : update: updating /Dhusor Somay.mp3
+Oct 07 00:28 : update: updating /Arek Notun Gaan.mp3
+Oct 07 00:28 : update: updating /Megh Jhorana.mp3
+Oct 07 00:28 : update: updating /Ki Kore Sob Vule Jai.mp3
+Oct 07 00:28 : update: updating /Juddho.mp3
+Oct 07 00:28 : update: updating /Ami Ki Rokom Vabe Beche Achi.mp3
+Oct 07 00:28 : update: updating /Konthe Amar.mp3
+Oct 07 00:28 : update: updating /Nitol Paye Live.mp3
+Oct 07 00:28 : update: updating /Shesh Chithi.mp3
+Oct 07 00:28 : update: updating /My Heart Will Go On.mp3
+Oct 07 00:28 : update: updating /Telephone E Fisfis.mp3
+Oct 07 00:28 : update: updating /Moner O bagane.mp3
+Oct 07 00:28 : update: updating /Albida.mp3
+Oct 07 00:28 : update: updating /Kofi House.mp3
+Oct 07 00:28 : update: updating /Akash Amar.mp3
+Oct 07 00:28 : update: updating /Uposhonghar.mp3
+Oct 07 00:28 : update: updating /Californication.mp3
+Oct 07 00:28 : update: updating /Geeti Kobita-2.mp3
+Oct 07 00:28 : update: updating /Pratidhwani Suni.mp3
+Oct 07 00:28 : update: updating /Kanamachi.mp3
+Oct 07 00:28 : update: updating /Akon Amar Nejer Kache.mp3
+Oct 07 00:28 : update: updating /Aar Noy Juddho.mp3
+Oct 07 00:28 : update: updating /Chal Chale.mp3
+Oct 07 00:28 : update: updating /Jare Ja Ure Ja.mp3
+Oct 07 00:28 : update: updating /Ochena Jibon.mp3
+Oct 07 00:28 : update: updating /Essor.mp3
+Oct 07 00:28 : update: updating /Baji.mp3
+Oct 07 00:28 : update: updating /Je Chilo Amar.mp3
+Oct 07 00:28 : update: updating /Haat Barao.mp3
+Oct 07 00:28 : update: updating /Akta Gopon Kotha.mp3
+Oct 07 00:28 : update: updating /Dil Se Re.mp3
+Oct 07 00:28 : update: updating /Dheke Jare Tui.mp3
+Oct 07 00:28 : update: updating /Station Road.mp3
+Oct 07 00:28 : update: updating /Batashe Lasher Gondho.mp3
+Oct 07 00:28 : update: updating /Ae Jeno Sei Chokh.mp3
+Oct 07 00:28 : update: updating /Jadi Emon.mp3
+Oct 07 00:28 : update: updating /Hauge.mp3
+Oct 07 00:28 : update: updating /I Just Call To say.mp3
+Oct 07 00:28 : update: updating /Jokhoni Nibir Kore.mp3
+Oct 07 00:28 : update: updating /Geeti Kobita.mp3
+Oct 07 00:28 : update: updating /O Sokhina.mp3
+Oct 07 00:28 : update: updating /Shai Tumi.mp3
+Oct 07 00:28 : update: updating /Sukher Ei Prithibi.mp3
+Oct 07 00:28 : update: updating /Everything She Wants.mp3
+Oct 07 00:28 : update: updating /Ektu Boshiya Thako.mp3
+Oct 07 00:28 : update: updating /Mon Bhalo Nei.mp3
+Oct 07 00:28 : update: updating /Coffee Houser Addata Aaj Ar Nei.mp3
+Oct 07 00:28 : update: updating /Hey, Rock Your Life.mp3
+Oct 07 00:28 : update: updating /Baburam Sapure.mp3
+Oct 07 00:28 : update: updating /Mon Chaile Mon.mp3
+Oct 07 00:28 : update: updating /Hok Kolorob.mp3
+Oct 07 00:28 : update: updating /Ato_Sur_Ar_Eto_Gaan-Srikanto.mp3
+Oct 07 00:28 : update: updating /Vashaylire.mp3
+Oct 07 00:28 : update: updating /Harano Hiyar Nikunjo Pothe-Asha.mp3
+Oct 07 00:28 : update: updating /Bhula Dena.mp3
+Oct 07 00:28 : update: updating /Tomar Ghore Bosot Kore Koijona.mp3
+Oct 07 00:28 : update: updating /Poddo Patar Jol.mp3
+Oct 07 00:28 : update: updating /Ak Muhurte.mp3
+Oct 07 00:28 : update: updating /Aarshi Nogor.mp3
+Oct 07 00:28 : update: updating /Jab Koi Baat Bigad.mp3
+Oct 07 00:28 : update: updating /Jibon Galo.mp3
+Oct 07 00:28 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:28 : update: updating /Tumi Amar Ghum.mp3
+Oct 07 00:28 : update: updating /Kew Kotha Rakheni.mp3
+Oct 07 00:28 : update: updating /Ferrari Ei Mon Ta Amar.mp3
+Oct 07 00:28 : update: updating /Tum Hi Ho.mp3
+Oct 07 00:28 : update: updating /Amar Khankher Kolosi.mp3
+Oct 07 00:28 : update: updating /One Love.mp3
+Oct 07 00:28 : update: updating /Amar Maje Nei Ekhon Ami.mp3
+Oct 07 00:28 : update: updating /Bhalobashi Bole Bondhu.mp3
+Oct 07 00:28 : update: updating /Obhimane Noi.mp3
+Oct 07 00:28 : update: updating /Amar Keno Emon Holo.mp3
+Oct 07 00:28 : update: updating /Jao Pakhi Bolo Tare.mp3
+Oct 07 00:28 : update: updating /Cholo Sabai.mp3
+Oct 07 00:28 : update: updating /Boshey Achi.mp3
+Oct 07 00:28 : update: updating /Beder Meye Josna.mp3
+Oct 07 00:28 : update: updating /Meghbalika.mp3
+Oct 07 00:28 : update: updating /Five Hundred Mils Away From Home.mp3
+Oct 07 00:28 : update: updating /Pata Kuronir Meye.mp3
+Oct 07 00:28 : update: updating /Separation.mp3
+Oct 07 00:28 : update: updating /Chole Gele.mp3
+Oct 07 00:28 : update: updating /Je Tumi Tarar Moto.mp3
+Oct 07 00:28 : update: updating /Aktu Pore Nambe Borsha.mp3
+Oct 07 00:28 : update: updating /Attokendrik.mp3
+Oct 07 00:28 : update: updating /Salam Salam.mp3
+Oct 07 00:28 : update: updating /Eso Amar Shohore.mp3
+Oct 07 00:28 : update: updating /Bhaage Re Mann Chameli.mp3
+Oct 07 00:28 : update: updating /Je Pothe Pothik Ney.mp3
+Oct 07 00:28 : update: updating /Sona Bandhu.mp3
+Oct 07 00:28 : update: updating /Hey You.mp3
+Oct 07 00:28 : update: updating /Dhono Dhanno Pushpe Vora.mp3
+Oct 07 00:28 : update: updating /Jotota Poth.mp3
+Oct 07 00:28 : update: updating /Amake Amar Moto Thakte Dao.mp3
+Oct 07 00:28 : update: updating /Bhalobashi Bhalobashi.mp3
+Oct 07 00:28 : update: updating /Bacha Thakle.mp3
+Oct 07 00:28 : update: updating /Dukhini Dukho Koro Na.mp3
+Oct 07 00:28 : update: updating /Ke Bashi Bajayre.mp3
+Oct 07 00:28 : update: updating /Nei Proyojon.mp3
+Oct 07 00:28 : update: updating /Buffalo Soldier.mp3
+Oct 07 00:28 : update: updating /Jekhane Simanto Tomar.mp3
+Oct 07 00:28 : update: updating /Eto Dure Je Chole Gecho.mp3
+Oct 07 00:28 : update: updating /Oshamajik.mp3
+Oct 07 00:28 : update: updating /Kefetariya.mp3
+Oct 07 00:28 : update: updating /Baro Mash.mp3
+Oct 07 00:28 : update: updating /Sarata Poth Jhure.mp3
+Oct 07 00:28 : update: updating /Amar A Ghar.mp3
+Oct 07 00:28 : update: updating /Kibhabe Bujhabo.mp3
+Oct 07 00:28 : update: updating /Father Figure.mp3
+Oct 07 00:28 : update: updating /Amai Nohe Go Firoza.mp3
+Oct 07 00:28 : update: updating /7th March Sheikh Mujibur Rahman Er.mp3
+Oct 07 00:28 : update: updating /Ei Prithibi.mp3
+Oct 07 00:28 : update: updating /Jene Shune Bish.mp3
+Oct 07 00:28 : update: updating /Amar Bela Je Jai.mp3
+Oct 07 00:28 : update: updating /Aaj Dujonar Duti Poth.mp3
+Oct 07 00:28 : update: updating /Ei Monta.mp3
+Oct 07 00:28 : update: updating /Bekarotto.mp3
+Oct 07 00:28 : update: updating /Rupak.mp3
+Oct 07 00:28 : update: updating /Duar Dana.mp3
+Oct 07 00:28 : update: updating /Akashe Batase.mp3
+Oct 07 00:28 : update: updating /Norwegian Wood.mp3
+Oct 07 00:28 : update: updating /Tumi Hina.mp3
+Oct 07 00:28 : update: updating /Adhar Amar Ontor.mp3
+Oct 07 00:28 : update: updating /Amay Bhashailire.mp3
+Oct 07 00:28 : update: updating /Tui Gaan Ga.mp3
+Oct 07 00:28 : update: updating /Ei Gan Ses Gan.mp3
+Oct 07 00:28 : update: updating /Abar Juddhe Jete Hobe.mp3
+Oct 07 00:28 : update: updating /Mela.mp3
+Oct 07 00:28 : update: updating /Koto Shohojey Tumi.mp3
+Oct 07 00:28 : update: updating /Ei Shundor Shornali Sondhai.mp3
+Oct 07 00:28 : update: updating /Jharna Theke Nodi.mp3
+Oct 07 00:28 : update: updating /Tomake Dekhle Ekbar.mp3
+Oct 07 00:28 : update: updating /Hotasha.mp3
+Oct 07 00:28 : update: updating /Shithilaion_2.mp3
+Oct 07 00:28 : update: updating /Alga Korogo Md.Rafi.mp3
+Oct 07 00:28 : update: updating /Kare Dekhabo.mp3
+Oct 07 00:28 : update: updating /Kashfuler Kabbo.mp3
+Oct 07 00:28 : update: updating /Bidrohi.mp3
+Oct 07 00:28 : update: updating /Gaaner Tale.mp3
+Oct 07 00:28 : update: updating /Shopno Deakbo Bole.mp3
+Oct 07 00:28 : update: updating /Enechi Amar.mp3
+Oct 07 00:28 : update: updating /Ek Muhurto.mp3
+Oct 07 00:28 : update: updating /Manali Trance.mp3
+Oct 07 00:28 : update: updating /Ek Sagor Er Rokter Binimoy e.mp3
+Oct 07 00:28 : update: updating /Dusto Meye.mp3
+Oct 07 00:28 : update: updating /Aaj Theke Aar.mp3
+Oct 07 00:28 : update: updating /Dakhina Hawa.mp3
+Oct 07 00:28 : update: updating /Bangladesh George Harrison.mp3
+Oct 07 00:28 : update: updating /Ek Jiggasa Porosh Pathor.mp3
+Oct 07 00:28 : update: updating /Kotodin Dekheni Duchokh.mp3
+Oct 07 00:28 : update: updating /Shob Bhalo Tui.mp3
+Oct 07 00:28 : update: updating /Palai Palai.mp3
+Oct 07 00:28 : update: updating /Full Nebe Na Osru.mp3
+Oct 07 00:28 : update: updating /All That She Wants.mp3
+Oct 07 00:28 : update: updating /Dark Side.mp3
+Oct 07 00:28 : update: updating /Sharthopor.mp3
+Oct 07 00:28 : update: updating /Annie's song.mp3
+Oct 07 00:28 : update: updating /Ami Tomakei Bole Debo.mp3
+Oct 07 00:28 : update: updating /Alash Samyer Porda.mp3
+Oct 07 00:28 : update: updating /Pinjor.mp3
+Oct 07 00:28 : update: updating /DoyaL.mp3
+Oct 07 00:28 : update: updating /Chalak Tumi.mp3
+Oct 07 00:28 : update: updating /Bistirna Dupare.mp3
+Oct 07 00:28 : update: updating /Amar Ei Poth.mp3
+Oct 07 00:28 : update: updating /Ekla Ghor.mp3
+Oct 07 00:28 : update: updating /Brishti Dekhe Onek (Dhun).mp3
+Oct 07 00:28 : update: updating /Give Me Some Sunshine.mp3
+Oct 07 00:28 : update: updating /Amar Bola Holo Na.mp3
+Oct 07 00:28 : update: updating /Aashiqui.mp3
+Oct 07 00:28 : update: updating /Nefartiti.mp3
+Oct 07 00:28 : update: updating /Onekta Samay.mp3
+Oct 07 00:28 : update: updating /Bure Bure Boro Boro.mp3
+Oct 07 00:28 : update: updating /Aajo Achhe Sei Gaan.mp3
+Oct 07 00:28 : update: updating /Tumi Aaj Koto Dure.mp3
+Oct 07 00:28 : update: updating /Jhilmill.mp3
+Oct 07 00:28 : update: updating /Pother Bap.mp3
+Oct 07 00:28 : update: updating /Jato Durey.mp3
+Oct 07 00:28 : update: updating /Chahun Main Ya Naa.mp3
+Oct 07 00:28 : update: updating /Ei.mp3
+Oct 07 00:28 : update: updating /Batase Fuler Sourov.mp3
+Oct 07 00:28 : update: updating /Aniket Prantor.mp3
+Oct 07 00:28 : update: updating /Keno Shunno Hate.mp3
+Oct 07 00:28 : update: updating /Mone Pore.mp3
+Oct 07 00:28 : update: updating /Na Jene Vul.mp3
+Oct 07 00:28 : update: updating /Annana.mp3
+Oct 07 00:28 : update: updating /Pother Bagan.mp3
+Oct 07 00:28 : update: updating /Blues And Rodh.mp3
+Oct 07 00:28 : update: updating /Ekhon Arale.mp3
+Oct 07 00:28 : update: updating /Tomake Chai.mp3
+Oct 07 00:28 : update: updating /Khub Chena Chena.mp3
+Oct 07 00:28 : update: updating /Amar Jabar Belai.mp3
+Oct 07 00:28 : update: updating /Ichhe Holo.mp3
+Oct 07 00:28 : update: updating /Vul Janma.mp3
+Oct 07 00:28 : update: updating /Kolonker Dhol.mp3
+Oct 07 00:28 : update: updating /Baiouskoper Khela.mp3
+Oct 07 00:28 : update: updating /Chondrahoto.mp3
+Oct 07 00:28 : update: updating /Bhalobasa Mane Porosh Pathor.mp3
+Oct 07 00:28 : update: updating /Ekbar Jete Dena.mp3
+Oct 07 00:28 : update: updating /Mohashunno.mp3
+Oct 07 00:28 : update: updating /Irsha.mp3
+Oct 07 00:28 : update: updating /Je Tuku Somoy.mp3
+Oct 07 00:28 : update: updating /Cherish.mp3
+Oct 07 00:28 : update: updating /Etihash.mp3
+Oct 07 00:28 : update: updating /Surer Tane.mp3
+Oct 07 00:28 : update: updating /Ekjon.mp3
+Oct 07 00:28 : update: updating /Amer Valobasa.mp3
+Oct 07 00:28 : update: updating /Dewal.mp3
+Oct 07 00:28 : update: updating /Didi Moni.mp3
+Oct 07 00:28 : update: updating /Amay Dekona Ferano Jabe Na.mp3
+Oct 07 00:28 : update: updating /Chayar Ninad.mp3
+Oct 07 00:28 : update: updating /Ami Kul Hara Kolonkini.mp3
+Oct 07 00:28 : update: updating /Aguner Poroshmoni.mp3
+Oct 07 00:28 : update: updating /Debdas.mp3
+Oct 07 00:28 : update: updating /Joni Please Don't Cry.mp3
+Oct 07 00:28 : update: updating /In The End.mp3
+Oct 07 00:28 : update: updating /Ei Je Ami.mp3
+Oct 07 00:28 : update: updating /Sacrifice.mp3
+Oct 07 00:28 : update: updating /Holudia Pakhi.mp3
+Oct 07 00:28 : update: updating /Ekdin Briste.mp3
+Oct 07 00:28 : update: updating /Hepi Brdej.mp3
+Oct 07 00:28 : update: updating /Ei Nosto Sohore.mp3
+Oct 07 00:28 : update: updating /Chole Gecho Tate Ki (Hasib).mp3
+Oct 07 00:28 : update: updating /Intro.mp3
+Oct 07 00:28 : update: updating /Kal Sararat.mp3
+Oct 07 00:28 : update: updating /Ekhane Ese Darale.mp3
+Oct 07 00:28 : update: updating /Hum Bhool Gaye Har Baat.mp3
+Oct 07 00:28 : update: updating /Shopnohara.mp3
+Oct 07 00:28 : update: updating /Ferari Somoy.mp3
+Oct 07 00:28 : update: updating /Chithi.mp3
+Oct 07 00:28 : update: updating /Shahid Saroni.mp3
+Oct 07 00:28 : update: updating /Bela Shese.mp3
+Oct 07 00:28 : update: updating /Quit playin' Games.mp3
+Oct 07 00:28 : update: updating /Ami Chirotore Firoza.mp3
+Oct 07 00:28 : update: updating /Forgotten.mp3
+Oct 07 00:28 : update: updating /Amora.mp3
+Oct 07 00:28 : update: updating /Din Bare Jai.mp3
+Oct 07 00:28 : update: updating /Rhythm Divine.mp3
+Oct 07 00:28 : update: updating /Beche Thakar Gaan.mp3
+Oct 07 00:28 : update: updating /Jibon Jala.mp3
+Oct 07 00:28 : update: updating /Dome Dome.mp3
+Oct 07 00:28 : update: updating /Dreamum Wakeupum.mp3
+Oct 07 00:28 : update: updating /Godhuli.mp3
+Oct 07 00:28 : update: updating /Chole Jau Bondhu.mp3
+Oct 07 00:28 : update: updating /Shukno Pata.mp3
+Oct 07 00:28 : update: updating /Baindua.mp3
+Oct 07 00:28 : update: updating /Sokhi Vabona Kahare Bole.mp3
+Oct 07 00:28 : update: updating /Don't Bother.mp3
+Oct 07 00:28 : update: updating /Meri Aashiqui.mp3
+Oct 07 00:28 : update: updating /Chera Pal(Acoustic).mp3
+Oct 07 00:28 : update: updating /More Jabo.mp3
+Oct 07 00:28 : update: updating /Quit Playin' Games Live.mp3
+Oct 07 00:28 : update: updating /Shunno.mp3
+Oct 07 00:28 : update: updating /Shithilaion_1.mp3
+Oct 07 00:28 : update: updating /Duronto Meye.mp3
+Oct 07 00:28 : update: updating /Amar Prithibee.mp3
+Oct 07 00:28 : update: updating /Sunn Raha Hai (Female).mp3
+Oct 07 00:28 : update: updating /He! Pagli.mp3
+Oct 07 00:28 : update: updating /Ovijog Nei.mp3
+Oct 07 00:28 : update: updating /Tumi Ki Dekecho Kobhu.mp3
+Oct 07 00:28 : update: updating /Eng.mp3
+Oct 07 00:28 : update: updating /He Nobi Yea Rasul.mp3
+Oct 07 00:28 : update: updating /Geetikobita-3.mp3
+Oct 07 00:28 : update: updating /Baywarish.mp3
+Oct 07 00:28 : update: updating /Bibagee.mp3
+Oct 07 00:28 : update: updating /Rat Furolei.mp3
+Oct 07 00:28 : update: updating /Bangladesh James.mp3
+Oct 07 00:28 : update: updating /Sweetheart.mp3
+Oct 07 00:28 : update: updating /Raag.mp3
+Oct 07 00:28 : update: updating /Khairunlo.mp3
+Oct 07 00:28 : update: updating /Amar Shopnogulo.mp3
+Oct 07 00:28 : update: updating /Nithua Pathare.mp3
+Oct 07 00:28 : update: updating /Banglai Gan Gai.mp3
+Oct 07 00:28 : update: updating /Hat Barea Chui.mp3
+Oct 07 00:28 : update: updating /Figure 09.mp3
+Oct 07 00:28 : update: updating /Amake Chobena.mp3
+Oct 07 00:28 : update: updating /Chader Meye Josna.mp3
+Oct 07 00:28 : update: updating /Gonga.mp3
+Oct 07 00:28 : update: updating /Obak Bhalobasha.mp3
+Oct 07 00:28 : update: updating /Freedom.mp3
+Oct 07 00:28 : update: updating /Toma Ke Chai.mp3
+Oct 07 00:28 : update: updating /Fast Love.mp3
+Oct 07 00:28 : update: updating /Mukosh.mp3
+Oct 07 00:28 : update: updating /Deho Ghori.mp3
+Oct 07 00:28 : update: updating /Kajra Muhabbat.mp3
+Oct 07 00:28 : update: updating /Ke Ake Onno Chobi.mp3
+Oct 07 00:28 : update: updating /Ektara.mp3
+Oct 07 00:28 : update: updating /Ami hoito Manus Noi.mp3
+Oct 07 00:28 : update: updating /Ekatorer Ma Jononi.mp3
+Oct 07 00:28 : update: updating /Tumi Aashbe Bole.mp3
+Oct 07 00:28 : update: updating /chaite Paro.mp3
+Oct 07 00:28 : update: updating /IF You Had My Love.mp3
+Oct 07 00:28 : update: updating /Chad Sajalo Alo Rupali.mp3
+Oct 07 00:28 : update: updating /At The Startiting Of The Day.mp3
+Oct 07 00:28 : update: updating /Beat It.mp3
+Oct 07 00:28 : update: updating /Purba Digante Surjo Uteche.mp3
+Oct 07 00:28 : update: updating /Aalo.mp3
+Oct 07 00:28 : update: updating /Lin.mp3
+Oct 07 00:28 : update: updating /Ek Paye Nupor.mp3
+Oct 07 00:28 : update: updating /Bashi Sune Aar Kaj.mp3
+Oct 07 00:28 : update: updating /Don't Cry Joni.mp3
+Oct 07 00:28 : update: updating /Jete Jete Pathe Holo Deri.mp3
+Oct 07 00:28 : update: updating /Shikaiya Piriti.mp3
+Oct 07 00:28 : update: updating /Tume Jode Node.mp3
+Oct 07 00:28 : update: updating /Tomake Vebhe Lekha.mp3
+Oct 07 00:28 : update: updating /Khuji Tomake Khuji.mp3
+Oct 07 00:28 : update: updating /Ki Jala2.mp3
+Oct 07 00:28 : update: updating /He Khaniker Otithi.mp3
+Oct 07 00:28 : update: updating /Ei Neel Monihar.mp3
+Oct 07 00:28 : update: updating /Breaking The Habit.mp3
+Oct 07 00:28 : update: updating /Arefoter Potaka [The Standard of Extelligence].mp3
+Oct 07 00:28 : update: updating /Kalare Koirogo Mana.mp3
+Oct 07 00:28 : update: updating /Tumi Prithibite Ei More.mp3
+Oct 07 00:28 : update: updating /Bille Jean.mp3
+Oct 07 00:28 : update: updating /Ek Kana Ghar Vangar Por.mp3
+Oct 07 00:28 : update: updating /Kushum Kushum.mp3
+Oct 07 00:28 : update: updating /Durotto.mp3
+Oct 07 00:28 : update: updating /Everyone Backstreet.mp3
+Oct 07 00:28 : update: updating /Chokra Chad.mp3
+Oct 07 00:28 : update: updating /Faint.mp3
+Oct 07 00:28 : update: updating /Fule Fule.mp3
+Oct 07 00:28 : update: updating /Ami Tomaro Songe.mp3
+Oct 07 00:28 : update: updating /Ajo.mp3
+Oct 07 00:28 : update: updating /Banglai Gaan Gai.mp3
+Oct 07 00:28 : update: updating /Jaa Rey.mp3
+Oct 07 00:28 : update: updating /Amar Sontan.mp3
+Oct 07 00:28 : update: updating /Majhi.mp3
+Oct 07 00:28 : update: updating /Hit Flim.mp3
+Oct 07 00:28 : update: updating /Jodi Balobasa Pai.mp3
+Oct 07 00:28 : update: updating /Bestota.mp3
+Oct 07 00:28 : update: updating /Everything I Do.mp3
+Oct 07 00:28 : update: updating /Moner Ovhimangulo.mp3
+Oct 07 00:28 : update: updating /Parwardigar.mp3
+Oct 07 00:28 : update: updating /Jaltaranga.mp3
+Oct 07 00:28 : update: updating /Allah Megh De Pani De.mp3
+Oct 07 00:28 : update: updating /Anaasamay.mp3
+Oct 07 00:28 : update: updating /Bondhu.mp3
+Oct 07 00:28 : update: updating /Gram Chara Oi.mp3
+Oct 07 00:28 : update: updating /Emono Dine Tare.mp3
+Oct 07 00:28 : update: updating /Jumbalika.mp3
+Oct 07 00:28 : update: updating /The Watson Brothers Akash.mp3
+Oct 07 00:28 : update: updating /Baniya Bondhu.mp3
+Oct 07 00:28 : update: updating /Krishnopokkho.mp3
+Oct 07 00:28 : update: updating /Ato Sur Aar Ato Gaan.mp3
+Oct 07 00:28 : update: updating /Cure For Theitch.mp3
+Oct 07 00:28 : update: updating /Kotha Noi Mukhe Mukhe.mp3
+Oct 07 00:28 : update: updating /Ami Fire Pete Chai.mp3
+Oct 07 00:28 : update: updating /Leekhte Parena.mp3
+Oct 07 00:28 : update: updating /Hero.mp3
+Oct 07 00:28 : update: updating /Brishti.mp3
+Oct 07 00:28 : update: updating /Jege theko sararat.mp3
+Oct 07 00:28 : update: updating /Daak Deyechen.mp3
+Oct 07 00:28 : update: updating /Chondro Jagiche Jonak Jagiche.mp3
+Oct 07 00:28 : update: updating /Tomake.mp3
+Oct 07 00:28 : update: updating /Kuthau Amar Harie.mp3
+Oct 07 00:28 : update: updating /Jachhe Chole.mp3
+Oct 07 00:28 : update: updating /Acid Namer Hiroshima.mp3
+Oct 07 00:28 : update: updating /Gotimoi Ei Sohore.mp3
+Oct 07 00:28 : update: updating /Brindabon.mp3
+Oct 07 00:28 : update: updating /Purano Shei Diner Kotha.mp3
+Oct 07 00:28 : update: updating /Din Jai Din.mp3
+Oct 07 00:28 : update: updating /Hridoyer Dabi.mp3
+Oct 07 00:28 : update: updating /Aj Danar Kete.mp3
+Oct 07 00:28 : update: updating /Matir Pinjira.mp3
+Oct 07 00:28 : update: updating /Bisher Urmimala.mp3
+Oct 07 00:28 : update: updating /Pa.mp3
+Oct 07 00:28 : update: updating /Kyuki Tum Hi Ho.mp3
+Oct 07 00:28 : update: updating /Kono Ashroy.mp3
+Oct 07 00:28 : update: updating /Tomar Jonno.mp3
+Oct 07 00:28 : update: updating /Bhange Mor Ghorer.mp3
+Oct 07 00:28 : update: updating /Vabe Mon Okaron Sarakhon.mp3
+Oct 07 00:28 : update: updating /Amay Jetey.mp3
+Oct 07 00:28 : update: updating /Chai.mp3
+Oct 07 00:28 : update: updating /Ek Nodi Rokto Periyea.mp3
+Oct 07 00:28 : update: updating /Joler Dame Dilam Khule.mp3
+Oct 07 00:28 : update: updating /Kobitai Bolechile.mp3
+Oct 07 00:28 : update: updating /Hoina Kichui Amar Paua.mp3
+Oct 07 00:28 : update: updating /Heremer Bondini.mp3
+Oct 07 00:28 : update: updating /Bashoriya.mp3
+Oct 07 00:28 : update: updating /Karar Oi Loho Kopat.mp3
+Oct 07 00:28 : update: updating /Nouka Vromon.mp3
+Oct 07 00:28 : update: updating /Aboshase Manus Eka.mp3
+Oct 07 00:28 : update: updating /Jakhan Somay Thomke.mp3
+Oct 07 00:28 : update: updating /Achcha Keno Manushgulo.mp3
+Oct 07 00:28 : update: updating /Pul Tola Oi Jamar.mp3
+Oct 07 00:28 : update: updating /Nirjon Raat.mp3
+Oct 07 00:28 : update: updating /Don't Stay.mp3
+Oct 07 00:28 : update: updating /Protiddhoni Shuni.mp3
+Oct 07 00:28 : update: updating /Aji E Bosonte.mp3
+Oct 07 00:28 : update: updating /Away From The Sun.mp3
+Oct 07 00:28 : update: updating /Banglar Lathiyal.mp3
+Oct 07 00:28 : update: updating /Pakhi Paka Pepe Khay.mp3
+Oct 07 00:28 : update: updating /Dhulo Pora Chithi.mp3
+Oct 07 00:28 : update: updating /Hit The Floor.mp3
+Oct 07 00:28 : update: updating /Nati Khati Bela Gelo.mp3
+Oct 07 00:28 : update: updating /Jonmo Amar Dhonno Holo.mp3
+Oct 07 00:28 : update: updating /Pagla Hawar Badol Dine.mp3
+Oct 07 00:28 : update: updating /Mon Amar Deho Ghori.mp3
+Oct 07 00:28 : update: updating /Amar Vaier Rokte Rangano.mp3
+Oct 07 00:28 : update: updating /Jat Gelo Jat Gelo Bole.mp3
+Oct 07 00:28 : update: updating /Sohoj Manus.mp3
+Oct 07 00:28 : update: updating /Ichche Hole Vhalobasis.mp3
+Oct 07 00:28 : update: updating /Na Chang.mp3
+Oct 07 00:28 : update: updating /Amar Sonar Bangla.mp3
+Oct 07 00:28 : update: updating /Balo Basi Oi Sobuj.mp3
+Oct 07 00:28 : update: updating /Majhe Majhe.mp3
+Oct 07 00:28 : update: updating /Paper.mp3
+Oct 07 00:28 : update: updating /Digonto Chuye Dio.mp3
+Oct 07 00:28 : update: updating /Golammustafa Bidrohi.mp3
+Oct 07 00:28 : update: updating /Rodela Dupure.mp3
+Oct 07 00:28 : update: updating /Fokiri.mp3
+Oct 07 00:28 : update: updating /Jatio Songeet Er Ditioline.mp3
+Oct 07 00:28 : update: updating /Tumi Jodi Bolo..mp3
+Oct 07 00:28 : update: updating /November Rain.mp3
+Oct 07 00:28 : update: updating /Baioscope.mp3
+Oct 07 00:28 : update: updating /Gaibona.mp3
+Oct 07 00:28 : update: updating /Tumi Kun Kanoner Phool.mp3
+Oct 07 00:28 : update: updating /Bonno.mp3
+Oct 07 00:28 : update: updating /Amar Har Kala Korlam Re.mp3
+Oct 07 00:28 : update: updating /Amaro Porano Jaha Chai.mp3
+Oct 07 00:28 : update: updating /Cha Er Cape Porichoy.mp3
+Oct 07 00:28 : update: updating /Bhindeshi Tara.mp3
+Oct 07 00:28 : update: updating /Aj Ei Meghe Dhaka Rat.mp3
+Oct 07 00:28 : update: updating /Ichche Chilo.mp3
+Oct 07 00:28 : update: updating /Mumursho Rupkotha.mp3
+Oct 07 00:28 : update: updating /Jodi Kokhono Vul Hoye.mp3
+Oct 07 00:28 : update: updating /Ekhon Onek Raat.mp3
+Oct 07 00:28 : update: updating /Ami Banglar Gan Gai.mp3
+Oct 07 00:28 : update: updating /Last Christmas.mp3
+Oct 07 00:28 : update: updating /Balolage Porosh Pathor(2).mp3
+Oct 07 00:28 : update: updating /Ektara Tui Desher Kotha Bol.mp3
+Oct 07 00:28 : update: updating /Iccher Ghuri.mp3
+Oct 07 00:28 : update: updating /Amai Nohe Go Ferdous ara.mp3
+Oct 07 00:28 : update: updating /Chukh Chhol Chhol.mp3
+Oct 07 00:28 : update: updating /Chera Paal.mp3
+Oct 07 00:28 : update: updating /Fatema.mp3
+Oct 07 00:28 : update: updating /Abosh Onubhuti.mp3
+Oct 07 00:28 : update: updating /A Different Corner.mp3
+Oct 07 00:36 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:36 : update: updating /Aaj Dukho volar Din.mp3
+Oct 07 00:37 : update: removing 7th March Sheikh Mujibur Rahman Er.mp3
+Oct 07 00:37 : update: added /Sheikh Mujibur Rahman Er Vashon.mp3
+Oct 07 00:37 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:41 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:48 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:49 : update: removing Aajo Achhe Sei Gaan.mp3
+Oct 07 00:49 : update: added /Aajo Ache Sei Gaan.mp3
+Oct 07 00:50 : update: added /7th March Sheikh Mujibur Rahman Er.mp3
+Oct 07 00:50 : update: added /Aajo Achhe Sei Gaan.mp3
+Oct 07 00:51 : update: removing Aajo Achhe Sei Gaan.mp3
+Oct 07 00:51 : update: removing 7th March Sheikh Mujibur Rahman Er.mp3
+Oct 07 00:52 : update: removing Aaj Theke Aar Kokhono.mp3
+Oct 07 00:52 : update: updating /Aaj Tomake.mp3
+Oct 07 00:52 : update: updating /Aaj Din Katuk Gaane.mp3
+Oct 07 00:53 : update: updating /Aaj Tomake.mp3
+Oct 07 00:54 : update: removing Aare Felai Ghorer Manus.mp3
+Oct 07 00:54 : update: added /Aare Felai.mp3
+Oct 07 00:54 : update: updating /Aar Noy Juddho.mp3
+Oct 07 00:54 : update: updating /Aarshi Nogor.mp3
+Oct 07 00:55 : update: updating /Abar Abar Jigay.mp3
+Oct 07 00:55 : update: updating /Abar Juddhe Jete Hobe.mp3
+Oct 07 00:56 : update: updating /Abar Juddhe Jete Hobe.mp3
+Oct 07 00:56 : update: removing Aber Surote.mp3
+Oct 07 00:56 : update: added /Abar Surute.mp3
+Oct 07 00:58 : update: updating /Aboshase Manus Eka.mp3
+Oct 07 00:58 : update: updating /Abosh Onubhuti.mp3
+Oct 07 00:58 : update: updating /Achcha Keno Manushgulo.mp3
+Oct 07 00:59 : update: updating /Acid Namer Hiroshima.mp3
+Oct 07 00:59 : update: updating /Adhar Amar Ontor.mp3
+Oct 07 01:00 : update: removing Ae Jeno Sei Chokh.mp3
+Oct 07 01:00 : update: added /E Jeno Sei Chokh.mp3
+Oct 07 01:02 : update: updating /Ai Khukhu Ai.mp3
+Oct 07 01:02 : update: updating /Aj Ei Meghe Dhaka Rat.mp3
+Oct 07 01:02 : update: updating /Aji E Bosonte.mp3
+Oct 07 01:02 : update: updating /Aj Mon Amar.mp3
+Oct 07 01:03 : update: updating /Ajo.mp3
+Oct 07 01:04 : update: updating /Akash Amar.mp3
+Oct 07 01:04 : update: updating /Akash Churi.mp3
+Oct 07 01:05 : update: updating /Akashe Batase.mp3
+Oct 07 01:06 : update: updating /Ak Muhurte.mp3
+Oct 07 01:06 : update: updating /Akon Amar Nejer Kache.mp3
+Oct 07 01:06 : update: updating /Akta Gaan Dau.mp3
+Oct 07 01:06 : update: updating /Akta Gopon Kotha.mp3
+Oct 07 01:06 : update: updating /Aktu Pore Nambe Borsha.mp3
+Oct 07 01:07 : update: updating /Alash Samyer Porda.mp3
+Oct 07 01:07 : update: updating /Albida.mp3
+Oct 07 01:07 : update: removing Alga Korogo Md.Rafi.mp3
+Oct 07 01:07 : update: added /Alga Korogo.mp3
+Oct 07 01:07 : update: updating /Allah Megh De Pani De.mp3
+Oct 07 01:08 : update: updating /All Rise.mp3
+Oct 07 01:08 : update: updating /All That She Wants.mp3
+Oct 07 01:08 : update: updating /Alo Amar Alo.mp3
+Oct 07 01:09 : update: removing Amai Nohe Go Ferdous ara.mp3
+Oct 07 01:09 : update: added /Amai Nohe Go.mp3
+Oct 07 01:09 : update: removing Amai Nohe Go Firoza.mp3
+Oct 07 01:09 : update: updating /Amai Nohe Go.mp3
+Oct 07 01:09 : update: removing Amai Vshailire Ornob.mp3
+Oct 07 01:09 : update: added /Amai Vshailire.mp3
+Oct 07 01:10 : update: updating /Amake Amar Moto Thakte Dao.mp3
+Oct 07 01:10 : update: updating /Amake Chobena.mp3
+Oct 07 01:10 : update: updating /Amake Khujte Tumi.mp3
+Oct 07 01:10 : update: updating /Amar A Ghar.mp3
+Oct 07 01:11 : update: updating /Amar Bola Holo Na.mp3
+Oct 07 01:11 : update: updating /Amar Ei Poth.mp3
+Oct 07 01:11 : update: updating /Amar Bela Je Jai.mp3
+Oct 07 01:12 : update: updating /Amar Har Kala Korlam Re.mp3
+Oct 07 01:12 : update: removing Amar Jabar Somoy Holo Firoza.mp3
+Oct 07 01:12 : update: added /Amar Jabar Somoy Holo.mp3
+Oct 07 12:50 : update: updating /Amar Keno Emon Holo.mp3
+Oct 07 12:50 : update: updating /Amar Khankher Kolosi.mp3
+Oct 07 12:51 : update: removing Amar Kisu Sapno.mp3
+Oct 07 12:51 : update: added /Amar Kichu Sapno.mp3
+Oct 07 12:51 : update: updating /Amar Maje Nei Ekhon Ami.mp3
+Oct 07 12:51 : update: updating /Amaro Porano Jaha Chai.mp3
+Oct 07 12:51 : update: updating /Amar Parthona.mp3
+Oct 07 12:52 : update: updating /Amar Prithibee.mp3
+Oct 07 12:52 : update: updating /Amar Shopnogulo.mp3
+Oct 07 12:52 : update: updating /Amar Sonar Bangla.mp3
+Oct 07 12:53 : update: updating /Amar Sontan.mp3
+Oct 07 12:53 : update: updating /Amar Vaier Rokte Rangano.mp3
+Oct 07 12:53 : update: removing Amay Bhashailire.mp3
+Oct 07 12:54 : update: updating /Amay Dekona Ferano Jabe Na.mp3
+Oct 07 12:54 : update: updating /Amay Jetey.mp3
+Oct 07 12:54 : update: removing Amer Valobasa.mp3
+Oct 07 12:54 : update: added /Amar Valobasa.mp3
+Oct 07 12:54 : update: updating /Ami Auppeeay.mp3
+Oct 07 12:55 : update: removing Ami Auppeeay.mp3
+Oct 07 12:55 : update: added /Opekkha.mp3
+Oct 07 12:56 : update: removing Amay Dekona Ferano Jabe Na.mp3
+Oct 07 12:56 : update: added /Amai Dekona Ferano Jabe Na.mp3
+Oct 07 12:57 : update: removing Amay Jetey.mp3
+Oct 07 12:57 : update: added /Amai Jetey.mp3
+Oct 07 12:57 : update: updating /Ami Banglar Gan Gai.mp3
+Oct 07 12:57 : update: updating /Ami Chailam Jare.mp3
+Oct 07 12:58 : update: updating /Ami Chailam Jare.mp3
+Oct 07 12:58 : update: removing Ami Chirotore Firoza.mp3
+Oct 07 12:58 : update: added /Ami Chirotore.mp3
+Oct 07 12:59 : update: updating /Ami Fire Pete Chai.mp3
+Oct 07 12:59 : update: removing Ami hoito Manus Noi.mp3
+Oct 07 12:59 : update: added /Ami Hoito Manus Noi.mp3
+Oct 07 12:59 : update: updating /Ami Kan Pete Roi.mp3
+Oct 07 12:59 : update: updating /Ami Ki Rokom Vabe Beche Achi.mp3
+Oct 07 12:59 : update: updating /Ami Kul Hara Kolonkini.mp3
+Oct 07 13:00 : update: removing Ami Sunechi Shedin Tumi.mp3
+Oct 07 13:00 : update: added /Ami Sunechi Sedin Tumi.mp3
+Oct 07 13:00 : update: updating /Ami Sunechi Sedin Tumi.mp3
+Oct 07 13:01 : update: updating /Ami Tomakei Bole Debo.mp3
+Oct 07 13:01 : update: updating /Ami Tomar Kache.mp3
+Oct 07 13:01 : update: updating /Ami Tomaro Songe.mp3
+Oct 07 13:01 : update: removing Ami Tomer Sange.mp3
+Oct 07 13:02 : update: updating /Ami To More Jabo.mp3
+Oct 07 13:02 : update: removing Amra Korbo.mp3
+Oct 07 13:02 : update: added /Amra Korbo Joy.mp3
+Oct 07 13:03 : update: updating /Anaasamay.mp3
+Oct 07 13:03 : update: updating /Annana.mp3
+Oct 07 13:04 : update: removing Annie's song.mp3
+Oct 07 13:04 : update: added /You Fill Up My Senses.mp3
+Oct 07 13:04 : update: updating /A Place For My Head.mp3
+Oct 07 13:04 : update: updating /Apon Deshe Cholo.mp3
+Oct 07 13:04 : update: updating /Arabic.mp3
+Oct 07 13:05 : update: removing Arefoter Potaka [The Standard of Extelligence].mp3
+Oct 07 13:05 : update: added /Arefoter Potaka.mp3
+Oct 07 13:06 : update: removing Arefoter Potaka.mp3
+Oct 07 13:06 : update: added /Marfoter Potaka.mp3
+Oct 07 13:06 : update: updating /Atel Totto.mp3
+Oct 07 13:07 : update: removing Ato_Sur_Ar_Eto_Gaan-Srikanto.mp3
+Oct 07 13:07 : update: added /Ato Sur Ar Eto.mp3
+Oct 07 13:08 : update: removing Ato Sur Ar Eto.mp3
+Oct 07 13:08 : update: added /Eto Sur Ar Eto.mp3
+Oct 07 13:08 : update: removing Ato Sur Aar Ato Gaan.mp3
+Oct 07 13:08 : update: added /Eto Sur Aar Eto Gaan.mp3
+Oct 07 13:09 : update: removing Eto Sur Ar Eto.mp3
+Oct 07 13:09 : update: added /Eto Sur Aar Eto.mp3
+Oct 07 13:10 : update: updating /At The Startiting Of The Day.mp3
+Oct 07 13:10 : update: updating /Attokendrik.mp3
+Oct 07 13:10 : update: updating /Away From The Sun.mp3
+Oct 07 13:10 : update: updating /Ay Brishti Veja.mp3
+Oct 07 13:11 : update: updating /Baburam Sapure.mp3
+Oct 07 13:11 : update: updating /Bacha Thakle.mp3
+Oct 07 13:11 : update: updating /Baduein.mp3
+Oct 07 13:11 : update: updating /Baindua.mp3
+Oct 07 13:11 : update: updating /Baioscope.mp3
+Oct 07 13:11 : update: updating /Baiouskoper Khela.mp3
+Oct 07 13:12 : update: updating /Baji.mp3
+Oct 07 13:12 : update: updating /Balo Basi Oi Sobuj.mp3
+Oct 07 13:12 : update: removing Balolage Porosh Pathor(2).mp3
+Oct 07 13:12 : update: added /Balolage.mp3
+Oct 07 13:12 : update: updating /Bangla Charo.mp3
+Oct 07 13:13 : update: removing Bangladesh AB.mp3
+Oct 07 13:13 : update: updating /Bangladesh.mp3
+Oct 07 13:15 : update: removing Bangladesh George Harrison.mp3
+Oct 07 13:15 : update: added /Bangladesh-GH.mp3
+Oct 07 13:16 : update: updating /Bangladesh James.mp3
+Oct 07 13:16 : update: updating /Bangladesh-GH.mp3
+Oct 07 13:16 : update: removing Bangladesh.mp3
+Oct 07 13:16 : update: added /Bangladesh-AB.mp3
+Oct 07 13:16 : update: updating /Banglai Gaan Gai.mp3
+Oct 07 13:17 : update: updating /Banglai Gaan Gai.mp3
+Oct 07 13:17 : update: removing Banglai Gan Gai.mp3
+Oct 07 13:17 : update: removing Baiouskoper Khela.mp3
+Oct 07 13:18 : update: updating /Banglar Lathiyal.mp3
+Oct 07 13:18 : update: updating /Baniya Bondhu.mp3
+Oct 07 13:18 : update: updating /Baro Asha Kore.mp3
+Oct 07 13:18 : update: updating /Baro Mash.mp3
+Oct 07 13:19 : update: updating /Barshar Prothom Dinay.mp3
+Oct 07 13:19 : update: updating /Barshar Prothom Dinay.mp3
+Oct 07 13:19 : update: updating /Bashi Sune Aar Kaj.mp3
+Oct 07 13:19 : update: updating /Bashoriya.mp3
+Oct 07 13:19 : update: updating /Batase Fuler Sourov.mp3
+Oct 07 13:20 : update: updating /Beat It.mp3
+Oct 07 13:20 : update: updating /Bekarotto.mp3
+Oct 07 13:20 : update: updating /Bela Shese.mp3
+Oct 07 13:20 : update: updating /Bhaage Re Mann Chameli.mp3
+Oct 07 13:21 : update: updating /Bhalobasa Mane Anjon Dutta.mp3
+Oct 07 13:21 : update: updating /Bhalobasa Mane Porosh Pathor.mp3
+Oct 07 13:21 : update: updating /Bhalobasha Dibosh'99.mp3
+Oct 07 13:21 : update: updating /Bhalobashi Bole Bondhu.mp3
+Oct 07 13:21 : update: updating /Bhalobastey Hobe.mp3
+Oct 07 13:22 : update: updating /Bhalobeshe Sokhi.mp3
+Oct 07 13:22 : update: removing Bheegi Bheegi James.mp3
+Oct 07 13:22 : update: added /Bheegi Bheegi.mp3
+Oct 07 13:22 : update: updating /Bhindeshi Tara.mp3
+Oct 07 13:23 : update: updating /Bhula Dena.mp3
+Oct 07 13:23 : update: updating /Bibagee.mp3
+Oct 07 13:23 : update: updating /Bicharpoti.mp3
+Oct 07 13:23 : update: updating /Bijli.mp3
+Oct 07 13:23 : update: updating /Bille Jean.mp3
+Oct 07 13:24 : update: updating /Bistirna Dupare.mp3
+Oct 07 13:24 : update: updating /Black Cloud.mp3
+Oct 07 13:24 : update: updating /Blues And Rodh.mp3
+Oct 07 13:24 : update: updating /Bokul Ful.mp3
+Oct 07 13:24 : update: updating /Bolai Dadar Gamcha.mp3
+Oct 07 13:24 : update: updating /Bondho Janala.mp3
+Oct 07 13:25 : update: updating /Bondhu.mp3
+Oct 07 13:25 : update: updating /Borsa.mp3
+Oct 07 13:25 : update: updating /Breaking The Habit.mp3
+Oct 07 13:25 : update: updating /Brindabon.mp3
+Oct 07 13:26 : update: updating /Brishti.mp3
+Oct 07 13:26 : update: updating /Bristi Jhore Jai.mp3
+Oct 07 13:26 : update: updating /Bristi Nemeche.mp3
+Oct 07 13:26 : update: updating /Buffalo Soldier.mp3
+Oct 07 13:26 : update: updating /Bullshit.mp3
+Oct 07 13:27 : update: updating /Bure Bure Boro Boro.mp3
+Oct 07 13:27 : update: updating /By My Self.mp3
+Oct 07 13:27 : update: updating /Californication.mp3
+Oct 07 13:28 : update: updating /Careless Whisper.mp3
+Oct 07 13:28 : update: updating /Chader Jonno Gan.mp3
+Oct 07 13:28 : update: updating /Chader Meye Josna.mp3
+Oct 07 13:37 : update: updating /Chad Sajalo Alo Rupali.mp3
+Oct 07 13:38 : update: updating /Cha Er Cape Porichoy.mp3
+Oct 07 13:38 : update: updating /Chahun Main Ya Naa.mp3
+Oct 07 13:38 : update: removing chaite Paro.mp3
+Oct 07 13:38 : update: added /Chaite Paro.mp3
+Oct 07 13:38 : update: updating /Chal Chale.mp3
+Oct 07 13:39 : update: updating /Chera Pal(Acoustic).mp3
+Oct 07 13:39 : update: updating /Cherish.mp3
+Oct 07 13:39 : update: updating /Chithi Chupi Chupi.mp3
+Oct 07 13:39 : update: updating /Chole Gele.mp3
+Oct 07 13:39 : update: updating /Chole Jau Bondhu.mp3
+Oct 07 13:40 : update: updating /Cholo Bodle Jay.mp3
+Oct 07 13:40 : update: removing Cholo Bodle Jay.mp3
+Oct 07 13:40 : update: added /Cholo Bodle Jai.mp3
+Oct 07 13:40 : update: updating /Cholona Ghure Aashi.mp3
+Oct 07 13:40 : update: updating /Cholo Sabai.mp3
+Oct 07 13:40 : update: updating /Chondrahoto.mp3
+Oct 07 13:41 : update: updating /Chondro Jagiche Jonak Jagiche.mp3
+Oct 07 13:41 : update: removing Chrite Niay.mp3
+Oct 07 13:41 : update: added /Smiriti Niye.mp3
+Oct 07 13:42 : update: removing Chukh Chhol Chhol.mp3
+Oct 07 13:42 : update: added /Chokh Chhol Chhol.mp3
+Oct 07 13:42 : update: updating /Coffee Houser Addata Aaj Ar Nei.mp3
+Oct 07 13:42 : update: updating /Crawling.mp3
+Oct 07 13:42 : update: updating /Cure For Theitch.mp3
+Oct 07 13:42 : update: updating /Daak Deyechen.mp3
+Oct 07 13:42 : update: updating /Dakhina Hawa.mp3
+Oct 07 13:43 : update: updating /Dark Side.mp3
+Oct 07 13:43 : update: updating /Debdas.mp3
+Oct 07 13:43 : update: updating /Dekha Hobe.mp3
+Oct 07 13:43 : update: updating /Dekhna Mon.mp3
+Oct 07 13:44 : update: removing Delhite Nizamuddin-Arman Fakir.mp3
+Oct 07 13:44 : update: added /Delhite Nizamuddin.mp3
+Oct 07 13:44 : update: updating /Dewal.mp3
+Oct 07 13:44 : update: updating /Dhakar Prem.mp3
+Oct 07 13:44 : update: updating /Dheke Jare Tui.mp3
+Oct 07 13:45 : update: updating /Dhere Dhere Se.mp3
+Oct 07 13:45 : update: updating /Dhitang Dhitang Bole.mp3
+Oct 07 13:45 : update: updating /Dhono Dhanno Pushpe Vora.mp3
+Oct 07 13:45 : update: updating /Dhukho Ola.mp3
+Oct 07 13:45 : update: updating /Dhulo Pora Chithi.mp3
+Oct 07 13:45 : update: updating /Didi Moni.mp3
+Oct 07 13:45 : update: updating /Digonto Chuye Dio.mp3
+Oct 07 13:46 : update: updating /Dilli Se Nizamuddin.mp3
+Oct 07 13:46 : update: updating /Dil Se Re.mp3
+Oct 07 13:46 : update: updating /Din Bare Jai.mp3
+Oct 07 13:46 : update: updating /Din Furailo (Lalon Bondona).mp3
+Oct 07 13:46 : update: updating /Din Jai Din.mp3
+Oct 07 13:47 : update: updating /Disco Bandor.mp3
+Oct 07 13:47 : update: updating /Don't Bother.mp3
+Oct 07 13:47 : update: updating /Don't Cry Joni.mp3
+Oct 07 13:47 : update: updating /Don't Stay.mp3
+Oct 07 13:48 : update: updating /Don't Want U Back.mp3
+Oct 07 13:48 : update: removing DoyaL.mp3
+Oct 07 13:48 : update: added /Doyal.mp3
+Oct 07 13:48 : update: updating /Dreamum Wakeupum.mp3
+Oct 07 13:48 : update: updating /Duar Dana.mp3
+Oct 07 13:48 : update: updating /Dukha Keno Karo.mp3
+Oct 07 13:48 : update: updating /Dukhini Dukho Koro Na.mp3
+Oct 07 13:48 : update: updating /Dukkho Pelam.mp3
+Oct 07 13:49 : update: updating /Dupchaya.mp3
+Oct 07 13:49 : update: updating /Dur Dipobasini.mp3
+Oct 07 13:49 : update: updating /Dur Dipobasini.mp3
+Oct 07 13:49 : update: updating /Dure Achi Tai.mp3
+Oct 07 13:49 : update: updating /Duronto Meye.mp3
+Oct 07 13:49 : update: updating /Durotto.mp3
+Oct 07 13:49 : update: updating /Dusto Meye.mp3
+Oct 07 13:50 : update: updating /Duti Mon Aaj.mp3
+Oct 07 13:50 : update: updating /Easier To Run.mp3
+Oct 07 13:50 : update: updating /E Emon Porichay.mp3
+Oct 07 13:50 : update: updating /Ei Akash Tomari.mp3
+Oct 07 13:50 : update: updating /Ei Gan Ses Gan.mp3
+Oct 07 13:50 : update: updating /Ei Je Dunia.mp3
+Oct 07 13:51 : update: updating /Ei Ki Beshi Na.mp3
+Oct 07 13:51 : update: updating /Ei Monta.mp3
+Oct 07 13:51 : update: updating /Ei Neel Monihar.mp3
+Oct 07 13:51 : update: updating /Ei Nosto Sohore.mp3
+Oct 07 13:51 : update: updating /Ei Podda Ei Meghna.mp3
+Oct 07 13:52 : update: updating /Ei Prithibi.mp3
+Oct 07 13:52 : update: removing Ei Rangamatir Pothe-Anuradha.mp3
+Oct 07 13:52 : update: added /Ei Rangamatir Pothe.mp3
+Oct 07 13:52 : update: removing Ei Rangamatir Pothe-Indrani.mp3
+Oct 07 13:52 : update: added /Ei Rangamatir Pothe Lo.mp3
+Oct 07 13:53 : update: updating /Ei Sahara.mp3
+Oct 07 13:53 : update: updating /Ei Shundor Shornali Sondhai.mp3
+Oct 07 13:53 : update: updating /Ekaki Prohor.mp3
+Oct 07 13:53 : update: updating /Ekatorer Ma Jononi.mp3
+Oct 07 13:53 : update: updating /Ekbar Jete Dena.mp3
+Oct 07 13:54 : update: updating /Ekdin Briste.mp3
+Oct 07 13:54 : update: updating /Ekhane Ese Darale.mp3
+Oct 07 13:54 : update: updating /Ekhon Arale.mp3
+Oct 07 13:54 : update: updating /Ekhon Onek Raat.mp3
+Oct 07 20:55 : update: updating /Ek Jiggasa Porosh Pathor.mp3
+Oct 07 20:56 : update: updating /Ekjon.mp3
+Oct 07 20:56 : update: updating /Ek Kana Ghar Vangar Por.mp3
+Oct 07 20:56 : update: updating /Ekla Ghor.mp3
+Oct 07 20:56 : update: updating /Ek Nodi Rokto Periyea.mp3
+Oct 07 20:57 : update: removing Ek Sagor Er Rokter Binimoy e.mp3
+Oct 07 20:57 : update: added /Ek Sagor Rokter.mp3
+Oct 07 20:57 : update: updating /Ekta Chele.mp3
+Oct 07 20:57 : update: updating /Ektara.mp3
+Oct 07 20:58 : update: removing Ektara Tui Desher Kotha Bol.mp3
+Oct 07 20:58 : update: updating /Ekti Rangin Chadar.mp3
+Oct 07 20:58 : update: updating /Ektu Boshiya Thako.mp3
+Oct 07 20:58 : update: updating /Ektuku Choa Lage.mp3
+Oct 07 20:58 : update: updating /Emono Dine Tare.mp3
+Oct 07 20:59 : update: updating /Enechi Amar.mp3
+Oct 07 20:59 : update: updating /Eng.mp3
+Oct 07 20:59 : update: updating /Eso Prio Mono Rangai.mp3
+Oct 07 20:59 : update: updating /Essor.mp3
+Oct 07 20:59 : update: updating /Etihash.mp3
+Oct 07 20:59 : update: updating /Eto Dure Je Chole Gecho.mp3
+Oct 07 21:00 : update: updating /Eto Koshto Keno Bhalobashai.mp3
+Oct 07 21:00 : update: updating /Everyone Backstreet.mp3
+Oct 07 21:00 : update: updating /Everything I Do.mp3
+Oct 07 21:00 : update: updating /Faith.mp3
+Oct 07 21:00 : update: updating /Everything She Wants.mp3
+Oct 07 21:00 : update: updating /Faint.mp3
+Oct 07 21:00 : update: updating /Fast Love.mp3
+Oct 07 21:01 : update: updating /Fatema.mp3
+Oct 07 21:01 : update: updating /Father Figure.mp3
+Oct 07 21:01 : update: removing Ferare Mon.mp3
+Oct 07 21:01 : update: added /Ferari Mon.mp3
+Oct 07 21:01 : update: updating /Ferari Somoy.mp3
+Oct 07 21:01 : update: removing Ferrari Ei Mon Ta Amar.mp3
+Oct 07 21:02 : update: updating /Figure 09.mp3
+Oct 07 21:02 : update: updating /Five Hundred Miles.mp3
+Oct 07 21:02 : update: updating /Five Hundred Mils Away From Home.mp3
+Oct 07 21:02 : update: updating /Fokiri.mp3
+Oct 07 21:02 : update: updating /Foreword.mp3
+Oct 07 21:03 : update: updating /Forgotten.mp3
+Oct 07 21:03 : update: updating /Freedom.mp3
+Oct 07 21:03 : update: updating /From The Inside.mp3
+Oct 07 21:03 : update: updating /Full Nebe Na Osru.mp3
+Oct 07 21:03 : update: updating /Gaaner Tale.mp3
+Oct 07 21:03 : update: updating /Gache Kathal Gofe Tel.mp3
+Oct 07 21:04 : update: updating /Gaibona.mp3
+Oct 07 21:04 : update: updating /Gari Cholena.mp3
+Oct 07 21:04 : update: updating /Geeti Kobita-2.mp3
+Oct 07 21:04 : update: updating /Geetikobita-3.mp3
+Oct 07 21:04 : update: updating /Geeti Kobita.mp3
+Oct 07 21:04 : update: updating /Ghate Lagaiya Dinga.mp3
+Oct 07 21:04 : update: updating /Ghumonto Sohore.mp3
+Oct 07 21:05 : update: updating /Ghune Khaoya Rod.mp3
+Oct 07 21:06 : update: removing Ghune Khaoya Rod.mp3
+Oct 07 21:06 : update: added /Ghune Khaoua Rod.mp3
+Oct 07 21:07 : update: updating /Give Me Some Sunshine.mp3
+Oct 07 21:07 : update: updating /Glass Beat.mp3
+Oct 07 21:07 : update: updating /Godhuli.mp3
+Oct 07 21:07 : update: removing Golammustafa Bidrohi.mp3
+Oct 07 21:07 : update: updating /Bidrohi.mp3
+Oct 07 21:07 : update: updating /Gotimoi Ei Sohore.mp3
+Oct 07 21:08 : update: updating /Gotkal Rate.mp3
+Oct 07 21:08 : update: updating /Gram Chara Oi.mp3
+Oct 07 21:08 : update: updating /Haat Barao.mp3
+Oct 07 21:08 : update: removing Harano Hiyar Nikunjo Pothe-Asha.mp3
+Oct 07 21:08 : update: added /Harano Hiyar Nikunjo Pothe.mp3
+Oct 07 21:09 : update: removing Haste dakho.mp3
+Oct 07 21:09 : update: added /Haste Dekho.mp3
+Oct 07 21:09 : update: updating /Hat Barea Chui.mp3
+Oct 07 21:09 : update: updating /Hauge.mp3
+Oct 07 21:09 : update: updating /He Khaniker Otithi.mp3
+Oct 07 21:09 : update: updating /He Nobi Yea Rasul.mp3
+Oct 07 21:09 : update: updating /He! Pagli.mp3
+Oct 07 21:10 : update: updating /Hepi Brdej.mp3
+Oct 07 21:10 : update: updating /Heremer Bondini.mp3
+Oct 07 21:10 : update: updating /Here Without You.mp3
+Oct 07 21:10 : update: updating /Hero.mp3
+Oct 07 21:10 : update: updating /Hey, Rock Your Life.mp3
+Oct 07 21:11 : update: updating /Hey You.mp3
+Oct 07 21:11 : update: updating /Hit The Floor.mp3
+Oct 07 21:11 : update: updating /Hoina Kichui Amar Paua.mp3
+Oct 07 21:11 : update: updating /Hok Kolorob.mp3
+Oct 07 21:11 : update: updating /Holudia Pakhi.mp3
+Oct 07 21:12 : update: updating /Hotel California(Live).mp3
+Oct 07 21:12 : update: updating /Hriday Jure.mp3
+Oct 07 21:12 : update: updating /Hridoyer Dabi.mp3
+Oct 07 21:12 : update: updating /Hum Bhool Gaye Har Baat.mp3
+Oct 07 21:12 : update: updating /Iccher Ghuri.mp3
+Oct 07 21:12 : update: updating /Ichche Chilo.mp3
+Oct 07 21:12 : update: updating /Ichche Hole Vhalobasis.mp3
+Oct 07 21:13 : update: updating /Ichcher Palok.mp3
+Oct 07 21:13 : update: updating /Ichhe Holo.mp3
+Oct 07 21:13 : update: updating /IF You Had My Love.mp3
+Oct 07 21:13 : update: updating /I Just Call To say.mp3
+Oct 07 21:13 : update: updating /In The End.mp3
+Oct 07 21:13 : update: updating /Intro.mp3
+Oct 07 21:14 : update: updating /Jab Koi Baat Bigad.mp3
+Oct 07 21:14 : update: updating /Jachhe Chole.mp3
+Oct 07 21:14 : update: updating /Jadi Emon.mp3
+Oct 07 21:14 : update: updating /Jakhan Somay Thomke.mp3
+Oct 07 21:14 : update: updating /Jaltaranga.mp3
+Oct 07 21:14 : update: updating /Janala Vora.mp3
+Oct 07 21:14 : update: updating /Janebar Age.mp3
+Oct 07 21:15 : update: updating /Jao Pakhi Bolo Tare.mp3
+Oct 07 21:15 : update: updating /Jare Ja Ure Ja.mp3
+Oct 07 21:15 : update: updating /Jat Gelo Jat Gelo Bole.mp3
+Oct 07 21:16 : update: updating /Jatio Songeet Er Ditioline.mp3
+Oct 07 21:16 : update: removing Jato Durey.mp3
+Oct 07 21:16 : update: added /Joto Durey.mp3
+Oct 07 21:16 : update: updating /JatraBala.mp3
+Oct 07 21:16 : update: updating /Je Amake Prem Shikalo.mp3
+Oct 07 21:17 : update: updating /Jege theko sararat.mp3
+Oct 07 21:17 : update: updating /Jekhane Simanto Tomar.mp3
+Oct 07 21:17 : update: updating /Jekir.mp3
+Oct 07 21:17 : update: removing Jell Theke Bolche.mp3
+Oct 07 21:17 : update: added /Jell Theke Bolchi.mp3
+Oct 07 21:17 : update: updating /Jene Shune Bish.mp3
+Oct 07 21:17 : update: updating /Je Pothe Pothik Ney.mp3
+Oct 07 21:18 : update: updating /Jesus To A Child.mp3
+Oct 07 21:25 : update: updating /Je Tuku Somoy.mp3
+Oct 07 21:25 : update: updating /Jharna Theke Nodi.mp3
+Oct 07 21:26 : update: updating /Jhilmill.mp3
+Oct 07 21:26 : update: updating /Jhorer Rate.mp3
+Oct 07 21:26 : update: updating /Jibone Ki Koto Lokshan.mp3
+Oct 07 21:26 : update: updating /Jiboner Ba Pashe.mp3
+Oct 07 21:26 : update: updating /Jibon Galo.mp3
+Oct 07 21:26 : update: removing Jibon Galo.wma
+Oct 07 21:27 : update: removing Jibon Galo.mp3
+Oct 07 21:27 : update: added /Jibon Gelo.mp3
+Oct 07 21:27 : update: updating /Jibon Jala.mp3
+Oct 07 21:27 : update: updating /Jiye To Jiye.mp3
+Oct 07 21:27 : update: updating /Jodi Balobasa Pai.mp3
+Oct 07 21:27 : update: updating /Jodi Kokhono Vul Hoye.mp3
+Oct 07 21:27 : update: updating /Jodi Tor Daak Shune Keu.mp3
+Oct 07 21:27 : update: updating /Joi Joganondon.mp3
+Oct 07 21:28 : update: updating /Jokhoni Nibir Kore.mp3
+Oct 07 21:28 : update: updating /Jokhon Porbe Na Mor.mp3
+Oct 07 21:28 : update: updating /Joler Dame Dilam Khule.mp3
+Oct 07 21:28 : update: updating /Joni Please Don't Cry.mp3
+Oct 07 21:28 : update: updating /Jonmo Amar Dhonno Holo.mp3
+Oct 07 21:28 : update: updating /Joto Dure Jao.mp3
+Oct 07 21:28 : update: updating /Joto Durey.mp3
+Oct 07 21:28 : update: updating /Jotota Poth.mp3
+Oct 07 21:29 : update: updating /Joy Bangla Banglar Joy.mp3
+Oct 07 21:29 : update: updating /Juddho.mp3
+Oct 07 21:29 : update: updating /Jumbalika.mp3
+Oct 07 21:29 : update: removing Kaade Krishnomon [Cry Krishna].mp3
+Oct 07 21:29 : update: added /Kaade Krishnomon (Cry Krishna).mp3
+Oct 07 21:30 : update: updating /Kaade Krishnomon (Cry Krishna).mp3
+Oct 07 21:31 : update: updating /Kachar Vitor Ochin Pakhi.mp3
+Oct 07 21:31 : update: updating /Kailash Kher.mp3
+Oct 07 21:38 : update: removing Kailash Kher.mp3
+Oct 07 21:38 : update: added /Ek Parinda.mp3
+Oct 07 21:38 : update: updating /Kajra Muhabbat.mp3
+Oct 07 21:38 : update: updating /Kajra Re.mp3
+Oct 07 21:39 : update: updating /Kalare Koirogo Mana.mp3
+Oct 07 21:39 : update: updating /Kal Sararat.mp3
+Oct 07 21:39 : update: updating /Kal Sararat.mp3
+Oct 07 21:39 : update: updating /Kanamachi.mp3
+Oct 07 21:39 : update: updating /Karar Oi Loho Kopat.mp3
+Oct 07 21:40 : update: updating /Kar Chobi.mp3
+Oct 07 21:40 : update: updating /Kare Dekhabo.mp3
+Oct 07 21:40 : update: updating /Kashfuler Kabbo.mp3
+Oct 07 21:40 : update: updating /Ke Bashi Bajayre.mp3
+Oct 07 21:42 : update: updating /Khachar Vitor Ochin Pakhi.mp3
+Oct 07 21:42 : update: updating /Khairunlo.mp3
+Oct 07 21:42 : update: updating /Khelicho E Bisho.mp3
+Oct 07 21:43 : update: removing Khiyo-Amar Shonar Bangla.mp3
+Oct 07 21:43 : update: added /Amar Shonar Bangla-Khiyo.mp3
+Oct 07 21:43 : update: updating /Khub Chena Chena.mp3
+Oct 07 21:43 : update: updating /Khuji Tomake Khuji.mp3
+Oct 07 21:43 : update: updating /Khula Dakho Mon Ta.mp3
+Oct 07 21:43 : update: updating /Kibhabe Bujhabo.mp3
+Oct 07 21:43 : update: updating /Ki Jala2.mp3
+Oct 07 21:43 : update: updating /Ki Jala.mp3
+Oct 07 21:44 : update: updating /Ki Kore Sob Vule Jai.mp3
+Oct 07 21:44 : update: updating /Kobitai Bolechile.mp3
+Oct 07 21:44 : update: updating /Kochpana Kare Koi.mp3
+Oct 07 21:44 : update: updating /Kofi House.mp3
+Oct 07 21:44 : update: updating /Kolonker Dhol.mp3
+Oct 07 21:45 : update: updating /Kono Ashroy.mp3
+Oct 07 21:45 : update: updating /Konthe Amar.mp3
+Oct 07 21:45 : update: updating /Korimana.mp3
+Oct 07 21:45 : update: updating /Kotha Noi Mukhe Mukhe.mp3
+Oct 07 21:45 : update: updating /Kotodin Dekheni Duchokh.mp3
+Oct 07 21:46 : update: updating /Kotota Kosta Achi.mp3
+Oct 07 21:46 : update: updating /Krishnopokkho.mp3
+Oct 07 21:46 : update: removing Krithem Manush.mp3
+Oct 07 21:46 : update: added /Krittim Manush.mp3
+Oct 07 21:46 : update: updating /Kushum Kushum.mp3
+Oct 07 21:46 : update: updating /Kuthau Amar Harie.mp3
+Oct 07 21:47 : update: updating /Kyuki Tum Hi Ho.mp3
+Oct 07 21:47 : update: updating /Lais Feta Lais.mp3
+Oct 07 21:47 : update: updating /Lalpahari.mp3
+Oct 07 21:47 : update: updating /Last Christmas.mp3
+Oct 07 21:47 : update: updating /Leekhte Parena.mp3
+Oct 07 21:47 : update: updating /Lutpat.mp3
+Oct 07 21:48 : update: updating /Madhobe.mp3
+Oct 07 21:48 : update: updating /Majhe Majhe.mp3
+Oct 07 21:48 : update: updating /Majhe Majhe.mp3
+Oct 07 21:48 : update: updating /Majhi.mp3
+Oct 07 21:49 : update: updating /Ma.mp3
+Oct 07 21:49 : update: updating /Manali Trance.mp3
+Oct 07 21:49 : update: updating /Manena Mon.mp3
+Oct 07 21:49 : update: updating /Manush Manusher Jonno.mp3
+Oct 07 21:49 : update: updating /Matir Pinjira.mp3
+Oct 07 21:49 : update: updating /Meghbalika.mp3
+Oct 07 21:50 : update: updating /Megh Jhorana.mp3
+Oct 07 21:50 : update: updating /Mela.mp3
+Oct 07 21:50 : update: updating /Meri Aashiqui.mp3
+Oct 07 21:50 : update: updating /Meri En.mp3
+Oct 07 21:51 : update: updating /Modhur Modhur Chaoni.mp3
+Oct 07 21:51 : update: updating /Mohashunno.mp3
+Oct 07 21:51 : update: updating /Moina Go.mp3
+Oct 07 21:51 : update: updating /Moina Go.mp3
+Oct 07 21:51 : update: updating /Mon Amar Deho Ghori.mp3
+Oct 07 21:51 : update: updating /Mon Bhalo Nei.mp3
+Oct 07 21:51 : update: updating /Mon Chaile Mon.mp3
+Oct 07 21:52 : update: updating /Mon Chaile Mon.mp3
+Oct 07 21:52 : update: updating /Mon Chaile Mon.mp3
+Oct 07 21:52 : update: updating /Mone Pore.mp3
+Oct 07 21:52 : update: updating /Moner O bagane.mp3
+Oct 07 21:52 : update: updating /Mone Robe Kina.mp3
+Oct 07 21:52 : update: updating /Moner Ovhimangulo.mp3
+Oct 07 21:52 : update: updating /Mon Ki Je Chai.mp3
+Oct 07 21:53 : update: updating /Mon Niye Jontrona.mp3
+Oct 07 21:53 : update: updating /Mon Nodi 2.mp3
+Oct 07 21:53 : update: updating /Mora Ekti Phul Ke Bachabo Bole.mp3
+Oct 07 21:53 : update: updating /More Jabo.mp3
+Oct 07 21:53 : update: removing Mor Ghumo Ghore Firoza.mp3
+Oct 07 21:53 : update: added /Mor Ghumo Ghore.mp3
+Oct 07 21:54 : update: updating /Morile Kandisna Amar Dai.mp3
+Oct 07 21:54 : update: updating /Moushumi 2.mp3
+Oct 07 21:54 : update: updating /Moushumi.mp3
+Oct 07 21:54 : update: updating /Muche Jawa Din Guli.mp3
+Oct 07 21:54 : update: removing Mukosh.mp3
+Oct 07 21:54 : update: added /Shlock.mp3
+Oct 07 21:54 : update: updating /Mumursho Rupkotha.mp3
+Oct 07 21:55 : update: updating /My Heart Will Go On.mp3
+Oct 07 21:56 : update: updating /Na Chahile Jare.mp3
+Oct 07 21:56 : update: updating /Na Chang.mp3
+Oct 07 21:56 : update: updating /Na Jene Vul.mp3
+Oct 07 21:56 : update: updating /Nati Khati Bela Gelo.mp3
+Oct 07 21:56 : update: updating /Nefartiti.mp3
+Oct 07 21:57 : update: updating /Nei Proyojon.mp3
+Oct 07 22:00 : update: updating /Nilanjana.mp3
+Oct 07 22:01 : update: updating /Nilgiri.mp3
+Oct 07 22:01 : update: updating /Nisongota.mp3
+Oct 07 22:01 : update: updating /Nirjon Raat.mp3
+Oct 07 22:01 : update: updating /Nithua Pathare.mp3
+Oct 07 22:01 : update: updating /Nitol Paye Live.mp3
+Oct 07 22:02 : update: updating /No Matter What.mp3
+Oct 07 22:02 : update: updating /Nouka Vromon.mp3
+Oct 07 22:02 : update: updating /Obak Bhalobasha.mp3
+Oct 07 22:02 : update: updating /Obishap Dile.mp3
+Oct 07 22:02 : update: updating /Ochena Jibon.mp3
+Oct 07 22:02 : update: updating /Obhimane Noi.mp3
+Oct 07 22:02 : update: updating /Ohona.mp3
+Oct 07 22:02 : update: updating /Olpo Aktu Akash Dau Amai.mp3
+Oct 07 22:02 : update: updating /Onekta Samay.mp3
+Oct 07 22:03 : update: updating /One Love.mp3
+Oct 07 22:03 : update: updating /Ore Nil Doriya.mp3
+Oct 07 22:03 : update: updating /Oshamajik.mp3
+Oct 07 22:03 : update: updating /O Sokhina.mp3
+Oct 07 22:03 : update: updating /Paatshala.mp3
+Oct 07 22:04 : update: updating /Pagla Hawa.mp3
+Oct 07 22:04 : update: updating /Pakhi Paka Pepe Khay.mp3
+Oct 07 22:04 : update: updating /Pagla Hawar Badol Dine.mp3
+Oct 07 22:04 : update: updating /Palai Palai.mp3
+Oct 07 22:04 : update: updating /Panjabiola.mp3
+Oct 07 22:04 : update: updating /Pa.mp3
+Oct 07 22:05 : update: updating /Pare Loiya Jau Amai.mp3
+Oct 07 22:05 : update: updating /Paper.mp3
+Oct 07 22:05 : update: updating /Parwardigar.mp3
+Oct 07 22:05 : update: updating /Path Chola.mp3
+Oct 07 22:05 : update: updating /Pata Kuronir Meye.mp3
+Oct 07 22:05 : update: updating /Pinjor.mp3
+Oct 07 22:05 : update: updating /Poddo Patar Jol.mp3
+Oct 07 22:05 : update: updating /Polashir Prantor.mp3
+Oct 07 22:06 : update: updating /Pori.mp3
+Oct 07 22:06 : update: updating /Pother Bap.mp3
+Oct 07 22:06 : update: updating /Pratidhwani Suni.mp3
+Oct 07 22:06 : update: updating /Prematal.mp3
+Oct 07 22:06 : update: updating /Prem Tumi Ki.mp3
+Oct 07 22:06 : update: updating /Prithibir Joto Shuk.mp3
+Oct 07 22:06 : update: updating /Prothom Sporso.mp3
+Oct 07 22:07 : update: updating /Pul Tola Oi Jamar.mp3
+Oct 07 22:07 : update: updating /Protiddhoni Shuni.mp3
+Oct 07 22:07 : update: updating /Purano Shei Diner Kotha.mp3
+Oct 07 22:07 : update: updating /Purnimar Chad.mp3
+Oct 07 22:07 : update: updating /Purba Digante Surjo Uteche.mp3
+Oct 07 22:07 : update: updating /Quit Playin' Games Live.mp3
+Oct 07 22:08 : update: updating /Quit playin' Games.mp3
+Oct 07 22:08 : update: updating /Raag.mp3
+Oct 07 22:08 : update: updating /Rahur Grash.mp3
+Oct 07 22:08 : update: updating /Raj Kumar.mp3
+Oct 07 22:15 : update: updating /Rakheni Amaye Keo.mp3
+Oct 07 22:15 : update: updating /Rat Furolei.mp3
+Oct 07 22:15 : update: updating /Relax.mp3
+Oct 07 22:15 : update: updating /Rhythm Divine.mp3
+Oct 07 22:15 : update: updating /Rodela Dupure.mp3
+Oct 07 22:16 : update: updating /Rongdhonu.mp3
+Oct 07 22:16 : update: updating /Rupak.mp3
+Oct 07 22:16 : update: updating /Rupali Gitar.mp3
+Oct 07 22:59 : update: updating /Sacrifice.mp3
+Oct 07 22:59 : update: updating /Salam Salam.mp3
+Oct 07 23:00 : update: updating /Sarothe.mp3
+Oct 07 23:00 : update: updating /Samay Aar Katena.mp3
+Oct 07 23:00 : update: updating /Sarata Poth Jhure.mp3
+Oct 07 23:00 : update: updating /Se Je Bose Ache.mp3
+Oct 07 23:00 : update: updating /Separation.mp3
+Oct 07 23:00 : update: updating /Sesh Chiti.mp3
+Oct 07 23:00 : update: updating /Shahid Saroni.mp3
+Oct 07 23:00 : update: updating /Shahjalal Shahporan.mp3
+Oct 07 23:01 : update: removing Shai Tumi.mp3
+Oct 07 23:01 : update: added /Sei Tumi.mp3
+Oct 07 23:01 : update: updating /Sharthopor.mp3
+Oct 07 23:02 : update: updating /Shey Je Boshe Ache.mp3
+Oct 07 23:02 : update: updating /Shesh Chithi.mp3
+Oct 07 23:02 : update: updating /Shikaiya Piriti.mp3
+Oct 07 23:02 : update: updating /Shithilaion_2.mp3
+Oct 07 23:02 : update: updating /Shithilaion_1.mp3
+Oct 07 23:02 : update: updating /Shlock.mp3
+Oct 07 23:03 : update: updating /Shob Bhalo Tui.mp3
+Oct 07 23:03 : update: updating /Shopno Deakbo Bole.mp3
+Oct 07 23:04 : update: removing Shopno Deakbo Bole.mp3
+Oct 07 23:04 : update: updating /Shopnohara.mp3
+Oct 07 23:06 : update: updating /Shukno Pata.mp3
+Oct 07 23:06 : update: updating /Shunno.mp3
+Oct 07 23:06 : update: updating /Smooth Criminal.mp3
+Oct 07 23:06 : update: updating /Sohena Jatona.mp3
+Oct 07 23:06 : update: updating /Sohoj Manus.mp3
+Oct 07 23:06 : update: updating /Sokhi Vabona Kahare Bole.mp3
+Oct 07 23:07 : update: updating /Srabon.mp3
+Oct 07 23:07 : update: updating /Sritisarak.mp3
+Oct 07 23:07 : update: updating /Station Road.mp3
+Oct 07 23:07 : update: updating /Sukher Ei Prithibi.mp3
+Oct 07 23:07 : update: updating /Surer Tane.mp3
+Oct 07 23:08 : update: updating /Sweetheart.mp3
+Oct 07 23:08 : update: updating /Sweti.mp3
+Oct 07 23:08 : update: removing Tajmohol AB.mp3
+Oct 07 23:08 : update: added /Tajmohol.mp3
+Oct 07 23:08 : update: updating /Tara Vora Rate.mp3
+Oct 07 23:08 : update: updating /Taray Taray.mp3
+Oct 07 23:09 : update: updating /Telephone E Fisfis.mp3
+Oct 07 23:09 : update: updating /Tere Bina Jindegi.mp3
+Oct 07 23:09 : update: removing The Watson Brothers Akash.mp3
+Oct 07 23:09 : update: added /Akash.mp3
+Oct 07 23:09 : update: updating /They Don't Care About Us.mp3
+Oct 07 23:10 : update: updating /Tomake Chai.mp3
+Oct 07 23:10 : update: updating /Toma Ke Chai.mp3
+Oct 07 23:10 : update: removing Toma Ke Chai.mp3
+Oct 07 23:10 : update: added /Tomake Chai Kobita.mp3
+Oct 07 23:10 : update: updating /Tomake Dekhle Ekbar.mp3
+Oct 07 23:11 : update: updating /Tomake Vebhe Lekha.mp3
+Oct 07 23:11 : update: updating /Tomar Ghore Bosot Kore Koijona.mp3
+Oct 07 23:11 : update: updating /Tomar Jonno.mp3
+Oct 07 23:11 : update: updating /Tui Gaan Ga.mp3
+Oct 07 23:11 : update: updating /Tui Ki Janish Na2.mp3
+Oct 07 23:11 : update: updating /Tui Ki Janish Na.mp3
+Oct 07 23:11 : update: updating /Tui Se Amar Mon.mp3
+Oct 07 23:11 : update: removing Tume Jode Node.mp3
+Oct 07 23:11 : update: added /Tume Jodi Nodi.mp3
+Oct 07 23:12 : update: updating /Tumi Aaj Koto Dure.mp3
+Oct 07 23:12 : update: updating /Tumi Aashbe Bole.mp3
+Oct 07 23:12 : update: updating /Tumi Na Thakle.mp3
+Oct 07 23:12 : update: updating /Tumi Amar Ghum.mp3
+Oct 07 23:12 : update: updating /Tumi Hina.mp3
+Oct 07 23:12 : update: updating /Tumi Ki Dekecho Kobhu.mp3
+Oct 07 23:12 : update: updating /Tumi Jodi Bolo..mp3
+Oct 07 23:12 : update: updating /Tumi Kun Kanoner Phool.mp3
+Oct 07 23:13 : update: updating /Tumi Prithibite Ei More.mp3
+Oct 07 23:13 : update: updating /Tumi Prithibite Ei More.mp3
+Oct 07 23:13 : update: updating /Uposhonghar.mp3
+Oct 07 23:13 : update: updating /Vaabte Kemon Obak Lage.mp3
+Oct 07 23:13 : update: updating /Vabe Mon Okaron Sarakhon.mp3
+Oct 07 23:14 : update: updating /Valobese.mp3
+Oct 07 23:14 : update: updating /Vhalobasi Vhalovasi.mp3
+Oct 07 23:14 : update: updating /Venge poth.mp3
+Oct 07 23:14 : update: removing Vhalobasi Vhalovasi.mp3
+Oct 07 23:14 : update: updating /Vhul Koreo.mp3
+Oct 07 23:14 : update: updating /Vromor Koi O Gia.mp3
+Oct 07 23:14 : update: added /Bhalobasi Bhalobasi.mp3
+Oct 07 23:14 : update: updating /Vul Janma.mp3
+Oct 07 23:15 : update: updating /You Are Not Alone.mp3
+Oct 07 23:15 : update: updating /Zaara Zara.mp3
+Oct 07 23:36 : update: removing Barsha.wma
+Oct 07 23:36 : update: removing Koto Din Dekhi Na Tore.wma
+Oct 07 23:36 : update: removing Sotto Bol Bupothe Chol.wma
+Oct 07 23:36 : update: removing Somoy Gele Sadhon.wma
+Oct 07 23:36 : update: removing Allah Tala.wma
+Oct 07 23:36 : update: removing Sob Loke Koi.wma
+Oct 07 23:36 : update: removing Klanti Sohor.wma
+Oct 07 23:36 : update: removing Akash.wma
+Oct 07 23:36 : update: removing Barija Redot.wma
+Oct 07 23:36 : update: removing Bujhcho.wma
+Oct 07 23:36 : update: removing Be Like That.wma
+Oct 07 23:36 : update: removing Tumi R Nei Sei Tumi.wma
+Oct 07 23:36 : update: removing Anmone.wma
+Oct 07 23:36 : update: removing Chaite Paro 2.wma
+Oct 07 23:36 : update: removing Aushomapto.wma
+Oct 07 23:36 : update: removing Aushomapto 2.wma
+Oct 07 23:36 : update: removing Kadbe Bishmoy.wma
+Oct 07 23:36 : update: removing Jodi Konodin.wma
+Oct 07 23:36 : update: removing Guti.wma
+Oct 07 23:36 : update: removing Chera Shopno.wma
+Oct 08 00:11 : update: added /Sob Loke Koi.mp3
+Oct 08 00:11 : update: added /Kadbe Bishmoy.mp3
+Oct 08 00:11 : update: added /Bujhcho.mp3
+Oct 08 00:11 : update: added /Aushomapto 2.mp3
+Oct 08 00:11 : update: added /Koto Din Dekhi Na Tore.mp3
+Oct 08 00:11 : update: added /Chera Shopno.mp3
+Oct 08 00:11 : update: added /Be Like That.mp3
+Oct 08 00:11 : update: added /Aushomapto.mp3
+Oct 08 00:11 : update: added /Tumi R Nei Sei Tumi.mp3
+Oct 08 00:11 : update: added /Klanti Sohor.mp3
+Oct 08 00:11 : update: added /Somoy Gele Sadhon.mp3
+Oct 08 00:11 : update: added /Sotto Bol Bupothe Chol.mp3
+Oct 08 00:11 : update: added /Guti.mp3
+Oct 08 00:11 : update: added /Barija Redot.mp3
+Oct 08 00:11 : update: added /Allah Tala.mp3
+Oct 08 00:11 : update: added /Barsha.mp3
+Oct 08 00:11 : update: added /Chaite Paro 2.mp3
+Oct 08 00:11 : update: added /Anmone.mp3
+Oct 08 00:11 : update: added /Jodi Konodin.mp3
+Oct 08 00:12 : update: added /Jokhon Tumi.mp3
+Oct 08 00:13 : update: removing Rolling In The Deep.aac
+Oct 08 00:13 : update: removing While My Guitar Gently Weeps.aac
+Oct 08 00:13 : update: removing Behaya Mon.m4a
+Oct 08 00:13 : update: removing Droher Montre Bhalobasha.m4a
+Oct 08 00:13 : update: removing Nirban.m4a
+Oct 08 00:13 : update: removing Nachdi Phira.webm
+Oct 08 00:31 : update: added /Behaya Mon.mp3
+Oct 08 00:31 : update: added /Droher Montre Bhalobasha.mp3
+Oct 08 00:31 : update: added /Nachdi Phira.mp3
+Oct 08 00:31 : update: added /Rolling In The Deep.mp3
+Oct 08 00:31 : update: added /Nirban.mp3
+Oct 08 00:31 : update: added /While My Guitar Gently Weeps.mp3
+Oct 08 01:06 : update: updating /Baniya Bondhu.mp3
+Oct 08 01:08 : update: updating /Amora.mp3
+Oct 08 12:09 : update: updating /Ekdin Briste.mp3
+Oct 08 12:10 : update: updating /Ami Tomar Kache.mp3
+Oct 08 12:11 : update: updating /Amai Vshailire.mp3
+Oct 08 12:12 : update: updating /Amar Bela Je Jai.mp3
+Oct 08 12:13 : update: removing Baro Asha Kore.mp3
+Oct 08 12:13 : update: added /Boro Asha Kore.mp3
+Oct 08 12:14 : update: updating /Mon Ki Je Chai.mp3
+Oct 08 12:16 : update: updating /Mor Ghumo Ghore.mp3
+Oct 08 12:17 : update: updating /Amai Nohe Go.mp3
+Oct 08 12:17 : update: updating /Amar Jabar Somoy Holo.mp3
+Oct 08 12:17 : update: updating /Ami Chirotore.mp3
+Oct 08 12:18 : update: updating /Amar Bela Je Jai.mp3
+Oct 08 12:18 : update: updating /Harano Hiyar Nikunjo Pothe.mp3
+Oct 08 12:19 : update: updating /Boro Asha Kore.mp3
+Oct 08 12:19 : update: updating /Mon Ki Je Chai.mp3
+Oct 08 12:20 : update: updating /Tumi Prithibite Ei More.mp3
+Oct 08 12:21 : update: updating /Ghumonto Sohore.mp3
+Oct 08 12:22 : update: removing Cholo Bodle Jai.mp3
+Oct 08 12:22 : update: updating /Ekhon Onek Raat.mp3
+Oct 08 12:22 : update: updating /Sesh Chiti.mp3
+Oct 08 12:23 : update: removing Shesh Chithi.mp3
+Oct 08 12:24 : update: updating /Ei Neel Monihar.mp3
+Oct 08 12:25 : update: updating /Parwardigar.mp3
+Oct 08 12:26 : update: removing Samay Aar Katena.mp3
+Oct 08 12:26 : update: added /Somai Aar Katena.mp3
+Oct 08 12:26 : update: updating /Dekha Hobe.mp3
+Oct 08 12:27 : update: updating /Beche Thakar Gaan.mp3
+Oct 08 12:28 : update: removing Nilanjana.mp3
+Oct 08 12:28 : update: added /Nilanjana Oi Nil.mp3
+Oct 08 12:29 : update: updating /Ovijog Nei.mp3
+Oct 08 12:31 : update: removing Balo Basi Oi Sobuj.mp3
+Oct 08 12:31 : update: added /Bhalobasi Oi Sobuj.mp3
+Oct 08 12:31 : update: removing Cha Er Cape Porichoy.mp3
+Oct 08 12:31 : update: added /Cha Er Cape Porichoi.mp3
+Oct 08 12:32 : update: removing Dakhina Hawa.mp3
+Oct 08 12:32 : update: added /Dokhina Hawa.mp3
+Oct 08 12:32 : update: removing E Emon Porichay.mp3
+Oct 08 12:32 : update: added /E Emon Porichoi.mp3
+Oct 08 12:33 : update: updating /Eto Sur Aar Eto.mp3
+Oct 08 12:34 : update: updating /Ichhe Holo.mp3
+Oct 08 12:34 : update: updating /Tomake Chai.mp3
+Oct 08 12:34 : update: updating /Ami Sunechi Sedin Tumi.mp3
+Oct 08 12:35 : update: updating /Ami Sunechi Sedin Tumi.mp3
+Oct 08 12:35 : update: updating /Ami Sunechi Sedin Tumi.mp3
+Oct 08 12:37 : update: removing Ami Sunechi Sedin Tumi.mp3
+Oct 08 12:37 : update: added /Sopno Dekhbo Bole.mp3
+Oct 08 12:37 : update: updating /Sopno Dekhbo Bole.mp3
+Oct 08 12:40 : update: updating /Sopno Dekhbo Bole.mp3
+Oct 08 12:41 : update: removing More Jabo.mp3
+Oct 08 12:41 : update: removing Pratidhwani Suni.mp3
+Oct 08 12:41 : update: removing Jakhan Somay Thomke.mp3
+Oct 08 12:46 : update: added /Pratidhwani Suni.mp3
+Oct 08 12:46 : update: added /More Jabo.mp3
+Oct 08 12:46 : update: added /Jakhan Somay Thomke.mp3
+Oct 08 12:50 : update: updating /Amai Dekona Ferano Jabe Na.mp3
+Oct 08 12:54 : update: updating /Mon Amar Deho Ghori.mp3
+Oct 08 12:54 : update: updating /Mon Amar Deho Ghori.mp3
+Oct 08 12:55 : update: removing Mon Amar Deho Ghori.mp3
+Oct 08 12:58 : update: updating /Aboshase Manus Eka.mp3
+Oct 08 12:58 : update: updating /Abosh Onubhuti.mp3
+Oct 08 13:02 : update: updating /Aaj Dukho volar Din.mp3
+Oct 08 13:03 : update: removing Adhar Amar Ontor.mp3
+Oct 08 13:03 : update: added /Amar Ontor.mp3
+Oct 08 13:05 : update: updating /A Different Corner.mp3
+Oct 08 13:06 : update: updating /Ai Khukhu Ai.mp3
+Oct 08 13:06 : update: updating /Ajo.mp3
+Oct 08 13:07 : update: removing Ajo.mp3
+Oct 08 13:07 : update: updating /Akash Amar.mp3
+Oct 08 13:07 : update: updating /Akash Churi.mp3
+Oct 08 13:07 : update: updating /Akash.mp3
+Oct 08 13:08 : update: updating /Ak Muhurte.mp3
+Oct 08 13:08 : update: updating /Akon Amar Nejer Kache.mp3
+Oct 08 13:08 : update: updating /Akta Gaan Dau.mp3
+Oct 08 13:08 : update: updating /Alash Samyer Porda.mp3
+Oct 08 13:08 : update: updating /Albida.mp3
+Oct 08 13:08 : update: updating /Alga Korogo.mp3
+Oct 08 13:09 : update: removing Allah Megh De Pani De.mp3
+Oct 08 13:09 : update: updating /Allah Tala.mp3
+Oct 08 13:09 : update: updating /All Rise.mp3
+Oct 08 13:09 : update: updating /Amai Dekona Ferano Jabe Na.mp3
+Oct 08 13:10 : update: updating /Amar A Ghar.mp3
+Oct 08 13:10 : update: updating /Amar Bela Je Jai.mp3
+Oct 08 13:10 : update: updating /Amar Bola Holo Na.mp3
+Oct 08 13:11 : update: updating /Amar Har Kala Korlam Re.mp3
+Oct 08 13:11 : update: updating /Amar Keno Emon Holo.mp3
+Oct 08 13:11 : update: updating /Amar Khankher Kolosi.mp3
+Oct 08 13:11 : update: updating /Amar Kichu Sapno.mp3
+Oct 08 13:12 : update: updating /Amar Ontor.mp3
+Oct 08 13:12 : update: updating /Amar Parthona.mp3
+Oct 08 13:12 : update: removing Amar Prithibee.mp3
+Oct 08 13:12 : update: updating /Amar Shonar Bangla-Khiyo.mp3
+Oct 08 13:13 : update: updating /Amar Shopnogulo.mp3
+Oct 08 13:13 : update: updating /Amar Shopnogulo.mp3
+Oct 08 13:13 : update: updating /Amar Sonar Bangla.mp3
+Oct 08 13:13 : update: updating /Amar Sontan.mp3
+Oct 08 13:13 : update: updating /Amar Vaier Rokte Rangano.mp3
+Oct 08 13:15 : update: removing Amar Valobasa.mp3
+Oct 08 13:15 : update: added /Amar Bhalobasa.mp3
+Oct 08 13:15 : update: updating /Ami Banglar Gan Gai.mp3
+Oct 08 13:16 : update: updating /Ami Hoito Manus Noi.mp3
+Oct 08 13:16 : update: updating /Ami Fire Pete Chai.mp3
+Oct 08 13:16 : update: updating /Ami Ki Rokom Vabe Beche Achi.mp3
+Oct 08 13:16 : update: updating /Ami Kul Hara Kolonkini.mp3
+Oct 08 13:16 : update: updating /Ami Tomakei Bole Debo.mp3
+Oct 08 13:16 : update: updating /Amra Korbo Joy.mp3
+Oct 08 13:16 : update: updating /Anaasamay.mp3
+Oct 08 13:17 : update: updating /Annana.mp3
+Oct 08 13:17 : update: updating /Anmone.mp3
+Oct 08 13:17 : update: removing Attokendrik.mp3
+Oct 08 13:17 : update: updating /Aushomapto 2.mp3
+Oct 08 13:18 : update: updating /Aushomapto.mp3
+Oct 08 13:18 : update: updating /Bacha Thakle.mp3
+Oct 08 13:18 : update: updating /Baioscope.mp3
+Oct 08 13:18 : update: updating /Baji.mp3
+Oct 08 13:19 : update: updating /Barija Redot.mp3
+Oct 08 13:19 : update: updating /Barsha.mp3
+Oct 08 13:19 : update: updating /Bashoriya.mp3
+Oct 08 13:20 : update: updating /Batase Fuler Sourov.mp3
+Oct 08 13:20 : update: updating /Behaya Mon.mp3
+Oct 08 13:20 : update: updating /Bekarotto.mp3
+Oct 08 13:20 : update: updating /Be Like That.mp3
+Oct 08 13:20 : update: updating /Bhaage Re Mann Chameli.mp3
+Oct 08 13:21 : update: updating /Bhaage Re Mann Chameli.mp3
+Oct 08 13:21 : update: updating /Bhalobashi Bole Bondhu.mp3
+Oct 08 13:22 : update: updating /Bheegi Bheegi.mp3
+Oct 08 13:22 : update: updating /Bhindeshi Tara.mp3
+Oct 08 13:22 : update: removing Bhindeshi Tara.mp3
+Oct 08 13:22 : update: updating /Bijli.mp3
+Oct 08 13:22 : update: updating /Bidrohi.mp3
+Oct 08 13:23 : update: updating /Blues And Rodh.mp3
+Oct 08 13:23 : update: updating /Bondhu.mp3
+Oct 08 13:23 : update: updating /Boro Asha Kore.mp3
+Oct 08 13:24 : update: updating /Brindabon.mp3
+Oct 08 13:24 : update: updating /Bristi Jhore Jai.mp3
+Oct 08 13:24 : update: updating /Brishti.mp3
+Oct 08 13:24 : update: updating /Bujhcho.mp3
+Oct 08 13:24 : update: updating /Bullshit.mp3
+Oct 08 13:24 : update: updating /Californication.mp3
+Oct 08 13:25 : update: updating /Californication.mp3
+Oct 08 13:25 : update: updating /Careless Whisper.mp3
+Oct 08 13:25 : update: updating /Chader Jonno Gan.mp3
+Oct 08 13:25 : update: updating /Chad Sajalo Alo Rupali.mp3
+Oct 08 13:26 : update: updating /Chaite Paro.mp3
+Oct 08 13:26 : update: updating /Chaite Paro 2.mp3
+Oct 08 13:26 : update: updating /Chal Chale.mp3
+Oct 08 13:26 : update: updating /Chera Pal(Acoustic).mp3
+Oct 08 13:26 : update: updating /Chera Shopno.mp3
+Oct 08 13:26 : update: updating /Chokh Chhol Chhol.mp3
+Oct 08 13:27 : update: removing Chole Gecho Tate Ki (Hasib).mp3
+Oct 08 13:27 : update: added /Chole Gecho Tate Ki.mp3
+Oct 08 13:27 : update: updating /Chole Jau Bondhu.mp3
+Oct 08 13:27 : update: updating /Cholona Ghure Aashi.mp3
+Oct 08 13:27 : update: updating /Chondrahoto.mp3
+Oct 08 13:27 : update: updating /Chondro Jagiche Jonak Jagiche.mp3
+Oct 08 13:28 : update: updating /Coffee Houser Addata Aaj Ar Nei.mp3
+Oct 08 13:28 : update: updating /Debdas.mp3
+Oct 08 13:28 : update: updating /Dekhna Mon.mp3
+Oct 08 13:29 : update: updating /Delhite Nizamuddin.mp3
+Oct 08 13:29 : update: updating /Deshlai.mp3
+Oct 08 13:36 : update: updating /Dheke Jare Tui.mp3
+Oct 08 13:37 : update: updating /Dhitang Dhitang Bole.mp3
+Oct 08 13:37 : update: removing Dhitang Dhitang Bole.mp3
+Oct 08 13:37 : update: updating /Dhono Dhanno Pushpe Vora.mp3
+Oct 08 13:37 : update: updating /Dhulo Pora Chithi.mp3
+Oct 08 13:37 : update: updating /Didi Moni.mp3
+Oct 08 13:38 : update: updating /Dil Se Re.mp3
+Oct 08 13:39 : update: updating /Don't Bother.mp3
+Oct 08 13:39 : update: updating /Don't Cry Joni.mp3
+Oct 08 13:39 : update: updating /Dreamum Wakeupum.mp3
+Oct 08 13:39 : update: removing Dreamum Wakeupum.mp3
+Oct 08 13:40 : update: updating /Droher Montre Bhalobasha.mp3
+Oct 08 13:40 : update: updating /Duar Dana.mp3
+Oct 08 13:40 : update: updating /Dukhini Dukho Koro Na.mp3
+Oct 08 13:40 : update: updating /Dukkho Pelam.mp3
+Oct 08 13:40 : update: updating /Dur Dipobasini.mp3
+Oct 08 13:41 : update: updating /Dur Dipobasini.mp3
+Oct 08 13:41 : update: updating /Dusto Meye.mp3
+Oct 08 13:41 : update: updating /Ei Akash Tomari.mp3
+Oct 08 13:41 : update: updating /Ei Gan Ses Gan.mp3
+Oct 08 13:42 : update: updating /Ei Nosto Sohore.mp3
+Oct 08 13:42 : update: updating /Ei Podda Ei Meghna.mp3
+Oct 08 13:42 : update: updating /Ei Rangamatir Pothe Lo.mp3
+Oct 08 13:42 : update: updating /Ei Rangamatir Pothe.mp3
+Oct 08 13:42 : update: updating /Ei Sahara.mp3
+Oct 08 13:42 : update: updating /Ei Shundor Shornali Sondhai.mp3
+Oct 08 13:43 : update: updating /Ekaki Prohor.mp3
+Oct 08 13:43 : update: updating /Ekbar Jete Dena.mp3
+Oct 08 13:43 : update: updating /Ekdin Briste.mp3
+Oct 08 13:43 : update: updating /Ekatorer Ma Jononi.mp3
+Oct 08 13:43 : update: removing Ekjon.mp3
+Oct 08 13:45 : update: updating /Ek Kana Ghar Vangar Por.mp3
+Oct 08 13:45 : update: updating /Ek Nodi Rokto Periyea.mp3
+Oct 08 13:45 : update: updating /Ek Parinda.mp3
+Oct 08 13:46 : update: updating /Ek Sagor Rokter.mp3
+Oct 08 13:46 : update: updating /Ekti Rangin Chadar.mp3
+Oct 08 13:46 : update: updating /Ektu Boshiya Thako.mp3
+Oct 08 13:46 : update: updating /Ektara.mp3
+Oct 08 13:46 : update: updating /Eso Prio Mono Rangai.mp3
+Oct 08 13:47 : update: updating /Eto Dure Je Chole Gecho.mp3
+Oct 08 13:47 : update: updating /Etihash.mp3
+Oct 08 13:47 : update: updating /Eto Sur Aar Eto.mp3
+Oct 08 13:47 : update: updating /Fatema.mp3
+Oct 08 13:47 : update: updating /Ferari Mon.mp3
+Oct 08 13:47 : update: updating /Ferari Somoy.mp3
+Oct 08 13:57 : update: added /Dhitang Dhitang Bole.mp3
+Oct 08 13:57 : update: added /Attokendrik.mp3
+Oct 08 13:57 : update: added /Ekjon.mp3
+Oct 08 13:57 : update: added /Dreamum Wakeupum.mp3
+Oct 08 13:57 : update: added /Amar Prithibee.mp3
+Oct 08 13:57 : update: added /Ajo.mp3
+Oct 08 13:57 : update: added /Allah Megh De Pani De.mp3
+Oct 08 13:57 : update: added /Mon Amar Deho Ghori.mp3
+Oct 08 13:57 : update: added /Bhindeshi Tara.mp3
+Oct 08 13:57 : update: updating /Gari Cholena.mp3
+Oct 08 13:57 : update: updating /Geetikobita-3.mp3
+Oct 08 13:57 : update: updating /Ghate Lagaiya Dinga.mp3
+Oct 08 13:58 : update: updating /Give Me Some Sunshine.mp3
+Oct 08 13:58 : update: updating /Gotimoi Ei Sohore.mp3
+Oct 08 13:58 : update: updating /Guti.mp3
+Oct 08 13:58 : update: removing Haat Barao.mp3
+Oct 08 13:59 : update: updating /Hand To Mouth.mp3
+Oct 08 13:59 : update: updating /Hat Barea Chui.mp3
+Oct 08 14:03 : update: updating /Hoina Kichui Amar Paua.mp3
+Oct 08 14:03 : update: updating /Holudia Pakhi.mp3
+Oct 08 14:04 : update: updating /Hridoyer Dabi.mp3
+Oct 08 14:04 : update: updating /Hum Bhool Gaye Har Baat.mp3
+Oct 08 14:04 : update: removing Hum Bhool Gaye Har Baat.mp3
+Oct 08 14:04 : update: updating /Ichche Chilo.mp3
+Oct 08 14:05 : update: updating /I Just Call To say.mp3
+Oct 08 14:05 : update: updating /Jakhan Somay Thomke.mp3
+Oct 08 14:05 : update: updating /Janala Vora.mp3
+Oct 08 14:06 : update: updating /Jare Ja Ure Ja.mp3
+Oct 08 14:06 : update: updating /Jao Pakhi Bolo Tare.mp3
+Oct 08 14:06 : update: updating /Jatio Songeet Er Ditioline.mp3
+Oct 08 14:06 : update: updating /Je Amake Prem Shikalo.mp3
+Oct 08 14:06 : update: removing Jekhane Simanto Tomar.mp3
+Oct 08 14:07 : update: updating /Jakhan Somay Thomke.mp3
+Oct 08 14:08 : update: updating /Jell Theke Bolchi.mp3
+Oct 08 14:08 : update: updating /Je Pothe Pothik Ney.mp3
+Oct 08 14:08 : update: removing Jiboner Ba Pashe.mp3
+Oct 08 14:09 : update: updating /Jodi Tor Daak Shune Keu.mp3
+Oct 08 14:09 : update: updating /Jiye To Jiye.mp3
+Oct 08 14:09 : update: updating /Jodi Balobasa Pai.mp3
+Oct 08 14:09 : update: updating /Jodi Kokhono Vul Hoye.mp3
+Oct 08 14:09 : update: updating /Jodi Konodin.mp3
+Oct 08 14:09 : update: updating /Joi Joganondon.mp3
+Oct 08 15:25 : update: updating /Jokhon Tumi.mp3
+Oct 08 15:26 : update: updating /Jokhon Tumi.mp3
+Oct 08 15:26 : update: updating /Joler Dame Dilam Khule.mp3
+Oct 08 15:26 : update: updating /Joto Dure Jao.mp3
+Oct 08 15:26 : update: updating /Jonmo Amar Dhonno Holo.mp3
+Oct 08 15:26 : update: updating /Joy Bangla Banglar Joy.mp3
+Oct 08 15:26 : update: updating /Jotota Poth.mp3
+Oct 08 15:27 : update: updating /Jumbalika.mp3
+Oct 08 15:27 : update: updating /Kachar Vitor Ochin Pakhi.mp3
+Oct 08 15:27 : update: updating /Kadbe Bishmoy.mp3
+Oct 08 15:27 : update: removing Kajra Muhabbat.mp3
+Oct 08 15:28 : update: updating /Kajra Re.mp3
+Oct 08 15:28 : update: updating /Kajra Re.mp3
+Oct 08 15:28 : update: updating /Kal Sararat.mp3
+Oct 08 15:28 : update: updating /Kalare Koirogo Mana.mp3
+Oct 08 15:28 : update: removing Kanamachi.mp3
+Oct 08 15:29 : update: updating /Karar Oi Loho Kopat.mp3
+Oct 08 15:29 : update: updating /Kar Chobi.mp3
+Oct 08 15:29 : update: updating /Kashfuler Kabbo.mp3
+Oct 08 15:29 : update: updating /Keno Shunno Hate.mp3
+Oct 08 15:29 : update: updating /Khachar Vitor Ochin Pakhi.mp3
+Oct 08 15:30 : update: updating /Khairunlo.mp3
+Oct 08 15:30 : update: updating /Ki Kore Sob Vule Jai.mp3
+Oct 08 15:30 : update: updating /Klanti Sohor.mp3
+Oct 08 15:30 : update: updating /Kochpana Kare Koi.mp3
+Oct 08 15:31 : update: updating /Kotha Noi Mukhe Mukhe.mp3
+Oct 08 15:31 : update: updating /Koto Din Dekhi Na Tore.mp3
+Oct 08 15:31 : update: updating /Kotota Kosta Achi.mp3
+Oct 08 15:31 : update: updating /Krishnopokkho.mp3
+Oct 08 15:31 : update: updating /Krittim Manush.mp3
+Oct 08 15:31 : update: updating /Kushum Kushum.mp3
+Oct 08 15:31 : update: updating /Kuthau Amar Harie.mp3
+Oct 08 15:32 : update: updating /Lais Feta Lais.mp3
+Oct 08 15:32 : update: updating /Leekhte Parena.mp3
+Oct 08 15:32 : update: updating /Last Christmas.mp3
+Oct 08 15:32 : update: updating /Lutpat.mp3
+Oct 08 15:32 : update: updating /Majhi.mp3
+Oct 08 15:32 : update: updating /Ma.mp3
+Oct 08 15:32 : update: updating /Manali Trance.mp3
+Oct 08 15:33 : update: updating /Manena Mon.mp3
+Oct 08 15:33 : update: updating /Manush Manusher Jonno.mp3
+Oct 08 15:33 : update: updating /Megh Jhorana.mp3
+Oct 08 15:33 : update: updating /Meghbalika.mp3
+Oct 08 15:33 : update: updating /Mela.mp3
+Oct 08 15:33 : update: updating /Matir Pinjira.mp3
+Oct 08 15:33 : update: updating /Meri En.mp3
+Oct 08 15:33 : update: updating /Modhur Modhur Chaoni.mp3
+Oct 08 15:34 : update: updating /Moina Go.mp3
+Oct 08 15:34 : update: updating /Mohashunno.mp3
+Oct 08 15:34 : update: updating /Mon Amar Deho Ghori.mp3
+Oct 08 15:34 : update: updating /Mon Bhalo Nei.mp3
+Oct 08 15:34 : update: updating /Mone Pore.mp3
+Oct 08 15:34 : update: updating /Moner O bagane.mp3
+Oct 08 15:34 : update: updating /Mone Robe Kina.mp3
+Oct 08 15:34 : update: updating /Moner Ovhimangulo.mp3
+Oct 08 15:35 : update: updating /Mon Nodi 2.mp3
+Oct 08 15:35 : update: updating /Mora Ekti Phul Ke Bachabo Bole.mp3
+Oct 08 15:35 : update: updating /More Jabo.mp3
+Oct 08 15:35 : update: updating /Moushumi 2.mp3
+Oct 08 15:35 : update: updating /Moushumi.mp3
+Oct 08 15:35 : update: updating /Morile Kandisna Amar Dai.mp3
+Oct 08 15:35 : update: updating /Muche Jawa Din Guli.mp3
+Oct 08 15:35 : update: removing Mumursho Rupkotha.mp3
+Oct 08 15:36 : update: updating /Na Chahile Jare.mp3
+Oct 08 15:36 : update: updating /Nachdi Phira.mp3
+Oct 08 15:36 : update: updating /Na Chang.mp3
+Oct 08 15:37 : update: updating /Nei Proyojon.mp3
+Oct 08 15:37 : update: updating /Nefartiti.mp3
+Oct 08 15:37 : update: updating /Na Jene Vul.mp3
+Oct 08 15:37 : update: updating /Nati Khati Bela Gelo.mp3
+Oct 08 15:37 : update: removing Nilanjana Oi Nil.mp3
+Oct 08 15:37 : update: removing Nilgiri.mp3
+Oct 08 15:37 : update: updating /Nirban.mp3
+Oct 08 15:38 : update: updating /Nirjon Raat.mp3
+Oct 08 15:38 : update: updating /Nisongota.mp3
+Oct 08 15:38 : update: removing Nithua Pathare.mp3
+Oct 08 15:38 : update: updating /Nitol Paye Live.mp3
+Oct 08 15:38 : update: updating /No Matter What.mp3
+Oct 08 15:38 : update: updating /Nouka Vromon.mp3
+Oct 08 15:39 : update: updating /Obishap Dile.mp3
+Oct 08 15:39 : update: updating /Ochena Jibon.mp3
+Oct 08 15:39 : update: updating /Obhimane Noi.mp3
+Oct 08 15:39 : update: updating /Obak Bhalobasha.mp3
+Oct 08 15:39 : update: updating /Olpo Aktu Akash Dau Amai.mp3
+Oct 08 15:39 : update: updating /Ohona.mp3
+Oct 08 15:39 : update: updating /One Love.mp3
+Oct 08 15:39 : update: updating /Onekta Samay.mp3
+Oct 08 15:39 : update: updating /Opekkha.mp3
+Oct 08 15:39 : update: updating /Oshamajik.mp3
+Oct 08 15:40 : update: removing O Sokhina.mp3
+Oct 08 15:41 : update: removing Onekta Samay.mp3
+Oct 08 15:41 : update: added /Onekta Somoi.mp3
+Oct 08 15:42 : update: updating /Paatshala.mp3
+Oct 08 15:42 : update: updating /Pagla Hawa.mp3
+Oct 08 15:42 : update: updating /Pagla Hawar Badol Dine.mp3
+Oct 08 15:42 : update: removing Pakhi Paka Pepe Khay.mp3
+Oct 08 15:42 : update: added /Pakhi Paka Pepe Khai.mp3
+Oct 08 15:42 : update: updating /Palai Palai.mp3
+Oct 08 15:42 : update: updating /Pa.mp3
+Oct 08 15:42 : update: updating /Panjabiola.mp3
+Oct 08 15:42 : update: removing Paper.mp3
+Oct 08 15:43 : update: updating /Pare Loiya Jau Amai.mp3
+Oct 08 15:43 : update: updating /Parwardigar.mp3
+Oct 08 15:43 : update: removing Parwardigar.mp3
+Oct 08 15:43 : update: updating /Path Chola.mp3
+Oct 08 15:43 : update: updating /Pata Kuronir Meye.mp3
+Oct 08 15:44 : update: updating /Pinjor.mp3
+Oct 08 15:44 : update: updating /Poddo Patar Jol.mp3
+Oct 08 15:44 : update: updating /Polashir Prantor.mp3
+Oct 08 15:44 : update: updating /Pori.mp3
+Oct 08 15:44 : update: updating /Pratidhwani Suni.mp3
+Oct 08 15:44 : update: updating /Pother Bap.mp3
+Oct 08 15:44 : update: updating /Prematal.mp3
+Oct 08 15:45 : update: updating /Prem Tumi Ki.mp3
+Oct 08 15:45 : update: updating /Prithibir Joto Shuk.mp3
+Oct 08 15:45 : update: updating /Prothom Sporso.mp3
+Oct 08 15:45 : update: removing Protiddhoni Shuni.mp3
+Oct 08 15:45 : update: updating /Pul Tola Oi Jamar.mp3
+Oct 08 15:45 : update: removing Purano Shei Diner Kotha.mp3
+Oct 08 15:45 : update: updating /Purba Digante Surjo Uteche.mp3
+Oct 08 15:46 : update: updating /Purnimar Chad.mp3
+Oct 08 15:46 : update: updating /Quit Playin' Games Live.mp3
+Oct 08 15:46 : update: updating /Raag.mp3
+Oct 08 15:46 : update: updating /Rahur Grash.mp3
+Oct 08 15:46 : update: updating /Raj Kumar.mp3
+Oct 08 15:46 : update: updating /Rakheni Amaye Keo.mp3
+Oct 08 15:46 : update: updating /Relax.mp3
+Oct 08 15:46 : update: updating /Rat Furolei.mp3
+Oct 08 15:46 : update: updating /Rhythm Divine.mp3
+Oct 08 15:46 : update: updating /Rodela Dupure.mp3
+Oct 08 15:47 : update: updating /Rongdhonu.mp3
+Oct 08 15:47 : update: updating /Rolling In The Deep.mp3
+Oct 08 15:47 : update: updating /Rupali Gitar.mp3
+Oct 08 15:47 : update: updating /Rupak.mp3
+Oct 08 15:47 : update: updating /Sacrifice.mp3
+Oct 08 15:47 : update: updating /Sarothe.mp3
+Oct 08 15:47 : update: updating /Se Je Bose Ache.mp3
+Oct 08 15:47 : update: updating /Separation.mp3
+Oct 08 15:47 : update: updating /Salam Salam.mp3
+Oct 08 15:47 : update: updating /Sarata Poth Jhure.mp3
+Oct 08 15:47 : update: updating /Sei Tumi.mp3
+Oct 08 15:47 : update: updating /Sesh Chiti.mp3
+Oct 08 15:48 : update: updating /Shahjalal Shahporan.mp3
+Oct 08 15:48 : update: updating /Shey Je Boshe Ache.mp3
+Oct 08 15:48 : update: updating /Shithilaion_2.mp3
+Oct 08 15:48 : update: updating /Shithilaion_1.mp3
+Oct 08 15:48 : update: updating /Shikaiya Piriti.mp3
+Oct 08 15:48 : update: updating /Shlock.mp3
+Oct 08 15:48 : update: removing Shlock.mp3
+Oct 08 15:49 : update: updating /Shopnohara.mp3
+Oct 08 15:49 : update: updating /Shukno Pata.mp3
+Oct 08 15:49 : update: updating /Sob Loke Koi.mp3
+Oct 08 15:49 : update: updating /Sohena Jatona.mp3
+Oct 08 15:49 : update: updating /Sokhi Vabona Kahare Bole.mp3
+Oct 08 15:49 : update: updating /Sohoj Manus.mp3
+Oct 08 15:49 : update: updating /Somoy Gele Sadhon.mp3
+Oct 08 15:49 : update: updating /Sopno Dekhbo Bole.mp3
+Oct 08 15:50 : update: updating /Sotto Bol Bupothe Chol.mp3
+Oct 08 15:50 : update: updating /Srabon.mp3
+Oct 08 15:50 : update: updating /Station Road.mp3
+Oct 08 15:50 : update: updating /Surer Tane.mp3
+Oct 08 15:50 : update: updating /Sweetheart.mp3
+Oct 08 15:50 : update: updating /Sweti.mp3
+Oct 08 15:50 : update: updating /Tajmohol.mp3
+Oct 08 15:51 : update: removing Tajmohol.mp3
+Oct 08 15:51 : update: updating /Taray Taray.mp3
+Oct 08 15:53 : update: removing Taray Taray.mp3
+Oct 08 15:53 : update: added /Tarai Tarai.mp3
+Oct 08 15:53 : update: updating /Tere Bina Jindegi.mp3
+Oct 08 15:53 : update: updating /Tomake Chai Kobita.mp3
+Oct 08 15:53 : update: updating /Tomake Dekhle Ekbar.mp3
+Oct 08 15:53 : update: updating /Tomake Chai.mp3
+Oct 08 15:54 : update: updating /Tomar Ghore Bosot Kore Koijona.mp3
+Oct 08 15:54 : update: updating /Tomar Jonno.mp3
+Oct 08 15:54 : update: updating /Tui Ki Janish Na2.mp3
+Oct 08 15:54 : update: updating /Tui Ki Janish Na.mp3
+Oct 08 15:54 : update: updating /Tui Gaan Ga.mp3
+Oct 08 15:54 : update: updating /Tui Se Amar Mon.mp3
+Oct 08 15:54 : update: updating /Tume Jodi Nodi.mp3
+Oct 08 15:54 : update: updating /Tumi Aaj Koto Dure.mp3
+Oct 08 15:54 : update: updating /Tumi Aashbe Bole.mp3
+Oct 08 15:54 : update: updating /Tumi Amar Ghum.mp3
+Oct 08 15:55 : update: updating /Tumi Hina.mp3
+Oct 08 15:55 : update: updating /Tumi Ki Dekecho Kobhu.mp3
+Oct 08 15:55 : update: updating /Tumi Jodi Bolo..mp3
+Oct 08 15:55 : update: updating /Tumi Na Thakle.mp3
+Oct 08 15:55 : update: updating /Tumi Kun Kanoner Phool.mp3
+Oct 08 15:55 : update: updating /Tumi R Nei Sei Tumi.mp3
+Oct 08 15:55 : update: removing Uposhonghar.mp3
+Oct 08 15:55 : update: updating /Vaabte Kemon Obak Lage.mp3
+Oct 08 15:56 : update: updating /Valobese.mp3
+Oct 08 15:56 : update: updating /Vabe Mon Okaron Sarakhon.mp3
+Oct 08 15:56 : update: updating /Venge poth.mp3
+Oct 08 15:56 : update: updating /Vhul Koreo.mp3
+Oct 08 15:56 : update: updating /Vromor Koi O Gia.mp3
+Oct 08 15:56 : update: updating /Vul Janma.mp3
+Oct 08 15:56 : update: updating /While My Guitar Gently Weeps.mp3
+Oct 08 15:56 : update: updating /You Fill Up My Senses.mp3
+Oct 08 15:56 : update: updating /Zaara Zara.mp3
+Oct 08 16:03 : update: added /Nilgiri.mp3
+Oct 08 16:03 : update: added /Jiboner Ba Pashe.mp3
+Oct 08 16:03 : update: added /Uposhonghar.mp3
+Oct 08 16:03 : update: added /Kanamachi.mp3
+Oct 08 16:03 : update: added /Haat Barao.mp3
+Oct 08 16:03 : update: added /O Sokhina.mp3
+Oct 08 16:03 : update: added /Nilanjana Oi Nil.mp3
+Oct 08 16:03 : update: added /Jekhane Simanto Tomar.mp3
+Oct 08 16:03 : update: added /Hum Bhool Gaye Har Baat.mp3
+Oct 08 16:03 : update: added /Tajmohol.mp3
+Oct 08 16:03 : update: added /Nithua Pathare.mp3
+Oct 08 16:03 : update: added /Kajra Muhabbat.mp3
+Oct 08 16:03 : update: added /Parwardigar.mp3
+Oct 08 16:03 : update: added /Shlock.mp3
+Oct 08 16:03 : update: added /Purano Shei Diner Kotha.mp3
+Oct 08 16:03 : update: added /Protiddhoni Shuni.mp3
+Oct 08 16:03 : update: added /Paper.mp3
+Oct 08 16:03 : update: added /Mumursho Rupkotha.mp3
+Oct 08 16:07 : update: updating /Deho Ghori.mp3
+Oct 08 16:10 : update: updating /Ovijog Nei.mp3
+Oct 08 21:04 : update: updating /Amora.mp3
+Oct 08 21:05 : update: updating /Amora.mp3
+Oct 08 21:07 : update: updating /Apon Deshe Cholo.mp3
+Oct 08 21:08 : update: updating /Apon Deshe Cholo.mp3
+Oct 08 21:08 : update: updating /Baindua.mp3
+Oct 08 21:09 : update: updating /Baindua.mp3
+Oct 08 21:10 : update: updating /Bhalobasha Dibosh'99.mp3
+Oct 08 21:10 : update: updating /Bhalobasha Dibosh'99.mp3
+Oct 08 21:10 : update: updating /Bhalobasha Dibosh'99.mp3
+Oct 08 21:10 : update: updating /Blues And Rodh.mp3
+Oct 08 21:11 : update: updating /Blues And Rodh.mp3
+Oct 08 21:11 : update: updating /Blues And Rodh.mp3
+Oct 08 21:11 : update: updating /Baindua.mp3
+Oct 08 21:12 : update: updating /Bokul Ful.mp3
+Oct 08 21:13 : update: updating /Bokul Ful.mp3
+Oct 08 21:13 : update: updating /Chondro Jagiche Jonak Jagiche.mp3
+Oct 08 21:14 : update: updating /Chondro Jagiche Jonak Jagiche.mp3
+Oct 08 21:14 : update: updating /Deho Ghori.mp3
+Oct 08 21:15 : update: updating /Deho Ghori.mp3
+Oct 08 21:15 : update: updating /Deho Ghori.mp3
+Oct 08 21:15 : update: updating /Dekhna Mon.mp3
+Oct 08 21:16 : update: updating /Dekhna Mon.mp3
+Oct 08 21:16 : update: updating /Delhite Nizamuddin.mp3
+Oct 08 21:17 : update: updating /Delhite Nizamuddin.mp3
+Oct 08 21:18 : update: updating /Dheke Jare Tui.mp3
+Oct 08 21:18 : update: removing Dheke Jare Tui.mp3
+Oct 08 21:18 : update: added /Dekhe Jare Tui.mp3
+Oct 08 21:18 : update: updating /Dilli Se Nizamuddin.mp3
+Oct 08 21:19 : update: removing Dilli Se Nizamuddin.mp3
+Oct 08 21:19 : update: added /Dellhi Se Nizamuddin.mp3
+Oct 08 21:20 : update: updating /Duar Dana.mp3
+Oct 08 21:20 : update: updating /Duar Dana.mp3
+Oct 08 21:22 : update: updating /Ei Akash Tomari.mp3
+Oct 08 21:23 : update: updating /Ei Akash Tomari.mp3
+Oct 08 21:24 : update: updating /Ekaki Prohor.mp3
+Oct 08 21:24 : update: updating /Ekaki Prohor.mp3
+Oct 08 21:24 : update: updating /Ekhane Ese Darale.mp3
+Oct 08 21:25 : update: updating /Ek Parinda.mp3
+Oct 08 21:25 : update: updating /Ekhon Arale.mp3
+Oct 08 21:27 : update: updating /No Matter What.mp3
+Oct 08 21:27 : update: updating /Jibone Ki Koto Lokshan.mp3
+Oct 08 21:27 : update: updating /Korimana.mp3
+Oct 08 21:27 : update: updating /Ki Jala.mp3
+Oct 08 21:27 : update: updating /Jab Koi Baat Bigad.mp3
+Oct 08 21:27 : update: updating /Khub Chena Chena.mp3
+Oct 08 21:27 : update: updating /Jibon Jala.mp3
+Oct 08 21:27 : update: updating /Ki Jala2.mp3
+Oct 08 21:27 : update: updating /Jege theko sararat.mp3
+Oct 08 21:32 : update: updating /Ekhane Ese Darale.mp3
+Oct 08 21:33 : update: updating /Ekhon Arale.mp3
+Oct 08 21:33 : update: updating /Ek Parinda.mp3
+Oct 08 21:33 : update: updating /Ek Parinda.mp3
+Oct 08 21:34 : update: updating /Jab Koi Baat Bigad.mp3
+Oct 08 21:35 : update: removing Jege theko sararat.mp3
+Oct 08 21:35 : update: added /Jege Theko Sararat.mp3
+Oct 08 21:35 : update: updating /Jibone Ki Koto Lokshan.mp3
+Oct 08 21:36 : update: updating /Jibon Jala.mp3
+Oct 08 21:37 : update: updating /Khub Chena Chena.mp3
+Oct 08 21:38 : update: updating /Ki Jala2.mp3
+Oct 08 21:38 : update: updating /Ki Jala.mp3
+Oct 08 21:39 : update: updating /Korimana.mp3
+Oct 08 21:39 : update: updating /No Matter What.mp3
+Oct 08 21:40 : update: updating /Beder Meye Josna.mp3
+Oct 08 21:42 : update: updating /Ami To More Jabo.mp3
+Oct 08 21:43 : update: updating /Bondho Janala.mp3
+Oct 08 21:44 : update: updating /Dhere Dhere Se.mp3
+Oct 08 21:45 : update: updating /Ektu Boshiya Thako.mp3
+Oct 08 21:45 : update: updating /Jaltaranga.mp3
+Oct 08 21:46 : update: updating /Jat Gelo Jat Gelo Bole.mp3
+Oct 08 21:46 : update: updating /Jiye To Jiye.mp3
+Oct 08 21:47 : update: updating /Kachar Vitor Ochin Pakhi.mp3
+Oct 08 21:48 : update: updating /Meghbalika.mp3
+Oct 18 12:32 : update: added /Here Without You.mp3
+Oct 18 12:32 : update: added /Rakheni Amaye Keo.mp3
+Oct 18 12:32 : update: added /Aj Mon Amar.mp3
+Oct 18 12:32 : update: added /Amar Shonar Bangla.mp3
+Oct 18 12:32 : update: added /Hotel California(Live).mp3
+Oct 18 12:32 : update: added /Sarothe.mp3
+Oct 18 12:32 : update: added /Sob Loke Koi.mp3
+Oct 18 12:32 : update: added /Lutpat.mp3
+Oct 18 12:32 : update: added /Alo Amar Alo.mp3
+Oct 18 12:32 : update: added /Opekkha.mp3
+Oct 18 12:32 : update: added /Dekhe Jare Tui.mp3
+Oct 18 12:32 : update: added /Don't Want U Back.mp3
+Oct 18 12:32 : update: added /Khula Dakho Mon Ta.mp3
+Oct 18 12:32 : update: added /Bhalobasha Dibosh'99.mp3
+Oct 18 12:32 : update: added /Bangla Charo.mp3
+Oct 18 12:32 : update: added /Bondhu Tomay.mp3
+Oct 18 12:32 : update: added /Ore Nil Doriya.mp3
+Oct 18 12:32 : update: added /Zaara Zara.mp3
+Oct 18 12:32 : update: added /Bhalobastey Hobe.mp3
+Oct 18 12:32 : update: added /Aajo Ache Sei Gaan.mp3
+Oct 18 12:32 : update: added /Bristi Nemeche.mp3
+Oct 18 12:32 : update: added /Mone Robe Kina.mp3
+Oct 18 12:32 : update: added /Ghune Khaoua Rod.mp3
+Oct 18 12:32 : update: added /Olpo Aktu Akash Dau Amai.mp3
+Oct 18 12:32 : update: added /Eso Prio Mono Rangai.mp3
+Oct 18 12:32 : update: added /Mon Ki Je Chai.mp3
+Oct 18 12:32 : update: added /Akta Gaan Dau.mp3
+Oct 18 12:32 : update: added /Borsa.mp3
+Oct 18 12:32 : update: added /Ei Rangamatir Pothe.mp3
+Oct 18 12:32 : update: added /Aasan Nahin Yahan.mp3
+Oct 18 12:32 : update: added /Ghumonto Sohore.mp3
+Oct 18 12:32 : update: added /Krittim Manush.mp3
+Oct 18 12:32 : update: added /Eto Sur Aar Eto Gaan.mp3
+Oct 18 12:32 : update: added /Mon Nodi 2.mp3
+Oct 18 12:32 : update: added /Khachar Vitor Ochin Pakhi.mp3
+Oct 18 12:32 : update: added /Ay Brishti Veja.mp3
+Oct 18 12:32 : update: added /Jodi Tor Daak Shune Keu.mp3
+Oct 18 12:32 : update: added /Paatshala.mp3
+Oct 18 12:32 : update: added /Apon Deshe Cholo.mp3
+Oct 18 12:32 : update: added /Polashir Prantor.mp3
+Oct 18 12:32 : update: added /Amar Parthona.mp3
+Oct 18 12:32 : update: added /Mor Ghumo Ghore.mp3
+Oct 18 12:32 : update: added /Crawling.mp3
+Oct 18 12:32 : update: added /Five Hundred Miles.mp3
+Oct 18 12:32 : update: added /Ei Podda Ei Meghna.mp3
+Oct 18 12:32 : update: added /Bijli.mp3
+Oct 18 12:32 : update: added /Milne Hai Mujhse Aayi.mp3
+Oct 18 12:32 : update: added /Dhere Dhere Se.mp3
+Oct 18 12:32 : update: added /Bangladesh-GH.mp3
+Oct 18 12:32 : update: added /Moushumi 2.mp3
+Oct 18 12:32 : update: added /No Matter What.mp3
+Oct 18 12:32 : update: added /Bondho Janala.mp3
+Oct 18 12:32 : update: added /Ohona.mp3
+Oct 18 12:32 : update: added /Cholona Ghure Aashi.mp3
+Oct 18 12:32 : update: added /Arabic.mp3
+Oct 18 12:32 : update: added /Behaya Mon.mp3
+Oct 18 12:32 : update: added /Dekha Hobe.mp3
+Oct 18 12:32 : update: added /Chole Gecho Tate Ki.mp3
+Oct 18 12:32 : update: added /Nilgiri.mp3
+Oct 18 12:32 : update: added /Eto Koshto Keno Bhalobashai.mp3
+Oct 18 12:32 : update: added /Tui Se Amar Mon.mp3
+Oct 18 12:32 : update: added /Prithibir Joto Shuk.mp3
+Oct 18 12:32 : update: added /Dhakar Prem.mp3
+Oct 18 12:32 : update: added /Janebar Age.mp3
+Oct 18 12:32 : update: added /Manena Mon.mp3
+Oct 18 12:32 : update: added /Rahur Grash.mp3
+Oct 18 12:32 : update: added /Ei Je Dunia.mp3
+Oct 18 12:32 : update: added /Ghate Lagaiya Dinga.mp3
+Oct 18 12:32 : update: added /Joto Dure Jao.mp3
+Oct 18 12:32 : update: added /Marfoter Potaka.mp3
+Oct 18 12:32 : update: added /Vhul Koreo.mp3
+Oct 18 12:32 : update: added /Baduein.mp3
+Oct 18 12:32 : update: added /Kadbe Bishmoy.mp3
+Oct 18 12:32 : update: added /Manush Manusher Jonno.mp3
+Oct 18 12:32 : update: added /Shahjalal Shahporan.mp3
+Oct 18 12:32 : update: added /Ami Kan Pete Roi.mp3
+Oct 18 12:32 : update: added /Black Cloud.mp3
+Oct 18 12:32 : update: added /Ami Chirotore.mp3
+Oct 18 12:32 : update: added /Bhalobasa Mane Anjon Dutta.mp3
+Oct 18 12:32 : update: added /They Don't Care About Us.mp3
+Oct 18 12:32 : update: added /Nobina.mp3
+Oct 18 12:32 : update: added /Path Chola.mp3
+Oct 18 12:32 : update: added /Jibone Ki Koto Lokshan.mp3
+Oct 18 12:32 : update: added /Gontobbohin.mp3
+Oct 18 12:32 : update: added /Lais Feta Lais.mp3
+Oct 18 12:32 : update: added /Jege Theko Sararat.mp3
+Oct 18 12:32 : update: added /Ekaki Prohor.mp3
+Oct 18 12:32 : update: added /Ami To More Jabo.mp3
+Oct 18 12:32 : update: added /Ekta Chele.mp3
+Oct 18 12:32 : update: added /Kajra Re.mp3
+Oct 18 12:32 : update: added /Sunn Raha Hai.mp3
+Oct 18 12:32 : update: added /Jodi Tumi Fire Na Asho.mp3
+Oct 18 12:32 : update: added /All Rise.mp3
+Oct 18 12:32 : update: added /Ei Kothata.mp3
+Oct 18 12:32 : update: added /Tumi Na Thakle.mp3
+Oct 18 12:32 : update: added /Jesus To A Child.mp3
+Oct 18 12:32 : update: added /Ektuku Choa Lage.mp3
+Oct 18 12:32 : update: added /Srabon.mp3
+Oct 18 12:32 : update: added /Kothai Haraley.mp3
+Oct 18 12:32 : update: added /Joi Joganondon.mp3
+Oct 18 12:32 : update: added /Tara Vora Rate.mp3
+Oct 18 12:32 : update: added /Jiye To Jiye.mp3
+Oct 18 12:32 : update: added /Aare Felai.mp3
+Oct 18 12:32 : update: added /Kochpana Kare Koi.mp3
+Oct 18 12:32 : update: added /Dhitang Dhitang Bole.mp3
+Oct 18 12:32 : update: added /Rongdhonu.mp3
+Oct 18 12:32 : update: added /Abar Abar Jigay.mp3
+Oct 18 12:32 : update: added /Korimana.mp3
+Oct 18 12:32 : update: added /Jekir.mp3
+Oct 18 12:32 : update: added /Pakhi Paka Pepe Khai.mp3
+Oct 18 12:32 : update: added /Sritisarak.mp3
+Oct 18 12:32 : update: added /Bolai Dadar Gamcha.mp3
+Oct 18 12:32 : update: added /Madhobe.mp3
+Oct 18 12:32 : update: added /Ei Sahara.mp3
+Oct 18 12:32 : update: added /Ki Jala.mp3
+Oct 18 12:32 : update: added /By My Self.mp3
+Oct 18 12:32 : update: added /Mora Ekti Phul Ke Bachabo Bole.mp3
+Oct 18 12:32 : update: added /Hriday Jure.mp3
+Oct 18 12:32 : update: added /Jhorer Rate.mp3
+Oct 18 12:32 : update: added /Jiboner Ba Pashe.mp3
+Oct 18 12:32 : update: added /Aaj Tomake.mp3
+Oct 18 12:32 : update: added /Droher Montre Bhalobasha.mp3
+Oct 18 12:32 : update: added /Moushumi.mp3
+Oct 18 12:32 : update: added /Chithi Chupi Chupi.mp3
+Oct 18 12:32 : update: added /JatraBala.mp3
+Oct 18 12:32 : update: added /Tere Bina Jindegi.mp3
+Oct 18 12:32 : update: added /Jatri.mp3
+Oct 18 12:32 : update: added /Ichcher Palok.mp3
+Oct 18 12:32 : update: added /Shey Je Boshe Ache.mp3
+Oct 18 12:32 : update: added /Kachar Vitor Ochin Pakhi.mp3
+Oct 18 12:32 : update: added /Bullshit.mp3
+Oct 18 12:32 : update: added /Gotkal Rate.mp3
+Oct 18 12:32 : update: added /Amai Dekona Ferano Jabe Na.mp3
+Oct 18 12:32 : update: added /Obishap Dile.mp3
+Oct 18 12:32 : update: added /Deshlai.mp3
+Oct 18 12:32 : update: added /Na Chahile Jare.mp3
+Oct 18 12:32 : update: added /Amake Khujte Tumi.mp3
+Oct 18 12:32 : update: added /Bullet.mp3
+Oct 18 12:32 : update: added /Ei Ki Beshi Na.mp3
+Oct 18 12:32 : update: added /Sesh Chiti.mp3
+Oct 18 12:32 : update: added /Prematal.mp3
+Oct 18 12:32 : update: added /Janala Vora.mp3
+Oct 18 12:32 : update: added /Tomake Chai Kobita.mp3
+Oct 18 12:32 : update: added /Dukkho Pelam.mp3
+Oct 18 12:32 : update: added /Chorom Bastobota.mp3
+Oct 18 12:32 : update: added /Ma.mp3
+Oct 18 12:32 : update: added /Ei Akash Tomari.mp3
+Oct 18 12:32 : update: added /Je Amake Prem Shikalo.mp3
+Oct 18 12:32 : update: added /Glass Beat.mp3
+Oct 18 12:32 : update: added /Ek Parinda.mp3
+Oct 18 12:32 : update: added /Vromor Koi O Gia.mp3
+Oct 18 12:32 : update: added /Pori.mp3
+Oct 18 12:32 : update: added /Dhukho Ola.mp3
+Oct 18 12:32 : update: added /Mon Niye Jontrona.mp3
+Oct 18 12:32 : update: added /Ami Hoito Manus Noi.mp3
+Oct 18 12:32 : update: added /Ami Tomar Kache.mp3
+Oct 18 12:32 : update: added /Tui Ki Janish Na2.mp3
+Oct 18 12:32 : update: added /Raj Kumar.mp3
+Oct 18 12:32 : update: added /Se Je Bose Ache.mp3
+Oct 18 12:32 : update: added /Amai Vashailire.mp3
+Oct 18 12:32 : update: added /Chole Gechi Tate Ki (Reply).mp3
+Oct 18 12:32 : update: added /Meri En.mp3
+Oct 18 12:32 : update: added /Chaite Paro.mp3
+Oct 18 12:32 : update: added /Bokul Ful.mp3
+Oct 18 12:32 : update: added /Kotota Kosta Achi.mp3
+Oct 18 12:32 : update: added /A Place For My Head.mp3
+Oct 18 12:32 : update: added /Piya Aaye Na.mp3
+Oct 18 12:32 : update: added /Kar Chobi.mp3
+Oct 18 12:32 : update: added /Dupchaya.mp3
+Oct 18 12:32 : update: added /Ami Chailam Jare.mp3
+Oct 18 12:32 : update: added /Easier To Run.mp3
+Oct 18 12:32 : update: added /You Are Not Alone.mp3
+Oct 18 12:32 : update: added /Alga Korogo.mp3
+Oct 18 12:32 : update: added /Foreword.mp3
+Oct 18 12:32 : update: added /Amar Shonar Bangla-Khiyo.mp3
+Oct 18 12:32 : update: added /Disco Bandor.mp3
+Oct 18 12:32 : update: added /Dokhina Hawa.mp3
+Oct 18 12:32 : update: added /Ganga.mp3
+Oct 18 12:32 : update: added /Ekti Rangin Chadar.mp3
+Oct 18 12:32 : update: added /Rupali Gitar.mp3
+Oct 18 12:32 : update: added /Bujhcho.mp3
+Oct 18 12:32 : update: added /Lalpahari.mp3
+Oct 18 12:32 : update: added /From The Inside.mp3
+Oct 18 12:32 : update: added /Smooth Criminal.mp3
+Oct 18 12:32 : update: added /Duti Mon Aaj.mp3
+Oct 18 12:32 : update: added /Morile Kandisna Amar Dai.mp3
+Oct 18 12:32 : update: added /Careless Whisper.mp3
+Oct 18 12:32 : update: added /Sweti.mp3
+Oct 18 12:32 : update: added /Valobese.mp3
+Oct 18 12:32 : update: added /Modhur Modhur Chaoni.mp3
+Oct 18 12:32 : update: added /Kosto Pete Bhalobashi.mp3
+Oct 18 12:32 : update: added /Hand To Mouth.mp3
+Oct 18 12:32 : update: added /Atel Totto.mp3
+Oct 18 12:32 : update: added /Bicharpoti.mp3
+Oct 18 12:32 : update: added /Prothom Sporso.mp3
+Oct 18 12:32 : update: added /Klanti Amai Khoma.mp3
+Oct 18 12:32 : update: added /Vaabte Kemon Obak Lage.mp3
+Oct 18 12:32 : update: added /Akash Churi.mp3
+Oct 18 12:32 : update: added /Jokhon Porbe Na Mor.mp3
+Oct 18 12:32 : update: added /Aaj Dukho volar Din.mp3
+Oct 18 12:32 : update: added /Barshar Prothom Dinay.mp3
+Oct 18 12:32 : update: added /Eri Majhe.mp3
+Oct 18 12:32 : update: added /Joy Bangla Banglar Joy.mp3
+Oct 18 12:32 : update: added /Pare Loiya Jau Amai.mp3
+Oct 18 12:32 : update: added /Dure Achi Tai.mp3
+Oct 18 12:32 : update: added /Purnimar Chad.mp3
+Oct 18 12:32 : update: added /Aushomapto 2.mp3
+Oct 18 12:32 : update: added /Boro Asha Kore.mp3
+Oct 18 12:32 : update: added /Faith.mp3
+Oct 18 12:32 : update: added /Moharaj.mp3
+Oct 18 12:32 : update: added /Gache Kathal Gofe Tel.mp3
+Oct 18 12:32 : update: added /Chader Jonno Gan.mp3
+Oct 18 12:32 : update: added /Here Comes The Sun.mp3
+Oct 18 12:32 : update: added /Tui Ki Janish Na.mp3
+Oct 18 12:32 : update: added /Prem Tumi Ki.mp3
+Oct 18 12:32 : update: added /Amai Nohe Go.mp3
+Oct 18 12:32 : update: added /Khelicho E Bisho.mp3
+Oct 18 12:32 : update: added /Sohena Jatona.mp3
+Oct 18 12:32 : update: added /Nachdi Phira.mp3
+Oct 18 12:32 : update: added /Amra Sobai Raza.mp3
+Oct 18 12:32 : update: added /Venge poth.mp3
+Oct 18 12:32 : update: added /Nisongota.mp3
+Oct 18 12:32 : update: added /Muche Jawa Din Guli.mp3
+Oct 18 12:32 : update: added /Panjabiola.mp3
+Oct 18 12:32 : update: added /Ai Khukhu Ai.mp3
+Oct 18 12:32 : update: added /Dekhna Mon.mp3
+Oct 18 12:32 : update: added /Gari Cholena.mp3
+Oct 18 12:32 : update: added /Dukha Keno Karo.mp3
+Oct 18 12:32 : update: added /Pagla Hawa.mp3
+Oct 18 12:32 : update: added /Din Furailo (Lalon Bondona).mp3
+Oct 18 12:32 : update: added /Bhalobeshe Sokhi.mp3
+Oct 18 12:32 : update: added /Ferari Mon.mp3
+Oct 18 12:32 : update: added /Dhusor Somay.mp3
+Oct 18 12:32 : update: added /Arek Notun Gaan.mp3
+Oct 18 12:32 : update: added /Megh Jhorana.mp3
+Oct 18 12:32 : update: added /Ki Kore Sob Vule Jai.mp3
+Oct 18 12:32 : update: added /Rolling In The Deep.mp3
+Oct 18 12:32 : update: added /Doyal.mp3
+Oct 18 12:32 : update: added /Juddho.mp3
+Oct 18 12:32 : update: added /Ami Ki Rokom Vabe Beche Achi.mp3
+Oct 18 12:32 : update: added /Konthe Amar.mp3
+Oct 18 12:32 : update: added /Nitol Paye Live.mp3
+Oct 18 12:32 : update: added /Bangladesh-AB.mp3
+Oct 18 12:32 : update: added /My Heart Will Go On.mp3
+Oct 18 12:32 : update: added /Telephone E Fisfis.mp3
+Oct 18 12:32 : update: added /Moner O bagane.mp3
+Oct 18 12:32 : update: added /Albida.mp3
+Oct 18 12:32 : update: added /Kofi House.mp3
+Oct 18 12:32 : update: added /Akash Amar.mp3
+Oct 18 12:32 : update: added /Ei Rangamatir Pothe Lo.mp3
+Oct 18 12:32 : update: added /Uposhonghar.mp3
+Oct 18 12:32 : update: added /Californication.mp3
+Oct 18 12:32 : update: added /Geeti Kobita-2.mp3
+Oct 18 12:32 : update: added /Pratidhwani Suni.mp3
+Oct 18 12:32 : update: added /Kanamachi.mp3
+Oct 18 12:32 : update: added /Akon Amar Nejer Kache.mp3
+Oct 18 12:32 : update: added /Aar Noy Juddho.mp3
+Oct 18 12:32 : update: added /Nirban.mp3
+Oct 18 12:32 : update: added /Chal Chale.mp3
+Oct 18 12:32 : update: added /Jare Ja Ure Ja.mp3
+Oct 18 12:32 : update: added /Ochena Jibon.mp3
+Oct 18 12:32 : update: added /Essor.mp3
+Oct 18 12:32 : update: added /Baji.mp3
+Oct 18 12:32 : update: added /Je Chilo Amar.mp3
+Oct 18 12:32 : update: added /Haat Barao.mp3
+Oct 18 12:32 : update: added /Akta Gopon Kotha.mp3
+Oct 18 12:32 : update: added /Dil Se Re.mp3
+Oct 18 12:32 : update: added /Station Road.mp3
+Oct 18 12:32 : update: added /Chokh Chhol Chhol.mp3
+Oct 18 12:32 : update: added /Koto Din Dekhi Na Tore.mp3
+Oct 18 12:32 : update: added /Batashe Lasher Gondho.mp3
+Oct 18 12:32 : update: added /Jadi Emon.mp3
+Oct 18 12:32 : update: added /Hauge.mp3
+Oct 18 12:32 : update: added /I Just Call To say.mp3
+Oct 18 12:32 : update: added /Amar Jabar Somoy Holo.mp3
+Oct 18 12:32 : update: added /Jokhoni Nibir Kore.mp3
+Oct 18 12:32 : update: added /Geeti Kobita.mp3
+Oct 18 12:32 : update: added /O Sokhina.mp3
+Oct 18 12:32 : update: added /Sukher Ei Prithibi.mp3
+Oct 18 12:32 : update: added /Everything She Wants.mp3
+Oct 18 12:32 : update: added /Ektu Boshiya Thako.mp3
+Oct 18 12:32 : update: added /Mon Bhalo Nei.mp3
+Oct 18 12:32 : update: added /Coffee Houser Addata Aaj Ar Nei.mp3
+Oct 18 12:32 : update: added /Hey, Rock Your Life.mp3
+Oct 18 12:32 : update: added /Baburam Sapure.mp3
+Oct 18 12:32 : update: added /Mon Chaile Mon.mp3
+Oct 18 12:32 : update: added /Hok Kolorob.mp3
+Oct 18 12:32 : update: added /Vashaylire.mp3
+Oct 18 12:32 : update: added /Bhula Dena.mp3
+Oct 18 12:32 : update: added /Tomar Ghore Bosot Kore Koijona.mp3
+Oct 18 12:32 : update: added /Poddo Patar Jol.mp3
+Oct 18 12:32 : update: added /Ak Muhurte.mp3
+Oct 18 12:32 : update: added /Aarshi Nogor.mp3
+Oct 18 12:32 : update: added /Jab Koi Baat Bigad.mp3
+Oct 18 12:32 : update: added /Aaj Din Katuk Gaane.mp3
+Oct 18 12:32 : update: added /Tumi Amar Ghum.mp3
+Oct 18 12:32 : update: added /Kew Kotha Rakheni.mp3
+Oct 18 12:32 : update: added /Tum Hi Ho.mp3
+Oct 18 12:32 : update: added /Amar Khankher Kolosi.mp3
+Oct 18 12:32 : update: added /One Love.mp3
+Oct 18 12:32 : update: added /Amar Maje Nei Ekhon Ami.mp3
+Oct 18 12:32 : update: added /E Emon Porichoi.mp3
+Oct 18 12:32 : update: added /Bhalobashi Bole Bondhu.mp3
+Oct 18 12:32 : update: added /Obhimane Noi.mp3
+Oct 18 12:32 : update: added /Amar Keno Emon Holo.mp3
+Oct 18 12:32 : update: added /Amar Ontor.mp3
+Oct 18 12:32 : update: added /Nilanjana Oi Nil.mp3
+Oct 18 12:32 : update: added /Jao Pakhi Bolo Tare.mp3
+Oct 18 12:32 : update: added /Cholo Sabai.mp3
+Oct 18 12:32 : update: added /Smiriti Niye.mp3
+Oct 18 12:32 : update: added /Boshey Achi.mp3
+Oct 18 12:32 : update: added /Beder Meye Josna.mp3
+Oct 18 12:32 : update: added /Meghbalika.mp3
+Oct 18 12:32 : update: added /Five Hundred Mils Away From Home.mp3
+Oct 18 12:32 : update: added /Pata Kuronir Meye.mp3
+Oct 18 12:32 : update: added /Separation.mp3
+Oct 18 12:32 : update: added /Chole Gele.mp3
+Oct 18 12:32 : update: added /Je Tumi Tarar Moto.mp3
+Oct 18 12:32 : update: added /Aktu Pore Nambe Borsha.mp3
+Oct 18 12:32 : update: added /Balolage.mp3
+Oct 18 12:32 : update: added /Attokendrik.mp3
+Oct 18 12:32 : update: added /Salam Salam.mp3
+Oct 18 12:32 : update: added /Eso Amar Shohore.mp3
+Oct 18 12:32 : update: added /Jokhon Tumi.mp3
+Oct 18 12:32 : update: added /Bhaage Re Mann Chameli.mp3
+Oct 18 12:32 : update: added /Je Pothe Pothik Ney.mp3
+Oct 18 12:32 : update: added /Sona Bandhu.mp3
+Oct 18 12:32 : update: added /Hey You.mp3
+Oct 18 12:32 : update: added /Jibon Gelo.mp3
+Oct 18 12:32 : update: added /Somai Aar Katena.mp3
+Oct 18 12:32 : update: added /Dhono Dhanno Pushpe Vora.mp3
+Oct 18 12:32 : update: added /Jotota Poth.mp3
+Oct 18 12:32 : update: added /Amake Amar Moto Thakte Dao.mp3
+Oct 18 12:32 : update: added /Bhalobashi Bhalobashi.mp3
+Oct 18 12:32 : update: added /Bacha Thakle.mp3
+Oct 18 12:32 : update: added /Dukhini Dukho Koro Na.mp3
+Oct 18 12:32 : update: added /Ke Bashi Bajayre.mp3
+Oct 18 12:32 : update: added /Nei Proyojon.mp3
+Oct 18 12:32 : update: added /Buffalo Soldier.mp3
+Oct 18 12:32 : update: added /Jekhane Simanto Tomar.mp3
+Oct 18 12:32 : update: added /Eto Dure Je Chole Gecho.mp3
+Oct 18 12:32 : update: added /Oshamajik.mp3
+Oct 18 12:32 : update: added /Kefetariya.mp3
+Oct 18 12:32 : update: added /Baro Mash.mp3
+Oct 18 12:32 : update: added /Dellhi Se Nizamuddin.mp3
+Oct 18 12:32 : update: added /Sarata Poth Jhure.mp3
+Oct 18 12:32 : update: added /Amar A Ghar.mp3
+Oct 18 12:32 : update: added /Sei Tumi.mp3
+Oct 18 12:32 : update: added /Bhalobasi Oi Sobuj.mp3
+Oct 18 12:32 : update: added /Harano Hiyar Nikunjo Pothe.mp3
+Oct 18 12:32 : update: added /Kibhabe Bujhabo.mp3
+Oct 18 12:32 : update: added /Father Figure.mp3
+Oct 18 12:32 : update: added /Ei Prithibi.mp3
+Oct 18 12:32 : update: added /Jene Shune Bish.mp3
+Oct 18 12:32 : update: added /Amar Bela Je Jai.mp3
+Oct 18 12:32 : update: added /Aaj Dujonar Duti Poth.mp3
+Oct 18 12:32 : update: added /Ei Monta.mp3
+Oct 18 12:32 : update: added /Bekarotto.mp3
+Oct 18 12:32 : update: added /Rupak.mp3
+Oct 18 12:32 : update: added /Duar Dana.mp3
+Oct 18 12:32 : update: added /Akashe Batase.mp3
+Oct 18 12:32 : update: added /Brishti Jhore Jai.mp3
+Oct 18 12:32 : update: added /Norwegian Wood.mp3
+Oct 18 12:32 : update: added /Tumi Hina.mp3
+Oct 18 12:32 : update: added /Tui Gaan Ga.mp3
+Oct 18 12:32 : update: added /Ei Gan Ses Gan.mp3
+Oct 18 12:32 : update: added /Bheegi Bheegi.mp3
+Oct 18 12:32 : update: added /Joto Durey.mp3
+Oct 18 12:32 : update: added /Abar Juddhe Jete Hobe.mp3
+Oct 18 12:32 : update: added /Mela.mp3
+Oct 18 12:32 : update: added /Koto Shohojey Tumi.mp3
+Oct 18 12:32 : update: added /Ei Shundor Shornali Sondhai.mp3
+Oct 18 12:32 : update: added /Jharna Theke Nodi.mp3
+Oct 18 12:32 : update: added /Tomake Dekhle Ekbar.mp3
+Oct 18 12:32 : update: added /Hotasha.mp3
+Oct 18 12:32 : update: added /Shithilaion_2.mp3
+Oct 18 12:32 : update: added /Kare Dekhabo.mp3
+Oct 18 12:32 : update: added /Chera Shopno.mp3
+Oct 18 12:32 : update: added /Kashfuler Kabbo.mp3
+Oct 18 12:32 : update: added /Bidrohi.mp3
+Oct 18 12:32 : update: added /Be Like That.mp3
+Oct 18 12:32 : update: added /Gaaner Tale.mp3
+Oct 18 12:32 : update: added /Enechi Amar.mp3
+Oct 18 12:32 : update: added /Ek Muhurto.mp3
+Oct 18 12:32 : update: added /Manali Trance.mp3
+Oct 18 12:32 : update: added /Dusto Meye.mp3
+Oct 18 12:32 : update: added /Aaj Theke Aar.mp3
+Oct 18 12:32 : update: added /Ek Jiggasa Porosh Pathor.mp3
+Oct 18 12:32 : update: added /Kotodin Dekheni Duchokh.mp3
+Oct 18 12:32 : update: added /Shob Bhalo Tui.mp3
+Oct 18 12:32 : update: added /Palai Palai.mp3
+Oct 18 12:32 : update: added /Full Nebe Na Osru.mp3
+Oct 18 12:32 : update: added /All That She Wants.mp3
+Oct 18 12:32 : update: added /Dark Side.mp3
+Oct 18 12:32 : update: added /Sharthopor.mp3
+Oct 18 12:32 : update: added /Ami Tomakei Bole Debo.mp3
+Oct 18 12:32 : update: added /Alash Samyer Porda.mp3
+Oct 18 12:32 : update: added /Pinjor.mp3
+Oct 18 12:32 : update: added /Chalak Tumi.mp3
+Oct 18 12:32 : update: added /Bistirna Dupare.mp3
+Oct 18 12:32 : update: added /Amar Ei Poth.mp3
+Oct 18 12:32 : update: added /Ekla Ghor.mp3
+Oct 18 12:32 : update: added /Brishti Dekhe Onek (Dhun).mp3
+Oct 18 12:32 : update: added /Amra Korbo Joy.mp3
+Oct 18 12:32 : update: added /Give Me Some Sunshine.mp3
+Oct 18 12:32 : update: added /Amar Bola Holo Na.mp3
+Oct 18 12:32 : update: added /Aashiqui.mp3
+Oct 18 12:32 : update: added /Sopno Dekhbo Bole.mp3
+Oct 18 12:32 : update: added /Nefartiti.mp3
+Oct 18 12:32 : update: added /Bure Bure Boro Boro.mp3
+Oct 18 12:32 : update: added /Bhalobasi Bhalobasi.mp3
+Oct 18 12:32 : update: added /Tumi Aaj Koto Dure.mp3
+Oct 18 12:32 : update: added /Jhilmill.mp3
+Oct 18 12:32 : update: added /Pother Bap.mp3
+Oct 18 12:32 : update: added /Chahun Main Ya Naa.mp3
+Oct 18 12:32 : update: added /Ei.mp3
+Oct 18 12:32 : update: added /Batase Fuler Sourov.mp3
+Oct 18 12:32 : update: added /Aniket Prantor.mp3
+Oct 18 12:32 : update: added /Moina Go.mp3
+Oct 18 12:32 : update: added /Keno Shunno Hate.mp3
+Oct 18 12:32 : update: added /Abar Surute.mp3
+Oct 18 12:32 : update: added /Mone Pore.mp3
+Oct 18 12:32 : update: added /Na Jene Vul.mp3
+Oct 18 12:32 : update: added /Annana.mp3
+Oct 18 12:32 : update: added /Pother Bagan.mp3
+Oct 18 12:32 : update: added /Blues And Rodh.mp3
+Oct 18 12:32 : update: added /Ekhon Arale.mp3
+Oct 18 12:32 : update: added /Tomake Chai.mp3
+Oct 18 12:32 : update: added /Khub Chena Chena.mp3
+Oct 18 12:32 : update: added /Amar Jabar Belai.mp3
+Oct 18 12:32 : update: added /Ichhe Holo.mp3
+Oct 18 12:32 : update: added /Vul Janma.mp3
+Oct 18 12:32 : update: added /Kolonker Dhol.mp3
+Oct 18 12:32 : update: added /Chondrahoto.mp3
+Oct 18 12:32 : update: added /Bhalobasa Mane Porosh Pathor.mp3
+Oct 18 12:32 : update: added /Ekbar Jete Dena.mp3
+Oct 18 12:32 : update: added /Mohashunno.mp3
+Oct 18 12:32 : update: added /Irsha.mp3
+Oct 18 12:32 : update: added /Je Tuku Somoy.mp3
+Oct 18 12:32 : update: added /Cherish.mp3
+Oct 18 12:32 : update: added /Etihash.mp3
+Oct 18 12:32 : update: added /Surer Tane.mp3
+Oct 18 12:32 : update: added /Ekjon.mp3
+Oct 18 12:32 : update: added /Dewal.mp3
+Oct 18 12:32 : update: added /Didi Moni.mp3
+Oct 18 12:32 : update: added /Chayar Ninad.mp3
+Oct 18 12:32 : update: added /Ami Kul Hara Kolonkini.mp3
+Oct 18 12:32 : update: added /Aushomapto.mp3
+Oct 18 12:32 : update: added /Aguner Poroshmoni.mp3
+Oct 18 12:32 : update: added /Debdas.mp3
+Oct 18 12:32 : update: added /Joni Please Don't Cry.mp3
+Oct 18 12:32 : update: added /In The End.mp3
+Oct 18 12:32 : update: added /Ei Je Ami.mp3
+Oct 18 12:32 : update: added /Sacrifice.mp3
+Oct 18 12:32 : update: added /Holudia Pakhi.mp3
+Oct 18 12:32 : update: added /Ekdin Briste.mp3
+Oct 18 12:32 : update: added /Hepi Brdej.mp3
+Oct 18 12:32 : update: added /Ei Nosto Sohore.mp3
+Oct 18 12:32 : update: added /Intro.mp3
+Oct 18 12:32 : update: added /Kal Sararat.mp3
+Oct 18 12:32 : update: added /Ekhane Ese Darale.mp3
+Oct 18 12:32 : update: added /Hum Bhool Gaye Har Baat.mp3
+Oct 18 12:32 : update: added /Shopnohara.mp3
+Oct 18 12:32 : update: added /Ferari Somoy.mp3
+Oct 18 12:32 : update: added /Chithi.mp3
+Oct 18 12:32 : update: added /Shahid Saroni.mp3
+Oct 18 12:32 : update: added /Bela Shese.mp3
+Oct 18 12:32 : update: added /Quit playin' Games.mp3
+Oct 18 12:32 : update: added /Forgotten.mp3
+Oct 18 12:32 : update: added /Amora.mp3
+Oct 18 12:32 : update: added /Din Bare Jai.mp3
+Oct 18 12:32 : update: added /Rhythm Divine.mp3
+Oct 18 12:32 : update: added /Beche Thakar Gaan.mp3
+Oct 18 12:32 : update: added /Tajmohol.mp3
+Oct 18 12:32 : update: added /Jibon Jala.mp3
+Oct 18 12:32 : update: added /Dome Dome.mp3
+Oct 18 12:32 : update: added /Dreamum Wakeupum.mp3
+Oct 18 12:32 : update: added /You Fill Up My Senses.mp3
+Oct 18 12:32 : update: added /Godhuli.mp3
+Oct 18 12:32 : update: added /Chole Jau Bondhu.mp3
+Oct 18 12:32 : update: added /Shukno Pata.mp3
+Oct 18 12:32 : update: added /Baindua.mp3
+Oct 18 12:32 : update: added /Sokhi Vabona Kahare Bole.mp3
+Oct 18 12:32 : update: added /Don't Bother.mp3
+Oct 18 12:32 : update: added /Meri Aashiqui.mp3
+Oct 18 12:32 : update: added /Chera Pal(Acoustic).mp3
+Oct 18 12:32 : update: added /More Jabo.mp3
+Oct 18 12:32 : update: added /Quit Playin' Games Live.mp3
+Oct 18 12:32 : update: added /Shunno.mp3
+Oct 18 12:32 : update: added /Shithilaion_1.mp3
+Oct 18 12:32 : update: added /Duronto Meye.mp3
+Oct 18 12:32 : update: added /Amar Prithibee.mp3
+Oct 18 12:32 : update: added /Sunn Raha Hai (Female).mp3
+Oct 18 12:32 : update: added /He! Pagli.mp3
+Oct 18 12:32 : update: added /Ovijog Nei.mp3
+Oct 18 12:32 : update: added /Amar Kichu Sapno.mp3
+Oct 18 12:32 : update: added /Tumi Ki Dekecho Kobhu.mp3
+Oct 18 12:32 : update: added /Eng.mp3
+Oct 18 12:32 : update: added /He Nobi Yea Rasul.mp3
+Oct 18 12:32 : update: added /Geetikobita-3.mp3
+Oct 18 12:32 : update: added /Baywarish.mp3
+Oct 18 12:32 : update: added /Bibagee.mp3
+Oct 18 12:32 : update: added /Delhite Nizamuddin.mp3
+Oct 18 12:32 : update: added /Rat Furolei.mp3
+Oct 18 12:32 : update: added /Bangladesh James.mp3
+Oct 18 12:32 : update: added /Sweetheart.mp3
+Oct 18 12:32 : update: added /Tumi R Nei Sei Tumi.mp3
+Oct 18 12:32 : update: added /Raag.mp3
+Oct 18 12:32 : update: added /Tume Jodi Nodi.mp3
+Oct 18 12:32 : update: added /Khairunlo.mp3
+Oct 18 12:32 : update: added /Amar Shopnogulo.mp3
+Oct 18 12:32 : update: added /Nithua Pathare.mp3
+Oct 18 12:32 : update: added /Hat Barea Chui.mp3
+Oct 18 12:32 : update: added /Figure 09.mp3
+Oct 18 12:32 : update: added /Amake Chobena.mp3
+Oct 18 12:32 : update: added /Chader Meye Josna.mp3
+Oct 18 12:32 : update: added /Gonga.mp3
+Oct 18 12:32 : update: added /Obak Bhalobasha.mp3
+Oct 18 12:32 : update: added /Freedom.mp3
+Oct 18 12:32 : update: added /Fast Love.mp3
+Oct 18 12:32 : update: added /Sheikh Mujibur Rahman Er Vashon.mp3
+Oct 18 12:32 : update: added /Deho Ghori.mp3
+Oct 18 12:32 : update: added /Kajra Muhabbat.mp3
+Oct 18 12:32 : update: added /Ke Ake Onno Chobi.mp3
+Oct 18 12:32 : update: added /Ektara.mp3
+Oct 18 12:32 : update: added /Onekta Somoi.mp3
+Oct 18 12:32 : update: added /Ekatorer Ma Jononi.mp3
+Oct 18 12:32 : update: added /Tumi Aashbe Bole.mp3
+Oct 18 12:32 : update: added /IF You Had My Love.mp3
+Oct 18 12:32 : update: added /Chad Sajalo Alo Rupali.mp3
+Oct 18 12:32 : update: added /At The Startiting Of The Day.mp3
+Oct 18 12:32 : update: added /Klanti Sohor.mp3
+Oct 18 12:32 : update: added /Beat It.mp3
+Oct 18 12:32 : update: added /Purba Digante Surjo Uteche.mp3
+Oct 18 12:32 : update: added /Aalo.mp3
+Oct 18 12:32 : update: added /Lin.mp3
+Oct 18 12:32 : update: added /Ek Paye Nupor.mp3
+Oct 18 12:32 : update: added /Bashi Sune Aar Kaj.mp3
+Oct 18 12:32 : update: added /Don't Cry Joni.mp3
+Oct 18 12:32 : update: added /Jete Jete Pathe Holo Deri.mp3
+Oct 18 12:32 : update: added /Somoy Gele Sadhon.mp3
+Oct 18 12:32 : update: added /Shikaiya Piriti.mp3
+Oct 18 12:32 : update: added /Tomake Vebhe Lekha.mp3
+Oct 18 12:32 : update: added /Khuji Tomake Khuji.mp3
+Oct 18 12:32 : update: added /Ki Jala2.mp3
+Oct 18 12:32 : update: added /He Khaniker Otithi.mp3
+Oct 18 12:32 : update: added /Ei Neel Monihar.mp3
+Oct 18 12:32 : update: added /Breaking The Habit.mp3
+Oct 18 12:32 : update: added /Sotto Bol Bupothe Chol.mp3
+Oct 18 12:32 : update: added /Kalare Koirogo Mana.mp3
+Oct 18 12:32 : update: added /Tumi Prithibite Ei More.mp3
+Oct 18 12:32 : update: added /Bille Jean.mp3
+Oct 18 12:32 : update: added /Ek Kana Ghar Vangar Por.mp3
+Oct 18 12:32 : update: added /Cha Er Cape Porichoi.mp3
+Oct 18 12:32 : update: added /Kushum Kushum.mp3
+Oct 18 12:32 : update: added /Durotto.mp3
+Oct 18 12:32 : update: added /Everyone Backstreet.mp3
+Oct 18 12:32 : update: added /Chokra Chad.mp3
+Oct 18 12:32 : update: added /Faint.mp3
+Oct 18 12:32 : update: added /Eto Sur Aar Eto.mp3
+Oct 18 12:32 : update: added /Fule Fule.mp3
+Oct 18 12:32 : update: added /Haste Dekho.mp3
+Oct 18 12:32 : update: added /Ami Tomaro Songe.mp3
+Oct 18 12:32 : update: added /Ajo.mp3
+Oct 18 12:32 : update: added /Banglai Gaan Gai.mp3
+Oct 18 12:32 : update: added /Jaa Rey.mp3
+Oct 18 12:32 : update: added /Amar Sontan.mp3
+Oct 18 12:32 : update: added /Majhi.mp3
+Oct 18 12:32 : update: added /Jell Theke Bolchi.mp3
+Oct 18 12:32 : update: added /Hit Flim.mp3
+Oct 18 12:32 : update: added /Jodi Balobasa Pai.mp3
+Oct 18 12:32 : update: added /While My Guitar Gently Weeps.mp3
+Oct 18 12:32 : update: added /Bestota.mp3
+Oct 18 12:32 : update: added /Everything I Do.mp3
+Oct 18 12:32 : update: added /Moner Ovhimangulo.mp3
+Oct 18 12:32 : update: added /Ek Sagor Rokter.mp3
+Oct 18 12:32 : update: added /Parwardigar.mp3
+Oct 18 12:32 : update: added /Jaltaranga.mp3
+Oct 18 12:32 : update: added /Allah Megh De Pani De.mp3
+Oct 18 12:32 : update: added /Anaasamay.mp3
+Oct 18 12:32 : update: added /Guti.mp3
+Oct 18 12:32 : update: added /Tarai Tarai.mp3
+Oct 18 12:32 : update: added /Bondhu.mp3
+Oct 18 12:32 : update: added /Gram Chara Oi.mp3
+Oct 18 12:32 : update: added /Emono Dine Tare.mp3
+Oct 18 12:32 : update: added /Jumbalika.mp3
+Oct 18 12:32 : update: added /Baniya Bondhu.mp3
+Oct 18 12:32 : update: added /Krishnopokkho.mp3
+Oct 18 12:32 : update: added /Cure For Theitch.mp3
+Oct 18 12:32 : update: added /Kotha Noi Mukhe Mukhe.mp3
+Oct 18 12:32 : update: added /Ami Fire Pete Chai.mp3
+Oct 18 12:32 : update: added /Leekhte Parena.mp3
+Oct 18 12:32 : update: added /Hero.mp3
+Oct 18 12:32 : update: added /Amai Jetey.mp3
+Oct 18 12:32 : update: added /Brishti.mp3
+Oct 18 12:32 : update: added /Daak Deyechen.mp3
+Oct 18 12:32 : update: added /Chondro Jagiche Jonak Jagiche.mp3
+Oct 18 12:32 : update: added /Shlock.mp3
+Oct 18 12:32 : update: added /Tomake.mp3
+Oct 18 12:32 : update: added /Kuthau Amar Harie.mp3
+Oct 18 12:32 : update: added /Jachhe Chole.mp3
+Oct 18 12:32 : update: added /Acid Namer Hiroshima.mp3
+Oct 18 12:32 : update: added /Gotimoi Ei Sohore.mp3
+Oct 18 12:32 : update: added /Brindabon.mp3
+Oct 18 12:32 : update: added /Purano Shei Diner Kotha.mp3
+Oct 18 12:32 : update: added /Barija Redot.mp3
+Oct 18 12:32 : update: added /Din Jai Din.mp3
+Oct 18 12:32 : update: added /Hridoyer Dabi.mp3
+Oct 18 12:32 : update: added /Aj Danar Kete.mp3
+Oct 18 12:32 : update: added /Dur Dipobasini.mp3
+Oct 18 12:32 : update: added /Matir Pinjira.mp3
+Oct 18 12:32 : update: added /Bisher Urmimala.mp3
+Oct 18 12:32 : update: added /Pa.mp3
+Oct 18 12:32 : update: added /Kyuki Tum Hi Ho.mp3
+Oct 18 12:32 : update: added /Kono Ashroy.mp3
+Oct 18 12:32 : update: added /Tomar Jonno.mp3
+Oct 18 12:32 : update: added /Bhange Mor Ghorer.mp3
+Oct 18 12:32 : update: added /Vabe Mon Okaron Sarakhon.mp3
+Oct 18 12:32 : update: added /Chai.mp3
+Oct 18 12:32 : update: added /Ek Nodi Rokto Periyea.mp3
+Oct 18 12:32 : update: added /Joler Dame Dilam Khule.mp3
+Oct 18 12:32 : update: added /Kobitai Bolechile.mp3
+Oct 18 12:32 : update: added /Hoina Kichui Amar Paua.mp3
+Oct 18 12:32 : update: added /Heremer Bondini.mp3
+Oct 18 12:32 : update: added /Bashoriya.mp3
+Oct 18 12:32 : update: added /Karar Oi Loho Kopat.mp3
+Oct 18 12:32 : update: added /Nouka Vromon.mp3
+Oct 18 12:32 : update: added /Aboshase Manus Eka.mp3
+Oct 18 12:32 : update: added /Kaade Krishnomon (Cry Krishna).mp3
+Oct 18 12:32 : update: added /Allah Tala.mp3
+Oct 18 12:32 : update: added /Jakhan Somay Thomke.mp3
+Oct 18 12:32 : update: added /Barsha.mp3
+Oct 18 12:32 : update: added /Akash.mp3
+Oct 18 12:32 : update: added /Achcha Keno Manushgulo.mp3
+Oct 18 12:32 : update: added /Pul Tola Oi Jamar.mp3
+Oct 18 12:32 : update: added /Nirjon Raat.mp3
+Oct 18 12:32 : update: added /Don't Stay.mp3
+Oct 18 12:32 : update: added /Protiddhoni Shuni.mp3
+Oct 18 12:32 : update: added /Aji E Bosonte.mp3
+Oct 18 12:32 : update: added /Away From The Sun.mp3
+Oct 18 12:32 : update: added /Banglar Lathiyal.mp3
+Oct 18 12:32 : update: added /Dhulo Pora Chithi.mp3
+Oct 18 12:32 : update: added /Hit The Floor.mp3
+Oct 18 12:32 : update: added /Nati Khati Bela Gelo.mp3
+Oct 18 12:32 : update: added /Chaite Paro 2.mp3
+Oct 18 12:32 : update: added /Jonmo Amar Dhonno Holo.mp3
+Oct 18 12:32 : update: added /Anmone.mp3
+Oct 18 12:32 : update: added /Pagla Hawar Badol Dine.mp3
+Oct 18 12:32 : update: added /Mon Amar Deho Ghori.mp3
+Oct 18 12:32 : update: added /Amar Vaier Rokte Rangano.mp3
+Oct 18 12:32 : update: added /Jat Gelo Jat Gelo Bole.mp3
+Oct 18 12:32 : update: added /Sohoj Manus.mp3
+Oct 18 12:32 : update: added /Ichche Hole Vhalobasis.mp3
+Oct 18 12:32 : update: added /Na Chang.mp3
+Oct 18 12:32 : update: added /E Jeno Sei Chokh.mp3
+Oct 18 12:32 : update: added /Majhe Majhe.mp3
+Oct 18 12:32 : update: added /Paper.mp3
+Oct 18 12:32 : update: added /Digonto Chuye Dio.mp3
+Oct 18 12:32 : update: added /Rodela Dupure.mp3
+Oct 18 12:32 : update: added /Fokiri.mp3
+Oct 18 12:32 : update: added /Jatio Songeet Er Ditioline.mp3
+Oct 18 12:32 : update: added /Tumi Jodi Bolo..mp3
+Oct 18 12:32 : update: added /November Rain.mp3
+Oct 18 12:32 : update: added /Baioscope.mp3
+Oct 18 12:32 : update: added /Gaibona.mp3
+Oct 18 12:32 : update: added /Tumi Kun Kanoner Phool.mp3
+Oct 18 12:32 : update: added /Bonno.mp3
+Oct 18 12:32 : update: added /Amar Har Kala Korlam Re.mp3
+Oct 18 12:32 : update: added /Amaro Porano Jaha Chai.mp3
+Oct 18 12:32 : update: added /Bhindeshi Tara.mp3
+Oct 18 12:32 : update: added /Aj Ei Meghe Dhaka Rat.mp3
+Oct 18 12:32 : update: added /Ichche Chilo.mp3
+Oct 18 12:32 : update: added /Mumursho Rupkotha.mp3
+Oct 18 12:32 : update: added /Jodi Kokhono Vul Hoye.mp3
+Oct 18 12:32 : update: added /Ekhon Onek Raat.mp3
+Oct 18 12:32 : update: added /Ami Banglar Gan Gai.mp3
+Oct 18 12:32 : update: added /Last Christmas.mp3
+Oct 18 12:32 : update: added /Amar Bhalobasa.mp3
+Oct 18 12:32 : update: added /Jodi Konodin.mp3
+Oct 18 12:32 : update: added /Iccher Ghuri.mp3
+Oct 18 12:32 : update: added /Chera Paal.mp3
+Oct 18 12:32 : update: added /Fatema.mp3
+Oct 18 12:32 : update: added /Abosh Onubhuti.mp3
+Oct 18 12:32 : update: added /A Different Corner.mp3
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 12:33 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:10 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:11 : exception: Failed to open /home/masud/.config/mpd/playlists: No such file or directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:13 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:14 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:14 : exception: Failed to open /home/masud/.config/mpd/playlists: Not a directory
+Oct 18 13:17 : ffmpeg/lrc: Format lrc detected only with low score of 5, misdetection possible!
+Oct 18 13:17 : ffmpeg: No audio stream inside
+Oct 18 13:17 : exception: Failed to decode http://119.148.23.88:1021/listen.pls
+Oct 18 13:17 : player: played "http://119.148.23.88:1021/listen.pls"
+Oct 18 13:17 : exception: Failed to decode http://119.148.23.88:1021/listen.pls
+Oct 18 20:54 : player: played "http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream"
+Oct 23 01:22 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/\;bbcbangla; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:22 : player: played "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/\;bbcbangla"
+Oct 23 01:22 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/\;bbcbangla; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:23 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/\;bbc; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:23 : player: played "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/\;bbc"
+Oct 23 01:23 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/;bbc; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:23 : player: played "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/;bbc"
+Oct 23 01:23 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/;bbcbangla; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:23 : player: played "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/;bbcbangla"
+Oct 23 01:23 : exception: Failed to decode http://as3.digitalsynapsebd.com:8263/;betar; CURL failed: Could not resolve host: as3.digitalsynapsebd.com
+Oct 23 01:23 : player: played "http://as3.digitalsynapsebd.com:8263/;betar"
+Oct 23 01:23 : exception: Failed to decode http://128.199.184.111:12496/stream/;foorti; CURL failed: Failed to connect to 128.199.184.111 port 12496: Network is unreachable
+Oct 23 01:23 : player: played "http://128.199.184.111:12496/stream/;foorti"
+Oct 23 01:23 : exception: Failed to decode http://182.160.110.180:1020/;today; CURL failed: Failed to connect to 182.160.110.180 port 1020: Network is unreachable
+Oct 23 01:23 : player: played "http://182.160.110.180:1020/;today"
+Oct 23 01:24 : exception: Failed to decode http://119.148.23.88:1021/listen.pls/;dhoni; CURL failed: Connection timed out after 10001 milliseconds
+Oct 23 01:24 : player: played "http://119.148.23.88:1021/listen.pls/;dhoni"
+Oct 23 01:24 : exception: Failed to decode http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw; CURL failed: Could not resolve host: node-12.zeno.fm
+Oct 23 01:24 : player: played "http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/folknama?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/folknama?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/goyesteryears?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/goyesteryears?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/rhi?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/rhi?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/radiobanglarock?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/radiobanglarock?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/robichhaya?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/robichhaya?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/radiobongonet?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/radiobongonet?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw; CURL failed: Could not resolve host: node-12.zeno.fm
+Oct 23 01:24 : player: played "http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw"
+Oct 23 01:24 : exception: Failed to decode http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw; CURL failed: Could not resolve host: node-12.zeno.fm
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/folknama?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/folknama?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup; CURL failed: Could not resolve host: bbcwssc.ic.llnwd.net
+Oct 23 01:24 : player: played "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup"
+Oct 23 01:24 : exception: Failed to decode http://182.160.110.180:1020/; CURL failed: Failed to connect to 182.160.110.180 port 1020: Network is unreachable
+Oct 23 01:24 : player: played "http://182.160.110.180:1020/"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/radiobongonet?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/radiobongonet?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/goyesteryears?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/goyesteryears?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://119.148.23.88:1021/listen.pls/;dhoni; CURL failed: Connection timed out after 10010 milliseconds
+Oct 23 01:24 : player: played "http://119.148.23.88:1021/listen.pls/;dhoni"
+Oct 23 01:24 : exception: Failed to decode http://119.148.23.88:1021/listen.pls/;dhoni; CURL failed: Connection timed out after 10010 milliseconds
+Oct 23 01:24 : exception: Failed to decode http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw; CURL failed: Could not resolve host: node-12.zeno.fm
+Oct 23 01:24 : player: played "http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/folknama?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/folknama?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/goyesteryears?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/goyesteryears?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/rhi?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/rhi?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/radiobanglarock?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/radiobanglarock?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/robichhaya?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/robichhaya?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream"
+Oct 23 01:24 : exception: Failed to decode http://stream.bongonet.net/proxy/radiobongonet?mp=/stream; CURL failed: Could not resolve host: stream.bongonet.net
+Oct 23 01:24 : player: played "http://stream.bongonet.net/proxy/radiobongonet?mp=/stream"

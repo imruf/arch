@@ -23,10 +23,10 @@
 #ffactor="10" #black outline
 #sub-bg-alpha="0" #background color ala closed captions
 #sub-bg-color="0" #black to white
-subfont-text-scale="3"	#truetype font scaling
+subfont-text-scale="1.2"	#truetype font scaling
 #subfont-blur="1" #Slight blur
 #subalign="2"
-subfont-autoscale=1
+# subfont-autoscale=1
 subpos="100"	#By default subtitles are too low
 
 #This sets the postprocessing into overdrive using all possible spare cpu cycles to make the movie look better

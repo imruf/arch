@@ -1,9 +1,7 @@
-sw_volume: 100
+sw_volume: 80
 audio_device_state:1:pulse audio
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 2
-time: 3.949000
+state: stop
 random: 0
 repeat: 0
 single: 1
@@ -12,120 +10,151 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Chole Gechi Tate Ki (Reply).mp3
-1:Chole Gecho Tate Ki (Hasib).mp3
-2:Annie's song.mp3
-3:Beder Meye Josna.mp3
-4:Chole Gechi Tate Ki (Reply).mp3
-5:Chole Gecho Tate Ki (Hasib).mp3
-6:Deho Ghori.mp3
-7:Dhitang Dhitang Bole.mp3
-8:Jat Gelo Jat Gelo Bole.mp3
-9:Jete Jete Pathe Holo Deri.mp3
-10:Kanamachi.mp3
-11:Moina Go.mp3
-12:Nachdi Phira.webm
-13:Sharthopor.mp3
-14:Duti Mon Aaj.mp3
-15:Ato_Sur_Ar_Eto_Gaan-Srikanto.mp3
-16:Cholona Ghure Aashi.mp3
-17:Jaltaranga.mp3
-18:Je Tuku Somoy.mp3
-19:Meghbalika.mp3
-20:Tomake Chai.mp3
-21:Tumi Amar Ghum.mp3
-22:Vabe Mon Okaron Sarakhon.mp3
-23:Coffee Houser Addata Aaj Ar Nei.mp3
-24:Be Like That.wma
-25:Here Without You.mp3
-26:Hey You.mp3
-27:Hey, Rock Your Life.mp3
-28:Bheegi Bheegi James.mp3
-29:Dreamum Wakeupum.mp3
-30:Give Me Some Sunshine.mp3
-31:Hum Bhool Gaye Har Baat.mp3
-32:Jab Koi Baat Bigad.mp3
-33:Kailash Kher.mp3
-34:Paatshala.mp3
-35:Zaara Zara.mp3
-36:Bhindeshi Tara.mp3
-37:Jachhe Chole.mp3
-38:Meri En.mp3
-39:Sweetheart.mp3
-40:Tumi Aashbe Bole.mp3
-41:Tumi Na Thakle.mp3
-42:Bhalobastey Hobe.mp3
-43:Bondho Janala.mp3
-44:Dheke Jare Tui.mp3
-45:Fatema.mp3
-46:Palai Palai.mp3
-47:Polashir Prantor.mp3
-48:Jao Pakhi Bolo Tare.mp3
-49:Amar Jabar Belai.mp3
-50:Ami Kan Pete Roi.mp3
-51:Ami Tomer Sange.mp3
-52:Amra Sobai Raza.mp3
-53:Bhalobashi Bhalobashi.mp3
-54:Bhange Mor Ghorer.mp3
-55:Gram Chara Oi.mp3
-56:Kuthau Amar Harie.mp3
-57:Tumi Kun Kanoner Phool.mp3
-58:Vhalobasi Vhalovasi.mp3
-59:Annie's song.mp3
-60:Beder Meye Josna.mp3
-61:Chole Gechi Tate Ki (Reply).mp3
-62:Chole Gecho Tate Ki (Hasib).mp3
-63:Deho Ghori.mp3
-64:Dhitang Dhitang Bole.mp3
-65:Jat Gelo Jat Gelo Bole.mp3
-66:Jete Jete Pathe Holo Deri.mp3
-67:Kanamachi.mp3
-68:Moina Go.mp3
-69:Nachdi Phira.webm
-70:Sharthopor.mp3
-71:Duti Mon Aaj.mp3
-72:Ato_Sur_Ar_Eto_Gaan-Srikanto.mp3
-73:Cholona Ghure Aashi.mp3
-74:Jaltaranga.mp3
-75:Je Tuku Somoy.mp3
-76:Meghbalika.mp3
-77:Tomake Chai.mp3
-78:Tumi Amar Ghum.mp3
-79:Vabe Mon Okaron Sarakhon.mp3
-80:Coffee Houser Addata Aaj Ar Nei.mp3
-81:Be Like That.wma
-82:Here Without You.mp3
-83:Hey You.mp3
-84:Hey, Rock Your Life.mp3
-85:Bheegi Bheegi James.mp3
-86:Dreamum Wakeupum.mp3
-87:Give Me Some Sunshine.mp3
-88:Hum Bhool Gaye Har Baat.mp3
-89:Jab Koi Baat Bigad.mp3
-90:Kailash Kher.mp3
-91:Paatshala.mp3
-92:Zaara Zara.mp3
-93:Bhindeshi Tara.mp3
-94:Jachhe Chole.mp3
-95:Meri En.mp3
-96:Sweetheart.mp3
-97:Tumi Aashbe Bole.mp3
-98:Tumi Na Thakle.mp3
-99:Bhalobastey Hobe.mp3
-100:Bondho Janala.mp3
-101:Dheke Jare Tui.mp3
-102:Fatema.mp3
-103:Palai Palai.mp3
-104:Polashir Prantor.mp3
-105:Jao Pakhi Bolo Tare.mp3
-106:Amar Jabar Belai.mp3
-107:Ami Kan Pete Roi.mp3
-108:Ami Tomer Sange.mp3
-109:Amra Sobai Raza.mp3
-110:Bhalobashi Bhalobashi.mp3
-111:Bhange Mor Ghorer.mp3
-112:Gram Chara Oi.mp3
-113:Kuthau Amar Harie.mp3
-114:Tumi Kun Kanoner Phool.mp3
-115:Vhalobasi Vhalovasi.mp3
+0:Dil Se Re.mp3
+1:Chole Gechi Tate Ki (Reply).mp3
+2:Beder Meye Josna.mp3
+3:Chole Gechi Tate Ki (Reply).mp3
+4:Deho Ghori.mp3
+5:Jat Gelo Jat Gelo Bole.mp3
+6:Jete Jete Pathe Holo Deri.mp3
+7:Moina Go.mp3
+8:Sharthopor.mp3
+9:Duti Mon Aaj.mp3
+10:Cholona Ghure Aashi.mp3
+11:Jaltaranga.mp3
+12:Je Tuku Somoy.mp3
+13:Meghbalika.mp3
+14:Tomake Chai.mp3
+15:Tumi Amar Ghum.mp3
+16:Vabe Mon Okaron Sarakhon.mp3
+17:Coffee Houser Addata Aaj Ar Nei.mp3
+18:Here Without You.mp3
+19:Hey You.mp3
+20:Hey, Rock Your Life.mp3
+21:Give Me Some Sunshine.mp3
+22:Jab Koi Baat Bigad.mp3
+23:Paatshala.mp3
+24:Zaara Zara.mp3
+25:Jachhe Chole.mp3
+26:Meri En.mp3
+27:Sweetheart.mp3
+28:Tumi Aashbe Bole.mp3
+29:Tumi Na Thakle.mp3
+30:Bhalobastey Hobe.mp3
+31:Bondho Janala.mp3
+32:Fatema.mp3
+33:Palai Palai.mp3
+34:Polashir Prantor.mp3
+35:Jao Pakhi Bolo Tare.mp3
+36:Amar Jabar Belai.mp3
+37:Ami Kan Pete Roi.mp3
+38:Amra Sobai Raza.mp3
+39:Bhalobashi Bhalobashi.mp3
+40:Bhange Mor Ghorer.mp3
+41:Gram Chara Oi.mp3
+42:Kuthau Amar Harie.mp3
+43:Tumi Kun Kanoner Phool.mp3
+44:Beder Meye Josna.mp3
+45:Chole Gechi Tate Ki (Reply).mp3
+46:Deho Ghori.mp3
+47:Jat Gelo Jat Gelo Bole.mp3
+48:Jete Jete Pathe Holo Deri.mp3
+49:Moina Go.mp3
+50:Sharthopor.mp3
+51:Duti Mon Aaj.mp3
+52:Cholona Ghure Aashi.mp3
+53:Jaltaranga.mp3
+54:Je Tuku Somoy.mp3
+55:Meghbalika.mp3
+56:Tomake Chai.mp3
+57:Tumi Amar Ghum.mp3
+58:Vabe Mon Okaron Sarakhon.mp3
+59:Coffee Houser Addata Aaj Ar Nei.mp3
+60:Here Without You.mp3
+61:Hey You.mp3
+62:Hey, Rock Your Life.mp3
+63:Give Me Some Sunshine.mp3
+64:Jab Koi Baat Bigad.mp3
+65:Paatshala.mp3
+66:Zaara Zara.mp3
+67:Jachhe Chole.mp3
+68:Meri En.mp3
+69:Sweetheart.mp3
+70:Tumi Aashbe Bole.mp3
+71:Tumi Na Thakle.mp3
+72:Bhalobastey Hobe.mp3
+73:Bondho Janala.mp3
+74:Fatema.mp3
+75:Palai Palai.mp3
+76:Polashir Prantor.mp3
+77:Jao Pakhi Bolo Tare.mp3
+78:Amar Jabar Belai.mp3
+79:Ami Kan Pete Roi.mp3
+80:Amra Sobai Raza.mp3
+81:Bhalobashi Bhalobashi.mp3
+82:Bhange Mor Ghorer.mp3
+83:Gram Chara Oi.mp3
+84:Kuthau Amar Harie.mp3
+85:Tumi Kun Kanoner Phool.mp3
+song_begin: http://119.148.23.88:1021/listen.pls
+song_end
+song_begin: http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw
+Title: This is my server name
+Name: -
+song_end
+song_begin: http://stream.bongonet.net/proxy/folknama?mp=/stream
+Title: Biren Das Baul - NIRAKARE NIRER PORE.mp3
+Name: Folk Nama
+song_end
+song_begin: http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup
+Name: BBC World Service News Internet
+song_end
+song_begin: http://182.160.110.180:1020/
+Name: RadioDhoni
+song_end
+song_begin: http://stream.bongonet.net/proxy/radiobongonet?mp=/stream
+Title: Canteen Classics - Team BongOnet
+Name: Radio BongOnet
+song_end
+song_begin: http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream
+Title: Akriti Kakkar - Dhim Tana
+Name: DiscoBani Kolkata
+song_end
+song_begin: http://stream.bongonet.net/proxy/goyesteryears?mp=/stream
+Title: Bhupen Hazarika - Ganga amar Maa
+Name: Go Yesteryears
+song_end
+94:November Rain.mp3
+song_begin: http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/\;bbcbangla
+song_end
+song_begin: http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/\;bbc
+song_end
+song_begin: http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws_backup/;bbc
+song_end
+song_begin: http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-benga_backup/;bbcbangla
+song_end
+song_begin: http://as3.digitalsynapsebd.com:8263/;betar
+song_end
+song_begin: http://128.199.184.111:12496/stream/;foorti
+song_end
+song_begin: http://182.160.110.180:1020/;today
+song_end
+song_begin: http://119.148.23.88:1021/listen.pls/;dhoni
+song_end
+song_begin: http://node-12.zeno.fm/0zha3rfq02quv?rj-ttl=5&rj-tok=AAABdRu_8RoAl0VHlAgT6kibmw
+song_end
+song_begin: http://stream.bongonet.net/proxy/folknama?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/goyesteryears?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/rhi?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/radiobanglarock?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/robichhaya?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/discobanikolkata?mp=/stream
+song_end
+song_begin: http://stream.bongonet.net/proxy/radiobongonet?mp=/stream
+song_end
 playlist_end

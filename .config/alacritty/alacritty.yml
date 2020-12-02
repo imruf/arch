@@ -1,0 +1,249 @@
+env:
+  TERM: xterm-256color
+
+window:
+  #dimensions:
+  #  columns: 0
+  #  lines: 0
+
+  #position:
+  #  x: 0
+  #  y: 0
+
+  # padding:
+  #   x: 6
+  #   y: 6
+
+  #dynamic_padding: true, false
+  #decorations: full, none
+  #startup_mode: Windowed, Maximized, Fullscreen
+
+  title: Alacritty
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+  #gtk_theme_variant: None, light, dark
+
+scrolling:
+  history: 5000
+
+  #multiplier: 3
+  #auto_scroll: false
+
+#tabspaces: 8
+
+font:
+  normal:
+    family: Hack
+    style: Regular
+  bold:
+    family: Hack
+    style: Regular
+  italic:
+    family: Hack
+    style: Italic
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+  size: 12.0
+
+    # family: SauceCodePro Nerd Font
+    # family: CodeNewRoman Nerd Font
+    # family: RobotoMono Nerd Font
+    # family: Hack
+    # family: JetBrains Mono
+    # family: UbuntuMono Nerd Font
+    # family: Monofur Nerd Font
+    # family: TerminessTTF Nerd Font
+
+  # offset.x/offset.y letter/line spacing.
+  offset:
+    x: 0
+    y: 1
+
+  # x/y right/up glyph
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+draw_bold_text_with_bright_colors: true
+
+schemes:
+  solarized_light: &light
+    primary:
+      #...
+    normal:
+      #...
+    bright:
+      #...
+  solarized_dark: &dark
+    primary:
+      #...
+    normal:
+      #...
+    bright:
+      #...
+
+colors: *light
+
+# Colors (Solarized Light)
+colors:
+  # Default colors
+  primary:
+    background: '#fdf6e3' # base3
+    foreground: '#657b83' # base00
+
+  # Cursor colors
+  cursor:
+    text:   '#fdf6e3' # base3
+    cursor: '#657b83' # base00
+
+  # Normal colors
+  normal:
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
+
+  # Bright colors
+  bright:
+    black:   '#002b36' # base03
+    red:     '#cb4b16' # orange
+    green:   '#586e75' # base01
+    yellow:  '#657b83' # base00
+    blue:    '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan:    '#93a1a1' # base1
+    white:   '#fdf6e3' # base3
+
+
+# Colors (Solarized Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#002b36' # base03
+    foreground: '#839496' # base0
+
+  # Cursor colors
+  cursor:
+    text:   '#002b36' # base03
+    cursor: '#839496' # base0
+
+  # Normal colors
+  normal:
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
+
+  # Bright colors
+  bright:
+    black:   '#002b36' # base03
+    red:     '#cb4b16' # orange
+    green:   '#586e75' # base01
+    yellow:  '#657b83' # base00
+    blue:    '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan:    '#93a1a1' # base1
+    white:   '#fdf6e3' # base3
+
+# Visual Bell
+# Values for `animation`:
+#   - Ease
+#   - EaseOut
+#   - EaseOutSine
+#   - EaseOutQuad
+#   - EaseOutCubic
+#   - EaseOutQuart
+#   - EaseOutQuint
+#   - EaseOutExpo
+#   - EaseOutCirc
+#   - Linear
+#  animation: EaseOutExpo
+#  duration: 0
+#  color: '0xffffff'
+
+background_opacity: 1.0
+
+#selection:
+  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  #save_to_clipboard: false
+#dynamic_title: true
+
+#cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  #style: Block
+  #unfocused_hollow: true
+
+#live_config_reload: true
+
+# Shell
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login
+
+#working_directory: None
+
+#alt_send_esc: true
+
+  #render_timer: false
+
+  # Keep the log file after quitting Alacritty.
+  #persistent_logging: false
+
+  #log_level: Warn, Error, Info, Debug, Trace
+
+  #print_events: false
+
+  #ref_test: false
+
+#mouse:
+  #triple_click: { threshold: 300 }
+
+  #hide_when_typing: false
+
+  #url:
+    #launcher:
+    #  program: xdg-open
+    #  args: []
+
+    #modifiers: None
+
+#mouse_bindings:
+#  - { mouse: Middle, action: PasteSelection }
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Plus,     mods: Control,       action: IncreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }

@@ -32,3 +32,4 @@ application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+text/html=org.qutebrowser.qutebrowser.desktop;

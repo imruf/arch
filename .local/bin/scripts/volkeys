@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# Script modified from these wonderful people:
+# https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
+# https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
+
+sicon="🔊"
+
+
+function send_mute {
+    dunstify -i printf $micon -r 2593
+}
+function send_vol {
+    # Make the bar with the special character ─ (it's not dash -)
+    # https://en.wikipedia.org/wiki/Box-drawing_character
+    bar=$(seq --separator="─" 0 "$(($vol / 5))" | sed 's/[0-9]//g')
+    # Send the notification
+    dunstify -i printf $sicon -r 2593 -u normal "$vol $bar"
+}
+
+case $1 in
+  up)
+    pamixer -u > /dev/null
+    pamixer -i 5 /dev/null; vol=$(pamixer --get-volume)
+    send_vol
+    ;;
+  down)
+    pamixer -u > /dev/null
+    pamixer -d 5 /dev/null; vol=$(pamixer --get-volume)
+    send_vol
+    ;;
+  mute)
+      pamixer -t > /dev/null; mt=$(pamixer --get-mute);
+      if $mt = true; then
+          micon=" 🔇 muted"
+      else
+          micon="🔈 unmuted"
+      fi
+    send_mute
+    ;;
+esac
