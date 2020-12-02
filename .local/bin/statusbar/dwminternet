@@ -12,12 +12,6 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-icon="📡"
-wlp=$(cat /sys/class/net/wlp4s0/operstate 2>/dev/null)
-sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print "📶", int($3 * 100 / 70) "%" }')
+sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print int($3 * 100 / 70) "%" }')
 
-if [ "${wlp}" == up ]; then
-printf "%s" "$sig"
-else
-printf "%s" $icon
-fi
+printf "%s%s\n" "$(sed "s/down/📡/;s/up/🌐 $sig/" /sys/class/net/w*/operstate 2>/dev/null)" "$(sed "s/.*/🔒/" /sys/class/net/tun*/operstate 2>/dev/null)"
