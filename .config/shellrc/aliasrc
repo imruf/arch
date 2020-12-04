@@ -77,8 +77,8 @@ alias \
 # microcode="grep . /sys/devices/system/cpu/vulnerabilities/*" \
 
 # GRUB
-# alias \
-# update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
+alias \
+ update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
 
 # FONTS
 alias \
@@ -86,16 +86,16 @@ alias \
 
 # Systemd
 alias \
- sys="sudo systemctl"
-# sys="sudo sv"
+ sys="sudo sv" \
+# sys="sudo systemctl"
 
 # MIRROR
 alias \
- mirror="sudo reflector -f 10 -l 10 --number 10 --verbose --save /etc/pacman.d/mirrorlist" \
- mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" \
- mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" \
- mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" \
- mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist" \
+ mirror="sudo reflector -f 10 -l 10 --number 10 --verbose --save /etc/pacman.d/mirrorlist-arch" \
+ mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist-arch" \
+ mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist-arch" \
+ mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
+ mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist-arch" \
 
 # PACMAN
 alias \
@@ -173,11 +173,11 @@ alias \
  math="mathomatic" \
  pc="python -ic 'from __future__ import division; from math import *; from random import *'" \
  c2='units' \
- sheet="sc-im" \
+ sm="sc-im" \
 
 # Misc. App
 alias \
- sv="sudo nvim" \
+ snv="sudo nvim" \
  m="cmus" \
  vol="ncpamixer" \
  def="sdcv" \
@@ -190,6 +190,7 @@ alias \
  weather="curl wttr.in/khagrachari" \
  xp="xclip -o" \
  uc="ucollage" \
+ abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook" \
 
 # books="pysheng" \
 # drive="gdrive" \
@@ -254,10 +255,10 @@ alias \
 
 #SSH/FTP
 alias \
- sfu="sudo systemctl start sshd" \
- sfd="sudo systemctl stop sshd" \
- ftpu="sudo systemctl start vsftpd" \
- ftpd="sudo systemctl stop vsftpd" \
+ sfu="sudo sv start sshd" \
+ sfd="sudo sv stop sshd" \
+ ftpu="sudo sv start vsftpd" \
+ ftpd="sudo sv stop vsftpd" \
 # termux="ssh -p 8022 u0_a127@192.168.137.234" \
 
 # downloader
