@@ -84,7 +84,7 @@ alias \
 alias \
  fc="sudo fc-cache -fv" \
 
-# Systemd
+# init
 alias \
  sys="sudo sv" \
 # sys="sudo systemctl"
@@ -126,6 +126,7 @@ alias \
 alias \
  tzn="trizen" \
  tinp="trizen -S" \
+ tpacs="trizen -Ss" \
  tznc="trizen -G" \
  uptzn="trizen -Syu --noconfirm" \
  tznskip="trizen -S --skipinteg" \
