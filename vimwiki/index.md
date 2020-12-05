@@ -1,2 +1,0 @@
-[#](#) VimTutorial
-[VimHelp](vimtutorial.md)
