@@ -24,9 +24,8 @@ call plug#end()
 
 "execute pathogen#infect()
 filetype plugin indent on    " required
+filetype plugin on
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
 "Remap ESC to jj 
 :imap jj <Esc>
@@ -90,6 +89,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax on
 
+set nocompatible
 set laststatus=2
 set t_Co=256
 set encoding=utf-8
@@ -145,7 +145,7 @@ command! -nargs=? -complete=dir AF
   \ })))
 
 ":vimwiki ext
-let g:vimwiki_list = [{'path': '~/vimwiki/',
+let g:vimwiki_list = [{'path': '~/.config/vimwiki',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " nnn
@@ -156,3 +156,7 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ '<c-x>': 'split',
 "             \ '<c-v>': 'vsplit'
 "             \ }
+
+
+" dwmblocks autocompile
+autocmd BufWritePost ~/Downloads/Git/dwmblocks/config.h !cd ~/Downloads/Git/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }

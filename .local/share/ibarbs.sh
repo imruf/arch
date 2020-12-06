@@ -229,6 +229,23 @@ dbus-uuidgen > /var/lib/dbus/machine-id
 	Option "Tapping" "on"
 EndSection' > /etc/X11/xorg.conf.d/40-libinput.conf
 
+#Display power
+[ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "Monitor"
+    Identifier "LVDS0"
+    Option "DPMS" "true"
+EndSection
+
+Section "ServerFlags"
+    Option "StandbyTime" "5"
+    Option "SuspendTime" "5"
+    Option "OffTime" "7"
+    Option "BlankTime" "7"
+EndSection
+
+Section "ServerLayout"
+    Identifier "ServerLayout0"
+EndSection' > /etc/X11/xorg.conf.d/10-monitor.conf
+
 # Fix fluidsynth/pulseaudio issue.
 grep -q "OTHER_OPTS='-a pulseaudio -m alsa_seq -r 48000'" /etc/conf.d/fluidsynth ||
 	echo "OTHER_OPTS='-a pulseaudio -m alsa_seq -r 48000'" >> /etc/conf.d/fluidsynth

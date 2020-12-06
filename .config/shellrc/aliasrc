@@ -91,7 +91,7 @@ alias \
 
 # MIRROR
 alias \
- mirror="sudo reflector -f 10 -l 10 --number 10 --verbose --save /etc/pacman.d/mirrorlist-arch" \
+ mirror="sudo reflector -f 5 -l 5 --number 5 --verbose --save /etc/pacman.d/mirrorlist-arch" \
  mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist-arch" \
  mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist-arch" \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
