@@ -35,8 +35,10 @@ fzf_sr()
 
 fzf_srbr() 
        { 
-             #zle -I; bms=$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e) && sr "$bms" ;
-             zle -I; bms=$(cat ~/.config/surfraw/bookmarks | fzf -e) && sr "$bms" ;
+             case "$(printf "cli\\ngui" | dmenu -i -p "Open it with?")" in
+                 cli) surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)" ;;
+                 gui) surfraw -browser=qutebrowser "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)" ;;
+             esac
        };
     zle -N fzf_srbr;
 

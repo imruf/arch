@@ -91,7 +91,7 @@ alias \
 
 # MIRROR
 alias \
- mirror="sudo reflector -f 5 -l 5 --number 5 --verbose --save /etc/pacman.d/mirrorlist-arch" \
+ mirror="sudo reflector -p https,http -f 5 -l 5 --number 5 --verbose --save /etc/pacman.d/mirrorlist-arch" \
  mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist-arch" \
  mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist-arch" \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
@@ -142,8 +142,9 @@ alias \
     cinp="sudo make clean install" \
     crmv="sudo make clean uninstall" \
 
-# wpa_supplicant
-# alias \
+# network wpa_supplicant; nmtui
+alias \
+    nmc="nmtui connect"
 # wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0" \
 
 # MOUNT
