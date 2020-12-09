@@ -181,7 +181,7 @@ alias \
 alias \
  snv="sudo nvim" \
  m="cmus" \
- vol="ncpamixer" \
+ vol="pulsemixer" \
  def="sdcv" \
  rt="tuir" \
  keep="keepcli" \
