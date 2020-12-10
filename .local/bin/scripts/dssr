@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$(printf "cli\\ngui" | dmenu -i -p "sr:>_")" in
+      cli)
+         case "$(printf "elvi\\nbms" | dmenu -i -p "sr:>_")" in
+            elvi) st -e surfraw $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_") ;;
+            bms) st -e surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | dmenu -l 10 -i -p "sr:>_")"
+            # bms) st -e surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)"
+        esac ;;
+      gui)
+         case "$(printf "elvi\\nbms" | dmenu -i -p "sr:>_")" in
+           elvi) surfraw -browser=qutebrowser $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_") ;;
+           bms) surfraw -browser=qutebrowser "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | dmenu -l 10 -i -p "sr:>_" )" ;;
+           # bms) surfraw -browser=qutebrowser "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)" ;;
+        esac ;;
+esac
