@@ -91,7 +91,7 @@ alias \
 
 # MIRROR
 alias \
- mirror="sudo reflector -p https,http -f 5 -l 5 --number 5 --verbose --save /etc/pacman.d/mirrorlist-arch" \
+ mirror="sudo reflector -p https,http,ftp -f 5 -l 5 --verbose --save /etc/pacman.d/mirrorlist-arch" \
  mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist-arch" \
  mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist-arch" \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
@@ -102,6 +102,7 @@ alias \
  pac="sudo pacman --color auto" \
  update="sudo pacman -Syyu" \
  up="sudo pacman -Syu" \
+ upig="sudo pacman -Syu --ignore" \
  pacs="pacman -Ss" \
  inp="sudo pacman -S" \
  rmv="sudo pacman -Rns" \
