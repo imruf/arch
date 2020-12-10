@@ -1,7 +1,8 @@
 Dot repo of archlinux+dwm rice
 ---
 
-    Keys And Setup Of This Repo
+Apps In This Repo
+---
 
 dwm
 ---
