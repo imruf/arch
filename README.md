@@ -84,7 +84,7 @@ qutebrowser
 elinks
 ---
 
-    Navigation
+    Navigation:
         - Page Down:                         Ctrl+f
         - Page up:                           Ctrl+b
         - Up:                                k
@@ -111,12 +111,12 @@ elinks
         - External Passing:                  v
         - View Image:                        i
 
-    Url
+    Url:
         - Open:                              u
         - Open In New Tab:                   T
         - Open New Tab In Background:        Ctrl+T
 
-    Quit                                     ; q
+    Quit:                                    ; q
 
 cmus
 ---
@@ -124,7 +124,7 @@ cmus
     Vim Key Navigation
     Quit q
  
-    Volume
+    Volume:
         - Up:                                +
         - Down:                              -
         - Left Up:                           [
@@ -132,7 +132,7 @@ cmus
         - Right Up:                          ]
         - Right Down:                        }
 
-    Player
+    Player:
         - Play:                              P
         - Play Track:                        Enter
         - Stop:                              S
@@ -145,7 +145,7 @@ cmus
         - Repeat:                            ^R
         - Repeat Album/Artist:               r
 
-    Playlists
+    Playlists:
         - Add To Library:                    a
         - Add To Queue After:                e
         - Add To Playlist:                   y
