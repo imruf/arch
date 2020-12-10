@@ -225,8 +225,7 @@ alias \
 alias \
     vpn="sudo openvpn --config ~/Downloads/opnevpn/def.ovpn" \
 
-
-# torsocks #now using 1.1.1.1 \
+# torsocks
 # tor="sys start tor.service" \
 # tors="sys stop tor.service" \
 # ctorc="torsocks elinks "https://check.torproject.org/"" \
@@ -271,6 +270,7 @@ alias \
  a2p="aria2p" \
  a2s="a2pd start" \
  a2d="a2pd stop" \
+ ttsm="tremc" \
 
 # youtube-dl
 alias \

@@ -18,7 +18,7 @@ COMMANDS["Web"]="dweb"
 LABELS["Web"]=""
 
 # Open custom web searches using surfraw
-COMMANDS["SurfRaw"]="dsr"
+COMMANDS["SurfRaw"]="ssr"
 LABELS["SurfRaw"]=""
 
 # Open surfraw bookmarks
