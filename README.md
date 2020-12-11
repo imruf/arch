@@ -4,17 +4,18 @@ Dot repo of archlinux+dwm rice
 Apps In This Repo
 ---
 
-# dwm
+[dwm](https://github.com/imrufbd/dwm)
+---
 
-Keys in [dwm](https://github.com/imrufbd/dwm) repo
+Keys in the repo
     
-st
+[st](https://github.com/imrufbd/st)
 ---
-    Keys in  [[st]](https://github.com/imrufbd/st) repo
+    Keys in the repo
     
-dmenu
+[dmenu](https://github.com/imrufbd/dmenu)
 ---
-    Keys in  [[dmenu]](https://github.com/imrufbd/dmenu) repo
+    Keys in the repo
 
 qutebrowser
 ---
