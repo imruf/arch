@@ -6,7 +6,7 @@ Apps In This Repo
 
 dwm
 ---
-    Keys in  [[dwm]](https://github.com/imrufbd/dwm) repo
+Keys in [dwm](https://github.com/imrufbd/dwm) repo
     
 st
 ---
