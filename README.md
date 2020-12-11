@@ -4,8 +4,8 @@ Dot repo of archlinux+dwm rice
 Apps In This Repo
 ---
 
-dwm
----
+# dwm
+
 Keys in [dwm](https://github.com/imrufbd/dwm) repo
     
 st
