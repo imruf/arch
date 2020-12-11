@@ -33,12 +33,12 @@ qutebrowser
         - Right:                             l
         - Half Up:                           Ctrl+B
         - Half Down:                         Ctrl+D
-        - Forward:                           L/m
-        - Back:                              H/u
+        - Forward:                           m
+        - Back:                              u
         - Follow Link:                       f
         - Follow Link In New Tab:            F, af
-        - Tab Next:                          J
-        - Tab Previous:                      K
+        - Tab Next:                          L
+        - Tab Previous:                      H 
         - Delete Current Tab:                d
         - Hint Menu:                         ;
         - Undo:                              Ctrl+u
@@ -96,10 +96,10 @@ elinks
         - Open Link:                         l
         - Next Link:                         n
         - Previous Link:                     p
-        - Back:                              H
-        - Forward:                           L
-        - Tab Next:                          K/Ctrl+l
-        - Tab Previous:                      J/Ctrl+h
+        - Back:                              u
+        - Forward:                           m
+        - Tab Next:                          L/Ctrl+l
+        - Tab Previous:                      H/Ctrl+h
         - Tab Close:                         d
         - Undo:                              Ctrl+u
         - Reload:                            r
