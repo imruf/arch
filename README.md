@@ -6,15 +6,12 @@ Apps In This Repo
 
 [dwm](https://github.com/imrufbd/dwm)
 ---
-    Keys in the repo
     
 [st](https://github.com/imrufbd/st)
 ---
-    Keys in the repo
     
 [dmenu](https://github.com/imrufbd/dmenu)
 ---
-    Keys in the repo
 
 qutebrowser
 ---
