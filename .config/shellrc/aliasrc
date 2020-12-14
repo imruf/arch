@@ -36,8 +36,7 @@ alias \
  f="fzf_cd" \
  k="fzf_kill" \
  h="fzf_history" \
- s="fzf_sr" \
- bm="fzf_srbr" \
+ fs="fssr" \
 
 # Database
 alias \
@@ -193,6 +192,7 @@ alias \
  weather="curl wttr.in/khagrachari" \
  xp="xclip -o" \
  uc="ucollage" \
+ sw="termdown" \
  abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook" \
 
 # books="pysheng" \

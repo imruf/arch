@@ -26,21 +26,13 @@ fzf_kill()
         }; 
     zle -N fzf_kill;
 
-fzf_sr()
-       {
-            term="$*"
-            zle -I; elvi=$(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | fzf +m) && sr "$elvi" "$term" ;
+fssr() {
+         case "$(printf "elvi\\nbms" | fzf -e)" in
+            elvi) surfraw $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | dmenu -l 5 -i -p "sr:>_") ;;
+            bms) surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf)" ;;
+        esac 
        };
-    zle -N fzf_sr;
-
-fzf_srbr() 
-       { 
-             case "$(printf "cli\\ngui" | dmenu -i -p "Open it with?")" in
-                 cli) surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)" ;;
-                 gui) surfraw -browser=qutebrowser "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf -e)" ;;
-             esac
-       };
-    zle -N fzf_srbr;
+     zle -N fssr;
 
 # nnn quitcd
 

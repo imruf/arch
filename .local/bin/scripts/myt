@@ -8,6 +8,5 @@ youtube-dl -F "$url"
 read -p "Enter Code: " FORMAT
 
 echo "Streaming..."
-mpv --loop=inf --ytdl-format=$FORMAT "$url"
-# --start=00:37:31
-# --stream-record=1.ts
+mpv --loop=inf --ytdl-format=$FORMAT "$url" --stream-record=1.ts
+# --start=01:00:05 --stream-record=1.ts
