@@ -1,5 +1,5 @@
 #!/bin/sh
 
-. $HOME/.xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
-ssh-agent dwm
+exec dwm

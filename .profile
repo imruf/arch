@@ -4,7 +4,7 @@
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
 # Defaults
-export BROWSER="qutebrowser"
+# export BROWSER="qutebrowser"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
