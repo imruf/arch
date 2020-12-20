@@ -117,6 +117,9 @@ elinks
 
 cmus
 ---
+
+    ~/.config/cmus/cmus.autosave to autosave
+
     1-7 view mode
     Vim Key Navigation
     Quit q
@@ -151,6 +154,8 @@ cmus
 
 nnn
 ---
+    .config/nnn.h to nnn/src/ make install
+    
     Basic vim keys for navigation
     Leader key for bookmark: ,
     CD Root, Home, Last: ~, `, @
