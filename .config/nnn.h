@@ -127,7 +127,7 @@ struct key {
 static struct key bindings[] = {
 	/* Back */
 	{ 'h',            SEL_BACK },
-	{ KEY_ENTER,      SEL_OPEN },
+	{ 'l',            SEL_OPEN },
 	{ 'l',            SEL_NAV_IN },
 	{ 'j',            SEL_NEXT },
 	{ 'k',            SEL_PREV },
@@ -173,7 +173,6 @@ static struct key bindings[] = {
 	{ 't',            SEL_SORT },
 	{ CONTROL('T'),   SEL_SORT },
 	{ CONTROL('L'),   SEL_REDRAW },
-	{ CONTROL('J'),   SEL_SEL },
 	{ ' ',            SEL_SEL },
 	{ 'm',            SEL_SELMUL },
 	{ CONTROL(' '),   SEL_SELMUL },
