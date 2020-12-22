@@ -1,0 +1,153 @@
+# A sample of ~/.w3m/keymap (default)
+#
+# Ctrl  : C-, ^
+# Escape: ESC-, M-, ^[
+# Space : SPC, ' '
+# Tab   : TAB, ^i, ^I
+# Delete: DEL, ^?
+# Up    : UP, ^[[A
+# Down  : DOWN, ^[[B
+# Right : RIGHT, ^[[C
+# Left  : LEFT, ^[[D
+
+# Navigation
+keymap	j	MOVE_DOWN
+keymap	k	MOVE_UP
+keymap	LEFT	MOVE_LEFT
+keymap	RIGHT	MOVE_RIGHT
+
+keymap	J	UP
+keymap	K	DOWN
+keymap	.	RIGHT
+keymap	>	SHIFT_RIGHT
+keymap	,	LEFT
+keymap	<	SHIFT_LEFT
+
+keymap	SPC	NEXT_PAGE
+keymap	PgDown	NEXT_PAGE
+keymap	PgUP	PREV_PAGE
+
+keymap	C-L	LIST
+keymap	M-l	LIST_MENU
+keymap	M-m	MOVE_LIST_MENU
+
+keymap	n	NEXT_LINK
+keymap	p	PREV_LINK
+keymap	C-j	GOTO_LINK
+keymap	l	GOTO_LINK
+
+
+keymap	l	LINK_BEGIN
+keymap	[	LINK_BEGIN
+keymap	]	LINK_END
+keymap	a	SAVE_LINK
+keymap	C-u	PEEK_LINK
+keymap	M-M	EXTERN_LINK
+keymap f EXTERN_LINK
+
+keymap	o	GOTO
+keymap	C-_	GOTO_HOME
+keymap	M-g	GOTO_LINE
+keymap	M-u	GOTO_RELATIVE
+
+keymap	\^	LINE_BEGIN
+keymap	$	LINE_END
+keymap	C-g	LINE_INFO
+
+keymap	C-o	OPTIONS
+
+keymap u PREV
+keymap m NEXT
+# SEARCH
+keymap	/	SEARCH
+keymap	?	SEARCH_BACK
+keymap	C-n	SEARCH_NEXT
+keymap	N	SEARCH_PREV
+keymap	C-r	ISEARCH_BACK
+keymap	C-s	ISEARCH
+
+# TAB
+keymap	d	CLOSE_TAB
+keymap	C-t	TAB_LINK
+keymap	M-t	TAB_MENU
+keymap	H	NEXT_TAB
+keymap	L	PREV_TAB
+keymap	T	NEW_TAB
+
+# Bookmark
+keymap	M-a	ADD_BOOKMARK
+keymap	M-b	BOOKMARK
+
+keymap	C-@	MARK
+keymap	:	MARK_URL
+keymap	";"	MARK_WORD
+keymap	M-:	MARK_MID
+keymap	\"	REG_MARK
+
+keymap	M-n	NEXT_MARK
+keymap	M-p	PREV_MARK
+
+
+keymap	C-h	HISTORY
+keymap	C-k	COOKIE
+
+keymap	C-l	REDRAW
+
+
+keymap	C-w	WRAP_TOGGLE
+keymap	C-z	SUSPEND
+
+keymap	!	SHELL
+keymap	#	PIPE_SHELL
+keymap	(	UNDO
+keymap	)	REDO
+keymap	=	INFO
+keymap	@	READ_SHELL
+keymap	D	DOWNLOAD_LIST
+keymap	E	EDIT
+keymap	F	FRAME
+keymap	G	END
+keymap	C-H	HELP
+keymap	M	EXTERN
+keymap v EXTERN
+keymap	Q	EXIT
+keymap	R	RELOAD
+keymap	S	SAVE_SCREEN
+keymap	V	LOAD
+keymap	W	PREV_WORD
+keymap	Z	CENTER_H
+keymap	c	PEEK
+keymap	g	BEGIN
+keymap	I	PEEK_IMG
+keymap	C-m	MOUSE_TOGGLE
+keymap	q	QUIT
+keymap	r	VERSION
+keymap	s	SELECT_MENU
+keymap	C-v	VIEW
+keymap	w	NEXT_WORD
+keymap	z	CENTER_V
+keymap	|	PIPE_BUF
+
+
+keymap	M-<	BEGIN
+keymap	M->	END
+
+keymap	M-I	SAVE_IMAGE
+keymap	i	VIEW_IMAGE
+
+keymap	M-W	DICT_WORD_AT
+keymap	M-c	COMMAND
+keymap	M-e	EDIT_SCREEN
+keymap	M-k	DEFINE_KEY
+keymap	M-o	SET_OPTION
+keymap	M-s	SAVE
+keymap	M-w	DICT_WORD
+
+
+keymap	M-[E	MENU
+keymap	M-[L	MENU
+
+keymap	M-[1~	BEGIN
+keymap	M-[2~	MENU
+keymap	M-[4~	END
+keymap	M-[28~	MENU
