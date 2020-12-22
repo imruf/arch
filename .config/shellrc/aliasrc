@@ -98,13 +98,13 @@ alias \
 
 # PACMAN
 alias \
- pac="sudo pacman --color auto" \
- update="sudo pacman -Syyu" \
- up="sudo pacman -Syu" \
- upig="sudo pacman -Syu --ignore" \
- pacs="pacman -Ss" \
- inp="sudo pacman -S" \
- rmv="sudo pacman -Rns" \
+ update="sudo pacman --color auto -Syyu" \
+ up="sudo pacman --color auto -Syu" \
+ upig="sudo pacman --color auto -Syu --ignore" \
+ pacs="pacman --color auto -Ss" \
+ inp="sudo pacman --color auto -S" \
+ linp="sudo pacman --color auto -U" \
+ rmv="sudo pacman --color auto -Rns" \
 
 alias \
  unlock="sudo rm /var/lib/pacman/db.lck" \
@@ -270,6 +270,9 @@ alias \
  a2p="aria2p" \
  a2s="a2pd start" \
  a2d="a2pd stop" \
+ tsm="transmission-remote --list" \
+ tsmdmn="transmission-daemon" \
+ tsmquit="killall transmission-daemon" \
  ttsm="tremc" \
 
 # youtube-dl
