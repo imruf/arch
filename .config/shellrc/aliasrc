@@ -36,7 +36,6 @@ alias \
  f="fzf_cd" \
  k="fzf_kill" \
  h="fzf_history" \
- fs="fssr" \
 
 # Database
 alias \
@@ -270,15 +269,6 @@ alias \
  a2p="aria2p" \
  a2s="a2pd start" \
  a2d="a2pd stop" \
-
-# tsm
-alias \
- tsm="transmission-remote --list" \
- tsmdmn="transmission-daemon" \
- tsmquit="killall transmission-daemon" \
- tsmadd="transmission-remote --add "$1"" \
- tsmpurge="transmission-remote -t"$1" --remove-and-delete" \
- tsmdel="transmission-remote -t"$1" --remove" \
  ttsm="tremc" \
 
 # youtube-dl
