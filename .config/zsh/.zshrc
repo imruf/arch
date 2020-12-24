@@ -69,7 +69,6 @@ bindkey -M vicmd 'v' edit-command-line
 #Alias
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/zshfnrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/zshfnrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shellrc/shortcutrc"
 
 source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-vcs-prompt/zshrc.sh 2>/dev/null
 source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null

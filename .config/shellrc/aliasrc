@@ -22,13 +22,40 @@ alias \
  ls="ls --color=auto --group-directories-first" \
  lah="exa -la --group-directories-first" \
 
-# Navigation
+# Operation
 alias \
  ..="cd .." \
  cp="cp -v" \
  mv="mv -v" \
  rm="rm -v" \
  mkd="mkdir -pv" \
+
+# Navigation
+alias \
+ dcc="cd /home/masud/.cache" \
+ dcf="cd /home/masud/.config" \
+ dcw="cd /home/masud/.config/vimwiki" \
+ dck="cd /home/masud/.config/vimwiki/keep" \
+ dls="cd /home/masud/.local/share" \
+ dlb="cd /home/masud/.local/bin" \
+ dh="cd /home/masud" \
+ ddl="cd /home/masud/Downloads" \
+ dn="cd /home/masud/Documents" \
+ dp="cd /home/masud/Pictures" \
+ dm="cd /home/masud/Music" \
+ dv="cd /home/masud/Videos" \
+ dw="cd /home/masud/Desktop" \
+ dda="cd /home/masud/Downloads/AUR" \
+ dga="cd /home/masud/Downloads/Git/arch" \
+ dgd="cd /home/masud/Downloads/Git/dwm" \
+ dgb="cd /home/masud/Downloads/Git/dwmblocks" \
+ dgs="cd /home/masud/Downloads/Git/st" \
+ dg="cd /home/masud/Downloads/Git" \
+ fv="$EDITOR /home/masud/.config/nvim/init.vim" \
+ fz="$EDITOR /home/masud/.config/zsh/.zshrc" \
+ fa="$EDITOR /home/masud/.config/shellrc/aliasrc" \
+ fzfn="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
+ fzp="$EDITOR /home/masud/.config/.zprofile" \
 
 # fzf
 alias \
