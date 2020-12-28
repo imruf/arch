@@ -46,11 +46,11 @@ alias \
  dv="cd /home/masud/Videos" \
  dw="cd /home/masud/Desktop" \
  dda="cd /home/masud/Downloads/AUR" \
+ dg="cd /home/masud/Downloads/Git" \
  dga="cd /home/masud/Downloads/Git/arch" \
  dgd="cd /home/masud/Downloads/Git/dwm" \
  dgb="cd /home/masud/Downloads/Git/dwmblocks" \
  dgs="cd /home/masud/Downloads/Git/st" \
- dg="cd /home/masud/Downloads/Git" \
  fv="$EDITOR /home/masud/.config/nvim/init.vim" \
  fz="$EDITOR /home/masud/.config/zsh/.zshrc" \
  fa="$EDITOR /home/masud/.config/shellrc/aliasrc" \
@@ -249,7 +249,7 @@ alias \
 
 # tor/vpn
 alias \
-    vpn="sudo openvpn --config ~/Downloads/opnevpn/def.ovpn" \
+    vpn="sudo openvpn --config ~/Downloads/openvpn/def.ovpn --mute 5 --mute-replay-warnings" \
 
 # torsocks
 # tor="sys start tor.service" \
