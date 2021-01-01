@@ -9,4 +9,5 @@ read -p "Enter Code: " FORMAT
 
 echo "Streaming..."
 mpv --loop=inf --ytdl-format=$FORMAT "$url" --stream-record=1.ts
-# --start=01:00:05 --stream-record=1.ts
+#--stream-record=1.ts
+#--start=00:00:00 

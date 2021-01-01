@@ -5,3 +5,5 @@ url="$*"
 
 echo "Streaming..."
 mpv --ytdl-format=1 --loop=inf --autofit=640x480 --really-quiet "$url"
+#--stream-record=1.ts
+#--start=00:00:00 

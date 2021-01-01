@@ -4,4 +4,6 @@
 url="$*"
 
 echo "Streaming..."
-mpv --ytdl-format='bestvideo[height<=480]+bestaudio/best[height<=360]' --loop=inf "$url"
+mpv --ytdl-format='bestvideo[height<=480]+bestaudio/best[height<=360]' --really-quiet "$url"
+#--stream-record=1.ts
+#--start=00:00:00 
