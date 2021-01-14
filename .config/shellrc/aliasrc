@@ -28,6 +28,7 @@ alias \
  cp="cp -v" \
  mv="mv -v" \
  rm="rm -v" \
+ rmd="rmdir -v" \
  mkd="mkdir -pv" \
 
 # Navigation
@@ -55,7 +56,7 @@ alias \
  fz="$EDITOR /home/masud/.config/zsh/.zshrc" \
  fa="$EDITOR /home/masud/.config/shellrc/aliasrc" \
  fzfn="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
- fzp="$EDITOR /home/masud/.config/.zprofile" \
+ fzp="$EDITOR /home/masud/.profile" \
 
 # fzf
 alias \
@@ -165,8 +166,8 @@ alias \
 
 # c source
 alias \
-    cinp="sudo make clean install" \
-    crmv="sudo make clean uninstall" \
+    cinp="sudo make install" \
+    crmv="sudo make uninstall" \
 
 # network wpa_supplicant; nmtui
 alias \
@@ -262,8 +263,9 @@ alias \
  pn="ping -c 3 google.com" \
  myip="ip addr show" \
  isp="curl ifconfig.co" \
- ns="speedtest" \
- nss="speedtest --simple --single" \
+ nsp="speedtest" \
+ nsps="speedtest --simple --single" \
+ ntm="speedometer -r wlp4s0 -t wlp4s0" \
 
 #curl ifconfig.co/json
 #http -b ifconfig.co
