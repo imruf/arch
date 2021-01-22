@@ -9,6 +9,7 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
 export FILE="nnn"
+export PAGER="most"
 
 # xdg-dir
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -30,20 +31,10 @@ export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch/notmuchrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export MOST_INITFILE="$XDG_CONFIG_HOME"/most/mostrc
 
 # Fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
-
-# Color Man Page
-export LESS=-R
-export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
-export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
-export LESS_TERMCAP_me="$(printf '%b' '[0m')"
-export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
-export LESS_TERMCAP_se="$(printf '%b' '[0m')"
-export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
-export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
-export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 # Askpass
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
