@@ -1,0 +1,30 @@
+color normal lightgray black
+color status yellow blue
+color underline brightgreen black
+color overstrike brightred black
+
+setkey down			"j"
+setkey up			"k"
+setkey page_left		"h"
+setkey page_right		"l"
+
+setkey bob			"gg"
+setkey eob			"G"
+
+setkey page_up 			"PgUp"
+setkey page_down		" "
+
+setkey goto_mark		","
+setkey set_mark			"M"
+
+setkey goto_line		"L"
+
+setkey search_forward		"/"
+setkey search_backward		"?"
+setkey find_next		"N"
+
+
+setkey redraw			"^L"
+
+setkey help			"H"
+setkey exit			"q"
