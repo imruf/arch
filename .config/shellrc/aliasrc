@@ -35,10 +35,13 @@ alias \
 alias \
  dcc="cd /home/masud/.cache" \
  dcf="cd /home/masud/.config" \
+ dcfs="cd /home/masud/.config/shellrc" \
+ dcfz="cd /home/masud/.config/zsh" \
  dcw="cd /home/masud/.config/vimwiki" \
  dck="cd /home/masud/.config/vimwiki/keep" \
  dls="cd /home/masud/.local/share" \
  dlb="cd /home/masud/.local/bin" \
+ dlbs="cd /home/masud/.local/bin/scripts" \
  dh="cd /home/masud" \
  ddl="cd /home/masud/Downloads" \
  dn="cd /home/masud/Documents" \
