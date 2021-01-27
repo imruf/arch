@@ -18,16 +18,16 @@ COMMANDS["Web"]="dweb"
 LABELS["Web"]=""
 
 # Open custom web searches using surfraw
-COMMANDS["SurfRaw"]="dssr"
-LABELS["SurfRaw"]=""
+COMMANDS["sr"]="dssr"
+LABELS["sr"]=""
 
 # Open surfraw bookmarks
-COMMANDS["Bookmarks"]="db"
-LABELS["Bookmarks"]=""
+COMMANDS["bm"]="db"
+LABELS["bm"]=""
 
 # Search/Find/Locate local files
-COMMANDS["Find"]="dl"
-LABELS["Find"]=""
+COMMANDS["locate"]="dl"
+LABELS["locate"]=""
 
 # Calculator/menu-calc dmneu rofi script from AUR
 COMMANDS["Calc"]="= --dmenu=dmenu -- -l 3 -c"
@@ -36,6 +36,14 @@ LABELS["Calc"]=""
 # Powermenu
 COMMANDS["power"]="powermenu"
 LABELS["power"]=""
+
+# gpg
+COMMANDS["gpg"]="passmenu"
+LABELS["gpg"]=""
+
+# gpg
+COMMANDS["sfix"]="sfix"
+LABELS["sfix"]=""
 
 # launch programs
 #COMMANDS["apps"]="dmenu_run"
