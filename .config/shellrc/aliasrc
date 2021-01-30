@@ -37,8 +37,8 @@ alias \
  dcf="cd /home/masud/.config" \
  dcfs="cd /home/masud/.config/shellrc" \
  dcfz="cd /home/masud/.config/zsh" \
- dcw="cd /home/masud/.config/vimwiki" \
- dck="cd /home/masud/.config/vimwiki/keep" \
+ dcfv="cd /home/masud/.config/vimwiki" \
+ dcfvk="cd /home/masud/.config/vimwiki/keep" \
  dls="cd /home/masud/.local/share" \
  dlb="cd /home/masud/.local/bin" \
  dlbs="cd /home/masud/.local/bin/scripts" \
@@ -58,7 +58,7 @@ alias \
  fv="$EDITOR /home/masud/.config/nvim/init.vim" \
  fz="$EDITOR /home/masud/.config/zsh/.zshrc" \
  fa="$EDITOR /home/masud/.config/shellrc/aliasrc" \
- fzfn="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
+ fzz="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
  fzp="$EDITOR /home/masud/.profile" \
 
 # fzf

@@ -42,8 +42,8 @@ COMMANDS["gpg"]="passmenu"
 LABELS["gpg"]=""
 
 # gpg
-COMMANDS["sfix"]="sfix"
-LABELS["sfix"]=""
+COMMANDS["bfix"]="bfix"
+LABELS["bfix"]=""
 
 # launch programs
 #COMMANDS["apps"]="dmenu_run"
