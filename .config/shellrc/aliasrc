@@ -174,8 +174,14 @@ alias \
 
 # network wpa_supplicant; nmtui
 alias \
-    nmc="nmtui connect"
+    nmc="nmtui connect" \
 # wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0" \
+
+# pip
+alias \
+    pipinp="pip install -U" \
+    piprmv="pip uninstall" \
+    pipup="pip-review -i" \
 
 # MOUNT
 alias \

@@ -10,7 +10,7 @@ fzf_file()
 
 fzf_cd() 
         { 
-            zle -I; DIR=$(find ~/ -type d 2> /dev/null | fzf +m) && cd "$DIR" ; 
+            zle -I; DIR=$(find -type d 2> /dev/null | fzf +m) && cd "$DIR" ; 
         }; 
     zle -N fzf_cd;
 
