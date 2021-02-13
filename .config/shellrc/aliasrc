@@ -180,6 +180,7 @@ alias \
 # pip
 alias \
     pipinp="pip install -U" \
+    pip3inp="pip3 install" \
     piprmv="pip uninstall" \
     pipup="pip-review -i" \
 
