@@ -1,3 +1,5 @@
+config.load_autoconfig(False)
+
 c.content.autoplay = False
 c.content.images = True
 c.content.javascript.enabled = True
