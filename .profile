@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-#Path
+# Path
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
 # Defaults
@@ -9,7 +9,11 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
 export FILE="nnn"
-export PAGER="most"
+
+# ManPage
+export MANPAGER="nvim -c 'set ft=man' -"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # xdg-dir
 export XDG_CONFIG_HOME="$HOME/.config"
