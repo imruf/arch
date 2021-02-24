@@ -8,7 +8,7 @@ alias \
  v="$EDITOR" \
  q="exit" \
 
-# tmux
+# Multiplexer/tmux
 alias \
  t="tmux" \
  ta0="tmux attach-session -t 0" \
@@ -73,6 +73,8 @@ alias \
  updb="sudo updatedb" \
 
 # Info
+
+# dir
 alias \
  pdw="pwd" \
  free="free -mt" \
@@ -126,6 +128,8 @@ alias \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
  mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist-arch" \
 
+# Package
+
 # PACMAN
 alias \
  update="sudo pacman --color auto -Syyu" \
@@ -172,17 +176,17 @@ alias \
     cinp="sudo make install" \
     crmv="sudo make uninstall" \
 
-# network wpa_supplicant; nmtui
-alias \
-    nmc="nmtui connect" \
-# wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0" \
-
-# pip
+# Python/pip
 alias \
     pipinp="pip install -U" \
     pip3inp="pip3 install" \
     piprmv="pip uninstall" \
     pipup="pip-review -i" \
+
+# network wpa_supplicant; nmtui
+# alias \
+#     nmc="nmtui connect" \
+# wpa="sudo wpa_supplicant -B -i wlp4s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp4s0.conf && sudo dhcpcd wlp4s0" \
 
 # MOUNT
 alias \
@@ -192,7 +196,7 @@ alias \
  eusb="udisksctl power-off -b /dev/sdb1" \
  sdx="mountjutsu" \
 
-# MAIL
+# MAIL/mutt-wizard
 alias \
  ibx="neomutt" \
  mail="mw -Y; neomutt" \
@@ -200,12 +204,6 @@ alias \
  ib="mw -y imrufbd@gmail.com; neomutt" \
  rry="mw -y riponridwan@yahoo.com; neomutt" \
  lic="mw -y riprid@cock.li; neomutt" \
-
-# TRANSMISSION
-alias \
- pfx="peerflix -k -f /home/masud/Videos/ptfx" \
- tfx="torrentflix" \
-
 
 # Calculator
 alias \
@@ -226,7 +224,6 @@ alias \
  img="sxiv" \
  el="elinks" \
  ka="killall" \
- weather="curl wttr.in/khagrachari" \
  xp="xclip -o" \
  uc="ucollage" \
  sw="termdown" \
@@ -236,7 +233,6 @@ alias \
 # drive="gdrive" \
 # imgur="imgur_downloader" \
 # e.g="tldr" \
-
 # ibus="ibus-daemon -xdr" \
 # music="ncmpcpp" \
 # vim="nvim" \
@@ -258,6 +254,33 @@ alias \
 alias \
  aw="wiki-search"
 
+# Network
+
+# IP/PING
+alias \
+ pn="ping -c 3 google.com" \
+ myip="ip addr show" \
+ isp="curl ifconfig.co" \
+
+# NetSpeed
+ nsp="speedtest" \
+ nsps="speedtest --simple --single" \
+ ntm="speedometer -r wlp4s0 -t wlp4s0" \
+
+# Firewall
+alias \
+ fwe="sudo ufw enable" \
+ fwd="sudo ufw disable" \
+ fws="sudo ufw status" \
+
+# SSH/FTP
+alias \
+ sfu="sudo sv start sshd" \
+ sfd="sudo sv stop sshd" \
+ ftpu="sudo sv start vsftpd" \
+ ftpd="sudo sv stop vsftpd" \
+# termux="ssh -p 8022 u0_a127@192.168.137.234" \
+
 # tor/vpn
 alias \
     v1="sudo openvpn --config ~/Downloads/openvpn/jp-free-01.protonvpn.com.udp.ovpn --mute 5 --mute-replay-warnings" \
@@ -270,40 +293,20 @@ alias \
 # ctorc="torsocks elinks "https://check.torproject.org/"" \
 # ctorb="torsocks surf https://check.torproject.org/" \
 
-#IP/PING
+# Services/ More at chubin/awesome-console-servies
 alias \
- pn="ping -c 3 google.com" \
- myip="ip addr show" \
- isp="curl ifconfig.co" \
- nsp="speedtest" \
- nsps="speedtest --simple --single" \
- ntm="speedometer -r wlp4s0 -t wlp4s0" \
+ ispc="curl ifconfig.co/country" \
+ ispct="curl ifconfig.co/city" \
+ geo="curl ip-api.com" \
+ lsu="ttm_url_shorten" \
+ weather="curl wttr.in/khagrachari" \
+ odic="online_dic" \
+ oman="online_man" \
 
-#curl ifconfig.co/json
-#http -b ifconfig.co
-#wget -qO- ifconfig.co
-#fetch -qo- https://ifconfig.co
-#bat -print=b ifconfig.co/ip
-#curl ifconfig.co/country
-#curl ifconfig.co/country-iso
-#curl ifconfig.co/city
-#curl ifconfig.co/asn
 
-#Firewall
-alias \
- fwe="sudo ufw enable" \
- fwd="sudo ufw disable" \
- fws="sudo ufw status" \
+# Downloader
 
-#SSH/FTP
-alias \
- sfu="sudo sv start sshd" \
- sfd="sudo sv stop sshd" \
- ftpu="sudo sv start vsftpd" \
- ftpd="sudo sv stop vsftpd" \
-# termux="ssh -p 8022 u0_a127@192.168.137.234" \
-
-# downloader
+# wget/aria2
 alias \
  wget="wget -c" \
  a2="aria2c" \
@@ -328,14 +331,13 @@ alias \
  ytdf="youtube-dl -f" \
  ytv="youtube-viewer -C" \
 
-#simple-mtpfs
-#alias \
-# phn="simple-mtpfs -l" \
-# mphn="simple-mtpfs --device" 
+# TRANSMISSION
+alias \
+ pfx="peerflix -k -f /home/masud/Videos/ptfx" \
+ tfx="torrentflix" \
 
-
-#PNGLatex
-#pnglatex -h for help
+# PNGLatex
+# pnglatex -h for help
 alias \
  eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png" \
 
@@ -347,11 +349,6 @@ alias \
 alias \
  gui="startx" \
 # dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
-
-# Corona
-alias \
- covid="curl https://corona-stats.online\?source\=2" \
- covidbd="curl https://corona-stats.online/BD"
 
 # POWERMANAGEMENT
 # iph="i3exit suspend" \

@@ -55,6 +55,24 @@ n ()
     fi
     }
 
+# services
+ttm_url_shorten() {
+            url="$*"
+            zle -I; curl -F shorten="$url" https://ttm.sh ; 
+       };
+     zle -N ttm_url_shorten;
+
+online_dic() {
+            phrase="$*"
+            zle -I; curl dict.org/d:"$phrase" ; 
+       };
+     zle -N online_dic;
+
+online_man() {
+            cheat="$*"
+            zle -I; curl cheat.sh/"$cheat" ; 
+       };
+     zle -N online_man;
 
 #transmission
 tsmcc() {
