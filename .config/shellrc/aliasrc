@@ -15,8 +15,7 @@ alias \
  ta="tmux attach-session -t" \
  tl="tmux ls" \
 
-# Files
-
+## Files
 # List
 alias \
  ls="ls --color=auto --group-directories-first" \
@@ -63,19 +62,11 @@ alias \
  fzz="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
  fzp="$EDITOR /home/masud/.profile" \
 
-# fzf
-alias \
- e="fzf_file" \
- f="fzf_cd" \
- k="fzf_kill" \
- h="fzf_history" \
-
 # Database
 alias \
  updb="sudo updatedb" \
 
-# Info
-
+## Info
 # dir
 alias \
  pdw="pwd" \
@@ -130,8 +121,7 @@ alias \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
  mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist-arch" \
 
-# Package
-
+## Package
 # PACMAN
 alias \
  update="sudo pacman --color auto -Syyu" \
@@ -239,6 +229,11 @@ alias \
 # music="ncmpcpp" \
 # vim="nvim" \
 
+# PNGLatex
+# pnglatex -h for help
+alias \
+ eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png" \
+
 # GIT
 alias \
  gitc="git clone" \
@@ -256,8 +251,7 @@ alias \
 alias \
  aw="wiki-search"
 
-# Network
-
+## Network
 # IP/PING
 alias \
  pn="ping -c 3 google.com" \
@@ -295,6 +289,19 @@ alias \
 # ctorc="torsocks elinks "https://check.torproject.org/"" \
 # ctorb="torsocks surf https://check.torproject.org/" \
 
+# zsh function
+# fzf
+alias \
+ e="fzf_file" \
+ f="fzf_cd" \
+ k="fzf_kill" \
+ h="fzf_history" \
+
+# surfraw
+alias \
+ fs="sr_elvi" \
+ bm="sr_bm" \
+
 # Services/ More at chubin/awesome-console-servies
 alias \
  ispc="curl ifconfig.co/country" \
@@ -305,9 +312,7 @@ alias \
  odic="online_dic" \
  oman="online_man" \
 
-
-# Downloader
-
+## Downloader
 # wget/aria2
 alias \
  wget="wget -c" \
@@ -338,26 +343,10 @@ alias \
  pfx="peerflix -k -f /home/masud/Videos/ptfx" \
  tfx="torrentflix" \
 
-# PNGLatex
-# pnglatex -h for help
-alias \
- eq="pnglatex -b Transparent -p amssymb:amsmath -d 300 -s 12 -o eq.png" \
-
-# JavaWM
-# alias \
-# jwc="wmname LG3D"
-
 # DE/WM
 alias \
  gui="startx" \
 # dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
-
-# POWERMANAGEMENT
-# iph="i3exit suspend" \
-# ipl="i3exit lock"    \
-# ips="i3exit shutdown" \
-# ipr="i3exit reboot"  \
-# bat="cat /sys/class/power_supply/BAT?/capacity" \ 
 
 # FETCH
 alias \

@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#fzf file, cd, history,  kill
+# fzf file, cd, history,  kill
+
 fzf_file() 
         { 
         zle -I; FILE=$(find -type f 2> /dev/null | fzf +m) && vim "$FILE" ; 
@@ -26,16 +27,18 @@ fzf_kill()
         }; 
     zle -N fzf_kill;
 
-fs() {
+# Surfraw
+
+sr_elvi() {
             term="$*"
             zle -I; elvi=$(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | fzf +m) && sr "$elvi" "$term" ; 
        };
-     zle -N fs;
+     zle -N sr_elvi;
 
-bm() {
+sr_bm() {
             surfraw "$(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sort -n | fzf)" ;
        };
-     zle -N bm;
+     zle -N sr_bm;
 
 # nnn quitcd
 n ()
