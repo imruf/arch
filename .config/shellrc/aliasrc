@@ -38,7 +38,9 @@ alias \
  dcfs="cd /home/masud/.config/shellrc" \
  dcfz="cd /home/masud/.config/zsh" \
  dcfv="cd /home/masud/.config/vimwiki" \
+ dcfvc="cd /home/masud/.config/vimwiki/contacts" \
  dcfvk="cd /home/masud/.config/vimwiki/keep" \
+ dcfvu="cd /home/masud/.config/vimwiki/urls" \
  dls="cd /home/masud/.local/share" \
  dlb="cd /home/masud/.local/bin" \
  dlbs="cd /home/masud/.local/bin/scripts" \
