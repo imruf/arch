@@ -38,7 +38,7 @@ alias \
  dcfz="cd /home/masud/.config/zsh" \
  dcfv="cd /home/masud/.config/vimwiki" \
  dcfvc="cd /home/masud/.config/vimwiki/contacts" \
- dcfvk="cd /home/masud/.config/vimwiki/keep" \
+ dcfvn="cd /home/masud/.config/vimwiki/notes" \
  dcfvu="cd /home/masud/.config/vimwiki/urls" \
  dls="cd /home/masud/.local/share" \
  dlb="cd /home/masud/.local/bin" \
@@ -259,6 +259,7 @@ alias \
  isp="curl ifconfig.co" \
 
 # NetSpeed
+alias \
  nsp="speedtest" \
  nsps="speedtest --simple --single" \
  ntm="speedometer -r wlp4s0 -t wlp4s0" \
