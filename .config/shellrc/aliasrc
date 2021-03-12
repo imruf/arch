@@ -252,6 +252,13 @@ alias \
  aw="wiki-search"
 
 ## Network
+
+## nmcli
+alias \
+ anc="nmcli connection up" \
+ dnc="nmcli connection down" \
+ snc="nmcli connection show" \
+
 # IP/PING
 alias \
  pn="ping -c 3 google.com" \
