@@ -154,6 +154,7 @@ alias \
  tinp="trizen -S" \
  tpacs="trizen -Ss" \
  tznc="trizen -G" \
+ quptzn="trizen -Qua" \
  uptzn="trizen -Syu --noconfirm" \
  tznskip="trizen -S --skipinteg" \
 
