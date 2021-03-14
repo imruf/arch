@@ -258,7 +258,7 @@ alias \
 alias \
  anc="nmcli connection up" \
  dnc="nmcli connection down" \
- snc="nmcli connection show" \
+ swnc="nmcli device wifi list" \
 
 # IP/PING
 alias \
