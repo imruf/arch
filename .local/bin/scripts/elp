@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+url="$*"
+
+echo "Playing..."
+mpv --really-quiet $(youtube-dl -g "$url")
