@@ -21,13 +21,11 @@ capacity=$(cat "$battery"/capacity 2>/dev/null) || break
 
 	bicon="$(sed "s/10[0-9]/ /;s/9[0-9]/ /;s/8[0-9]/ /;s/7[0-9]/ /;s/6[0-9]/ /;s/5[0-9]/ /;s/4[0-9]/ /;s/3[0-9]/ /;s/2[0-9]/ /;s/1[0-9]/ /;s/[0-9]/ /" "$battery"/capacity)"
  
- if [ "$capacity" -le 25 ] && [ "$status" = "🔋" ]; then
-     dunstify -r 1010 -u normal "🔌Battery"
- fi
+     [ "$capacity" -le 20 ] && [ "$status" = "🔋" ] && dunstify -r 1010 -u normal "🔌Battery"
 
- if [ "$capacity" == 100 ] && [ "$status" = "🛑" ]; then
-     dunstify -r 1035 -u normal "⚡Charged"
- fi
+     [ "$capacity" == 100 ] && [ "$status" = "🛑" ] && dunstify -r 1035 -u normal "⚡Charged"
+
+     [ "$capacity" -le 15 ] && [ "$status" = "🔋" ] && slock $(sudo -A zzz)
 
 	printf "%s%s%s%% " "$status " "$bicon ""$capacity"
  done | sed 's/ *$//'

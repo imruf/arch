@@ -29,5 +29,6 @@ case $BLOCK_BUTTON in
 esac
 
 dte="$(date +"%a %d %b|%H:%M $icon")"
+bdd="$(bd_date | awk '{print $8 $2 $4}' | sed "s/\://g;s/\}//g;s/'//g;s/,/ /g")"
 
-printf "%s %s" $cicon "$dte"
+printf "%s %s %s" "$bdd"$cicon "$dte"
