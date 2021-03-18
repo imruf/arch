@@ -1,6 +1,0 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-### pip install bangla
-import bangla
-bangla_date = bangla.get_date()
-print(bangla_date)
