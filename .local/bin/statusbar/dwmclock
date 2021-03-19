@@ -29,6 +29,6 @@ case $BLOCK_BUTTON in
 esac
 
 dte="$(date +"%a %d %b $icon %H:%M")"
-bdd="$(bn_cal)"
+bdd="$(bncal -f 3)"
 
-printf "%s %s %s" "$bdd" $cicon "$dte"
+printf "%s%s %s" "$bdd" $cicon "$dte"
