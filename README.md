@@ -4,13 +4,13 @@ Dot repo of archlinux+dwm rice
 Apps In This Repo
 ---
 
-[dwm](https://github.com/imrufbd/dwm)
+[dwm](https://github.com/imruf/dwm)
 ---
     
-[st](https://github.com/imrufbd/st)
+[st](https://github.com/imruf/st)
 ---
     
-[dmenu](https://github.com/imrufbd/dmenu)
+[dmenu](https://github.com/imruf/dmenu)
 ---
 
 qutebrowser
