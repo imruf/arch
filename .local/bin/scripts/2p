@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-
-url="$*"
-
-echo "Streaming..."
-mpv --ytdl-format='bestvideo[height<=240]+bestaudio/best[height<=240]' --really-quiet "$url" --stream-record=1.ts --start=00:05:00 
-#--stream-record=1.ts
-#--start=00:00:00 

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+read -p "URL: " URL
+read -p "RES: " RES
+
+MPVYT="${MPVYT-mpv --ytdl-format=}"
+
+if [ $RES -eq 0 ]; then
+    echo "Fetching Code..."
+    youtube-dl -F "$URL"
+    read -p "Enter Code: " FORMAT
+echo "Streaming..."
+    eval "$MPVYT"\'$FORMAT\'  "$URL"
+else
+YTF="bestvideo[height<=$RES]+bestaudio/best[height<=$RES]"
+echo "Streaming..."
+    eval "$MPVYT"\'$YTF\'  "$URL"
+fi
+
+#--stream-record=1.ts
+#--start=00:00:00 
+#--really-quiet 
