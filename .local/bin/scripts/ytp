@@ -6,14 +6,14 @@ read -p "RES: " RES
 MPVYT="${MPVYT-mpv --ytdl-format=}"
 
 if [ $RES -eq 0 ]; then
-    echo "Fetching Code..."
+    printf "%s\n" "Fetching Code..."
     youtube-dl -F "$URL"
     read -p "Enter Code: " FORMAT
-echo "Streaming..."
+printf "%s\n" "Streaming..."
     eval "$MPVYT"\'$FORMAT\'  "$URL"
 else
 YTF="bestvideo[height<=$RES]+bestaudio/best[height<=$RES]"
-echo "Streaming..."
+printf "%s\n" "Streaming..."
     eval "$MPVYT"\'$YTF\'  "$URL"
 fi
 
