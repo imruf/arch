@@ -6,11 +6,7 @@ RES="$2"
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "RES: " RES
 
-[ $RES = "l" ] && RES=240
-[ $RES = "m" ] && RES=360
-[ $RES = "s" ] && RES=480
-[ $RES = "h" ] && RES=720
-[ $RES = "hd" ] && RES=1080
+RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
 
 MPVYT="${MPVYT-mpv --ytdl-format=}"
 
