@@ -1,7 +1,16 @@
 #!/bin/sh
 
-read -p "URL: " URL
-read -p "RES: " RES
+URL="$1"
+RES="$2"
+
+[ -z $URL ] && read -p "URL: " URL
+[ -z $RES ] && read -p "RES: " RES
+
+[ $RES = "l" ] && RES=240
+[ $RES = "m" ] && RES=360
+[ $RES = "s" ] && RES=480
+[ $RES = "h" ] && RES=720
+[ $RES = "hd" ] && RES=1080
 
 MPVYT="${MPVYT-mpv --ytdl-format=}"
 
