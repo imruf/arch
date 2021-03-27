@@ -1,7 +1,34 @@
 #!/bin/sh
 
-URL="$1"
-RES="$2"
+# URL="$1"
+# RES="$2"
+
+parse_opt () {
+	opt=$1
+	OPTARG="$2"
+	case ${opt} in
+		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\ -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -h: Help\\n" && exit 1 ;;
+        u) URL="${OPTARG}" ;;
+        r) RES="${OPTARG}" ;;
+        R) MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=}" ;;
+        q) MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=}" ;;
+        p) shift
+           read -p "POS HH:MM:SS: " POS
+           MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=}"
+           shift
+           ;;
+        P) shift
+           read -p "POS HH:MM:SS: " POS
+           MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=}"
+           shift
+           ;;
+   esac
+}
+
+while getopts "RpPhqu:r:" opt; do
+    parse_opt "$opt" "$OPTARG"
+done
+shift $((OPTIND-1))
 
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "RES: " RES
