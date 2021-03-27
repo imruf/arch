@@ -1,6 +1,7 @@
 autoload -U colors && colors	# Load colors
 
 setopt prompt_subst
+unsetopt nomatch
 
 RPS1='$(vcs_super_info)'
 PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
