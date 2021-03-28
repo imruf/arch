@@ -3,33 +3,20 @@
 # URL="$1"
 # RES="$2"
 
-parse_opt () {
-	opt=$1
-	OPTARG="$2"
-	case ${opt} in
-		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\ -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -h: Help\\n" && exit 1 ;;
+while getopts "dhpPqRu:r:" o; do case "${o}" in
+		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -h: Help\\n" && exit 1 ;;
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
         d) MPVYT="${MPVYT-youtube-dl -f }" ;;
         R) MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=}" ;;
         q) MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=}" ;;
-        p) shift
-           read -p "POS HH:MM:SS: " POS
+        p) read -p "POS HH:MM:SS: " POS
            MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=}"
-           shift
            ;;
-        P) shift
-           read -p "POS HH:MM:SS: " POS
+        P) read -p "POS HH:MM:SS: " POS
            MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=}"
-           shift
            ;;
-   esac
-}
-
-while getopts "RpPhqdu:r:" opt; do
-    parse_opt "$opt" "$OPTARG"
-done
-shift $((OPTIND-1))
+esac done
 
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "RES: " RES
@@ -42,10 +29,10 @@ if [ $RES -eq 0 ]; then
     printf "%s\n" "Fetching Code..."
     youtube-dl -F "$URL"
     read -p "Enter Code: " FORMAT
-printf "%s\n" "Streaming..."
+printf "%s\n" "Loading..."
     eval "$MPVYT"\'$FORMAT\'  "$URL"
 else
 YTF="bestvideo[height<=$RES]+bestaudio/best[height<=$RES]"
-printf "%s\n" "Streaming..."
+printf "%s\n" "Loading..."
     eval "$MPVYT"\'$YTF\'  "$URL"
 fi
