@@ -7,9 +7,10 @@ parse_opt () {
 	opt=$1
 	OPTARG="$2"
 	case ${opt} in
-		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\ -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -h: Help\\n" && exit 1 ;;
+		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\ -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -h: Help\\n" && exit 1 ;;
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
+        d) MPVYT="${MPVYT-youtube-dl -f }" ;;
         R) MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=}" ;;
         q) MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=}" ;;
         p) shift
@@ -25,7 +26,7 @@ parse_opt () {
    esac
 }
 
-while getopts "RpPhqu:r:" opt; do
+while getopts "RpPhqdu:r:" opt; do
     parse_opt "$opt" "$OPTARG"
 done
 shift $((OPTIND-1))
@@ -48,7 +49,3 @@ YTF="bestvideo[height<=$RES]+bestaudio/best[height<=$RES]"
 printf "%s\n" "Streaming..."
     eval "$MPVYT"\'$YTF\'  "$URL"
 fi
-
-#--stream-record=1.ts
-#--start=00:00:00 
-#--really-quiet 
