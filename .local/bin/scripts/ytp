@@ -7,32 +7,40 @@ while getopts "dhpPqRu:r:" o; do case "${o}" in
 		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -h: Help\\n" && exit 1 ;;
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
-        d) MPVYT="${MPVYT-youtube-dl -f }" ;;
-        R) MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=}" ;;
-        q) MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=}" ;;
-        p) read -p "POS HH:MM:SS: " POS
-           MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=}"
-           ;;
-        P) read -p "POS HH:MM:SS: " POS
-           MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=}"
-           ;;
+        d) read -p "URL: " URL
+           printf "%s\n" "Fetching Code..."
+           youtube-dl -F "$URL"
+           read -p "Download Code: " RES
+           printf "%s\n" "Downloading..."
+           MPVYT="${MPVYT-youtube-dl -f $RES $URL}" ;;
+        R) read -p "URL: " URL
+           read -p "RES: " RES
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           printf "%s\n" "Recording Stream..."
+           MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+        q) read -p "URL: " URL
+           read -p "RES: " RES
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           printf "%s\n" "Really Quiet..."
+           MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+        p) read -p "URL: " URL
+           read -p "RES: " RES
+           read -p "POS HH:MM:SS: " POS
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           printf "%s\n" "Seeking Stream..."
+           MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+        P) read -p "URL: " URL
+           read -p "RES: " RES
+           read -p "POS HH:MM:SS: " POS
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           printf "%s\n" "Seek and Recording Stream..."
+           MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
 esac done
 
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "RES: " RES
 
 RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+MPVYT="${MPVYT-mpv --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}"
 
-MPVYT="${MPVYT-mpv --ytdl-format=}"
-
-if [ $RES -eq 0 ]; then
-    printf "%s\n" "Fetching Code..."
-    youtube-dl -F "$URL"
-    read -p "Enter Code: " FORMAT
-printf "%s\n" "Loading..."
-    eval "$MPVYT"\'$FORMAT\'  "$URL"
-else
-YTF="bestvideo[height<=$RES]+bestaudio/best[height<=$RES]"
-printf "%s\n" "Loading..."
-    eval "$MPVYT"\'$YTF\'  "$URL"
-fi
+$MPVYT
