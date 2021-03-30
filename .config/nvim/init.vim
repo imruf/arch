@@ -128,7 +128,7 @@ set rtp+=/usr/bin/fzf
 nnoremap <silent> <leader>f :AF<CR>
 
 if exists('$TMUX')
-  let g:fzf_layout = { 'tmux': '-p90%,60%' }
+  let g:fzf_prefer_tmux = 1
 else
   let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 endif
@@ -141,8 +141,9 @@ let g:fzf_action = {
 
 command! -nargs=? -complete=dir AF
  \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
-  \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
+ \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
   \ })))
+
 
 ":vimwiki ext
 let g:vimwiki_list = [{'path': '~/.config/vimwiki',
