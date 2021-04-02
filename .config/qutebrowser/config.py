@@ -15,9 +15,12 @@ c.statusbar.show = 'in-mode'
 c.tabs.show = 'multiple' #always, never, multiple, switching
 c.tabs.title.format = '{audio}{index}: {host}'
 
+# colors.webpage.preferred_color_scheme dark
 c.colors.webpage.darkmode.enabled = True
 # c.colors.webpage.darkmode.algorithm = 'lightness-cielab' #lightness/brightness-cielab/hsl/rgb
 # c.colors.webpage.darkmode.grayscale.all = True
+#auto, light, dark
+
 
 c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
                        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
@@ -73,6 +76,9 @@ config.bind('gx', 'open qute://settings')
 config.bind('gd', 'download')
 config.bind('gs', 'view-source')
 
+config.set("fileselect.handler", "external")
+config.set("fileselect.single_file.command", ['st', '-n', 'qtfp', '-g', '112x20', '-e', 'nnn', '-p', '{}'])
+config.set("fileselect.multiple_files.command", ['st', '-n', 'qtfp', '-g', '112x20', '-e', 'nnn', '-p', '{}'])
 
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 # c.auto_save.interval = 15000
