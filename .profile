@@ -4,15 +4,15 @@
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
 # Defaults
-# export BROWSER="qutebrowser"
+export BROWSER="qutebrowser"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
 export FILE="nnn"
 
 # ManPage
-export MANPAGER="nvim -c 'set ft=man' -"
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # xdg-dir
@@ -44,14 +44,14 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
 
 # Fix
-export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
+# export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
 # nnn environment
 export NNN_USE_EDITOR=1
-export NNN_OPTS="aCdDrx"
+export NNN_OPTS="aCdDr"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=mimeopen
 export NNN_COLORS="3427"
