@@ -38,8 +38,8 @@ COMMANDS["power"]="powermenu"
 LABELS["power"]=""
 
 # gpg
-COMMANDS["gpg"]="passmenu"
-LABELS["gpg"]=""
+COMMANDS["pgpg"]="passmenu"
+LABELS["pgpg"]=""
 
 # gpg
 COMMANDS["bfix"]="bfix"
