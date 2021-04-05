@@ -51,10 +51,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
 # nnn environment
 export NNN_USE_EDITOR=1
+#export NNN_OPTS="adr"
 export NNN_OPTS="aCdDr"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=mimeopen
 export NNN_COLORS="3427"
+#export NNN_FCOLORS='c1e2d62e276033f7c600abc4'
 export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud'
 export NNN_PLUG='d:dragdrop;f:fzfcd;p:preview-tui-ext;w:setbg;x:dups'
