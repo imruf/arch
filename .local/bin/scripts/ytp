@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# URL="$1"
-# RES="$2"
-
 while getopts "dhpPqRu:r:" o; do case "${o}" in
 		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -h: Help\\n" && exit 1 ;;
         u) URL="${OPTARG}" ;;
@@ -31,6 +28,8 @@ while getopts "dhpPqRu:r:" o; do case "${o}" in
            RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
            MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
 esac done
+
+URL="$*"
 
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "RES: " RES
