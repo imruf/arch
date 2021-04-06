@@ -89,8 +89,8 @@ alias \
  fgrep="fgrep --color=auto" \
 
 # Merge
-# alias \
-# merge="xrdb -merge ~/.Xresources" \
+alias \
+ merge="xrdb -merge ~/.Xresources" \
 
 # Conky
 # alias \
