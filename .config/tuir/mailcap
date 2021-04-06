@@ -1,0 +1,12 @@
+image/x-imgur-album; feh -B black -g 640x480  -. %s; test=test -n "$DISPLAY"
+image/*; feh -B black -g 640x480 -. '%s'; test=test -n "$DISPLAY"
+image/gif; ytp '%s'; test=test -n "$DISPLAY"; needsterminal
+audio/*; mpv %s ;
+video/*; ytp '%s'; test=test -n "$DISPLAY"; needsterminal
+text/plain; $EDITOR %s ;
+text/html; elinks %s ; nametemplate=%s.html
+text/html; elinks -assume_charset=%{charset} -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput;
+application/pdf; zathura %s ;
+application/pgp-encrypted; gpg -d '%s'; copiousoutput;
+# video/x-youtube; mpv --ytdl-format=bestvideo+bestaudio/best '%s' --autofit=640x480; test=test -n "$DISPLAY"
+# video/*; mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
