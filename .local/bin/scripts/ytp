@@ -5,39 +5,37 @@ while getopts "dfhpPqRu:r:" o; do case "${o}" in
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
         d) [ -z $URL ] && read -p "URL: " URL
-           printf "%s\n" "Fetching Code..."
            youtube-dl -F "$URL"
-           read -p "Download Code: " RES
+           read -p "Code: " RES
            MPVYT="${MPVYT-youtube-dl -f $RES $URL}" ;;
         f) [ -z $URL ] && read -p "URL: " URL
-           printf "%s\n" "Fetching Code..."
            youtube-dl -F "$URL"
-           read -p "Stream Code: " RES
-           MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=$RES $URL}" ;;
+           read -p "Code: " RES
+           MPVYT="${MPVYT-mpv --ytdl-format=$RES $URL}" ;;
         R) [ -z $URL ] && read -p "URL: " URL
-           read -p "RES: " RES
-           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           read -p "l/m/s/h/k/?: " RES
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
            MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
         q) [ -z $URL ] && read -p "URL: " URL
-           read -p "RES: " RES
-           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           read -p "l/m/s/h/k/?: " RES
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
            MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
         p) [ -z $URL ] && read -p "URL: " URL
-           read -p "RES: " RES
-           read -p "POS HH:MM:SS: " POS
-           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           read -p "l/m/s/h/k/?: " RES
+           read -p "HH:MM:SS: " POS
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
            MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
         P) [ -z $URL ] && read -p "URL: " URL
-           read -p "RES: " RES
-           read -p "POS HH:MM:SS: " POS
-           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+           read -p "l/m/s/h/k/?: " RES
+           read -p "HH:MM:SS: " POS
+           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
            MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
 esac done
 
 [ -z $URL ] && read -p "URL: " URL
-[ -z $RES ] && read -p "RES: " RES
+[ -z $RES ] && read -p "l/m/s/h/k/?: " RES
 
-RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/d/1080/')"
+RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
 MPVYT="${MPVYT-mpv --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}"
 
 $MPVYT
