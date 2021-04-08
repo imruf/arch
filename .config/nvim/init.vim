@@ -15,6 +15,7 @@ Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
+Plug 'strboul/urlview.vim'                        " urlview
 " Plug 'vim-airline/vim-airline'				  " Airline
 " Plug 'vim-airline/vim-airline-themes'			  " Airline Themes
 " Plug 'flazz/vim-colorschemes'                   " vim colorscheme
@@ -29,6 +30,9 @@ filetype plugin on
 
 "Remap ESC to jj 
 :imap jj <Esc>
+
+" Space to PageDown
+map <Space> <PageDown>
 
 "Disable arrow keys in Normal mode
 no <Up> <Nop>
@@ -77,10 +81,12 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 " Open corresponding .pdf/.html or preview
 map <leader>p :!opout <c-r>%<CR><CR>
 
+" color from hex code
 map <leader>h :ColorHighlight
-noremap <leader>u :w \| startinsert \| term urlview %<cr>
 
-":nnoremap <leader>u :silent w\|!urlview %<CR>
+" urlview
+nnoremap <silent> <leader>u :Urlview<CR>
+
 
 " Enable autocompletion:
 set wildmode=longest,list,full
@@ -102,6 +108,10 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 set hlsearch
+set autoindent
+set smartindent
+" set cursorline
+" set cursorcolumn
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
@@ -133,7 +143,6 @@ else
   let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 endif
 
-
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
@@ -143,7 +152,6 @@ command! -nargs=? -complete=dir AF
  \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
  \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
   \ })))
-
 
 ":vimwiki ext
 let g:vimwiki_list = [{'path': '~/.config/vimwiki',
@@ -158,6 +166,21 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ '<c-v>': 'vsplit'
 "             \ }
 
+" manpage with table of contents sidebar with neovim
+" https://asciinema.org/a/165076
+" add to shellrc: export MANPAGER="nvim +set\ filetype=man -"
+augroup manlaunchtoc
+    autocmd!
+    if has('nvim')
+        autocmd FileType man
+            \ call man#show_toc() |
+            \ setlocal laststatus=0 nonumber norelativenumber |
+            \ nnoremap <buffer> l <Enter> |
+            \ wincmd H |
+            \ vert resize 35 |
+            \ wincmd p
+    endif
+augroup end
 
 " dwmblocks autocompile
 autocmd BufWritePost ~/Downloads/Git/dwmblocks/config.h !cd ~/Downloads/Git/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
