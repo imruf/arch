@@ -11,8 +11,8 @@ export READER="zathura"
 export FILE="nnn"
 
 # ManPage
-# export MANPAGER="nvim -c 'set ft=man' -"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="nvim -c 'set ft=man' -"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # xdg-dir
@@ -44,7 +44,8 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
 
 # Fix
-# export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
+# export QT_QPA_PLATFORMTHEME="qt5ct"
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
@@ -58,8 +59,7 @@ export NNN_COLORS="3427"
 export NNN_FCOLORS='00e2272ec16033f7c6d6abc4'
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud'
-export NNN_PLUG='d:dragdrop;f:fzfcd;p:preview-tui-ext;w:setbg;x:dups'
-# export NNN_OPTS="adr"
+export NNN_PLUG='d:drop;f:fzfcd;p:preview-tui-ext;w:setbg;x:dups'
 
 # tuir environment
 export TUIR_BROWSER="elinks"

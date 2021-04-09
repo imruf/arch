@@ -167,17 +167,15 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ }
 
 " manpage with table of contents sidebar with neovim
-" https://asciinema.org/a/165076
-" add to shellrc: export MANPAGER="nvim +set\ filetype=man -"
 augroup manlaunchtoc
-    autocmd!
-    if has('nvim')
+     autocmd!
+     if has('nvim')
         autocmd FileType man
             \ call man#show_toc() |
-            \ setlocal laststatus=0 nonumber norelativenumber |
+            \ setlocal laststatus=0 number relativenumber |
             \ nnoremap <buffer> l <Enter> |
             \ wincmd H |
-            \ vert resize 35 |
+            \ vert resize 10 |
             \ wincmd p
     endif
 augroup end

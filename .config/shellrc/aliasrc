@@ -10,9 +10,8 @@ alias \
 
 # Multiplexer/tmux
 alias \
- t="tmux" \
- ta0="tmux attach-session -t 0" \
- ta="tmux attach-session -t" \
+ t="tmux a || tmux" \
+ ta="tmux a -t" \
  tl="tmux ls" \
 
 ## Files
