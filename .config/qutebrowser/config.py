@@ -22,7 +22,7 @@ c.colors.webpage.darkmode.enabled = True
 #auto, light, dark
 
 
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}',
                        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
                        'aw': 'https://wiki.archlinux.org/?search={}',
                        'b2b': 'https://www.english-bangla.com/bntobn/index/{}',

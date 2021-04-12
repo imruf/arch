@@ -1,7 +1,7 @@
 #!/bin/sh
 
-while getopts "dfhpPqRu:r:" o; do case "${o}" in
-		h) 	printf "Options\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -q: Quiet\\n -d: Download\\n -f: Get Format\\n -h: Help\\n" && exit 1 ;;
+while getopts "adfhpPRu:r:" o; do case "${o}" in
+		h) 	printf "ytp\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -d: Download\\n -a: Audio Only\\n -f: Get Format\\n -h: Help\\n" && exit 1 ;;
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
         d) [ -z $URL ] && read -p "URL: " URL
@@ -16,10 +16,10 @@ while getopts "dfhpPqRu:r:" o; do case "${o}" in
            read -p "l/m/s/h/k/?: " RES
            RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
            MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
-        q) [ -z $URL ] && read -p "URL: " URL
-           read -p "l/m/s/h/k/?: " RES
-           RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
-           MPVYT="${MPVYT-mpv --really-quiet --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+        a) [ -z $URL ] && read -p "URL: " URL
+           read -p "a/b/c/d/e/?: " RES
+           RES="$(printf $RES | sed 's/a/139/;s/b/140/;s/c/249/;s/d/250/;s/e/251/')"
+           MPVYT="${MPVYT-mpv --ytdl-format=$RES $URL}" ;;
         p) [ -z $URL ] && read -p "URL: " URL
            read -p "l/m/s/h/k/?: " RES
            read -p "HH:MM:SS: " POS
