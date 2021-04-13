@@ -238,6 +238,7 @@ alias \
 alias \
  gitc="git clone" \
  gitu="git push -u origin main" \
+ gitd="git pull" \
  gitca="git commit -a" \
  gita="git add" \
  gits="git status" \
