@@ -46,8 +46,8 @@ c.window.hide_decoration = True
 c.window.title_format = '{perc}{host}'
 
 # config.bind('X', 'hint links spawn mpv {url}')
-config.bind('x', 'hint links spawn 4p {hint-url}')
-config.bind('X', 'hint links spawn mpv {hint-url}')
+config.bind('x', 'hint links spawn ytp -u {hint-url}')
+config.bind('X', 'hint links spawn ytp -u {hint-url} -f')
 config.bind('ca', 'hint links spawn aria2p add {hint-url}')
 config.bind('an', 'config-cycle content.user_stylesheets ~/.surf/styles/solarized.css ""')
 config.bind('q', 'quit')
