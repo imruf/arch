@@ -1,0 +1,24 @@
+#!/bin/sh
+
+## check for new or broken services
+## https://github.com/chubin/awesome-console-services
+## dependencies
+# curl
+# dig (bind/dnsutils)
+
+case "$(printf "ip\\ndns\\ngeo\\ntxt\\nurl-shorten\\nshare-file\\ncreate-qrcode\\ntldr\\ndic\\n" | fzf)" in
+             ip) curl eth0.me ;;
+            dns) curl -L https://edns.ip-api.com/json ;;
+            geo) curl ifconfig.es/geo ;;
+            txt) read -p "TEXT: " TEXT
+                 echo "$TEXT" | curl -F 'f:1=<-' ix.io ;;
+    url-shorten) read -p "url: " url
+                 curl -F shorten=$url https://ttm.sh ;;
+     share-file) read -p "FILE: " FILE
+                 curl -F file=@$FILE https://ttm.sh ;;
+  create-qrcode) read -p "STRING: " STRING
+                 echo $STRING | curl -F-=\<- qrenco.de ;;
+           tldr) read -p "progs: " progs
+                 curl cheat.sh/$progs ;;
+            dic) read -p "word: " word && curl dict.org/d:$word ;;
+esac
