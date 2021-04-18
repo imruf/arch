@@ -2,8 +2,8 @@
 Name=dwm
 Comment=suckless dynamic window manager
 Exec=dwm
-Type=Application
+Type=XSession
 X-LightDM-DesktopName=DWM
 DesktopNames=dwm
 
-#Put this in /usr/share/xsessions/
+#Put this in /usr/share/xsessions/; create if doesn't exist
