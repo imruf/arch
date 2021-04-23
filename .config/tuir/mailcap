@@ -7,5 +7,3 @@ text/plain; $EDITOR %s ;
 text/html; elinks %s ; nametemplate=%s.html
 application/pdf; zathura %s ;
 application/pgp-encrypted; gpg -d '%s'; copiousoutput;
-# video/x-youtube; mpv --ytdl-format=bestvideo+bestaudio/best '%s' --autofit=640x480; test=test -n "$DISPLAY"
-# video/*; mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
