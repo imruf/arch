@@ -3,11 +3,15 @@ autoload -U colors && colors	# Load colors
 setopt prompt_subst
 unsetopt nomatch
 
+#autoload -Uz promptinit
+#promptinit
+#prompt redhat
+
 RPS1='$(vcs_super_info)'
-PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
+PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%d%F{green} %b:- "
 #PS1="%F{yellow}%n%F{blue}$(print -P '\uF303';)%F{yellow}%M %B%F{yellow}%~%F{green} »%b "
 #PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
-# PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
+#PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
 
 #EXPORT 
 export TERM="xterm-256color"

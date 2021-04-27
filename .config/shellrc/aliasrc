@@ -109,7 +109,7 @@ alias \
 
 # init
 alias \
- sys="sudo sv" \
+ sys="sudo rsm" \
 # sys="sudo systemctl"
 
 # MIRROR
@@ -280,10 +280,10 @@ alias \
 
 # SSH/FTP
 alias \
- sfu="sudo sv start sshd" \
- sfd="sudo sv stop sshd" \
- ftpu="sudo sv start vsftpd" \
- ftpd="sudo sv stop vsftpd" \
+ sfu="sudo rsm start sshd" \
+ sfd="sudo rsm stop sshd" \
+ ftpu="sudo rsm start vsftpd" \
+ ftpd="sudo rsm stop vsftpd" \
 # termux="ssh -p 8022 u0_a127@192.168.137.234" \
 
 # tor/vpn
