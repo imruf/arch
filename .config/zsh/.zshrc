@@ -8,7 +8,9 @@ unsetopt nomatch
 #prompt redhat
 
 RPS1='$(vcs_super_info)'
-PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%d%F{green} %b:- "
+PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green}%b
+:- "
+
 #PS1="%F{yellow}%n%F{blue}$(print -P '\uF303';)%F{yellow}%M %B%F{yellow}%~%F{green} »%b "
 #PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
 #PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "

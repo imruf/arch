@@ -1,0 +1,67 @@
+#!/bin/bash
+
+while getopts "i:r:" o; do case "${o}" in
+        i) id="${OPTARG}" ;;
+        r) res="${OPTARG}" ;;
+esac done
+
+[ -z "$id" ] && id="0"
+[ -z "$res" ] && res="1366x768"
+
+bing="http://www.bing.com"
+xmlURL="http://www.bing.com/HPImageArchive.aspx?format=xml&idx=$id&n=1&mkt=en-WW"
+
+saveDir=$HOME'/Pictures/Wall/Bing/'
+# mkdir -p $saveDir
+
+# Valid set options are: none,wallpaper,centered,scaled,stretched,zoom,span ned
+# Valid res options: "_1024x768" "_1280x720" "_1366x768" "_1920x1200"
+# picOpts="zoom"
+
+picRes="_$res"
+picExt=".jpg"
+picURL=$bing$(echo $(curl -s $xmlURL) | grep -oP "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)$picRes$picExt
+picName=${picURL##*/} 
+picFileName=$(echo $picName | grep -oP "id=(.*)_" | cut -d "." -f 2 | cut -d "_" -f 1)
+
+# tempName="temp.jpg"
+# picFileName=${picName%.*}.png
+
+# Download the Bing pic of the day
+curl -o $saveDir$picFileName$picExt $picURL && dunstify -u normal "$picFileName$picExt downloaded"
+
+# set wallpaper
+# setbg $saveDir$picFileName$picExt
+
+
+# Get the description from the EXIF of the image
+# annotation=$(exiftool -s -s -s -Title "$saveDir$tempName")
+
+# Dir to place the altered images (with image description)
+# deskDir="${saveDir}desktop/"
+
+# Make sure the directory exists
+# mkdir -p $deskDir
+
+# Write the EXIF into the Wallpaper
+#convert $saveDir$tempName  -fill white  -undercolor '#00000080' -font Ubuntu-Regular -pointsize 24 -gravity Southeast -annotate +0+5 " $annotation " $deskDir$picName
+# Ubuntu Unity (no bottom menu)
+#convert $saveDir$tempName  -fill white  -undercolor '#00000080' -font Ubuntu-Regular -pointsize 24 -gravity Southeast -annotate +0+61 " $annotation " $deskDir$picFileName
+# Cinnamon (bottom menu)
+# convert $saveDir$tempName  -fill white  -undercolor '#00000080' -font Ubuntu-Regular -pointsize 24 -gravity Southeast -annotate +0+86 " $annotation " $deskDir$picFileName
+
+# Remove Temp
+# rm $saveDir$tempName
+# mv $saveDir$tempName $saveDir$picName
+
+# Set the GNOME3 wallpaper
+# DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri '"file://'$deskDir$picFileName'"'
+
+# Set the GNOME 3 wallpaper picture options
+# DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-options $picOpts
+
+# Remove pictures older than 7 days
+# find $deskDir -atime 14 -delete
+
+# Exit the script
+exit
