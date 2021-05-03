@@ -9,11 +9,10 @@ numlockx on &
 ibus-daemon -xdr &
 xcompmgr &		# xcompmgr for transparency
 dunst &			# dunst for notifications
-unclutter &		# Remove mouse when idle
 clipmenud &     # clipboardmanager
 redshift &
 xset r rate 300 50 &
 setxkbmap -option caps:escape &
+unclutter &		# Remove mouse when idle
 #sxhkd -m 1 &		# Bind keys with sxhkd
 # slstatus &
-

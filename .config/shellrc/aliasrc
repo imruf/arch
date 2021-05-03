@@ -259,6 +259,7 @@ alias \
  anc="nmcli connection up" \
  dnc="nmcli connection down" \
  swnc="nmcli device wifi list" \
+ rnm="sys restart NetworkManager" \
 
 # IP/PING
 alias \
