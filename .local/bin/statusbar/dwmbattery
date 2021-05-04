@@ -27,5 +27,5 @@ capacity=$(cat "$battery"/capacity 2>/dev/null) || break
 
      [ "$capacity" -le 15 ] && [ "$status" = "🔋" ] && slock $(sudo -A zzz)
 
-	printf "%s%s%s%% " "$status " "$bicon ""$capacity"
+	printf "%s%s%s" "$bicon ""$capacity%" " $status" 
  done | sed 's/ *$//'

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# Displays todays precipication chance (☔) and daily low (🥶) and high (🌞).
+# Usually intended for the statusbar.
+
+# If we have internet, get a weather report from wttr.in and store it locally.
+# You could set up a shell alias to view the full file in a pager in the
+# terminal if desired. This function will only be run once a day when needed.
+# curl wttr.in/:help
+# C    Weather condition textual name,
+# x    Weather condition, plain-text symbol,
+# h    Humidity,
+# t    Temperature (Actual),
+# f    Temperature (Feels Like),
+# w    Wind,
+# l    Location,
+# m    Moon phase 🌑🌒🌓🌔🌕🌖🌗🌘,
+# M    Moon day,
+# p    Precipitation (mm/3 hours),
+# P    Pressure (hPa),
+# D    Dawn*,
+# S    Sunrise*,
+# z    Zenith*,
+# s    Sunset*,
+# d    Dusk*,
+# T    Current time*,
+# Z    Local timezone.
+	
+	
+weatherreport="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
+getforecast() { curl -sf "v2d.wttr.in/khagrachari?format=%c%C%t" > "$weatherreport" || exit 1 ;}
+
+# Some very particular and terse stream manipulation. We get the maximum
+# precipitation chance and the daily high and low from the downloaded file and
+# display them with corresponding emojis.
+
+
+
+showweather() { printf "%s" "$(awk -F'[+]' '{print $1"🌡️"$2}' < "$weatherreport")"
+}
+
+case $BLOCK_BUTTON in
+	1) notify-send "Getting Weather Update" && getforecast && showweather  ;;
+	3) notify-send "🌈 Weather module" "\- Left click for full forecast.
+- Middle click to update forecast.
+☔: Chance of rain/snow
+🥶: Daily low
+🌞: Daily high" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+# The test if our forecast is updated to the day. If it isn't download a new
+# weather report from wttr.in with the above function.
+
+[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
+
+getforecast
+
+
+showweather

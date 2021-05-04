@@ -23,4 +23,4 @@ else
 	icon="🔉"
 fi
 
-printf " %s %s" $icon "$vol%"
+printf "%s %s" $icon "$vol%"
