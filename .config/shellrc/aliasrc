@@ -42,6 +42,7 @@ alias \
  dls="cd /home/masud/.local/share" \
  dlb="cd /home/masud/.local/bin" \
  dlbs="cd /home/masud/.local/bin/scripts" \
+ dlbb="cd /home/masud/.local/bin/statusbar" \
  dh="cd /home/masud" \
  ddl="cd /home/masud/Downloads" \
  dn="cd /home/masud/Documents" \

@@ -45,11 +45,11 @@ getforecast() { curl -sf "v2d.wttr.in/khagrachari?format=%c%C-🌡️%t" > "$wea
 # precipitation chance and the daily high and low from the downloaded file and
 # display them with corresponding emojis.
 
-showweather() { [ -s $weatherreport ] && printf "%s" "$(awk -F'[-]' '{print $1 $2}' < "$weatherreport")" || printf "🌈 Click To Update Weather"
+showweather() { [ -s $weatherreport ] && printf "%s\n" "$(awk -F'[-]' '{print $1 $2}' < "$weatherreport")" || printf "%s\n" "🌈 Click To Update Weather"
 }
 
 case $BLOCK_BUTTON in
-	1) getforecast && notify-send "🌈 Weather Updated" ;;
+	1) notify-send "🌈 Updating Weather" && getforecast ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
