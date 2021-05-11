@@ -25,36 +25,37 @@
 # d    Dusk*,
 # T    Current time*,
 # Z    Local timezone.
+# ☁️ cloud; 2601 FE0F;
+# ⛅ sun behind cloud; 26C5;
+# ⛈️ cloud with lightning and rain; 26C8 FE0F;
+# 🌤️ sun behind small cloud; 1F324 FE0F;
+# 🌥️ sun behind large cloud; 1F325 FE0F;
+# 🌦️ sun behind rain cloud; 1F326 FE0F;
+# 🌧️ cloud with rain; 1F327 FE0F;
+# 🌨️ cloud with snow; 1F328 FE0F;
+# 🌩️ cloud with lightning; 1F329 FE0F;
+# 🌫️ fog; 1F32B FE0F;
+# 🌬️ wind face; 1F32C FE0F;
 	
 	
 weatherreport="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
-getforecast() { curl -sf "v2d.wttr.in/khagrachari?format=%c%C%t" > "$weatherreport" || exit 1 ;}
+getforecast() { curl -sf "v2d.wttr.in/khagrachari?format=%c%C-🌡️%t" > "$weatherreport" || exit 1 ;}
 
 # Some very particular and terse stream manipulation. We get the maximum
 # precipitation chance and the daily high and low from the downloaded file and
 # display them with corresponding emojis.
 
-
-
-showweather() { printf "%s" "$(awk -F'[+]' '{print $1"🌡️"$2}' < "$weatherreport")"
+showweather() { [ -s $weatherreport ] && printf "%s" "$(awk -F'[-]' '{print $1 $2}' < "$weatherreport")" || printf "🌈 Click To Update Weather"
 }
 
 case $BLOCK_BUTTON in
-	1) notify-send "Getting Weather Update" && getforecast && showweather  ;;
-	3) notify-send "🌈 Weather module" "\- Left click for full forecast.
-- Middle click to update forecast.
-☔: Chance of rain/snow
-🥶: Daily low
-🌞: Daily high" ;;
+	1) getforecast && notify-send "🌈 Weather Updated" ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 # The test if our forecast is updated to the day. If it isn't download a new
 # weather report from wttr.in with the above function.
 
-[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
-
-getforecast
-
+#[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
 
 showweather

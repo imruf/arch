@@ -246,7 +246,7 @@ alias \
 # ARCHIVE
 alias \
  uz="atool -x" \
- z="atool -a" \
+ z="apack" \
 
 # arch-wiki-lite
 alias \
