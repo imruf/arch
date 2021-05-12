@@ -1,7 +1,8 @@
 image/x-imgur-album; feh -B black -g 640x480  -. %s; test=test -n "$DISPLAY"
-image/*; linkhandler '%s';
 image/gif; ytp -u '%s' -f; test=test -n "$DISPLAY"; needsterminal
+image/*; linkhandler '%s';
 audio/*; mpv %s ;
+video/redgif; ytp -u '%s' -g; test=test -n "$DISPLAY"
 video/*; ytp -u '%s' -f; test=test -n "$DISPLAY"; needsterminal
 text/plain; $EDITOR %s ;
 text/html; elinks %s ; nametemplate=%s.html
