@@ -1,10 +1,14 @@
 image/x-imgur-album; feh -B black -g 640x480  -. %s; test=test -n "$DISPLAY"
 image/gif; ytp -u '%s' -f; test=test -n "$DISPLAY"; needsterminal
-image/*; linkhandler '%s';
-audio/*; mpv %s ;
-video/redgif; ytp -u '%s' -g; test=test -n "$DISPLAY"
+image/*; linkhandler '%s'; test=test -n "$DISPLAY"; needsterminal
+audio/*; mpv %s; test=test -n "$DISPLAY"; needsterminal
+video/redgif; ytp -u '%s' -g; test=test -n "$DISPLAY"; needsterminal 
 video/*; ytp -u '%s' -f; test=test -n "$DISPLAY"; needsterminal
-text/plain; $EDITOR %s ;
+text/plain; $EDITOR %s ; test=test -n "$DISPLAY"
 text/html; elinks %s ; nametemplate=%s.html
-application/pdf; zathura %s ;
-application/pgp-encrypted; gpg -d '%s'; copiousoutput;
+application/pdf; zathura %s ; test=test -n "$DISPLAY"
+application/pgp-encrypted; gpg -d '%s'; copiousoutput
+
+# - Add ``test=test -n "$DISPLAY"`` if your command opens a new window
+# - Add ``needsterminal`` for commands that use the terminal
+# - Add ``copiousoutput`` for commands that dump text to stdout

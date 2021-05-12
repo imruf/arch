@@ -32,8 +32,8 @@ while getopts "adfghpPRu:r:" o; do case "${o}" in
            MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
 # this -g is for redgif
         g) [ -z $URL ] && read -p "URL: " URL
-           youtube-dl -g --no-warnings "$URL" | awk 'NR==2' | xclip
-           RES=$(xclip -o)
+           youtube-dl -g --no-warnings "$URL" | awk 'NR==2' | xsel
+           RES="$(printf $(xsel -o))"
            MPVYT="${MPVYT-mpv $RES}" ;;
 esac done
 
