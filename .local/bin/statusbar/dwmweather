@@ -25,17 +25,6 @@
 # d    Dusk*,
 # T    Current time*,
 # Z    Local timezone.
-# ☁️ cloud; 2601 FE0F;
-# ⛅ sun behind cloud; 26C5;
-# ⛈️ cloud with lightning and rain; 26C8 FE0F;
-# 🌤️ sun behind small cloud; 1F324 FE0F;
-# 🌥️ sun behind large cloud; 1F325 FE0F;
-# 🌦️ sun behind rain cloud; 1F326 FE0F;
-# 🌧️ cloud with rain; 1F327 FE0F;
-# 🌨️ cloud with snow; 1F328 FE0F;
-# 🌩️ cloud with lightning; 1F329 FE0F;
-# 🌫️ fog; 1F32B FE0F;
-# 🌬️ wind face; 1F32C FE0F;
 	
 	
 weatherreport="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
@@ -56,6 +45,8 @@ esac
 # The test if our forecast is updated to the day. If it isn't download a new
 # weather report from wttr.in with the above function.
 
-#[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
+[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
+	getforecast
+
 
 showweather
