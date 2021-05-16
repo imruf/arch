@@ -241,6 +241,7 @@ alias \
  gitu="git push -u origin main" \
  gitd="git pull" \
  gitca="git commit -a" \
+ gitcm="git commit -m" \
  gita="git add" \
  gits="git status" \
 
