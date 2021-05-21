@@ -31,36 +31,37 @@ alias \
 
 # Navigation
 alias \
- dcc="cd /home/masud/.cache" \
- dcf="cd /home/masud/.config" \
- dcfs="cd /home/masud/.config/shellrc" \
- dcfz="cd /home/masud/.config/zsh" \
- dcfv="cd /home/masud/.config/vimwiki" \
- dcfvc="cd /home/masud/.config/vimwiki/contacts" \
- dcfvn="cd /home/masud/.config/vimwiki/notes" \
- dcfvu="cd /home/masud/.config/vimwiki/urls" \
- dls="cd /home/masud/.local/share" \
- dlb="cd /home/masud/.local/bin" \
- dlbs="cd /home/masud/.local/bin/scripts" \
- dlbb="cd /home/masud/.local/bin/statusbar" \
- dh="cd /home/masud" \
- ddl="cd /home/masud/Downloads" \
- dn="cd /home/masud/Documents" \
- dp="cd /home/masud/Pictures" \
- dm="cd /home/masud/Music" \
- dv="cd /home/masud/Videos" \
- dw="cd /home/masud/Desktop" \
- dda="cd /home/masud/Downloads/AUR" \
- dg="cd /home/masud/Downloads/Git" \
- dga="cd /home/masud/Downloads/Git/arch" \
- dgd="cd /home/masud/Downloads/Git/dwm" \
- dgb="cd /home/masud/Downloads/Git/dwmblocks" \
- dgs="cd /home/masud/Downloads/Git/st" \
- fv="$EDITOR /home/masud/.config/nvim/init.vim" \
- fz="$EDITOR /home/masud/.config/zsh/.zshrc" \
- fa="$EDITOR /home/masud/.config/shellrc/aliasrc" \
- fzz="$EDITOR /home/masud/.config/shellrc/zshfnrc" \
- fzp="$EDITOR /home/masud/.profile" \
+ xr="cd $XDG_RUNTIME_DIR" \
+ xcc="cd $XDG_CACHE_HOME" \
+ xc="cd $XDG_CONFIG_HOME" \
+ xcs="cd $XDG_CONFIG_HOME/shellrc" \
+ xcv="cd $XDG_CONFIG_HOME/vimwiki" \
+ xcvc="cd $XDG_CONFIG_HOME/vimwiki/contacts" \
+ xcvn="cd $XDG_CONFIG_HOME/vimwiki/notes" \
+ xcvu="cd $XDG_CONFIG_HOME/vimwiki/urls" \
+ xd="cd $XDG_DATA_HOME" \
+ zd="cd $ZDOTDIR" \
+ dlb="cd $HOME/.local/bin" \
+ dlbs="cd $HOME/.local/bin/scripts" \
+ dlbb="cd $HOME/.local/bin/statusbar" \
+ h="cd $HOME" \
+ hd="cd $HOME/Downloads" \
+ hn="cd $HOME/Documents" \
+ hp="cd $HOME/Pictures" \
+ hm="cd $HOME/Music" \
+ hv="cd $HOME/Videos" \
+ hw="cd $HOME/Desktop" \
+ hda="cd $HOME/Downloads/AUR" \
+ hg="cd $HOME/Downloads/Git" \
+ hga="cd $HOME/Downloads/Git/arch" \
+ hgd="cd $HOME/Downloads/Git/dwm" \
+ hgb="cd $HOME/Downloads/Git/dwmblocks" \
+ hgs="cd $HOME/Downloads/Git/st" \
+ fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
+ fz="$EDITOR $ZDOTDIR/.zshrc" \
+ fa="$EDITOR $XDG_CONFIG_HOME/shellrc/aliasrc" \
+ fzz="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
+ fzp="$EDITOR $HOME/.profile" \
 
 # Database
 alias \
@@ -80,7 +81,7 @@ alias \
 
 # HARDWARE
 alias \
- hw="hwinfo --short" \
+ hwinf="hwinfo --short" \
 
 # Grep
 alias \
@@ -304,10 +305,10 @@ alias \
 # zsh function
 # fzf
 alias \
- e="fzf_file" \
- f="fzf_cd" \
- k="fzf_kill" \
- h="fzf_history" \
+ fe="fzf_file" \
+ ff="fzf_cd" \
+ fk="fzf_kill" \
+ fh="fzf_history" \
 
 # surfraw
 alias \
