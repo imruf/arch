@@ -18,6 +18,13 @@ case "$1" in
 		curl -L "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && zathura "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*mp3|*flac|*opus|*mp3?source*)
 		mpv "$1"  >/dev/null 2>&1 ;;
+	*reddit.com/comments*)
+        tmpfile=/tmp/gallery
+        linkfile=/tmp/links
+        https_data=$(tr '"' '\n' < $tmpfile | awk '/https/ && /format/ && !/blur/ {print}' | sed 's/amp;//g' > $linkfile)
+        url=$(printf '%s' "$(<$linkfile)")
+        feh -B black -g 640x480 $url ;;
+
 	*)
 		[ -f "$1" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$1" >/dev/null 2>&1 || setsid -f "$BROWSER" "$1" >/dev/null 2>&1
 esac
