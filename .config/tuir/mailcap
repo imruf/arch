@@ -8,7 +8,3 @@ text/plain; $EDITOR %s ; test=test -n "$DISPLAY"
 text/html; elinks %s ; nametemplate=%s.html
 application/pdf; zathura %s ; test=test -n "$DISPLAY"
 application/pgp-encrypted; gpg -d '%s'; copiousoutput
-
-# - Add ``test=test -n "$DISPLAY"`` if your command opens a new window
-# - Add ``needsterminal`` for commands that use the terminal
-# - Add ``copiousoutput`` for commands that dump text to stdout
