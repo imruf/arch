@@ -57,10 +57,11 @@ alias \
  hgd="cd $HOME/Downloads/Git/dwm" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
  hgs="cd $HOME/Downloads/Git/st" \
+ fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
  fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
  fz="$EDITOR $ZDOTDIR/.zshrc" \
  fa="$EDITOR $XDG_CONFIG_HOME/shellrc/aliasrc" \
- fzz="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
+ fzfn="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
  fzp="$EDITOR $HOME/.profile" \
 
 # Database
