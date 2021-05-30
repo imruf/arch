@@ -37,6 +37,9 @@ export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch/notmuchrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MOST_INITFILE="$XDG_CONFIG_HOME"/most/mostrc
 
+# stardict
+export DICS="/usr/share/stardict/dic/"
+
 # Fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 
