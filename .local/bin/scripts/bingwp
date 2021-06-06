@@ -11,7 +11,6 @@ esac done
 bing="http://www.bing.com"
 xmlURL="http://www.bing.com/HPImageArchive.aspx?format=xml&idx=$id&n=1&mkt=en-WW"
 
-saveDir=$HOME'/Pictures/Wall/Bing/'
 # mkdir -p $saveDir
 
 # Valid set options are: none,wallpaper,centered,scaled,stretched,zoom,span ned

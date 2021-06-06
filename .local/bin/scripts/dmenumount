@@ -9,7 +9,7 @@ getmount() { \
 	[ -z "$chosen" ] && exit 1
         # shellcheck disable=SC2086
 	mp="$(find $1 2>/dev/null | dmenu -i -p "Type in mount point.")" || exit 1
-	[ "$mp" = "" ] && exit 1
+	test -z "$mp" && exit 1
 	if [ ! -d "$mp" ]; then
 		mkdiryn=$(printf "No\\nYes" | dmenu -i -p "$mp does not exist. Create it?") || exit 1
 		[ "$mkdiryn" = "Yes" ] && (mkdir -p "$mp" || sudo -A mkdir -p "$mp")
@@ -32,15 +32,25 @@ mountusb() { \
 	}
 
 mountandroid() { \
-	simple-mtpfs --device 1 ~/Downloads/R4X/smtp
-	notify-send "🤖 Android Mounting" "Android device mounted to ~/Downloads/R4X/smtp"
+	chosen="$(echo "$anddrives" | dmenu -i -p "Which Android device?")" || exit 1
+	chosen="$(echo "$chosen" | cut -d : -f 1)"
+	mnp="$(find /home/masud/ -type d 2>/dev/null | dmenu -i -p "Type In Mount Point.")" || exit 1
+    simple-mtpfs --device "$chosen" "$mnp"
+	notify-send "🤖 Android Mounting" "Android device mounted to $mnp."
+	}
+
+unmountandroid() { \
+	umnp="$(find /home/masud/ -type d 2>/dev/null | dmenu -i -p "Type In UnMount Point.")" || exit 1
+	fusermount -u $umnp
+	notify-send "🤖 Android UnMounting" "Android device unmounted from $umnp."
 	}
 
 asktype() { \
-	choice="$(printf "USB\\nAndroid" | dmenu -i -p "Mount a USB drive or Android device?")" || exit 1
+	choice="$(printf "USB\\nAndroid\\nUnmount" | dmenu -i -p "Mount a USB drive or Android device?")" || exit 1
 	case $choice in
 		USB) mountusb ;;
 		Android) mountandroid ;;
+		Unmount) unmountandroid ;;
 	esac
 	}
 

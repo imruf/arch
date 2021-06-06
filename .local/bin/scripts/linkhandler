@@ -22,7 +22,7 @@ case "$1" in
         tmpfile=/tmp/gallery
         linkfile=/tmp/links
         iurl=https://www.reddit.com/comments/$(basename $1).json
-        rm /tmp/*.[jp][pn]g
+        rm /tmp/*.[jp][pn]*
         curl $iurl > $tmpfile
         tr '"' '\n' < $tmpfile | awk '/https/ && /format/ && !/blur/ {print}' | sed 's/amp;//g' | sort -n > $linkfile
         [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && sxiv -f /tmp/. || cat $tmpfile; sleep 0.5 ;;
