@@ -40,6 +40,12 @@ sr_bm() {
        };
      zle -N sr_bm;
 
+sdcv_def() {
+            word="$*"
+            sdcv --color "$word" | elinks
+       };
+     zle -N sdcv_def;
+
 # nnn quitcd
 n ()
     {
