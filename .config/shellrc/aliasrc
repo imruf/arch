@@ -213,6 +213,7 @@ alias \
  m="cmus" \
  vol="pulsemixer" \
  def="sdcv" \
+ d="sdcv_def" \
  rt="tuir" \
  keep="keepcli" \
  pdf="zathura" \
@@ -313,8 +314,8 @@ alias \
 
 # surfraw
 alias \
- fs="sr_elvi" \
- bm="sr_bm" \
+ ffs="sr_elvi" \
+ fbm="sr_bm" \
 
 # Services/ More at chubin/awesome-console-servies
 alias \
