@@ -4,5 +4,5 @@
 # [/Page 1 /View [/XYZ null null null] /Title (First page) /OUT pdfmark 
 
 gs -sDEVICE=pdfwrite -q -dBATCH -dNOPAUSE \
--sOutputFile=out.pdf index.info \
+-sOutputFile=out.pdf in.info \
 -f in.pdf

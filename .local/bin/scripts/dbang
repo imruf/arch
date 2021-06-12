@@ -17,17 +17,13 @@ declare -A COMMANDS
 COMMANDS["Web"]="dweb"
 LABELS["Web"]=""
 
-# Open custom web searches using surfraw
-COMMANDS["sr"]="dssr"
-LABELS["sr"]=""
+# Open custom web searches using surfraw or go to webpage
+COMMANDS["surfraw"]="dssr"
+LABELS["surfraw"]=""
 
-# Open surfraw bookmarks
-COMMANDS["bm"]="db"
-LABELS["bm"]=""
-
-# Search/Find/Locate local files
-COMMANDS["locate"]="dl"
-LABELS["locate"]=""
+# Search/Find/Locate/Open local files
+COMMANDS["file"]="dfile"
+LABELS["file"]=""
 
 # Calculator/menu-calc dmneu rofi script from AUR
 COMMANDS["Calc"]="= --dmenu=dmenu -- -l 3 -c"
@@ -41,7 +37,7 @@ LABELS["power"]=""
 COMMANDS["pgpg"]="passmenu"
 LABELS["pgpg"]=""
 
-# gpg
+# fix bar
 COMMANDS["bfix"]="bfix"
 LABELS["bfix"]=""
 

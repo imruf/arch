@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+while getopts "r:s:w:h" o; do case "${o}" in
+    h) printf "wps\\n -w: source (b=bing, u=unsplash(default), reddit) name\\n -s: subreddit name for reddit source\\n -r: pic res\\n -h: help\\n" && exit 1 ;;
+        s) sub="${OPTARG}" ;;
+        w) ws="${OPTARG}" ;;
+        r) res="${OPTARG}" ;;
+esac done
+
+saveDir=$HOME'/Pictures/Wall/wps/'
+
+[ -z "$res" ] && res="1366x768"
+[ -z "$ws" ] && ws="u"
+
+bing(){
+    read -p "id: " id
+    web="http://www.bing.com"
+    xmlURL="http://www.bing.com/HPImageArchive.aspx?format=xml&idx=$id&n=1&mkt=en-WW"
+    picURL=$web$(echo $(curl -s $xmlURL) | grep -oP "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)_$res.jpg
+    picName="$(printf "%s" bing_"$(date "+%m%d%N")")".jpg
+    aria2c -d $saveDir -o $picName $picURL && dunstify -u normal "$picName downloaded"
+}
+
+unsp(){
+    web="https://source.unsplash.com/random/"
+    picURL="${web}${res}"
+    [ ! -z $search ] && picURL="${web}?${search}"
+    picName="$(printf "%s" unsp_"$(date "+%m%d%N")")".jpg
+    aria2c -d $saveDir -o $picName $picURL && dunstify -u normal "$picName downloaded"
+}
+
+reddit(){
+    useragent="riprid0629"
+    timeout=60
+
+    # readarray subreddits < subreddits
+    # a=${#subreddits[@]}
+    # b=$(($RANDOM % $a))
+    # sub=${subreddits[$b]}
+    sort=$2
+    top_time=$3
+    if [ -z $sort   ]; then
+        sort="hot"
+    fi
+
+    if [ -z $top_time   ]; then
+        top_time=""
+    fi
+    sub="$(echo -e "${sub}" | tr -d '[:space:]')"
+    if [ ! -z $1 ]; then
+        sub=$1
+    fi
+    url="https://www.reddit.com/r/$sub/$sort/.json?raw_json=1&t=$top_time"
+    content=`wget -T $timeout -U "$useragent" -q -O - $url`
+    urls=$(echo -n "$content"| jq -r '.data.children[]|select(.data.post_hint|test("image")?) | .data.preview.images[0].source.url')
+    names=$(echo -n "$content"| jq -r '.data.children[]|select(.data.post_hint|test("image")?) | .data.title')
+    ids=$(echo -n "$content"| jq -r '.data.children[]|select(.data.post_hint|test("image")?) | .data.id')
+    arrURLS=($urls)
+    arrNAMES=($names)
+    arrIDS=($ids)
+    wait # prevent spawning too many processes
+    size=${#arrURLS[@]}
+    idx=$(($RANDOM % $size))
+    picURL=${arrURLS[$idx]}
+    picName="$(printf "%s" reddit_"$(date "+%m%d%N")")".jpg
+    aria2c -d $saveDir -o $picName $picURL && dunstify -u normal "$picName downloaded"
+
+}
+
+
+[ $ws = b ] && bing 
+[ $ws = u ] && [ -z $sub ] && unsp
+[ ! -z $sub ] && reddit $sub
