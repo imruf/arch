@@ -38,7 +38,10 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MOST_INITFILE="$XDG_CONFIG_HOME"/most/mostrc
 
 # stardict
-export DICS="/usr/share/stardict/dic/"
+# export DICS="$XDG_DATA_HOME/stardict/dic/"
+export STARDICT_DATA_DIR="/usr/share/stardict/dic/"
+export SDCV_HISTFILE="/usr/share/stardict/dic/sdcv_history"
+export SDCV_PAGER='less --quit-if-one-screen -RX'
 
 # Fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
@@ -62,7 +65,7 @@ export NNN_COLORS="3427"
 export NNN_FCOLORS='00e2272ec16033f7c6d6abc4'
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud'
-export NNN_PLUG='d:drop;f:fzfcd;p:preview-tui-ext;w:setbg;x:dups'
+export NNN_PLUG='d:drop;f:fzfcd;o:fzfile;p:preview-tui-ext;w:setbg;x:dups'
 
 # tuir environment
 export TUIR_BROWSER="elinks"
