@@ -16,10 +16,20 @@ Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
 Plug 'strboul/urlview.vim'                        " urlview
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/nvim-compe'
+" Plug 'rkulla/pydiction'                       " python library
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'vim-scripts/AutoComplPop'                   " autocomplete
 " Plug 'vim-airline/vim-airline'				  " Airline
 " Plug 'vim-airline/vim-airline-themes'			  " Airline Themes
 " Plug 'flazz/vim-colorschemes'                   " vim colorscheme
 " Plug 'chrisbra/unicode.vim'                     " unicode search
+
+
 
 call plug#end()
 
@@ -69,8 +79,8 @@ map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
 "Copy paste Clipboard Access:
-vnoremap <C-c> "+y
-map <C-p> "+P
+vmap <leader>xy :!xclip -f -sel clip<CR>
+map <leader>xp mz:-1r !xclip -o -sel clip<CR>`z
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>s :setlocal spell! spelllang=en_us<CR>
@@ -95,29 +105,44 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax on
 
+set encoding=utf-8
+set t_Co=256
 set nocompatible
 set laststatus=2
-set t_Co=256
-set encoding=utf-8
+
+" set updatetime=300
+" set shortmess+=c
+
 set relativenumber
 set number
+
 set showcmd
 set noshowmode
+" set cmdheight=2
+
+
 set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set hlsearch
 set autoindent
 set smartindent
+
+set hlsearch
+set incsearch
+
+set hidden
+
 " set cursorline
 " set cursorcolumn
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
-set incsearch
+
 set nobackup
+set nowritebackup
 set noswapfile
+
 set splitbelow splitright
 
 hi LineNr ctermfg=242
@@ -157,6 +182,11 @@ command! -nargs=? -complete=dir AF
 let g:vimwiki_list = [{'path': '~/.config/vimwiki',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
+
+" python dict pydiction plugin
+let g:pydiction_location = '/home/masud/.config/nvim/plugged/pydiction/complete-dict'
+let g:pydiction_menu_height = 3
+
 " nnn
 let g:nnn#set_default_mappings = 0
 nnoremap <silent> <leader>nnn :NnnPicker<CR>
@@ -167,18 +197,18 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ }
 
 " manpage with table of contents sidebar with neovim
-augroup manlaunchtoc
-     autocmd!
-     if has('nvim')
-        autocmd FileType man
-            \ call man#show_toc() |
-            \ setlocal laststatus=0 number relativenumber |
-            \ nnoremap <buffer> l <Enter> |
-            \ wincmd H |
-            \ vert resize 10 |
-            \ wincmd p
-    endif
-augroup end
+ augroup manlaunchtoc
+      autocmd!
+      if has('nvim')
+         autocmd FileType man
+             \ call man#show_toc() |
+             \ setlocal laststatus=0 number relativenumber |
+             \ nnoremap <buffer> l <Enter> |
+             \ wincmd V |
+             \ resize 5 |
+             \ wincmd p
+     endif
+ augroup end
 
 " dwmblocks autocompile
 autocmd BufWritePost ~/Downloads/Git/dwmblocks/config.h !cd ~/Downloads/Git/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
