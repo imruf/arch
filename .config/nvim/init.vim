@@ -16,11 +16,10 @@ Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
 Plug 'strboul/urlview.vim'                        " urlview
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
 " Plug 'rkulla/pydiction'                       " python library
-" Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 " Plug 'vim-scripts/AutoComplPop'                   " autocomplete
@@ -28,8 +27,6 @@ Plug 'strboul/urlview.vim'                        " urlview
 " Plug 'vim-airline/vim-airline-themes'			  " Airline Themes
 " Plug 'flazz/vim-colorschemes'                   " vim colorscheme
 " Plug 'chrisbra/unicode.vim'                     " unicode search
-
-
 
 call plug#end()
 
@@ -209,6 +206,11 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
              \ wincmd p
      endif
  augroup end
+
+" lsp
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 
 " dwmblocks autocompile
 autocmd BufWritePost ~/Downloads/Git/dwmblocks/config.h !cd ~/Downloads/Git/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
