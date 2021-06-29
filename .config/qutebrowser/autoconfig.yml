@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  content.javascript.enabled:
-    global: true
+  content.user_stylesheets:
+    global: null
