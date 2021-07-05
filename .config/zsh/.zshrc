@@ -7,7 +7,7 @@ unsetopt nomatch
 #promptinit
 #prompt redhat
 
-# [[ $UID -eq 0 ]] && local user_symbol='#' ||  local user_symbol='$'
+# [[ $UID -eq 0 ]] && local user_symbol='%F{red}#%f' ||  local user_symbol='%F{green}$%f'
 
 RPS1='$(vcs_super_info)'
 PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
