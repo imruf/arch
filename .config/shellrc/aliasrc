@@ -29,7 +29,7 @@ alias \
  rmd="rmdir -v" \
  mkd="mkdir -pv" \
 
-# Navigation
+# Navigation/Files
 alias \
  xr="cd $XDG_RUNTIME_DIR" \
  xcc="cd $XDG_CACHE_HOME" \
@@ -58,6 +58,7 @@ alias \
  hgd="cd $HOME/Downloads/Git/dwm" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
  hgs="cd $HOME/Downloads/Git/st" \
+ fpconf="snv /etc/pacman.conf" \
  fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
  fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
  fz="$EDITOR $ZDOTDIR/.zshrc" \
