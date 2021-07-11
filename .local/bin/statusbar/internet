@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 ssid=$(iwgetid -r)
 sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print " ", int($3 * 100 / 70) "%" }')

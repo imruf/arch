@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # works on any init system
 
 layout="$(ibus read-config | awk '/engines-order/ {print $3}' | sed "s/'m17n:bn:unijoy']/qwerty/;s/'xkb:us::eng']/unijoy/")"

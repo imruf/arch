@@ -1,4 +1,22 @@
 #!/bin/bash
+
+# fix acpid
+# PID=$(pgrep dbus-launch)
+# USER=$(ps -o user --no-headers $PID)
+# USERHOME=$(getent passwd $USER | cut -d: -f6)
+# 
+# export XAUTHORITY="$USERHOME/.Xauthority"
+# for x in /tmp/.X11-unix/*; do
+#     displaynum=`echo $x | sed s#/tmp/.X11-unix/X##`
+#     if [ x"$XAUTHORITY" != x"" ]; then
+#         export DISPLAY=":$displaynum"
+#     fi
+# done
+# 
+# # PATH
+# export PATH=$USERHOME/.local/bin:/bin:/usr/bin:/sbin:/usr/sbin
+
+
 # Default acpi script that takes an entry for all actions
 
 case "$1" in

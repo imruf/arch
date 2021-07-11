@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 while getopts "adfghpPRu:r:" o; do case "${o}" in
 		h) 	printf "ytp\\n -u: URL\\n -r: Resolution\\n -R: Record Stream\\n -p: Seek To Position\\n -P: Seek To Position And Record\\n -d: Download\\n -a: Audio Only\\n -f: Get Format\\n -h: Help\\n" && exit 1 ;;

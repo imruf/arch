@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-sleep 1 && xtrlock
+
+slock

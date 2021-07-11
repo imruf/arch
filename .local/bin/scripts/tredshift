@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
 if pgrep -x "redshift" > /dev/null
 then
 	killall redshift

@@ -1,17 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # power script for dwm
-
-case "$(readlink -f /sbin/init)" in
-	*runit*) hib="sudo -A zzz" ;;
-	*openrc*) reb="sudo -A openrc-shutdown -r"; shut="sudo -A openrc-shutdown -p" ;;
-esac
 
 case "$1" in
     lock)
         slock
         ;;
     suspend)
-        slock ${hib:-systemctl suspend-then-hibernate -i}
+        sudo -A zzz
         ;;
     reboot)
         sudo -A reboot

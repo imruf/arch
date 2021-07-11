@@ -1,4 +1,4 @@
-#! /bin/bash 
+#!/usr/bin/env sh
 
 mem=`free -h | awk '/Mem/ {printf $3"B"}'`
 # mem=`free -h | awk '/Mem/ {printf $3"B" "/" $2"B"}'`

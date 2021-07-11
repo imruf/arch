@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env sh
 
 # create index.info with 
 # [/Page 1 /View [/XYZ null null null] /Title (First page) /OUT pdfmark 

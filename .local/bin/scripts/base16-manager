@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # Install base16 templates and set themes globally.
 # Source https://github.com/AuditeMarlow/base16-manager

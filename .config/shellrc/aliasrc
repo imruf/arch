@@ -10,7 +10,7 @@ alias \
 
 # Multiplexer/tmux
 alias \
- t="tmux a || tmux" \
+ t="tmux" \
  ta="tmux a -t" \
  tl="tmux ls" \
 

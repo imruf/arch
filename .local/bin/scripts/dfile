@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # info: rofi-locate is a script to search local files and folders on your computer using the locate command and the updatedb database
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 ext="${1##*.}"
 mpvFiles="mkv mp4 gif"
