@@ -16,7 +16,7 @@ Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
 Plug 'strboul/urlview.vim'                        " urlview
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}   " vim lsp and coc
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
 " Plug 'rkulla/pydiction'                       " python library
@@ -34,12 +34,17 @@ call plug#end()
 filetype plugin indent on    " required
 filetype plugin on
 
-
 "Remap ESC to jj 
 :imap jj <Esc>
 
 " Space to PageDown
 map <Space> <PageDown>
+
+" save as root !!
+" Silent version of the super user edit, sudo tee trick.
+cnoremap W!! execute 'silent! write !sudo /usr/bin/tee "%" >/dev/null' <bar> edit!
+" Talkative version of the super user edit, sudo tee trick.
+cmap w!! w !sudo /usr/bin/tee >/dev/null "%"
 
 "Disable arrow keys in Normal mode
 no <Up> <Nop>
@@ -52,6 +57,10 @@ ino <Up> <Nop>
 ino <Down> <Nop>
 ino <Left> <Nop>
 ino <Right> <Nop>
+
+" Quick jump with K and L
+nnoremap <silent> K 10j
+nnoremap <silent> L 10k
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
@@ -94,7 +103,6 @@ map <leader>h :ColorHighlight
 " urlview
 nnoremap <silent> <leader>u :Urlview<CR>
 
-
 " Enable autocompletion:
 set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -117,7 +125,6 @@ set showcmd
 set noshowmode
 " set cmdheight=2
 
-
 set expandtab
 set smarttab
 set shiftwidth=4
@@ -132,6 +139,9 @@ set hidden
 
 " set cursorline
 " set cursorcolumn
+
+set sidescrolloff=999
+set scrolloff=999
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
