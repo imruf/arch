@@ -1,0 +1,32 @@
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map I recolor
+map p print
+map ; quit
+map o zoom out
+map i zoom in
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+set adjust-open "best-fit"
+set guioptions ""
+
+
+# basic vim navigation
+# J K PgDn PgUP
+# P current page screenshot
+# jump ^j,K
+# a,s best-fit/width +,-,=,n=?% zoom
+# f,F link
+# Tab index
+# d,D dual page/toggle
+# f5,f11 presentation,fullscreen
+# :b(marrk, list,delete) bookmark
+# :open,close,info,print
+
