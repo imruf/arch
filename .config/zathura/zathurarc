@@ -11,9 +11,6 @@ map p print
 map ; quit
 map o zoom out
 map i zoom in
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
 set adjust-open "best-fit"
 set guioptions ""
 

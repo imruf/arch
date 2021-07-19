@@ -11,36 +11,36 @@ while getopts "adfghpPRu:r:" o; do case "${o}" in
         f) [ -z $URL ] && read -p "URL: " URL
            youtube-dl -F "$URL"
            read -p "Code: " RES
-           MPVYT="${MPVYT-mpv --ytdl-format=$RES $URL}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt --ytdl-format=$RES $URL}" ;;
         R) [ -z $URL ] && read -p "URL: " URL
            read -p "l/m/s/h/k/?: " RES
            RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
-           MPVYT="${MPVYT-mpv --stream-record=1.ts --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt --stream-record=1.ts --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
         a) [ -z $URL ] && read -p "URL: " URL
            read -p "a/b/c/d/e/?: " RES
            RES="$(printf $RES | sed 's/a/139/;s/b/140/;s/c/249/;s/d/250/;s/e/251/')"
-           MPVYT="${MPVYT-mpv --ytdl-format=$RES $URL}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt --ytdl-format=$RES $URL}" ;;
         p) [ -z $URL ] && read -p "URL: " URL
            read -p "l/m/s/h/k/?: " RES
            read -p "HH:MM:SS: " POS
            RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
-           MPVYT="${MPVYT-mpv --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
         P) [ -z $URL ] && read -p "URL: " URL
            read -p "l/m/s/h/k/?: " RES
            read -p "HH:MM:SS: " POS
            RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
-           MPVYT="${MPVYT-mpv --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt --stream-record=1.ts --start=$POS --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}" ;;
 # this -g is for redgif
         g) [ -z $URL ] && read -p "URL: " URL
            youtube-dl -g --no-warnings "$URL" | awk 'NR==2' | xsel
            RES="$(printf $(xsel -o))"
-           MPVYT="${MPVYT-mpv $RES}" ;;
+           MPVYT="${MPVYT-mpv --profile=yt $RES}" ;;
 esac done
 
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "l/m/s/h/k/?: " RES
 
 RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
-MPVYT="${MPVYT-mpv --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}"
+MPVYT="${MPVYT-mpv --profile=yt --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}"
 
 $MPVYT

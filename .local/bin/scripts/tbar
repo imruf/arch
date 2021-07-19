@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-sudo -A killall -q dwmblocks;setsid dwmblocks &
+killall -q dwmblocks
+dwmblocks &
