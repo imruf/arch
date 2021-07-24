@@ -3,13 +3,14 @@ autoload -U colors && colors	# Load colors
 setopt prompt_subst
 unsetopt nomatch
 
-#autoload -Uz promptinit
-#promptinit
+autoload -Uz promptinit
+promptinit
 #prompt redhat
 
 # [[ $UID -eq 0 ]] && local user_symbol='%F{red}#%f' ||  local user_symbol='%F{green}$%f'
 
-RPS1='$(vcs_super_info)'
+
+RPS1='%# $(vcs_super_info)%F{240}%*%f %(?.%F{green}√.%F{red}?%?)%f'
 PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
 %B:-%b "
 
