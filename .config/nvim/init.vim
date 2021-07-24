@@ -88,6 +88,9 @@ map <leader>to :tabonly<cr>
 vmap <leader>xy :!xclip -f -sel clip<CR>
 map <leader>xp mz:-1r !xclip -o -sel clip<CR>`z
 
+" Searches visually selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 
@@ -140,8 +143,8 @@ set hidden
 " set cursorline
 " set cursorcolumn
 
-set sidescrolloff=999
-set scrolloff=999
+" set sidescrolloff=999
+" set scrolloff=999
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
@@ -162,7 +165,7 @@ let g:python_highlight_all = 1
 
 let g:rehash256 = 1
 let g:lightline = {
-      \ 'colorscheme': 'OldHope',
+      \ 'colorscheme': 'apprentice',
       \ }
 
 " fzf
