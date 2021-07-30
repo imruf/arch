@@ -83,6 +83,12 @@ online_man() {
        };
      zle -N online_man;
 
+termux_ssh() {
+            ip="$*"
+            zle -I; ssh -p 8022 u0_a122@192.168.43."$ip" ;
+       };
+     zle -N termux_ssh;
+
 #transmission
 tsmcc() {
         transmission-remote -l | grep 100% | grep Done | \
