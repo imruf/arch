@@ -287,7 +287,7 @@ alias \
  sfd="sudo rsm stop sshd" \
  ftpu="sudo rsm start vsftpd" \
  ftpd="sudo rsm stop vsftpd" \
-# termux="ssh -p 8022 u0_a127@192.168.137.234" \
+ at="termux_ssh" \
 
 # tor/vpn
 alias \
@@ -338,13 +338,14 @@ alias \
 alias \
  ytd-aac="youtube-dl --extract-audio --audio-format aac" \
  ytd-best="youtube-dl --extract-audio --audio-format best" \
+ ytd-best="youtube-dl -f bestvideo+bestaudio " \
  ytd-flac="youtube-dl --extract-audio --audio-format flac" \
  ytd-m4a="youtube-dl --extract-audio --audio-format m4a" \
  ytd-mp3="youtube-dl --extract-audio --audio-format mp3" \
  ytd-opus="youtube-dl --extract-audio --audio-format opus" \
+ ytd-sub="youtube-dl --skip-download --all-subs" \
  ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis" \
  ytd-wav="youtube-dl --extract-audio --audio-format wav" \
- ytd-best="youtube-dl -f bestvideo+bestaudio " \
  ytd="youtube-dl" \
  ytdF="youtube-dl -F" \
  ytdf="youtube-dl -f" \
