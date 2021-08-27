@@ -40,7 +40,7 @@ alias \
  xcvn="cd $XDG_CONFIG_HOME/vimwiki/notes" \
  xcvu="cd $XDG_CONFIG_HOME/vimwiki/urls" \
  xcvl="cd $XDG_CONFIG_HOME/vimwiki/latex" \
- xcvcnf="cd $XDG_CONFIG_HOME/vimwiki/notes" \
+ xcvcnf="cd $XDG_CONFIG_HOME/vimwiki/cnf" \
  xd="cd $XDG_DATA_HOME" \
  zd="cd $ZDOTDIR" \
  dlb="cd $HOME/.local/bin" \
