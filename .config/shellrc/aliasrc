@@ -360,7 +360,11 @@ alias \
 # DE/WM
 alias \
  gui="startx" \
-# dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
+ dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
+ xfce="cp ~/.config/.xinit/xfce.xinitrc ~/.xinitrc && gui" \
+ mate="cp ~/.config/.xinit/mate.xinitrc ~/.xinitrc && gui" \
+ kde="cp ~/.config/.xinit/kde.xinitrc ~/.xinitrc && gui" \
+ bud="cp ~/.config/.xinit/budgie.xinitrc ~/.xinitrc && gui" \
 
 # FETCH
 alias \
