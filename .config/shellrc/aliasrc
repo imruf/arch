@@ -136,6 +136,7 @@ alias \
  inp="sudo pacman --color auto -S" \
  linp="sudo pacman --color auto -U" \
  rmv="sudo pacman --color auto -Rns" \
+ rmvd="sudo pacman --color auto -Rnds --nodeps" \
 
 alias \
  unlock="sudo rm /var/lib/pacman/db.lck" \
