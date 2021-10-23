@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# Description: cd to any dir in the z database using an fzf pane
+#
+# Shell: POSIX compliant
+# Author: Nick Waywood
+
+IFS="$(printf '\n\r')"
+. "$(dirname "$0")"/.nnn-plugin-helper
+
+CTX=+
+LIST="$LIST"
+
+    sel=$(find -type d 2> /dev/null | fzf +m)
+
+        if [ "$PWD" = "/" ]; then
+            nnn_cd "/$sel" "$CTX"
+        else
+            nnn_cd "$PWD/$sel" "$CTX"
+        fi
