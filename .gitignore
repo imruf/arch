@@ -6,3 +6,8 @@ bncal
 plugins
 web_scrape
 pys.py
+
+
+update info
+git remote remove origin
+git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
