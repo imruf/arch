@@ -1,4 +1,5 @@
 Dot repo of archlinux+dwm rice
+test
 ---
 
 Apps In This Repo
