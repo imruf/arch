@@ -22,8 +22,14 @@ RPS1='$(vcs_super_info) %# %F{240}%T%f %(?.%F{green}√.%F{red}?%?)%f'
 export TERM="xterm-256color"
 export TERM="st-256color"
 export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=dbus
 export QT_IM_MODULE=ibus
+export QT4_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
+
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS=@im=dbus
+# export QT_IM_MODULE=ibus
 
 # History in cache directory:
 HISTSIZE=10000
