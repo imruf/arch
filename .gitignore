@@ -6,6 +6,8 @@ bncal
 plugins
 web_scrape
 pys.py
+AW_prod.jnlp
+asycuda
 
 
 update info
