@@ -4,7 +4,7 @@
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
 # Defaults
-export BROWSER="qutebrowser"
+export BROWSER="firefox"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
@@ -65,7 +65,7 @@ export NNN_COLORS="3427"
 export NNN_FCOLORS='00e2272ec16033f7c6d6abc4'
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud'
-export NNN_PLUG='d:drop;f:fzcd;g:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups'
+export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups'
 # export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
 # export NNN_RCLONE='rclone mount --read-only --no-checksum'
 

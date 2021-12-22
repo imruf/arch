@@ -1,0 +1,5 @@
+#!/bin/sh
+
+javaws -nosecurity /home/masud/.local/bin/scripts/AW_prod.jnlp
+# javaws /home/masud/.local/bin/scripts/AW_prod.jnlp
+
