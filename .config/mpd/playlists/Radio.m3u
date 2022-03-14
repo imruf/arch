@@ -1,0 +1,78 @@
+#EXTM3U
+#EXTINF:-1,Betar
+http://as3.digitalsynapsebd.com:8263/;
+
+#EXTINF:-1,BBC Bangla
+https://stream.live.vc.bbcmedia.co.uk/bbc_bangla_radio
+
+#EXTINF:-1,ABC FM
+http://node-17.zeno.fm/83cb628zmd5tv?rj-ttl=5&rj-token=AAABXuvV7uM2poSnCHyjQCOej7oNpg6Sm5HQDMmP9OP4esU8QQp_fg&rj-tok=AAABf3xxzfgAkpv_WRbAM8PAAg
+
+#EXTINF:-1,Dhaka FM
+http://node-10.zeno.fm/ay4pqkk604zuv?rj-ttl=5&rj-tok=AAABf31W4K0AJlPyka1-Z7BUWw
+
+#EXTINF:-1,Radio Foorti
+http://119.148.23.88:1021/
+
+#EXTINF:-1,Radio Today
+http://node-05.zeno.fm/0zha3rfq02quv?zs=_47lLPuSRX2vL2i1_GD0ww&rj-ttl=5&amp=&rj-tok=AAABf3rtqngAPInMFm_8fFbeUA
+
+#EXTINF:-1,GoonGoon
+https://audio.streamcast.xyz/radio/8000/radio.mp3?1647091787
+
+#EXTINF:-1,Jago FM
+http://128.199.184.111:12496/stream
+
+#EXTINF:-1,Peoples Radio
+http://s3.myradiostream.com:14498/;listen.mp3
+
+#EXTINF:-1,Radio Shadhin
+http://node-02.zeno.fm/eabgu655puquv?zs=eRh2unIDT-aENyS6K9Nsuw&rj-tok=AAABf3taY5IA4tZG6yEOUfs5pA&rj-ttl=5
+
+#EXTINF:-1,Radio71
+http://162.254.149.187:5566/;stream/1;.mp3
+
+#EXTINF:-1,Capital FM
+http://node-15.zeno.fm/4nzaapqw34zuv?rj-ttl=5&rj-tok=AAABf34GoJAAZGkLpMRAhkp_dQ
+
+#EXTINF:-1,Amber
+http://118.179.215.45:8000/;.mp3
+
+#EXTINF:-1,BBC Asian Network
+http://stream.live.vc.bbcmedia.co.uk/bbc_asian_network
+
+#EXTINF:-1,BBC Radio 1
+http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
+
+#EXTINF:-1,BBC Radio 2
+http://stream.live.vc.bbcmedia.co.uk/bbc_radio_two
+
+#EXTINF:-1,BBC Radio 3
+https://stream.live.vc.bbcmedia.co.uk/bbc_radio_three
+
+#EXTINF:-1,BBC Radio 4
+https://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourfm
+
+#EXTINF:-1,BBC Radio 5
+http://stream.live.vc.bbcmedia.co.uk/bbc_radio_five_live_online_nonuk?s=1647135165&e=1647149565&h=1ea92a77961530c58835f37e859e6a66
+
+#EXTINF:-1,BBC Radio 6
+http://stream.live.vc.bbcmedia.co.uk/bbc_6music?s=1647132572&e=1647146972&h=92884781d3913ee3464e3936588577f5
+
+#EXTINF:-1,BongOnet
+https://www.bongonet.net/bongonet
+
+#EXTINF:-1,BanglaRock
+https://www.bongonet.net/banglarock
+
+#EXTINF:-1,DiscoBani
+https://www.bongonet.net/dbk
+
+#EXTINF:-1,Folknama
+https://www.bongonet.net/folknama
+
+#EXTINF:-1,Retro Hindi
+https://www.bongonet.net/rhi
+
+#EXTINF:-1,RobiChhaya
+https://www.bongonet.net/robichhaya
