@@ -41,6 +41,10 @@ LABELS["pgpg"]=""
 COMMANDS["bfix"]="bfix"
 LABELS["bfix"]=""
 
+# radio
+COMMANDS["radio"]="radio"
+LABELS["radio"]=""
+
 # launch programs
 #COMMANDS["apps"]="dmenu_run"
 #LABELS["apps"]=""

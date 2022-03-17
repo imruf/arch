@@ -18,7 +18,8 @@ alias \
 # List
 alias \
  ls="ls --color=auto --group-directories-first" \
- lah="exa -la --group-directories-first" \
+ lah="lsd -la1h --group-dirs first" \
+# lah="exa -la --group-directories-first" \
 
 # Operation
 alias \
@@ -56,6 +57,7 @@ alias \
  hda="cd $HOME/Downloads/AUR" \
  hg="cd $HOME/Downloads/Git" \
  hga="cd $HOME/Downloads/Git/arch" \
+ hgc="cd $HOME/Downloads/Git/cnf" \
  hgd="cd $HOME/Downloads/Git/dwm" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
  hgs="cd $HOME/Downloads/Git/st" \
@@ -202,7 +204,7 @@ alias \
 # Calculator
 alias \
  math="mathomatic" \
- pc="python -ic 'from __future__ import division; from math import *; from random import *'" \
+ pc="python -ic 'from __future__ import division; from math import *; from fractions import Fraction; from random import *'" \
  c2='units' \
  sm="sc-im" \
 
@@ -275,7 +277,7 @@ alias \
 alias \
  nsp="speedtest" \
  nsps="speedtest --simple --single" \
- ntm="speedometer -r wlp4s0 -t wlp4s0" \
+ ntm="speedometer -r wlan0 -t wlan0" \
 
 # Firewall
 alias \

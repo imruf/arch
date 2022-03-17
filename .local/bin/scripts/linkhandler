@@ -17,11 +17,11 @@ case "$1" in
 	*pdf|*cbz|*cbr)
 		curl -L "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && zathura "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*mp3|*flac|*opus|*mp3?source*)
-		mpv "$1"  >/dev/null 2>&1 ;;
+		mpv --profile=radio "$1"  >/dev/null 2>&1 ;;
 	*redgifs.com*)
-        youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --loop-file=inf ;;
+        youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --loop-file=inf --profile=yt ;;
 	*imgur.com*)
-        youtube-dl -g "$1" | xargs mpv --loop-file=inf ;;
+        youtube-dl -g "$1" | xargs mpv --loop-file=inf --profile=yt ;;
 	*reddit.com/gallery/*)
         tmpfile=/tmp/gallery
         linkfile=/tmp/links
