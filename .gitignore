@@ -10,7 +10,7 @@ pys.py
 
 update info
 
-git remote set-url origin https://oauth2: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@git.domain/user/project.git
+git remote set-url origin https://oauth2:token@git.domain/user/project.git
 
 git remote remove origin
 git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
