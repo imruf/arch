@@ -13,6 +13,7 @@ Apps In This Repo
 [dmenu](https://github.com/imruf/dmenu)
 ---
 
+git test
 qutebrowser
 ---
 
