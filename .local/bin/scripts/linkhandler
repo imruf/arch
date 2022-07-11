@@ -19,9 +19,9 @@ case "$1" in
 	*mp3|*flac|*opus|*mp3?source*)
 		mpv --profile=radio "$1"  >/dev/null 2>&1 ;;
 	*redgifs.com*)
-        youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --loop-file=inf --profile=yt ;;
+        youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --profile=yt --loop-file=inf ;;
 	*imgur.com*)
-        youtube-dl -g "$1" | xargs mpv --loop-file=inf --profile=yt ;;
+        youtube-dl -g "$1" | xargs mpv --profile=yt --loop-file=inf ;;
 	*reddit.com/gallery/*)
         tmpfile=/tmp/gallery
         linkfile=/tmp/links

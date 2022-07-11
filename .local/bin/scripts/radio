@@ -1,11 +1,15 @@
 #!/usr/bin/env sh
 
+music_icon="🎶"
+radio_icon="📻"
+
 start_radio() {
-  notify-send "Starting radio" "Playing station: $1. 🎶"
+  dunstify -r 5001 -u normal "▶  $radio_icon 🎶"
 }
 
+
 end_radio() {
-  notify-send "Stopping radio" "🎶"
+  dunstify -r 5002 -u normal "⏹ $radio_icon"
 }
 
 stream_url() {
