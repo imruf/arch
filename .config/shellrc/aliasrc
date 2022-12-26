@@ -127,6 +127,8 @@ alias \
  mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist-arch" \
  mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist-arch" \
  mirrorb="sudo reflector -f 10 --country Bangladesh --save /etc/pacman.d/mirrorlist-arch" \
+ artixmirror="rate-mirrors artix" \
+ archmirror="rate-mirrors arch" \
 
 ## Package
 # PACMAN
