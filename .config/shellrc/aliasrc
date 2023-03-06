@@ -67,7 +67,7 @@ alias \
  fz="$EDITOR $ZDOTDIR/.zshrc" \
  fa="$EDITOR $XDG_CONFIG_HOME/shellrc/aliasrc" \
  fzfn="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
- fzp="$EDITOR $HOME/.profile" \
+ fzp="$EDITOR $XDG_CONFIG_HOME/shellrc/profile" \
 
 # Database
 alias \
@@ -141,6 +141,7 @@ alias \
  linp="sudo pacman --color auto -U" \
  rmv="sudo pacman --color auto -Rns" \
  rmvd="sudo pacman --color auto -Rnds --nodeps" \
+ rmopkg="sudo pacman --color auto -Scc" \
 
 alias \
  unlock="sudo rm /var/lib/pacman/db.lck" \
@@ -209,6 +210,12 @@ alias \
  pc="python -ic 'from __future__ import division; from math import *; from fractions import Fraction; from random import *'" \
  c2='units' \
  sm="sc-im" \
+
+# Equalizer
+alias \
+ eqon="viper start" \
+ eqoff="viper stop" \
+ eqst="viper status" \
 
 # Misc. App
 alias \
@@ -297,9 +304,9 @@ alias \
 
 # tor/vpn
 alias \
-    v1="sudo openvpn --config ~/Downloads/openvpn/jp-free-01.protonvpn.com.udp.ovpn --mute 5 --mute-replay-warnings" \
-    v2="sudo openvpn --config ~/Downloads/openvpn/jp-free-02.protonvpn.com.udp.ovpn --mute 5 --mute-replay-warnings" \
-    v3="sudo openvpn --config ~/Downloads/openvpn/jp-free-03.protonvpn.com.udp.ovpn --mute 5 --mute-replay-warnings" \
+    v1="sudo openvpn --config ~/Downloads/openvpn/jp-free-01.protonvpn.net.udp.ovpn --mute 5 --mute-replay-warnings" \
+    v2="sudo openvpn --config ~/Downloads/openvpn/jp-free-02.protonvpn.net.udp.ovpn --mute 5 --mute-replay-warnings" \
+    v3="sudo openvpn --config ~/Downloads/openvpn/jp-free-03.protonvpn.net.udp.ovpn --mute 5 --mute-replay-warnings" \
 
 # torsocks
 # tor="sys start tor.service" \
@@ -359,7 +366,7 @@ alias \
 
 # TRANSMISSION
 alias \
- pfx="peerflix -k -f /home/masud/Videos/ptfx" \
+ pfx="peerflix -k -f /home/masud/Downloads" \
  tfx="torrentflix" \
 
 # DE/WM
