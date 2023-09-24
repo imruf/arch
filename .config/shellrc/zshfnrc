@@ -78,6 +78,12 @@ online_dic() {
        };
      zle -N online_dic;
 
+sharedfile_download() {
+            fileex="$*"
+            zle -I; a2 https://ttm.sh/"$fileex" ; 
+       };
+     zle -N sharedfile_download;
+
 online_man() {
             cheat="$*"
             zle -I; curl cheat.sh/"$cheat" ; 
@@ -86,7 +92,7 @@ online_man() {
 
 termux_ssh() {
             ip="$*"
-            zle -I; ssh -p 8022 u0_a122@192.168.43."$ip" ;
+            zle -I; ssh -p 8022 u0_a221@192.168.31."$ip" ;
        };
      zle -N termux_ssh;
 

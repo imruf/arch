@@ -336,6 +336,7 @@ alias \
  weather="curl wttr.in/khagrachari" \
  odic="online_dic" \
  oman="online_man" \
+ ttmd="sharedfile_download" \
 
 ## Downloader
 # wget/aria2
@@ -348,21 +349,21 @@ alias \
  ttsm="transg-tui" \
  # ttsm="tremc" \
 
-# youtube-dl
+# yt-dlp
 alias \
- ytd-aac="youtube-dl --extract-audio --audio-format aac" \
- ytd-best="youtube-dl --extract-audio --audio-format best" \
- ytd-best="youtube-dl -f bestvideo+bestaudio " \
- ytd-flac="youtube-dl --extract-audio --audio-format flac" \
- ytd-m4a="youtube-dl --extract-audio --audio-format m4a" \
- ytd-mp3="youtube-dl --extract-audio --audio-format mp3" \
- ytd-opus="youtube-dl --extract-audio --audio-format opus" \
- ytd-sub="youtube-dl --skip-download --all-subs" \
- ytd-vorbis="youtube-dl --extract-audio --audio-format vorbis" \
- ytd-wav="youtube-dl --extract-audio --audio-format wav" \
- ytd="youtube-dl" \
- ytdF="youtube-dl -F" \
- ytdf="youtube-dl -f" \
+ ytd-aac="yt-dlp --extract-audio --audio-format aac" \
+ ytd-best="yt-dlp --extract-audio --audio-format best" \
+ ytd-best="yt-dlp -f bestvideo+bestaudio " \
+ ytd-flac="yt-dlp --extract-audio --audio-format flac" \
+ ytd-m4a="yt-dlp --extract-audio --audio-format m4a" \
+ ytd-mp3="yt-dlp --extract-audio --audio-format mp3" \
+ ytd-opus="yt-dlp --extract-audio --audio-format opus" \
+ ytd-sub="yt-dlp --skip-download --all-subs" \
+ ytd-vorbis="yt-dlp --extract-audio --audio-format vorbis" \
+ ytd-wav="yt-dlp --extract-audio --audio-format wav" \
+ ytd="yt-dlp" \
+ ytdF="yt-dlp -F" \
+ ytdf="yt-dlp -f" \
  ytv="youtube-viewer" \
 
 # TRANSMISSION

@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+dwmblocks &
+setbg &			# set the background with the `setbg` script
+numlockx on &
+ibus-daemon -rxR &
+xcompmgr &		# xcompmgr for transparency
+dunst &			# dunst for notifications
+clipmenud &     # clipboardmanager
+redshift &
+xset r rate 300 80 &
+setxkbmap -option caps:escape &
+unclutter &		# Remove mouse when idle
+# slstatus &
+# sxhkd -m 1 &		# Bind keys with sxhkd
