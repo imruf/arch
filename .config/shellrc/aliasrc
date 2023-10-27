@@ -336,7 +336,7 @@ alias \
  weather="curl wttr.in/khagrachari" \
  odic="online_dic" \
  oman="online_man" \
- ttmd="sharedfile_download" \
+ oshi="sharedfile_download" \
 
 ## Downloader
 # wget/aria2

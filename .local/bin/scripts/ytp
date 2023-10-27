@@ -5,11 +5,11 @@ while getopts "adfghpPRu:r:" o; do case "${o}" in
         u) URL="${OPTARG}" ;;
         r) RES="${OPTARG}" ;;
         d) [ -z $URL ] && read -p "URL: " URL
-           youtube-dl -F "$URL"
+           yt-dlp -F "$URL"
            read -p "Code: " RES
-           MPVYT="${MPVYT-youtube-dl -f $RES $URL}" ;;
+           MPVYT="${MPVYT-yt-dlp -f $RES $URL}" ;;
         f) [ -z $URL ] && read -p "URL: " URL
-           youtube-dl -F "$URL"
+           yt-dlp -F "$URL"
            read -p "Code: " RES
            MPVYT="${MPVYT-mpv --profile=yt --ytdl-format=$RES $URL}" ;;
         R) [ -z $URL ] && read -p "URL: " URL

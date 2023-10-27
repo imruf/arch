@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 while getopts "r:s:S:w:h" o; do case "${o}" in
-    h) printf "wps\\n -w: source (b=bing, u=unsplash(default), reddit) name\\n -s: search\\n -S: subreddit name for reddit source\\n -r: pic res\\n -h: help\\n" && exit 1 ;;
+    h) printf "wps\\n -w: source (b=bing, u=unsplash(default), reddit(-S subreddit) name\\n -s: search\\n -S: subreddit name for reddit source\\n -r: pic res\\n -h: help\\n" && exit 1 ;;
         s) search="${OPTARG}" ;;
         S) sub="${OPTARG}" ;;
         w) ws="${OPTARG}" ;;

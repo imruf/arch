@@ -3,16 +3,34 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-dwmblocks &
+
+
 setbg &			# set the background with the `setbg` script
-numlockx on &
-ibus-daemon -rxR &
-xcompmgr &		# xcompmgr for transparency
-dunst &			# dunst for notifications
-clipmenud &     # clipboardmanager
-redshift &
-xset r rate 300 80 &
-setxkbmap -option caps:escape &
-unclutter &		# Remove mouse when idle
+
+
+# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
+
+
+
+autostart="dwmblocks redshift xcompmgr dunst clipmenud unclutter keymaps"
+
+for program in $autostart; do
+	pidof -sx "$program" || "$program" &
+done >/dev/null 2>&1
+
+
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
+
+# numlockx on &
+# ibus-daemon -rxR &
+# xset r rate 300 80 &
+# setxkbmap -option caps:escape &
+# dunst &			# dunst for notifications
+# clipmenud &     # clipboardmanager
+# dwmblocks &
+# redshift &
+# xcompmgr &		# xcompmgr for transparency
+# unclutter &		# Remove mouse when idle
 # slstatus &
 # sxhkd -m 1 &		# Bind keys with sxhkd

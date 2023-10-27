@@ -80,7 +80,7 @@ online_dic() {
 
 sharedfile_download() {
             fileex="$*"
-            zle -I; a2 https://ttm.sh/"$fileex" ; 
+            zle -I; a2 https://oshi.at/"$fileex" ; 
        };
      zle -N sharedfile_download;
 
@@ -92,7 +92,7 @@ online_man() {
 
 termux_ssh() {
             ip="$*"
-            zle -I; ssh -p 8022 u0_a221@192.168.31."$ip" ;
+            zle -I; ssh -p 8022 u0_a221@192.168.43."$ip" ;
        };
      zle -N termux_ssh;
 

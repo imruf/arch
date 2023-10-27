@@ -19,7 +19,10 @@ case "$1" in
 	*mp3|*flac|*opus|*mp3?source*)
 		mpv --profile=radio "$1"  >/dev/null 2>&1 ;;
 	*redgifs.com*)
-        youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --profile=yt --loop-file=inf ;;
+        mpv --loop-file=inf "$1";;
+        # mpv --ytdl --loop-file=inf "$1";;
+        # mpv --profile=yt --loop-file=inf "$1";;
+        # youtube-dl -g "$1" | awk 'NR==2' | xargs mpv --profile=yt --loop-file=inf ;;
 	*imgur.com*)
         youtube-dl -g "$1" | xargs mpv --profile=yt --loop-file=inf ;;
 	*reddit.com/gallery/*)

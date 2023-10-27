@@ -3,6 +3,8 @@
 # Path
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
+unsetopt PROMPT_SP
+
 # Defaults
 export BROWSER="firefox"
 export EDITOR="nvim"
@@ -11,8 +13,10 @@ export READER="zathura"
 export FILE="nnn"
 
 # ManPage
+export MANPAGER="nvim +Man!"
+# export MANPAGER="less"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER="nvim -c 'set ft=man' -"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # xdg-dir
@@ -36,6 +40,18 @@ export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch/notmuchrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MOST_INITFILE="$XDG_CONFIG_HOME"/most/mostrc
+
+
+# Less
+export LESS=-R
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 # stardict
 # export DICS="$XDG_DATA_HOME/stardict/dic/"
