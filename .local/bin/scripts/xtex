@@ -1,0 +1,8 @@
+#!/bin/sh
+
+xelatex $1 && xelatex $1 && rm *.log *.out *.aux
+
+# xelatex $1 && xelatex $1 && rm *.log *.out *.aux && echo $1 | sed 's/tex/pdf/g' | xargs xdg-open
+
+
+# xelatex $1 && rm *.log *.out *.aux && echo $1 | sed 's/tex/pdf/g' | xargs xdg-open

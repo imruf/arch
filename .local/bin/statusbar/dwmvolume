@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 case $BLOCK_BUTTON in
 	1) setsid -f "$TERMINAL" -n spf -g 110x18 -e pulsemixer ;;
@@ -11,16 +11,30 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-[ "$(pamixer --get-mute)" = true ] && echo 🔇 && exit
+status=$(grep -A4 -ri 'Headphone Playback Switch' /proc/asound/card1/codec\#0 | grep "Amp-Out vals.*0x00 0x00" > /dev/null)
+exit_state=$?
+if [ $exit_state -eq 0 ]; then
+    state="🎧"
+else
+    state="📢"
+fi
+
+
+[ "$(pamixer --get-mute)" = true ] && echo "$state 🔇" && exit
 
 vol="$(pamixer --get-volume)"
 
 if [ $vol -gt 70 ]; then
-	icon="🔊"
+	icon="$state 🔊"
 elif [ $vol -lt 30 ]; then
-	icon="🔈"
+	icon="$state 🔈"
 else
-	icon="🔉"
+	icon="$state 🔉"
 fi
 
-printf "%s %s" $icon "$vol%"
+printf "%s%s" "$icon " "$vol%"
+
+
+
+
+

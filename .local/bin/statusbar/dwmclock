@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 clock=$(date '+%I')
 cicon=""

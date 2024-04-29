@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
+
 # power script for dwm
 
 case "$1" in

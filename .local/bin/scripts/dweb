@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # title: dmenu_websearch <http://efe.kim/dmenu_websearch.html>
 # license: CC0

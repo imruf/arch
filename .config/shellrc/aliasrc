@@ -68,6 +68,7 @@ alias \
  fa="$EDITOR $XDG_CONFIG_HOME/shellrc/aliasrc" \
  fzfn="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
  fzp="$EDITOR $XDG_CONFIG_HOME/shellrc/profile" \
+ fzh="$EDITOR $XDG_CACHE_HOME/zsh/history" \
 
 # Database
 alias \
@@ -89,6 +90,13 @@ alias \
 alias \
  hwinf="hwinfo --short" \
 
+# cpupower
+alias \
+ pinf="cpupower frequency-info" \
+ pcon="sudo cpupower frequency-set -g conservative" \
+ pper="sudo cpupower frequency-set -g performance" \
+ ppow="sudo cpupower frequency-set -g powersave" \
+
 # Grep
 alias \
  grep="grep --color=auto" \
@@ -106,6 +114,10 @@ alias \
 # MICROCODE
 # alias \
 # microcode="grep . /sys/devices/system/cpu/vulnerabilities/*" \
+
+# Init
+alias \
+ mkin="sudo mkinitcpio -P" \
 
 # GRUB
 alias \

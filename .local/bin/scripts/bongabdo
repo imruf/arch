@@ -1,0 +1,396 @@
+#!/bin/sh
+
+# Bangla date count starts with the rising of the sun. So date is corrected to change at 6 in the morning with GMT. If date doesn't change accordingly uncomment line 19  and comment 20.
+
+while getopts "ed:t:m:z:y:s:f:c:h" o; do case "${o}" in
+    h) printf "bncal\\n -d: Date\\n -t: Bangla Date\\n -m: Month\\n -z: Bangla Month\\n -y: Year\\n -s: Year\\n -f: Date Format\\n -c: Bongabdo (-t -z -s) To Engabdo\\n -e: Text Format(Bangreji)\\n -h: help\\n" && exit 1 ;;
+	d) en_dt=${OPTARG} ;;
+	m) en_m=${OPTARG} ;;
+	y) en_y=${OPTARG} ;;
+	f) dt_f=${OPTARG} ;;
+	c) cd_f=${OPTARG} ;;
+	e) txt="0" ;;
+    t) bndt=${OPTARG} ;;
+    z) bnm=${OPTARG} ;;
+    s) bny=${OPTARG} ;;
+	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit 1 ;;
+esac done
+
+# [ -z $en_dt ] && en_dt=$(date +%d | sed 's/^0//g')
+[ -z $en_dt ] && en_dt=$(TZ='Europe/London' date +"%d" | sed 's/^0//g')
+[ -z $en_m ] && en_m=$(date +%m | sed 's/^0//g')
+[ -z $en_y ] && en_y=$(date +%Y)
+[ -z $dt_f ] && dt_f="0"
+[ -z $cd_f ] && cd_f="0"
+
+lp_y=$(( $en_y % 4 ))
+en_d=$(date --date=$en_y-$en_m-$en_dt +%u)
+# en_d=$(date +%u)
+
+
+bongabdo() {
+    if [ $en_m -eq 4 ]; then
+        if [ $en_dt -le 13 ]; then
+        bn_y=$(( $en_y - 594 ))
+    else 
+        bn_y=$(( $en_y - 593 ))
+        fi
+
+    elif [ $en_m -lt 4 ]; then
+        bn_y=$(( $en_y - 594 ))
+    elif [ $en_m -gt 4 ]; then
+        bn_y=$(( $en_y - 593 ))
+    fi
+
+    if [ $en_m -eq 4 ]; then
+        if [ $en_dt -lt 14 ]; then
+            bn_m=c
+            bn_s=6
+            bn_dt=$(( $en_dt + 14 + 3 ))
+        elif [ $en_dt -ge 14 ]; then
+            bn_m=1
+            bn_s=1
+            bn_dt=$(( $en_dt - 14 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 5 ]; then
+        if [ $en_dt -lt 15 ]; then
+            bn_m=1
+            bn_s=1
+            bn_dt=$(( $en_dt + 15 + 2 ))
+        elif [ $en_dt -ge 15 ]; then
+            bn_m=2
+            bn_s=1
+            bn_dt=$(( $en_dt - 15 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 6 ]; then
+        if [ $en_dt -lt 15 ]; then
+            bn_m=2
+            bn_s=1
+            bn_dt=$(( $en_dt + 15 + 2 ))
+        elif [ $en_dt -ge 15 ]; then
+            bn_m=3
+            bn_s=2
+            bn_dt=$(( $en_dt - 15 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 7 ]; then
+        if [ $en_dt -lt 16 ]; then
+            bn_m=3
+            bn_s=2
+            bn_dt=$(( $en_dt + 16 ))
+        elif [ $en_dt -ge 16 ]; then
+            bn_m=4
+            bn_s=2
+            bn_dt=$(( $en_dt - 16 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 8 ]; then
+        if [ $en_dt -lt 16 ]; then
+            bn_m=4
+            bn_s=2
+            bn_dt=$(( $en_dt + 16 ))
+        elif [ $en_dt -ge 16 ]; then
+            bn_m=5
+            bn_s=3
+            bn_dt=$(( $en_dt - 16 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 9 ]; then
+        if [ $en_dt -lt 16 ]; then
+            bn_m=5
+            bn_s=3
+            bn_dt=$(( $en_dt + 16 ))
+        elif [ $en_dt -ge 16 ]; then
+            bn_m=6
+            bn_s=3
+            bn_dt=$(( $en_dt - 16 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 10 ]; then
+        if [ $en_dt -lt 17 ]; then
+            bn_m=6
+            bn_s=3
+            bn_dt=$(( $en_dt + 15 ))
+        elif [ $en_dt -ge 17 ]; then
+            bn_m=7
+            bn_s=4
+            bn_dt=$(( $en_dt - 17 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 11 ]; then
+        if [ $en_dt -lt 16 ]; then
+            bn_m=7
+            bn_s=4
+            bn_dt=$(( $en_dt + 14 + 1 ))
+        elif [ $en_dt -ge 16 ]; then
+            bn_m=8
+            bn_s=4
+            bn_dt=$(( $en_dt - 16 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 12 ]; then
+        if [ $en_dt -lt 16 ]; then
+            bn_m=8
+            bn_s=4
+            bn_dt=$(( $en_dt + 14 + 1 ))
+        elif [ $en_dt -ge 16 ]; then
+            bn_m=9
+            bn_s=5
+            bn_dt=$(( $en_dt - 16 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 1 ]; then
+        if [ $en_dt -lt 15 ]; then
+            bn_m=9
+            bn_s=5
+            bn_dt=$(( $en_dt + 13 + 3 ))
+        elif [ $en_dt -ge 15 ]; then
+            bn_m=m
+            bn_s=5
+            bn_dt=$(( $en_dt - 15 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 2 ]; then
+        if [ $en_dt -lt 14 ]; then
+            bn_m=m
+            bn_s=5
+            bn_dt=$(( $en_dt + 12 + 5 ))
+        elif [ $en_dt -ge 14 ]; then
+            bn_m=f
+            bn_s=6
+            bn_dt=$(( $en_dt - 14 + 1 ))
+        fi
+    fi
+
+    if [ $en_m -eq 3 ]; then
+        if [ $en_dt -lt 15 ]; then
+            if [ $lp_y -ne 0 ]; then
+                bn_m=f
+                bn_s=6
+                bn_dt=$(( $en_dt + 15 ))
+            else
+                bn_m=f
+                bn_s=6
+                bn_dt=$(( $en_dt + 15 + 1 ))
+            fi
+        elif [ $en_dt -ge 15 ]; then
+            bn_m=c
+            bn_s=6
+            bn_dt=$(( $en_dt - 15 + 1 ))
+        fi
+    fi
+
+    if [ -z $txt ]; then
+        din=$(printf "%s" $en_d | sed 's/1/সোম/;s/2/মঙ্গল/;s/3/বুধ/;s/4/বৃহঃ/;s/5/শুক্র/;s/6/শনি/;s/7/রবি/')
+        tariq=$(printf "%s" $bn_dt | sed 's/1/১/g;s/2/২/g;s/3/৩/g;s/4/৪/g;s/5/৫/g;s/6/৬/g;s/7/৭/g;s/8/৮/g;s/9/৯/g;s/0/০/g')
+        mas=$(printf "%s" $bn_m | sed 's/1/বৈশাখ/;s/2/জ্যৈষ্ঠ/;s/3/আষাঢ়/;s/4/শ্রাবণ/;s/5/ভাদ্র/;s/6/আশ্বিন/;s/7/কার্তিক/;s/8/অগ্রহায়ণ/;s/9/পৌষ/;s/m/মাঘ/;s/f/ফাল্গুন/;s/c/চৈত্র/')
+        son=$(printf "%s" $bn_y | sed 's/1/১/g;s/2/২/g;s/3/৩/g;s/4/৪/g;s/5/৫/g;s/6/৬/g;s/7/৭/g;s/8/৮/g;s/9/৯/g;s/0/০/g')
+        hritu=$(printf "%s" $bn_s | sed 's/1/গ্রীষ্ম/;s/2/বর্ষা/;s/3/শরৎ/;s/4/হেমন্ত/;s/5/শীত/;s/6/বসন্ত/')
+    else
+        din=$(printf "%s" $en_d | sed 's/1/Som/;s/2/Mongol/;s/3/Budh/;s/4/Briho/;s/5/Shukro/;s/6/Shoni/;s/7/Robi/')
+        tariq=$bn_dt
+        mas=$(printf "%s" $bn_m | sed 's/1/Boishakh/;s/2/Jaishtha/;s/3/Aashar/;s/4/Srabon/;s/5/Vhadra/;s/6/Aashwin/;s/7/Kartik/;s/8/Aagrahayon/;s/9/Poush/;s/m/Magh/;s/f/Falgun/;s/c/Chaitra/')
+        son=$bn_y
+        hritu=$(printf "%s" $bn_s | sed 's/1/Grishsho/;s/2/Borsha/;s/3/Sharot/;s/4/Hemanta/;s/5/Sheet/;s/6/Bosonto/')
+    fi
+
+    if [ $dt_f -eq 1 ]; then
+         printf "%s %s %s" $din $tariq $mas
+    elif [ $dt_f -eq 2 ]; then
+        printf "%s %s %s %s" $din $tariq $mas $son
+    elif [ $dt_f -eq 3 ]; then
+        printf "%s %s %s" $hritu $tariq $mas
+    elif [ $dt_f -eq 4 ]; then
+        printf "%s %s %s %s" $hritu $tariq $mas $son
+    elif [ $dt_f -eq 5 ]; then
+        printf "%s %s" "$tariq "$mas
+    else
+        printf "%s %s %s %s %s" $hritu $din $tariq $mas $son
+    fi
+}
+
+
+engabdo() {
+    if [ $bnm -lt 9 ]; then
+            eny=$(( $bny + 593 ))
+            else
+            eny=$(( $bny + 593 + 1 ))
+    fi
+    if [ $bnm -eq 9 ]; then
+        if [ $bndt -le 16 ]; then
+            eny=$(( $bny + 593 ))
+            else
+            eny=$(( $bny + 594 ))
+         fi
+     fi
+
+    if [ $bnm -gt 9 ]; then
+            eny=$(( $bny + 594 ))
+    fi
+
+    if [ $bnm -eq 1 ]; then
+        if [ $bndt -lt 18 ]; then
+            enm=4
+            endt=$(( $bndt + 13 ))
+        elif [ $bndt -ge 18 ]; then
+            enm=5
+            endt=$(( $bndt - 17 ))
+        fi
+    fi
+
+    if [ $bnm -eq 2 ]; then
+        if [ $bndt -lt 18 ]; then
+            enm=5
+            endt=$(( $bndt + 14 ))
+        elif [ $bndt -ge 18 ]; then
+            enm=6
+            endt=$(( $bndt - 17 ))
+        fi
+    fi
+
+    if [ $bnm -eq 3 ]; then
+        if [ $bndt -lt 17 ]; then
+            enm=6
+            endt=$(( $bndt + 14 ))
+        elif [ $bndt -ge 17 ]; then
+            enm=7
+            endt=$(( $bndt - 16 ))
+        fi
+    fi
+
+    if [ $bnm -eq 4 ]; then
+        if [ $bndt -lt 17 ]; then
+            enm=7
+            endt=$(( $bndt + 15 ))
+        elif [ $bndt -ge 17 ]; then
+            enm=8
+            endt=$(( $bndt - 16 ))
+        fi
+    fi
+
+    if [ $bnm -eq 5 ]; then
+        if [ $bndt -lt 17 ]; then
+            enm=8
+            endt=$(( $bndt + 15 ))
+        elif [ $bndt -ge 17 ]; then
+            enm=9
+            endt=$(( $bndt - 16 ))
+        fi
+    fi
+
+    if [ $bnm -eq 6 ]; then
+        if [ $bndt -lt 16 ]; then
+            enm=9
+            endt=$(( $bndt + 15 ))
+        elif [ $bndt -ge 16 ]; then
+            enm=o
+            endt=$(( $bndt - 15 ))
+        fi
+    fi
+
+    if [ $bnm -eq 7 ]; then
+        if [ $bndt -lt 16 ]; then
+            enm=o
+            endt=$(( $bndt + 16 ))
+        elif [ $bndt -ge 16 ]; then
+            enm=z
+            endt=$(( $bndt - 15 ))
+        fi
+    fi
+
+    if [ $bnm -eq 8 ]; then
+        if [ $bndt -lt 16 ]; then
+            enm=z
+            endt=$(( $bndt + 15 ))
+        elif [ $bndt -ge 16 ]; then
+            enm=d
+            endt=$(( $bndt - 15 ))
+        fi
+    fi
+
+    if [ $bnm -eq 9 ]; then
+        if [ $bndt -lt 17 ]; then
+            enm=d
+            endt=$(( $bndt + 15 ))
+        elif [ $bndt -ge 17 ]; then
+            enm=1
+            endt=$(( $bndt - 16 ))
+        fi
+    fi
+    
+    if [ $bnm -eq 10 ]; then
+        if [ $bndt -lt 18 ]; then
+            enm=1
+            endt=$(( $bndt + 14 ))
+        elif [ $bndt -ge 18 ]; then
+            enm=2
+            endt=$(( $bndt - 17 ))
+        fi
+    fi
+
+    lpby=$(( $eny % 4 ))
+
+    if [ $bnm -eq 11 ]; then
+        if [ $lpby -ne 0 ]; then
+            if [ $bndt -lt 16 ]; then
+            enm=2
+            endt=$(( $bndt + 13 ))
+            elif [ $bndt -ge 16 ]; then
+            enm=3
+            endt=$(( $bndt - 15 ))
+            fi
+        else
+            if [ $bndt -lt 17 ]; then
+            enm=2
+            endt=$(( $bndt + 13 ))
+            elif [ $bndt -ge 16 ]; then
+            enm=3
+            endt=$(( $bndt - 16 ))
+            fi
+        fi
+    fi
+
+    if [ $bnm -eq 12 ]; then
+        if [ $bndt -lt 18 ]; then
+            enm=3
+            endt=$(( $bndt + 14 ))
+        elif [ $bndt -ge 18 ]; then
+            enm=4
+            endt=$(( $bndt - 17 ))
+        fi
+    fi
+
+        enmf=$(printf "%s" $enm | sed 's/o/10/;s/n/11/;s/d/12/')
+        bn_d=$(date --date=$eny-$enmf-$endt +%u)
+
+    if [ -z $txt ]; then
+        din=$(printf "%s" $bn_d | sed 's/1/সোম/;s/2/মঙ্গল/;s/3/বুধ/;s/4/বৃহঃ/;s/5/শুক্র/;s/6/শনি/;s/7/রবি/')
+        tariq=$(printf "%s" $endt | sed 's/1/১/g;s/2/২/g;s/3/৩/g;s/4/৪/g;s/5/৫/g;s/6/৬/g;s/7/৭/g;s/8/৮/g;s/9/৯/g;s/0/০/g')
+        mas=$(printf "%s" $enm | sed 's/1/জানুয়ারি/;s/2/ফেব্রুয়ারি/;s/3/মার্চ/;s/4/এপ্রিল/;s/5/মে/;s/6/জুন/;s/7/জুলাই/;s/8/আগস্ট/;s/9/সেপ্টেম্বর/;s/o/অক্টোবর/;s/z/নভেম্বর/;s/d/ডিসেম্বর/')
+        son=$(printf "%s" $eny | sed 's/1/১/g;s/2/২/g;s/3/৩/g;s/4/৪/g;s/5/৫/g;s/6/৬/g;s/7/৭/g;s/8/৮/g;s/9/৯/g;s/0/০/g')
+    else
+        din=$(printf "%s" $bn_d | sed 's/1/Som/;s/2/Mongol/;s/3/Budh/;s/4/Briho/;s/5/Shukro/;s/6/Shoni/;s/7/Robi/')
+        tariq=$endt
+        mas=$(printf "%s" $enm | sed 's/1/January/;s/2/February/;s/3/March/;s/4/April/;s/5/May/;s/6/June/;s/7/July/;s/8/August/;s/9/September/;s/o/October/;s/z/November/;s/d/December/')
+        son=$eny
+    fi
+        printf "%s %s %s %s" $din $tariq $mas $son
+}
+
+if [ $cd_f -eq 1 ]; then
+	printf "%s\n" "$(engabdo)"
+	else
+	printf "%s\n" "$(bongabdo)"
+fi

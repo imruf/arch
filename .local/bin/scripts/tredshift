@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 if pgrep -x "redshift" > /dev/null
 then

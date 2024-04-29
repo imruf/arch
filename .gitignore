@@ -6,6 +6,7 @@ bncal
 plugins
 web_scrape
 pys.py
+*.jnlp
 
 
 update info
@@ -14,4 +15,3 @@ git remote set-url origin https://oauth2:token@git.domain/user/project.git
 
 git remote remove origin
 git remote add origin https://token@github.com/user/project.git
-

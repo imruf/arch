@@ -1,0 +1,117 @@
+#!/bin/sh
+
+
+while getopts "d:m:y:D:M:Y:h" o; do case "${o}" in
+    h) printf "agcal\\n -d: Birth Date\\n -m: Birth Month\\n -y: Birth Year\\n -D: Current Date\\n -M: Current Month\\n -Y: Current Year\\n -h: help\\n" && exit 1 ;;
+	d) b_d=${OPTARG} ;;
+	m) b_m=${OPTARG} ;;
+	y) b_y=${OPTARG} ;;
+	D) c_d=${OPTARG} ;;
+	M) c_m=${OPTARG} ;;
+	Y) c_y=${OPTARG} ;;
+	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit 1 ;;
+esac done
+
+[ -z $b_d ] && read -p "Enter Birth Day: " b_d
+[ -z $b_m ] && read -p "Enter Birth Month:  " b_m
+[ -z $b_y ] && read -p "Enter Birth Year:  " b_y
+[ -z $c_d ] && c_d=$(date +%-d)
+[ -z $c_m ] && c_m=$(date +%-m)
+[ -z $c_y ] && c_y=$(date +%Y)
+
+# Getting Number of Days in A Month
+ndm=$(cal $b_m $b_y | awk 'NF {Days = $NF}; END {print Days}')
+ndmc=$(cal $m $y | awk 'NF {Days = $NF}; END {print Days}')
+
+if [ $b_m -eq $c_m ]; then
+    if [ $b_d -le $c_d ]; then
+        y=$(( $c_y - $b_y ))
+        m=$(( $c_m - $b_m ))
+    else
+        y=$(( $c_y - 1 - $b_y ))
+        m=$(( 12 - $b_m + $c_m - 1 ))
+         # m=$(( 12 - 1 ))
+    fi
+elif [ $b_m -lt $c_m ]; then
+    if [ $b_d -le $c_d ]; then
+        y=$(( $c_y - $b_y ))
+        m=$(( $c_m - $b_m ))
+    else
+        y=$(( $c_y - $b_y ))
+        m=$(( $c_m - $b_m -1 ))
+    fi
+elif [ $b_m -gt $c_m ]; then
+    if [ $b_d -le $c_d ]; then
+        y=$(( $c_y - 1 - $b_y ))
+        m=$(( 12 - $b_m + $c_m ))
+    else
+        y=$(( $c_y - 1 - $b_y ))
+        m=$(( 12 - $b_m + $c_m - 1 ))
+    fi
+fi
+
+
+if [ $c_d -ge $b_d ]; then
+    d=$(( $c_d - $b_d ))
+else
+    d=$(( $c_d - $b_d + $ndm ))
+fi
+
+if [ $ndmc -eq 31 ]; then
+    if [ $d -le 29 ]; then
+        dc=$(( $d + 1 ))
+        mc=$m
+        yc=$y
+    else
+        dc=0
+        mc=$(( $m + 1 ))
+        yc=$y
+    fi
+fi
+
+if [ $ndmc -eq 30 ]; then
+    if [ $m -eq 11 ] && [ $d -eq 30 ]; then
+        dc=0
+        mc=0
+        yc=$(( $y + 1 ))
+    elif [ $m -eq 11 ] && [ $d -le 29 ]; then
+        dc=$(( $d + 1 ))
+        mc=$m
+        yc=$y
+    elif [ $m -ne 11 ] && [ $d -le 28 ]; then
+        dc=$(( $d + 1 ))
+        mc=$m
+        yc=$y
+    else
+        dc=0
+        mc=$(( $m + 1 ))
+        yc=$y
+    fi
+fi
+
+if [ $ndmc -eq 28 ]; then
+    if [ $d -le 26 ]; then
+        dc=$(( $d + 1 ))
+        mc=$m
+        yc=$y
+    else
+        dc=0
+        mc=$(( $m + 1 ))
+        yc=$y
+    fi
+fi
+
+if [ $ndmc -eq 29 ]; then
+    if [ $d -le 27 ]; then
+        dc=$(( $d + 1 ))
+        mc=$m
+        yc=$y
+    else
+        dc=0
+        mc=$(( $m + 1 ))
+        yc=$y
+    fi
+fi
+
+printf "Age is: %s Years %s Months %s Days\n" $y $m $d
+printf "Completed Age Is: %s Years %s Months %s Days\n" $yc $mc $dc

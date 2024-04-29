@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 #keymap
 # This script is called on startup to remap keys.

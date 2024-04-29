@@ -1,0 +1,19 @@
+#!/bin/sh
+
+filter() { cmus-remote -Q | tac | awk '/status|title|artist|album/' | sed "s/paused/⏸/g;s/playing/▶/g;s/stopped/⏹/g;s/title\|artist\|album/ /g;s/tag\|status//g" | tr -d '\n'; }
+
+pidof -x cmus >/dev/null 2>&1 || cmus >/dev/null 2>&1 &
+
+case $BLOCK_BUTTON in
+	2) setsid -f "$TERMINAL" -e cmus ;;  # right click, pause/unpause
+	1) cmus-remote -u | filter ;;  # right click, pause/unpause
+	3) cmus-remote -Q | filter ; notify-send "🎵 Music module" "\- Shows cmus song playing.
+- ⏸ when paused.
+- Left click opens nccmus-remotepp.
+- Middle click pauses.
+- Scroll changes track.";;  # right click, pause/unpause
+	4) cmus-remote -r   | filter ;;  # scroll up, previous
+	5) cmus-remote -n   | filter ;;  # scroll down, next
+	6) cmus-remote -Q | filter ; "$TERMINAL" -e "$EDITOR" "$0" ;;
+	*) cmus-remote -Q | filter ;;
+esac

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 ## check for new or broken services
 ## https://github.com/chubin/awesome-console-services

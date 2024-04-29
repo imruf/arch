@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 keycode 1 = Caps_Lock
 keycode 58 = Escape

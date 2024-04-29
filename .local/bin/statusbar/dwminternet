@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 case $BLOCK_BUTTON in
 	1) "$TERMINAL" -n spf -g 110x18 -e nmtui; pkill -RTMIN+4 dwmblocks ;;

@@ -3,6 +3,14 @@
 # Path
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
+unsetopt PROMPT_SP
+
+# Driver
+# export DRI_PRIME=1
+# export LIBVA_DRIVER_NAME=r600
+export VDPAU_DRIVER=va_gl
+# export VDPAU_DRIVER=r600
+
 # Defaults
 export BROWSER="firefox"
 export EDITOR="nvim"
@@ -10,9 +18,13 @@ export TERMINAL="st"
 export READER="zathura"
 export FILE="nnn"
 
+
+
 # ManPage
+export MANPAGER="nvim +Man!"
+# export MANPAGER="less"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER="nvim -c 'set ft=man' -"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # xdg-dir
@@ -28,7 +40,7 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+# export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
@@ -36,6 +48,18 @@ export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch/notmuchrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MOST_INITFILE="$XDG_CONFIG_HOME"/most/mostrc
+
+
+# Less
+export LESS=-R
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 # stardict
 # export DICS="$XDG_DATA_HOME/stardict/dic/"
@@ -50,7 +74,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
 
 # Fix
-export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
@@ -65,9 +89,14 @@ export NNN_COLORS="3427"
 export NNN_FCOLORS='00e2272ec16033f7c6d6abc4'
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud;t:/tmp;c:/home/masud/.config/vimwiki/cnf'
-export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups'
+export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups;i:imgview'
 # export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
 # export NNN_RCLONE='rclone mount --read-only --no-checksum'
 
 # tuir environment
 export TUIR_BROWSER="elinks"
+
+
+#start x
+# Start graphical server on user's current tty if not already running.
+# [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"

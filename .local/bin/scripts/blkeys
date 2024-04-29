@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # You can call this script like this:
 # $ ./brightnessControl.sh up
@@ -29,4 +29,7 @@ case $1 in
     sudo brightnessctl s 5%- > /dev/null; light=$(brightnessctl | awk '/Current/ {print $4}' | sed 's/[%()]//g')
     send_bl
     ;;
+  off)
+      xset dpms force off
+      ;;
 esac

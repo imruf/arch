@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
+
 
 # A dmenu wrapper script for system functions.
 

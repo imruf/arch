@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 music_icon="🎶"
 radio_icon="📻"

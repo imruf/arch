@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 case "$(printf "cli\\ngui" | dmenu -i -p "sr:>_")" in
       cli)

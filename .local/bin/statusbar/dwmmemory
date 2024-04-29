@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 case $BLOCK_BUTTON in
 	1) notify-send "🧠 Memory hogs" "$(ps axch -o cmd:15,%mem --sort=-%mem | head)" ;;
@@ -9,7 +9,8 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-mem=$(free -h --kilo | awk '/^Mem:/ {print $3}')
-#mem=$(free -h --kilo | awk '/^Mem:/ {print $3 "/" $2}')
+#mem=$(free -h | awk '/^Mem:/ {print $3}')
+#mem=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+mem=$(free -h | awk '/^Mem:/ {print $3}')
 icon=""
 printf "%s %s" $icon "$mem"
