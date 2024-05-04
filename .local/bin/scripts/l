@@ -13,14 +13,14 @@ else
 fi
 
 case "$url" in
-	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*|*odysee.com*)
-		setsid -f mpv --loop-file=inf -quiet "$url" >/dev/null 2>&1 ;;
-	*png|*jpg|*jpe|*jpeg|*gif|*webp)
-		curl -sL "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && nsxiv -a "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
+	*mkv|*webm|*mp4)
+		setsid -f mpv --loop-file=inf -quiet "$url" ;;
+	*png|*jpg|*jpe|*jpeg|*webp|*gif)
+		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && nsxiv -fa "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*pdf|*cbz|*cbr)
-		curl -sL "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && zathura "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
+		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && zathura "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*mp3|*flac|*opus|*mp3?source*)
-		qndl "$url" 'curl -LO'  >/dev/null 2>&1 ;;
+		qndl "$url" 'curl -LO' ;;
 	*imgur.com*)
         yt-dlp -g "$1" | xargs mpv --profile=yt --loop-file=inf ;;
 	*redgifs.com*)
@@ -39,13 +39,16 @@ case "$url" in
         rm /tmp/*.[jpg][pni]*
         curl $iurl > $tmpfile
         tr '"' '\n' < $tmpfile | awk '/https/ && /format/ && !/blur/ {print}' | sed 's/amp;//g' | sort -n > $linkfile
-        [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -f -a /tmp/. || cat $tmpfile; sleep 0.5 ;;
+        [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $tmpfile; sleep 0.5 ;;
 	*imgchest.com*)
         tmpfile=/tmp/gallery
         linkfile=/tmp/links
         rm /tmp/*.[jpg][pni]*
         curl $url | grep og:image | tr '"' '\n' | awk '/https/ {print}' > $linkfile
-        [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -f -a /tmp/. || cat $linkfile; sleep 0.5 ;;
+        [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $linkfile; sleep 0.5 ;;
+	*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*odysee.com*|*eroticmv.com*|*xnxx.com*|*pornhub.com*|*xvideos.com*|*xhamster.com*|*youjizz.com*|*youporn.com*|*sxyprn.com*|*spankbang.com*|*desixx.net*|*fsiblog3.club*|*hqporner.com*|*porntrex.com**)
+        RES="$(yt-dlp -F $url | fzf --print-query | tail -1 | awk '{print $1}')"
+        mpv --loop-file=inf --ytdl-format=$RES "$url" ;;
 	*)
-		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || setsid -f "$BROWSER" "$url" >/dev/null 2>&1
+		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || setsid -f "$BROWSER" "$url"
 esac

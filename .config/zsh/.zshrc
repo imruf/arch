@@ -10,25 +10,24 @@ prompt redhat
 # setopt autocd		# Automatically cd into typed directory.
 # setopt interactive_comments
 
-# EXPORT 
-export TERM="xterm-256color"
-export TERM="st-256color"
 
 stty stop undef		# Disable ctrl-s to freeze terminal.
+
+
+
+PS1="%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%B%F{226}  %f%b%B%F{78}%~%b%f%F{15}]%f %F{038}>%f%b "
 
 # PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
 # %B:-%b "
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b
 # %F{yellow}$(print -P '\uF303')%f %F{blue} :- %f"
 
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b %B%{$fg[cyan]%}>%{$reset_color%}%b "
+# PS1="%B%F{148}[ %f%F{yellow}%K{black}%n%k%f%F{106}@%f%F{030}%M%f %F{208}%~%f%F{148} ]%f %F{038}>%f%b "
 
 
-# ibus integration
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export QT4_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b %B%{$fg[cyan]%}>%{$reset_color%}%b "
+
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -110,13 +109,3 @@ source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/fsh/fast-syntax-highlighting.plugin
 
 
 # [[ $UID -eq 0 ]] && local user_symbol='%F{red}#%f' ||  local user_symbol='%F{green}$%f'
-
-
-# PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
-# %B:-%b "
-# RPS1='$(vcs_super_info) %# %F{240}%T%f %(?.%F{green}√.%F{red}?%?)%f'
-#PS1="%F{yellow}%n%F{blue}$(print -P '\uF303';)%F{yellow}%M %B%F{yellow}%~%F{green} »%b "
-#PS1="%F{blue}$(print -P '\uF303';) %B%F{yellow}%~%F{green} »%b "
-#PS1="%B%F{cyan}[%F{cyan}%n%F{cyan}@%F{cyan}%M %F{yellow}%~%F{cyan}]%F{green} %F{yellow}➜%b "
-
-

@@ -36,6 +36,7 @@ esac done
 [ -z $URL ] && read -p "URL: " URL
 [ -z $RES ] && read -p "l/m/s/h/k/?: " RES
 
+bav="bestvideo*+bestaudio/best"
 RES="$(printf $RES | sed 's/l/240/;s/m/360/;s/s/480/;s/h/720/;s/k/1080/')"
 MPVYT="${MPVYT-mpv --ytdl-format=\'bestvideo[height<=$RES]+bestaudio/best[height<=$RES]\' $URL}"
 

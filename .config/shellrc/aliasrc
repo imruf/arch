@@ -13,6 +13,7 @@ alias \
  t="tmux" \
  ta="tmux a -t" \
  tl="tmux ls" \
+ tns="tmux new -s $1" \
 
 ## Files
 # List
@@ -236,7 +237,7 @@ alias \
  vol="pulsemixer" \
  def="sdcv" \
  d="sdcv_def" \
- rt="tuir" \
+ rt="tns reddit tuir; ta reddit" \
  keep="keepcli" \
  pdf="zathura" \
  img="sxiv" \
