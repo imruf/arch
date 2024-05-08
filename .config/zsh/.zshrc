@@ -14,8 +14,10 @@ prompt redhat
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
 
+PS1="%B%F{15}[%f%F{190}  %f%F{33}  %f%F{78}%~%f%F{15}]%f
+%F{038}:->%f%b "
 
-PS1="%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%B%F{226}  %f%b%B%F{78}%~%b%f%F{15}]%f %F{038}>%f%b "
+# PS1="%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%F{226}  %f%F{78}%~%f%F{15}]%f %F{038}>%f%b "
 
 # PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
 # %B:-%b "

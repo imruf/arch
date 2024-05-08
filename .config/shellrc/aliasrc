@@ -237,7 +237,7 @@ alias \
  vol="pulsemixer" \
  def="sdcv" \
  d="sdcv_def" \
- rt="tns reddit tuir; ta reddit" \
+ rt="rt_tmux" \
  keep="keepcli" \
  pdf="zathura" \
  img="sxiv" \
