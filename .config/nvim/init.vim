@@ -7,16 +7,21 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 	autocmd VimEnter * PlugInstall
 endif
 
+" PlugIns
+" Install Plugins With :PlugInstall
+
+
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 
 Plug 'itchyny/lightline.vim'                      " Vim Lightline
-Plug 'chrisbra/Colorizer'                         " color from rgb
 Plug 'vimwiki/vimwiki'                            " vimwiki
-Plug 'mcchrish/nnn.vim'                           " nnn file picker
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
-Plug 'strboul/urlview.vim'                        " urlview
-Plug 'neoclide/coc.nvim', {'branch': 'release'}   " vim lsp and coc
+Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'chrisbra/Colorizer'                         " color from rgb
+" Plug 'mcchrish/nnn.vim'                           " nnn file picker
+" Plug 'strboul/urlview.vim'                        " urlview
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}   " vim lsp and coc
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
 " Plug 'rkulla/pydiction'                       " python library
@@ -140,9 +145,8 @@ set incsearch
 
 set hidden
 
-" set cursorline
-" set cursorcolumn
-
+set cursorline
+set cursorcolumn
 " set sidescrolloff=999
 " set scrolloff=999
 
@@ -161,12 +165,18 @@ hi VertSplit ctermfg=8 ctermbg=0
 hi Statement ctermfg=3
 
 
+" nightfly colorscheme
+colorscheme nightfly
+
 let g:python_highlight_all = 1
 
 let g:rehash256 = 1
 let g:lightline = {
-      \ 'colorscheme': 'apprentice',
+      \ 'colorscheme': 'nightfly',
       \ }
+
+" :hardcopy wihtout header
+" let &printheader = " "
 
 " fzf
 set rtp+=/usr/bin/fzf
@@ -183,10 +193,10 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-command! -nargs=? -complete=dir AF
- \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
- \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
-  \ })))
+   command! -nargs=? -complete=dir AF
+    \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
+    \   'source': 'find ~/ -type f 2> /dev/null '.expand(<q-args>)
+     \ })))
 
 ":vimwiki ext
 let g:vimwiki_list = [{'path': '~/.config/vimwiki',
@@ -194,8 +204,8 @@ let g:vimwiki_list = [{'path': '~/.config/vimwiki',
 
 
 " python dict pydiction plugin
-let g:pydiction_location = '/home/masud/.config/nvim/plugged/pydiction/complete-dict'
-let g:pydiction_menu_height = 3
+" let g:pydiction_location = '/home/masud/.config/nvim/plugged/pydiction/complete-dict'
+" let g:pydiction_menu_height = 3
 
 " nnn
 let g:nnn#set_default_mappings = 0
@@ -207,22 +217,22 @@ nnoremap <silent> <leader>nnn :NnnPicker<CR>
 "             \ }
 
 " manpage with table of contents sidebar with neovim
- augroup manlaunchtoc
-      autocmd!
-      if has('nvim')
-         autocmd FileType man
-             \ call man#show_toc() |
-             \ setlocal laststatus=0 number relativenumber |
-             \ nnoremap <buffer> l <Enter> |
-             \ wincmd V |
-             \ resize 5 |
-             \ wincmd p
-     endif
- augroup end
+" augroup manlaunchtoc
+"      autocmd!
+"      if has('nvim')
+"         autocmd FileType man
+"             \ call man#show_toc() |
+"             \ setlocal laststatus=0 number relativenumber |
+"             \ nnoremap <buffer> l <Enter> |
+"             \ wincmd V |
+"             \ resize 5 |
+"             \ wincmd p
+"     endif
+" augroup end
 
 " lsp
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 " dwmblocks autocompile
