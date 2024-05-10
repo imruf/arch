@@ -18,7 +18,7 @@ Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
 Plug 'junegunn/fzf.vim'                           " vim fzf
 Plug 'bluz71/vim-nightfly-guicolors'
-" Plug 'chrisbra/Colorizer'                         " color from rgb
+Plug 'chrisbra/Colorizer'                         " color from rgb
 " Plug 'mcchrish/nnn.vim'                           " nnn file picker
 " Plug 'strboul/urlview.vim'                        " urlview
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}   " vim lsp and coc
@@ -146,7 +146,7 @@ set incsearch
 set hidden
 
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 " set sidescrolloff=999
 " set scrolloff=999
 
