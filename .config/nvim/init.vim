@@ -147,8 +147,8 @@ set hidden
 
 set cursorline
 " set cursorcolumn
-" set sidescrolloff=999
-" set scrolloff=999
+set sidescrolloff=999
+set scrolloff=999
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
