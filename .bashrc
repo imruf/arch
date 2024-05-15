@@ -10,8 +10,9 @@ coltt=$(tput setaf 33)
 colost=$(tput setaf 172)
 
 
-PS1='\[$bold\]\[$colw\][\[$reset\]\[$bold\]\[$colgo\]  \[$reset\]\[$bold\]\[$coltt\]  \[$reset\] \[$bold\]\[$colgr\]\w\[$reset\]\[$bold\]\[$colw\] ]\[$reset\]\[$bold\]\[$colc\] >> \[$reset\]'
+# PS1='\[$bold\]\[$colw\][\[$reset\]\[$bold\]\[$colgo\]  \[$reset\]\[$bold\]\[$coltt\]  \[$reset\] \[$bold\]\[$colgr\]\w\[$reset\]\[$bold\]\[$colw\] ]\[$reset\]\[$bold\]\[$colc\] >> \[$reset\]'
 
+PS1='\[$bold\]\[$colw\][\[$reset\]\[$bold\]\[$colost\]\u\[$reset\]\[$bold\]\[$colw\]@\[$reset\]\[$bold\]\[$colc\]\h\[$reset\]\[$bold\]\[$coly\] \[$reset\]\[$bold\]\[$colgr\]\w\[$reset\]\[$bold\]\[$colw\]]\[$reset\]\[$bold\]\[$colc\] >> \[$reset\]'
 
 # PS1='\[$bold\]\[$colw\][\[$reset\]\[$bold\]\[$colost\]\u\[$reset\]\[$bold\]\[$colw\]@\[$reset\]\[$bold\]\[$colc\]\h\[$reset\]\[$bold\]\[$coly\]  \[$reset\]\[$bold\]\[$colgr\]\w\[$reset\]\[$bold\]\[$colw\]]\[$reset\]\[$bold\]\[$colc\] >> \[$reset\]'
 # PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
