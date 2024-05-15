@@ -8,7 +8,7 @@ unsetopt PROMPT_SP
 # Driver
 # export DRI_PRIME=1
 # export LIBVA_DRIVER_NAME=r600
-export VDPAU_DRIVER=va_gl
+# export VDPAU_DRIVER=va_gl
 # export VDPAU_DRIVER=r600
 
 # TERM COLOR
@@ -101,8 +101,7 @@ export NNN_OPTS="adr"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=mimeopen
 export NNN_COLORS="3427"
-export NNN_FCOLORS='00e2272ec16033f7c6d6abc4'
-# export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
+export NNN_FCOLORS='c1e2d72e006033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud;t:/tmp;c:/home/masud/.config/vimwiki/cnf'
 export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups;i:imgview'
 # export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'

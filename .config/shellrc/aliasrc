@@ -60,8 +60,10 @@ alias \
  hga="cd $HOME/Downloads/Git/arch" \
  hgc="cd $HOME/Downloads/Git/cnf" \
  hgd="cd $HOME/Downloads/Git/dwm" \
+ hgdg="cd $HOME/Downloads/Git/dwm-git" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
  hgs="cd $HOME/Downloads/Git/st" \
+ hgsg="cd $HOME/Downloads/Git/st-git" \
  fpconf="snv /etc/pacman.conf" \
  fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
  fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
@@ -233,7 +235,7 @@ alias \
 # Misc. App
 alias \
  snv="sudo nvim" \
- m="cmus" \
+ m="ncmpcpp" \
  vol="pulsemixer" \
  def="sdcv" \
  d="sdcv_def" \
