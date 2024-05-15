@@ -16,9 +16,14 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 Plug 'itchyny/lightline.vim'                      " Vim Lightline
 Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'AndrewRadev/id3.vim'                        " id3tag editor
-Plug 'junegunn/fzf.vim'                           " vim fzf
-Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'chrisbra/Colorizer'                         " color from rgb
+Plug 'gruvbox-community/gruvbox'
+" Plug 'junegunn/fzf.vim'                           " vim fzf
+" Plug 'vim-airline/vim-airline-themes'             " Airline Themes
+" Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
+" Plug 'tjdevries/colorbuddy.nvim'                  " colorbuddy
+" Plug 'overcache/NeoSolarized'                     " Neosolarized ColorScheme
 " Plug 'mcchrish/nnn.vim'                           " nnn file picker
 " Plug 'strboul/urlview.vim'                        " urlview
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}   " vim lsp and coc
@@ -145,10 +150,10 @@ set incsearch
 
 set hidden
 
-set cursorline
+" set cursorline
 " set cursorcolumn
-set sidescrolloff=999
-set scrolloff=999
+" set sidescrolloff=999
+"  set scrolloff=999
 
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
@@ -164,16 +169,24 @@ hi CursorLineNr ctermfg=15
 hi VertSplit ctermfg=8 ctermbg=0
 hi Statement ctermfg=3
 
+" colorscheme
+" set termguicolors
+
+" set background=dark " or light if you want light mode
+colorscheme gruvbox
 
 " nightfly colorscheme
-colorscheme nightfly
+" colorscheme nightfly
 
-let g:python_highlight_all = 1
+" let g:python_highlight_all = 1
 
-let g:rehash256 = 1
-let g:lightline = {
-      \ 'colorscheme': 'nightfly',
-      \ }
+" let g:lightline = {}
+" let g:lightline.colorscheme = 'gruvbox'
+
+" let g:rehash256 = 1
+" let g:lightline = {
+"      \ 'colorscheme': 'nightfly',
+"      \ }
 
 " :hardcopy wihtout header
 " let &printheader = " "
