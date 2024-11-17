@@ -5,12 +5,13 @@
 # Increase key speed via a rate change
 # Map the caps lock key to escape, use swapescape to swap keys
 # Reload statusbar
-xset r rate 300 80 &
+# xset r rate 250 50 &
 if xset q | grep -q 'Caps Lock: *off'; then
     setxkbmap -option caps:escape &
 else
     xdotool key Caps_Lock
     setxkbmap -option caps:escape &
 fi
-killall -q dwmblocks
-dwmblocks &
+
+# killall -q dwmblocks
+# dwmblocks &

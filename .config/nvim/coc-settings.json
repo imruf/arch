@@ -1,0 +1,14 @@
+{
+    "languageserver": {
+      "latex": {
+        "command": "texlab",
+        "filetypes": ["tex", "bib", "plaintex", "context"]
+      },
+      "bash": {
+        "command": "bash-language-server",
+        "args": ["start"],
+        "filetypes": ["sh"]
+      }
+
+    }
+}

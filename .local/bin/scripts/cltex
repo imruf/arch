@@ -1,0 +1,31 @@
+#!/bin/sh
+
+
+rm *.xref;
+rm *.tmp;
+rm *.pyc;
+rm *.pyg;
+rm *.pyo;
+rm *.fls;
+rm *.vrb;
+rm *.fdb_latexmk;
+rm *.bak;
+rm *.swp;
+rm *.aux;
+rm *.log;
+rm *.synctex\(busy\);
+rm *.lof;
+rm *.lot;
+rm *.maf;
+rm *.idx;
+rm *.mtc;
+rm *.mtc0;
+rm *.nav;
+rm *.out;
+rm *.snm;
+rm *.toc;
+rm *.bcf;
+rm *.run\.xml;
+rm *.synctex\.gz;
+rm *.blg;
+rm *.bbl;

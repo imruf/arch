@@ -2,11 +2,16 @@
 
 # info: rofi-locate is a script to search local files and folders on your computer using the locate command and the updatedb database
 
-
-cmd="find ~/ -type f 2>/dev/null"
-entry="$(eval "$cmd" | dmenu -l 10 -i -p "file:>_")"
-xdg-open "$entry" >/dev/null 2>&1
+# find with find
+# cmd="find ~/ -type f 2>/dev/null"
+# entry="$(eval "$cmd" | dmenu -l 10 -i -p "file:>_")"
+# xdg-open "$entry" >/dev/null 2>&1
 
 #FILE="$(find -H -type f 2> /dev/null | dmenu -l 5 -i -p "locate:>_")" && mimeopen "$FILE"
 # xdg-open "$(locate home | rofi -threads 0 -width 100 -dmenu -i -p ">>>")"
 
+# find with locate
+feed="${1:-$(printf "%s" | dmenu -p 'search file:>_')}"
+cmd="locate -i $feed 2>/dev/null"
+entry="$(eval "$cmd" | dmenu -l 10 -i -p "open:>_")"
+xdg-open "$entry" >/dev/null 2>&1

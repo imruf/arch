@@ -47,8 +47,7 @@ case "$url" in
         curl $url | grep og:image | tr '"' '\n' | awk '/https/ {print}' > $linkfile
         [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $linkfile; sleep 0.5 ;;
 	*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*odysee.com*|*eroticmv.com*|*xnxx.com*|*pornhub.com*|*xvideos.com*|*xhamster.com*|*youjizz.com*|*youporn.com*|*sxyprn.com*|*spankbang.com*|*desixx.net*|*fsiblog3.club*|*hqporner.com*|*porntrex.com**)
-        RES="$(yt-dlp -F $url | fzf --print-query | tail -1 | awk '{print $1}')"
-        mpv --loop-file=inf --ytdl-format=$RES "$url" ;;
+        mpv --loop-file=inf --ytdl-format=bestvideo*+bestaudio/best "$url" ;;
 	*)
 		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || setsid -f "$BROWSER" "$url"
 esac

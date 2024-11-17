@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # vim to nvim
-command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+# command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # EDITOR
 alias \
@@ -42,6 +42,8 @@ alias \
  xcvn="cd $XDG_CONFIG_HOME/vimwiki/notes" \
  xcvu="cd $XDG_CONFIG_HOME/vimwiki/urls" \
  xcvl="cd $XDG_CONFIG_HOME/vimwiki/latex" \
+ xcvd="cd $XDG_CONFIG_HOME/vimwiki/latex/docs" \
+ xcvt="cd $XDG_CONFIG_HOME/vimwiki/latex/bnlatex" \
  xcvcnf="cd $XDG_CONFIG_HOME/vimwiki/cnf" \
  xd="cd $XDG_DATA_HOME" \
  zd="cd $ZDOTDIR" \
@@ -317,6 +319,11 @@ alias \
  ftpd="sudo rsm stop vsftpd" \
  at="termux_ssh" \
 
+# fb hosts
+alias \
+ fb="sudo cp /home/masud/Downloads/hosts-gen/host-social /etc/hosts" \
+ nfb="sudo cp /home/masud/Downloads/hosts-gen/hosts /etc" \
+
 # tor/vpn
 alias \
     v1="sudo openvpn --config ~/Downloads/openvpn/jp-free-01.protonvpn.net.udp.ovpn --mute 5 --mute-replay-warnings" \
@@ -389,11 +396,12 @@ alias \
 # DE/WM
 alias \
  gui="startx" \
- dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.xinitrc && gui" \
- xfce="cp ~/.config/.xinit/xfce.xinitrc ~/.xinitrc && gui" \
- mate="cp ~/.config/.xinit/mate.xinitrc ~/.xinitrc && gui" \
- kde="cp ~/.config/.xinit/kde.xinitrc ~/.xinitrc && gui" \
- budgie="cp ~/.config/.xinit/budgie.xinitrc ~/.xinitrc && gui" \
+ dwm="cp ~/.config/.xinit/dwm.xinitrc ~/.config/x11/xinitrc && gui" \
+ xfce="cp ~/.config/.xinit/xfce.xinitrc ~/.config/x11/xinitrc && gui" \
+ mate="cp ~/.config/.xinit/mate.xinitrc ~/.config/x11/xinitrc && gui" \
+ kde="cp ~/.config/.xinit/kde.xinitrc ~/.config/x11/xinitrc && gui" \
+ budgie="cp ~/.config/.xinit/budgie.xinitrc ~/.config/x11/xinitrc && gui" \
+ sway="cp ~/.config/.xinit/sway.xinitrc ~/.config/x11/xinitrc && gui" \
 
 # FETCH
 alias \

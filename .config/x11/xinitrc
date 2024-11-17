@@ -9,9 +9,11 @@ fi
 
 # Activate dbus variables
 dbus-update-activation-environment --all
-dbus-launch ssh-agent dwm
+exec dwm
+# dbus-launch ssh-agent dwm
 
 # [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 # [ -f ~/.xprofile ] && . ~/.xprofile
 
 # exec dwm
+

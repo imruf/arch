@@ -13,4 +13,6 @@ esac
 #mem=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
 mem=$(free -h | awk '/^Mem:/ {print $3}')
 icon=""
-printf "%s %s" $icon "$mem"
+
+
+printf "%s  %s" $icon $mem

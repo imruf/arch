@@ -1,6 +1,8 @@
 !! Transparency (0-1):
 !! *.alpha: 0.5
 
+!! /* hard contrast: #1d2021 / soft contrast: #32302f */
+
 !! Display
 Xft.dpi: 96
 Xft.antialias: true

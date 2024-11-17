@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$(printf "cli\\ngui" | dmenu -i -p "sr:>_")" in
+      cli) st -e pipe-viewer ;;
+      gui) gtk-pipe-viewer ;;
+esac

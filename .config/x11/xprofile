@@ -5,9 +5,10 @@
 
 setbg &			# set the background with the `setbg` script
 keymaps &
+
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 
-autostart="dwmblocks xcompmgr dunst clipmenud unclutter"
+autostart="pipewire dwmblocks xcompmgr dunst clipmenud unclutter"
 
 for program in $autostart; do
   pidof -sx "$program" || "$program" &

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# ssh exit from dwm for black display after suspend
+
+# For non-systemd init systems.
+
+
+kill -TERM $(pgrep -u $USER "\bdwm$")

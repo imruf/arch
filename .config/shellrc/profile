@@ -7,16 +7,16 @@ unsetopt PROMPT_SP
 
 # Driver
 # export DRI_PRIME=1
-# export LIBVA_DRIVER_NAME=r600
+export LIBVA_DRIVER_NAME=r600
 # export VDPAU_DRIVER=va_gl
-# export VDPAU_DRIVER=r600
+export VDPAU_DRIVER=r600
 
 # TERM COLOR
 export TERM=st-256color
 
 
 # Defaults
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
@@ -27,7 +27,6 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export QT4_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-
 
 
 # pyenv shell integration
@@ -55,7 +54,7 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 
-# export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
@@ -89,7 +88,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
 
 # Fix
-export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
+# export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
@@ -101,7 +100,7 @@ export NNN_OPTS="adr"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=mimeopen
 export NNN_COLORS="3427"
-export NNN_FCOLORS='c1e2d72e006033f7c6d6abc4'
+export NNN_FCOLORS='c1e2882e486033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud;t:/tmp;c:/home/masud/.config/vimwiki/cnf'
 export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups;i:imgview'
 # export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
