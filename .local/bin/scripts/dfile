@@ -12,6 +12,6 @@
 
 # find with locate
 feed="${1:-$(printf "%s" | dmenu -p 'search file:>_')}"
-cmd="locate -i $feed 2>/dev/null"
+cmd="sudo updatedb && locate -i $feed 2>/dev/null"
 entry="$(eval "$cmd" | dmenu -l 10 -i -p "open:>_")"
 xdg-open "$entry" >/dev/null 2>&1

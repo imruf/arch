@@ -44,7 +44,10 @@ alias \
  xcvl="cd $XDG_CONFIG_HOME/vimwiki/latex" \
  xcvd="cd $XDG_CONFIG_HOME/vimwiki/latex/docs" \
  xcvt="cd $XDG_CONFIG_HOME/vimwiki/latex/bnlatex" \
- xcvcnf="cd $XDG_CONFIG_HOME/vimwiki/cnf" \
+ cnf="cd $XDG_CONFIG_HOME/vimwiki/cnf" \
+ saif="cd $XDG_CONFIG_HOME/vimwiki/cnf/saif" \
+ jamuna="cd $XDG_CONFIG_HOME/vimwiki/cnf/jamuna" \
+ ssaf="cd $XDG_CONFIG_HOME/vimwiki/cnf/ssaf" \
  xd="cd $XDG_DATA_HOME" \
  zd="cd $ZDOTDIR" \
  dlb="cd $HOME/.local/bin" \
@@ -61,11 +64,9 @@ alias \
  hg="cd $HOME/Downloads/Git" \
  hga="cd $HOME/Downloads/Git/arch" \
  hgc="cd $HOME/Downloads/Git/cnf" \
- hgd="cd $HOME/Downloads/Git/dwm" \
- hgdg="cd $HOME/Downloads/Git/dwm-git" \
+ hgd="cd $HOME/Downloads/Git/dwm-git" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
- hgs="cd $HOME/Downloads/Git/st" \
- hgsg="cd $HOME/Downloads/Git/st-git" \
+ hgs="cd $HOME/Downloads/Git/st-git" \
  fpconf="snv /etc/pacman.conf" \
  fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
  fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
@@ -212,6 +213,10 @@ alias \
  eusb="udisksctl power-off -b /dev/sdb1" \
  sdx="mountjutsu" \
 
+# DISPLAY
+alias \
+ edp="export DISPLAY=:0" \
+
 # MAIL/mutt-wizard
 alias \
  ibx="neomutt" \
@@ -318,6 +323,7 @@ alias \
  ftpu="sudo rsm start vsftpd" \
  ftpd="sudo rsm stop vsftpd" \
  at="termux_ssh" \
+ ter="ssh -p 8022 u0_a221@192.168.31.247" \
 
 # fb hosts
 alias \

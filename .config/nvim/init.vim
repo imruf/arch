@@ -8,7 +8,7 @@ endif
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 
 Plug 'itchyny/lightline.vim'                      " Vim Lightline
-Plug 'vim-airline/vim-airline-themes'             " Airline Themes
+" Plug 'vim-airline/vim-airline-themes'             " Airline Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'                            " vimwiki
 Plug 'chrisbra/Colorizer'                         " color from rgb
@@ -57,7 +57,8 @@ let maplocalleader = ","
 "
 filetype plugin on
 
-set number relativenumber
+set number
+" set relativenumber
 
 set encoding=utf-8
 
@@ -135,16 +136,21 @@ nnoremap <silent> <leader>u :Urlview<CR>
 set autoindent
 set smartindent
 
-set termguicolors
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_better_performance = 1
+
+set termguicolors
+
 colorscheme gruvbox-material
 
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 
 
-" let g:lightline = {
-"       \ 'colorscheme': 'gruvbox_material',
-"       \ }
+
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox_material',
+      \ }
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
@@ -153,24 +159,23 @@ let g:airline_symbols.colnr = ' C:'
 let g:airline_symbols.linenr = ' L:'
 let g:airline_symbols.maxlinenr = '☰ '
 
-
-let s:hidden_all = 0
-function! ToggleHiddenAll()
-    if s:hidden_all  == 0
-        let s:hidden_all = 1
-        set noshowmode
-        set noruler
-        set laststatus=0
-        set noshowcmd
-    else
-        let s:hidden_all = 0
-        set showmode
-        set ruler
-        set laststatus=2
-        set showcmd
-    endif
-endfunction
-nnoremap <leader>h :call ToggleHiddenAll()<CR>
+" let s:hidden_all = 0
+" function! ToggleHiddenAll()
+"     if s:hidden_all  == 0
+"         let s:hidden_all = 1
+"         set noshowmode
+"         set noruler
+"         set laststatus=0
+"         set noshowcmd
+"     else
+"         let s:hidden_all = 0
+"         set showmode
+"         set ruler
+"         set laststatus=2
+"         set showcmd
+"     endif
+" endfunction
+" nnoremap <leader>h :call ToggleHiddenAll()<CR>
 
 " let g:vimtex_view_method = 'zathura'
 " let g:vimtex_compiler_method = 'latexmk'

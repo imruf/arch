@@ -5,6 +5,7 @@
 
 setbg &			# set the background with the `setbg` script
 keymaps &
+xautolock -time 10 -locker slock &
 
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 
