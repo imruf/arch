@@ -130,7 +130,6 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 map <leader>p :!opout "%:p"<CR>
 autocmd VimLeave *.tex !texclear %
 
-map <leader>h :ColorHighlight
 nnoremap <silent> <leader>u :Urlview<CR>
 
 set autoindent
