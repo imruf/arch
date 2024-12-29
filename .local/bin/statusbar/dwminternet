@@ -16,4 +16,4 @@ esac
 ssid=$(iwgetid -r)
 sig=$(grep "^\s*w" /proc/net/wireless | awk '{ print int($3 * 100 / 70) "%" }')
 #printf "%s%s\n" "$(sed "s/down/📡/;s/up/$ssid📶$sig/" /sys/class/net/w*/operstate 2>/dev/null)" "$(sed "s/.*/🔒/" /sys/class/net/tun*/operstate 2>/dev/null)"
-printf "%s%s\n" "$(sed "s/down/📡/;s/up/📶$sig/" /sys/class/net/w*/operstate 2>/dev/null)" "$(sed "s/.*/🔒/" /sys/class/net/tun*/operstate 2>/dev/null)"
+printf "%s%s\n" "$(sed "s/down/📡/;s/up/📶$sig/" /sys/class/net/w*/operstate 2>/dev/null)" "$(sed "s/.*/🔒/" /sys/class/net/tun*/operstate 2>/dev/null) জয় বাংলা"

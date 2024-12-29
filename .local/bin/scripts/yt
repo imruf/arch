@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+cd /home/masud/Downloads/AUR/Grayjay && ./Grayjay

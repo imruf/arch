@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/usr/bin/env bash
 ###             _   _     _      _         
 ###  __ _  ___ | |_| |__ | | ___| |_ _   _ 
 ### / _` |/ _ \| __| '_ \| |/ _ \ __| | | |
@@ -277,6 +276,10 @@ format2usb-fat32-32kbcluster() {
       return 1
     fi
   echo -e "${Red}>>>Delete any existing partition then create a new single partition ${Color_Off}"
+
+    # delete existing label
+    sudo dd if=/dev/zero of=/dev/"$DEVICE_NAME" bs=446 count=1
+
     echo -e "d\n\nd\n\nd\n\nd\n\nd\n\nd\n\nd\n\nd\n\no\nn\np\n1\n\n\nt\nb\nw" | sudo fdisk /dev/"$DEVICE_NAME"
     # delete partiton x8 using d\n\n
     # d    delete a partition
@@ -598,6 +601,10 @@ format2usb-fat32() {
       return 1
     fi
   echo -e "${Red}>>>Delete any existing partition then create a new single partition ${Color_Off}"
+
+    # delete existing label
+    sudo dd if=/dev/zero of=/dev/"$DEVICE_NAME" bs=446 count=1
+
     echo -e "d\n\nd\n\nd\n\nd\n\nd\n\nd\n\nd\n\nd\n\no\nn\np\n1\n\n\nt\nb\nw" | sudo fdisk /dev/"$DEVICE_NAME"
     # delete partiton x8 using d\n\n
     # d    delete a partition
@@ -1496,6 +1503,18 @@ list-all-drive() {
 list-removable-drive() {
   lsblk -o "hotplug,kname,tran,size,fstype,type,label,mountpoint,uuid,model" | head -n1
   lsblk -o "hotplug,kname,tran,size,fstype,type,label,mountpoint,uuid,model" | awk '$1 == 1 || /rom/ || /usb/ || /crypt/ || /crypto_LUKS/ {print $0}'
+  printf '%s\n'
+}
+list-mtp-device() {
+  if [[ "$(simple-mtpfs -l 2>/dev/null | wc -l)" -gt 0 ]]; then
+    printf '%s\n' "MTP Devices [ Android > USB_Debugging=Enable,USB_Configuration=MTP ]"
+    simple-mtpfs -l
+  fi
+  if [[ "$(ls /run/user/$UID/mtp 2>/dev/null | wc -l)" -gt 0 ]]; then
+    printf '%s\n'
+    printf '%s\n' "MTP Mounted @ /run/user/$UID/mtp/"
+    ls -1 /run/user/$UID/mtp
+  fi
 }
 
 while true; do
@@ -1503,6 +1522,7 @@ while true; do
   pidof tmux >/dev/null && tmux clear-history
   printf '%s\n\n' '======================= LISTING REMOVABLE DEVICES ====================='
   list-removable-drive
+  list-mtp-device
   # printf '%s\n\n' '======================= LISTING ALL DEVICES ==========================='
   # list-all-drive
   printf '%s\n'
@@ -1817,8 +1837,15 @@ while true; do
     m)
       echo -n "Which device do you want to mount? (e.g sdx1): "
       read DEVICE
-      udisksctl mount --block-device "/dev/$DEVICE"
-        if [ $? -ne 0 ]; then
+        if [[ "$DEVICE" =~ ^[[:digit:]] ]]; then
+          # e.g) 1: SamsungGalaxy --> 1-SamsungGalaxy
+          mtp_num_name=$(simple-mtpfs -l | grep "^${DEVICE}:" | cut -d' ' -f1,2 | sed 's/: /-/g')
+          # trap "rmdir /run/user/$UID/mtp/$mtp_num_name" EXIT
+          mkdir -p /run/user/$UID/mtp/$mtp_num_name
+          simple-mtpfs --device "$DEVICE" /run/user/$UID/mtp/$mtp_num_name
+        elif [[ "$DEVICE" =~ ^[[:alpha:]] ]]; then
+          udisksctl mount --block-device "/dev/$DEVICE"
+        elif [[ $? -ne 0 ]]; then
           mount-udisksctl-luks "$DEVICE"
         fi
       read -rsp $'Press any key to return to main menu\n' -n1 key
@@ -1826,8 +1853,13 @@ while true; do
     u)
       echo -n "Which device do you want to unmount? (e.g sdx1): "
       read DEVICE
-      udisksctl unmount --force --block-device "/dev/$DEVICE"
-        if [ $? -ne 0 ]; then
+        if [[ "$DEVICE" = [0-9]* ]]; then
+          mtp_num_name=$(simple-mtpfs -l | grep "^${DEVICE}:" | cut -d' ' -f1,2 | sed 's/: /-/g')
+          fusermount -u /run/user/$UID/mtp/$mtp_num_name
+          rmdir /run/user/$UID/mtp/$mtp_num_name
+        elif [[ "$DEVICE" = [[:alpha:]]* ]]; then
+          udisksctl unmount --force --block-device "/dev/$DEVICE"
+        elif [[ $? -ne 0 ]]; then
           unmount-udisksctl-luks "$DEVICE"
         fi
       read -rsp $'Press any key to return to main menu\n' -n1 key
