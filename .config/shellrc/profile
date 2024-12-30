@@ -96,7 +96,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
 # nnn environment
 export NNN_USE_EDITOR=1
-export NNN_OPTS="adr"
+export NNN_OPTS="adDr"
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=mimeopen
 export NNN_COLORS="3427"
@@ -110,6 +110,6 @@ export NNN_PLUG='d:drop;g:fzcd;f:fzfcd;o:fzfile;p:preview-tui;w:setbg;x:dups;i:i
 export TUIR_BROWSER="l"
 
 
-#start x
+# start x
 # Start graphical server on user's current tty if not already running.
 # [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"

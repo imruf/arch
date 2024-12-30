@@ -109,5 +109,7 @@ source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history-substring-search/history-su
 source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/fsh/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 
+# Zoxide
+eval "$(zoxide init zsh)"
 
 # [[ $UID -eq 0 ]] && local user_symbol='%F{red}#%f' ||  local user_symbol='%F{green}$%f'

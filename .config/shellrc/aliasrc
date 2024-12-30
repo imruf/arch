@@ -16,14 +16,22 @@ alias \
  tns="tmux new -s $1" \
 
 ## Files
+# File Manager
+alias \
+ yz="yazi" \
+
 # List
 alias \
- ls="ls --color=auto --group-directories-first" \
- lah="lsd -la1h --group-dirs first" \
-# lah="exa -la --group-directories-first" \
+ ls="eza --colour=auto --group-directories-first --icons=auto" \
+ la="eza -l --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
+ lah="eza -la --colour=auto --group-directories-first --icons=auto" \
+ # lah="eza -1la --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
+# ls="ls --color=auto --group-directories-first" \
+
 
 # Operation
 alias \
+ cd="z" \
  ..="cd .." \
  cp="cp -v" \
  mv="mv -v" \
@@ -69,7 +77,7 @@ alias \
  hgs="cd $HOME/Downloads/Git/st-git" \
  fpconf="snv /etc/pacman.conf" \
  fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
- fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
+ fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.lua" \
  fz="$EDITOR $ZDOTDIR/.zshrc" \
  fa="$EDITOR $XDG_CONFIG_HOME/shellrc/aliasrc" \
  fzfn="$EDITOR $XDG_CONFIG_HOME/shellrc/zshfnrc" \
@@ -282,8 +290,8 @@ alias \
 
 # ARCHIVE
 alias \
- uz="atool -x" \
- z="apack" \
+ uzp="atool -x" \
+ zp="apack" \
 
 # arch-wiki-lite
 alias \
