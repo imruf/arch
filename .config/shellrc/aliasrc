@@ -353,10 +353,8 @@ alias \
 # zsh function
 # fzf
 alias \
- fe="fzf_file" \
- ff="fzf_cd" \
- fk="fzf_kill" \
- fh="fzf_history" \
+ fe="vf" \
+ ff="cf" \
 
 # surfraw
 alias \

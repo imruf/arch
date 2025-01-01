@@ -27,7 +27,6 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-
 opt.backspace = "indent,eol,start"
 
 vim.api.nvim_create_autocmd( "VimLeave", {

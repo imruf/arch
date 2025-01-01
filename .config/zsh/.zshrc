@@ -18,16 +18,11 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 
 PS1="%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%F{226} %f%F{78}%~%f%F{15}]%f %F{038}>%f%b "
 # PS1="%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%F{226}  %f%F{78}%~%f%F{15}]%f %F{038}>%f%b "
-
 # PS1="%F{blue}$(print -P '\uF303';)%f %B%F{yellow}%~%b%f
 # %B:-%b "
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b
 # %F{yellow}$(print -P '\uF303')%f %F{blue} :- %f"
-
 # PS1="%B%F{148}[ %f%F{yellow}%K{black}%n%k%f%F{106}@%f%F{030}%M%f %F{208}%~%f%F{148} ]%f %F{038}>%f%b "
-
-
-
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b %B%{$fg[cyan]%}>%{$reset_color%}%b "
 
 
@@ -111,5 +106,8 @@ source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/fsh/fast-syntax-highlighting.plugin
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# fzf
+eval "$(fzf --zsh)"
 
 # [[ $UID -eq 0 ]] && local user_symbol='%F{red}#%f' ||  local user_symbol='%F{green}$%f'

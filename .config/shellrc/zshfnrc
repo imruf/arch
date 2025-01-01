@@ -1,31 +1,44 @@
 #!/bin/sh
 
 # fzf file, cd, history,  kill
+#
+fzf_file() {
+  local files
+  if [[ -z $string ]]
+  then
+    printf "Search File:>_ "
+    read string
+  fi
+  files=(${(f)"$(locate -Ai -0 $string | grep -z -vE '~$' | fzf --read0 -0 -1 -m)"})
 
-fzf_file() 
-        { 
-        zle -I; FILE=$(find -type f 2> /dev/null | fzf +m) && vim "$FILE" ; 
-#        zle -I; FILE=$(find -type f -not \( -path "./path1/*" -o -path "./path2/*" \)  2> /dev/null | fzf +m) && vim "$FILE" ; 
-        }; 
-    zle -N fzf_file;
+  if [[ -n $files ]]
+  then
+     nvim -- $files
+     print -l $files[1]
+  fi
+}
 
-fzf_cd() 
-        { 
-            zle -I; DIR=$(find -type d 2> /dev/null | fzf +m) && cd "$DIR" ; 
-        }; 
-    zle -N fzf_cd;
 
-fzf_history() 
-        { 
-            zle -I; eval $(history | fzf -e +i +s | sed 's/ *[0-9]* *//') ; 
-        }; 
-    zle -N fzf_history;
+fzf_cd() {
+  local file
+  if [[ -z $string ]]
+  then
+    printf "Search Dir:>_ "
+    read string
+  fi
 
-fzf_kill() 
-        { 
-            zle -I; ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9} ; 
-        }; 
-    zle -N fzf_kill;
+  file="$(locate -Ai -0 $string | grep -z -vE '~$' | fzf --read0 -0 -1)"
+
+  if [[ -n $file ]]
+  then
+     if [[ -d $file ]]
+     then
+        z -- $file
+     else
+        z -- ${file:h}
+     fi
+  fi
+}
 
 # Surfraw
 
