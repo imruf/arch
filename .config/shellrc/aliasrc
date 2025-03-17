@@ -17,17 +17,19 @@ alias \
 
 ## Files
 # File Manager
-alias \
- yz="yazi" \
 
 # List
 alias \
  ls="eza --colour=auto --group-directories-first --icons=auto" \
  la="eza -l --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
- lah="eza -la --colour=auto --group-directories-first --icons=auto" \
+ lah="eza -la --colour=auto --group-directories-first --no-user --no-filesize --no-time --icons=auto" \
  # lah="eza -1la --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
 # ls="ls --color=auto --group-directories-first" \
 
+# List
+alias \
+  cat="bat" \
+  diff="batdiff" \
 
 # Operation
 alias \
@@ -64,6 +66,8 @@ alias \
  h="cd $HOME" \
  hd="cd $HOME/Downloads" \
  hn="cd $HOME/Documents" \
+ epdf="cd $HOME/Documents/Book/epdf" \
+ epub="cd $HOME/Documents/Book/epub" \
  hp="cd $HOME/Pictures" \
  hm="cd $HOME/Music" \
  hv="cd $HOME/Videos" \
@@ -93,7 +97,6 @@ alias \
 alias \
  pdw="pwd" \
  free="free -mt" \
- diff="diff --color=auto" \
  df="df -h" \
 
 # Userlist
@@ -254,7 +257,6 @@ alias \
  vol="pulsemixer" \
  def="sdcv" \
  d="sdcv_def" \
- rt="rt_tmux" \
  keep="keepcli" \
  pdf="zathura" \
  img="sxiv" \
@@ -264,6 +266,7 @@ alias \
  uc="ucollage" \
  sw="termdown" \
  abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook" \
+ # rt="tuir" \
 
 # books="pysheng" \
 # drive="gdrive" \
@@ -353,8 +356,9 @@ alias \
 # zsh function
 # fzf
 alias \
- fe="vf" \
- ff="cf" \
+ fe="fzf_file" \
+ ff="fzf_cd" \
+ fk="fzf_kill" \
 
 # surfraw
 alias \

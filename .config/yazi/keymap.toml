@@ -18,8 +18,8 @@ keymap = [
 	{ on = "<PageUp>",     run = "arrow -100%", desc = "Move cursor up one page" },
 	{ on = "<PageDown>",   run = "arrow 100%",  desc = "Move cursor down one page" },
 
-	{ on = [ "g", "g" ], run = "arrow -99999999", desc = "Move cursor to the top" },
-	{ on = "G",          run = "arrow 99999999",  desc = "Move cursor to the bottom" },
+	{ on = [ "g", "g" ], run = "arrow top", desc = "Move cursor to the top" },
+	{ on = "G",          run = "arrow bot",  desc = "Move cursor to the bottom" },
 
 	# Navigation
 	{ on = "h", run = "leave", desc = "Go back to the parent directory" },
@@ -42,8 +42,9 @@ keymap = [
 	{ on = "J", run = "seek 5",  desc = "Seek down 5 units in the preview" },
 
 	# Spotting
-	{ on = ["s", "d"], run = "spot", desc = "Spot hovered file" },
 	{ on = "i", run = "spot", desc = "Spot hovered file" },
+
+
 
 	# Operation
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
@@ -55,18 +56,19 @@ keymap = [
 	{ on = "P",         run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
 	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "D",         run = "unyank",                      desc = "Cancel the yank status" },
-	{ on = "x",         run = "remove",                      desc = "Trash selected files" },
-	{ on = "X",         run = "remove --permanently",        desc = "Permanently delete selected files" },
+	{ on = "X",         run = "remove",                      desc = "Trash selected files" },
+	{ on = "x",         run = "remove --permanently",        desc = "Permanently delete selected files" },
 	{ on = "n",         run = "create",                      desc = "Create a file (ends with / for directories)" },
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
 	{ on = ":",         run = "shell --block --interactive", desc = "Run a shell command (block until finishes)" },
 	{ on = ".",         run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
-	{ on = "s",         run = "search --via=fd",             desc = "Search files by name via fd" },
-	{ on = "S",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 	{ on = "<C-s>",     run = "escape --search",             desc = "Cancel the ongoing search" },
 	{ on = "z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
 	{ on = "Z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
+	{ on = [ "c", "s" ],run = "search --via=fd",             desc = "Search files by name via fd" },
+	{ on = [ "c", "S" ],run = "search --via=rg",             desc = "Search files by content via ripgrep" },
+
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Linemode: size" },
@@ -78,7 +80,7 @@ keymap = [
 
 	# Copy
 	{ on = [ "c", "c" ], run = "copy path",             desc = "Copy the file path" },
-	{ on = [ "c", "d" ], run = "copy dirname",          desc = "Copy the directory path" },
+	{ on = [ "c", "l" ], run = "copy dirname",          desc = "Copy the directory path" },
 	{ on = [ "c", "f" ], run = "copy filename",         desc = "Copy the filename" },
 	{ on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy the filename without extension" },
 
@@ -140,6 +142,12 @@ keymap = [
 
 	# Tasks
 	{ on = "w", run = "tasks_show", desc = "Show task manager" },
+
+	# Drag And Drop
+  { on = [ "c", "d" ], run = '''
+     shell 'dragon -x -i -T "$1"'
+  '''},
+#     shell 'ripdrag "$1" -x 2>/dev/null &' --confirm
 
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
@@ -350,3 +358,33 @@ keymap = [
 	# Filtering
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
+
+[[manager.prepend_keymap]]
+	on = "l"
+  run = "plugin smart-enter"
+  desc = "Open selected files"
+
+[[manager.prepend_keymap]]
+on   = ["c", "p"]
+run  = "plugin hide-preview"
+desc = "Hide or show preview"
+
+[[manager.prepend_keymap]]
+on   = [ ",", "/"]
+run  = "plugin smart-filter"
+desc = "Smart filter"
+
+[[manager.prepend_keymap]]
+	on = "s"
+  run = 'shell "$SHELL" --block'
+  desc = "Drop To Shell"
+
+# [[manager.prepend_keymap]]
+#	on = "o"
+#  run = 'plugin open-with-cmd --args=block'
+#  desc = "Open With Cmd Plugin"
+
+[[manager.prepend_keymap]]
+	on = "o"
+  run = 'plugin open-with-cmd'
+  desc = "Open With Dialog"
