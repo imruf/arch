@@ -4,5 +4,7 @@
 
 # For non-systemd init systems.
 
+kill -TERM $(pidof dwm)
 
-kill -TERM $(pgrep -u $USER "\bdwm$")
+# kill -TERM $(pgrep -u $USER "\bdwm$")
+# kill -HUP $(pgrep -u $USER "\bdwm$")

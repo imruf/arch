@@ -8,27 +8,32 @@ fi
 
 case "$url" in
 	*mkv|*webm|*mp4)
-		setsid -f mpv --loop-file=inf -quiet "$url" ;;
+		setsid -f mplayer -loop 0 -quiet "$url" ;;
 	*png|*jpg|*jpe|*jpeg|*webp)
 		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && nsxiv -fa "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*gif)
-		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && mpv "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
+		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && mplayer "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*pdf|*cbz|*cbr)
 		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && zathura "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*mp3|*flac|*opus|*mp3?source*)
 		qndl "$url" 'curl -LO' ;;
 	*imgur.com*)
-        yt-dlp -g "$1" | xargs mpv --profile=yt --loop-file=inf ;;
+          yt-dlp -g "$1" | sed 's/https/ffmpeg:\/\/https/' | xargs mplayer -loop 0 ;;
 	*redgifs.com*)
-               mpv --ytdl-format=sd $url --loop-file=inf ;; 
+#        case $url in
+#	        https://redgifs.com*)
+          yt-dlp -f sd -g $url | sed 's/https/ffmpeg:\/\/https/' | xargs mplayer -loop 0 ;;
+# 	        *)
+#                 echo $url | sed 's/#.*//;s/v3/api/;s/www/api/;s/watch/v2\/gifs/;s/$/\/sd.m3u8/' | xargs mplayer -loop 0
+#         esac ;;
 	*v.reddit.com*|*v.redd.it*)
-        mpv --profile=yt --loop-file=inf --ytdl-format='bestvideo*+bestaudio/best' $url ;;
+          yt-dlp -g $url | sed 's/https/ffmpeg:\/\/https/' | xargs mplayer -loop 0 ;;
 	*reddit.com/gallery*)
         tmpfile=/tmp/gallery
         linkfile=/tmp/links
         iurl=https://www.reddit.com/comments/$(basename $1).json
         rm /tmp/*.[jpg][pni]*
-        curl -L $iurl > $tmpfile
+        curl $iurl > $tmpfile
         tr '"' '\n' < $tmpfile | awk '/https/ && /format/ && !/blur/ {print}' | sed 's/amp;//g' | sort -n > $linkfile
         [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $tmpfile; sleep 0.5 ;;
 	*imgchest.com*)
@@ -38,7 +43,7 @@ case "$url" in
         curl $url | grep og:image | tr '"' '\n' | awk '/https/ {print}' > $linkfile
         [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $linkfile; sleep 0.5 ;;
 	*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*odysee.com*|*eroticmv.com*|*xnxx.com*|*pornhub.com*|*xvideos.com*|*xhamster.com*|*youjizz.com*|*youporn.com*|*sxyprn.com*|*spankbang.com*|*desixx.net*|*fsiblog3.club*|*hqporner.com*|*porntrex.com**)
-        mpv --loop-file=inf --ytdl-format=bestvideo*+bestaudio/best "$url" ;;
+          yt-dlp -g $url | sed 's/https/ffmpeg:\/\/https/' | xargs mplayer -loop 0 ;;
 	*)
 		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || elinks "$url"
 esac

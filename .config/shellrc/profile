@@ -6,9 +6,9 @@ export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 unsetopt PROMPT_SP
 
 # Driver
-# export DRI_PRIME=1
+#export DRI_PRIME=1
 export LIBVA_DRIVER_NAME=r600
-# export VDPAU_DRIVER=va_gl
+export VDPAU_DRIVER=va_gl
 export VDPAU_DRIVER=r600
 
 # TERM COLOR
@@ -16,7 +16,7 @@ export TERM=st-256color
 
 
 # Defaults
-export BROWSER="librewolf"
+export BROWSER="qutebrowser"
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
@@ -110,8 +110,13 @@ _fzf_compgen_dir() {
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenupass"
 
 # Fix
-# export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
-# export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="gtk3"	# Have QT use gtk2 theme.
+# export QTWEBENGINE_CHROMIUM_FLAGS="--disable-gpu" # Temporary fix for glx buffer bug QT6.9
+
+# export QT_QPA_PLATFORMTHEME="qt6ct"
+
+
+
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
@@ -125,11 +130,12 @@ export NNN_COLORS="3427"
 export NNN_FCOLORS='c1e2882e486033f7c6d6abc4'
 export NNN_BMS='h:~/;d:~/Downloads;n:~/Documents;p:~/Pictures;m:/home/masud/Music;w:~/Desktop;v:~/Videos;f:~/Videos/Movies;u:/run/media/masud;t:/tmp;c:/home/masud/.config/vimwiki/cnf;l:/home/masud/.config/vimwiki/latex'
 export NNN_PLUG='d:drop;f:fzfcd;g:fzcd;i:imgview;o:fzfile;p:preview-tui;w:setbg;x:dups;z:autojump;'
-# export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
+#export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
+export NNN_SSHFS='sshfs -o follow_symlinks'
 # export NNN_RCLONE='rclone mount --read-only --no-checksum'
 
 # tuir environment
-export TUIR_BROWSER="l"
+export TUIR_BROWSER="elinks"
 
 
 # start x

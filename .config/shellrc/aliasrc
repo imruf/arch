@@ -22,7 +22,8 @@ alias \
 alias \
  ls="eza --colour=auto --group-directories-first --icons=auto" \
  la="eza -l --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
- lah="eza -la --colour=auto --group-directories-first --no-user --no-filesize --no-time --icons=auto" \
+ lah="eza -la --colour=auto --group-directories-first --icons=auto" \
+# lah="eza -la --colour=auto --group-directories-first --no-user --no-filesize --no-time --icons=auto" \
  # lah="eza -1la --colour=auto --group-directories-first --icons=auto --no-filesize --no-time --no-permissions --no-user" \
 # ls="ls --color=auto --group-directories-first" \
 
@@ -35,8 +36,8 @@ alias \
 alias \
  cd="z" \
  ..="cd .." \
- cp="cp -v" \
- mv="mv -v" \
+ cp="cpg -g" \
+ mv="mvg -g" \
  rm="rm -v" \
  rmd="rmdir -v" \
  mkd="mkdir -pv" \
@@ -243,6 +244,7 @@ alias \
  pc="python -ic 'from __future__ import division; from math import *; from fractions import Fraction; from random import *'" \
  c2='units' \
  sm="sc-im" \
+ qc="qalc" \
 
 # Equalizer
 alias \
@@ -330,11 +332,13 @@ alias \
 # SSH/FTP
 alias \
  sfu="sudo rsm start sshd" \
+ sfr="sudo rsm restart sshd" \
  sfd="sudo rsm stop sshd" \
  ftpu="sudo rsm start vsftpd" \
+ ftpr="sudo rsm restart vsftpd" \
  ftpd="sudo rsm stop vsftpd" \
  at="termux_ssh" \
- ter="ssh -p 8022 u0_a221@192.168.31.247" \
+ ter="ssh -p 8022 u0_a221@192.168.37.43" \
 
 # fb hosts
 alias \

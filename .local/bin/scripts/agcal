@@ -1,23 +1,21 @@
 #!/bin/sh
 
-
-while getopts "d:m:y:D:M:Y:h" o; do case "${o}" in
-    h) printf "agcal\\n -d: Birth Date\\n -m: Birth Month\\n -y: Birth Year\\n -D: Current Date\\n -M: Current Month\\n -Y: Current Year\\n -h: help\\n" && exit 1 ;;
-	d) b_d=${OPTARG} ;;
-	m) b_m=${OPTARG} ;;
-	y) b_y=${OPTARG} ;;
-	D) c_d=${OPTARG} ;;
-	M) c_m=${OPTARG} ;;
-	Y) c_y=${OPTARG} ;;
+while getopts "b:c:h" o; do case "${o}" in
+  h) printf "agcal\\n -b: Birth Date (dd-mm-yyyy)\\n -c: Current Date (dd-mm-yyyy)\\n -h: help\\n" && exit 1 ;;
+	b) br_date=${OPTARG} ;;
+	c) cr_date=${OPTARG} ;;
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit 1 ;;
 esac done
 
-[ -z $b_d ] && read -p "Enter Birth Day: " b_d
-[ -z $b_m ] && read -p "Enter Birth Month:  " b_m
-[ -z $b_y ] && read -p "Enter Birth Year:  " b_y
-[ -z $c_d ] && c_d=$(date +%-d)
-[ -z $c_m ] && c_m=$(date +%-m)
-[ -z $c_y ] && c_y=$(date +%Y)
+[ -z $br_date ] && read -p "Enter Birth Day (dd-mm-yyyy): " br_date
+[ -z $cr_date ] && read -p "Enter Age Date (dd-mm-yyyy): " cr_date && [ -z $cr_date ] && cr_date=$(date +%-d-%-m-%-Y)
+
+b_d=$(echo $br_date | tr '-' '\n' | sed -n "1p" | sed "s/^0//")
+b_m=$(echo $br_date | tr '-' '\n' | sed -n "2p" | sed "s/^0//")
+b_y=$(echo $br_date | tr '-' '\n' | sed -n "3p" | sed "s/^0//")
+c_d=$(echo $cr_date | tr '-' '\n' | sed -n "1p" | sed "s/^0//")
+c_m=$(echo $cr_date | tr '-' '\n' | sed -n "2p" | sed "s/^0//")
+c_y=$(echo $cr_date | tr '-' '\n' | sed -n "3p" | sed "s/^0//")
 
 # Getting Number of Days in A Month
 ndm=$(cal $b_m $b_y | awk 'NF {Days = $NF}; END {print Days}')

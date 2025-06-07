@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo $1 | sed 's/github/raw.githubusercontent/g;s/blob/refs\/heads/g' | xargs aria2c

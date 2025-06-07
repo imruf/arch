@@ -11,7 +11,7 @@
 
 browser='qutebrowser'
 engine='https://www.google.com/search?hl=en&q=%s'
-bookmarks="$HOME/.config/surfraw/bookmarks"
+bookmarks="$HOME/.config/elinks/bookmarks"
 
 gotourl() {
 	if [ "$nbrowser" = surf ]
@@ -45,6 +45,7 @@ xprop -root | grep '^_NET_ACTIVE_WINDOW' && {
 	class=$(xprop -id "$winid" WM_CLASS | awk -F'\"' '{ print $(NF - 1) }')
 	case "$class" in
 		Firefox) nbrowser='firefox' ;;
+		librewolf) nbrowser='librewolf' ;;
 		#Firefox) shortcut='ctrl+l' ;; # alternative method, uses xdotool
 		IceCat) nbrowser='icecat' ;;
 		Chromium) nbrowser='chromium' ;;

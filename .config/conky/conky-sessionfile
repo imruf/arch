@@ -1,1 +1,0 @@
-conky -c /home/masud/.config/conky/informant/AP-inf-orange.conkyrc & sleep 1s

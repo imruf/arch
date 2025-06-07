@@ -56,7 +56,7 @@ mount-udisksctl() {
     echo -e "mount device like most GUI file manager"
     echo -e "\nUsage: $0 <device|partition>"
     echo -e "Example: $0 sdx"
-    echo -e "         $0 sdx1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -72,7 +72,7 @@ unmount-udisksctl() {
     echo -e "mount device like most GUI file manager"
     echo -e "\nUsage: $0 <device|partition>"
     echo -e "Example: $0 sdx"
-    echo -e "         $0 sdx1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -91,7 +91,7 @@ mount-udisksctl-luks() {
     echo -e "mount LUKS encrypted device like most GUI file manager"
     echo -e "\nUsage: $0 <luks-device|partition>"
     echo -e "Example: $0 sdx"
-    echo -e "         $0 sdx1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -111,7 +111,7 @@ unmount-udisksctl-luks() {
     echo -e "unmount LUKS encrypted device like most GUI file manager"
     echo -e "\nUsage: $0 <luks-device|partition>"
     echo -e "Example: $0 sdx"
-    echo -e "         $0 sdx1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -129,7 +129,7 @@ mount-luks() {
     echo -e "mount LUKS disk encrypted device"
     echo -e "\nUsage: $0 <luks-device|partition>"
     echo -e "Example: $0 sdX"
-    echo -e "         $0 sdX1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -148,7 +148,7 @@ unmount-luks() {
     echo -e "unmount LUKS disk encrypted device"
     echo -e "\nUsage: $0 <luks-device|partition>"
     echo -e "Example: $0 sdX"
-    echo -e "         $0 sdX1"
+    echo -e "         $0 sdx"
     echo -e "Multiple:$0 sdx sdy sdz"
     echo -e "         $0 sdx*"
     return 1
@@ -1004,7 +1004,7 @@ luks-setup-ext() {
     echo -e "format device and apply LUKS disk encryption (Linux Unified Key Setup)"
     echo -e "\nUsage: $0 <fstype:ext2/3/4> <device|partition>"
     echo -e "Example: $0 ext2 sdx"
-    echo -e "         $0 ext4 sdx1"
+    echo -e "         $0 ext4 sdx"
     return 1
   fi
   FSTYPE="$1"
@@ -1135,7 +1135,7 @@ clonezilla-partition-restore() {
     echo -e "restore image to device partition"
     echo -e "\nUsage: $0 <input_file> <device>"
     echo -e "\nExample: $0 mylaptop_clonezilla_partition2_2016_07_02 sdx2"
-    echo -e "\nNote: partition <device> usually have numbers at the end (sdx1)"
+    echo -e "\nNote: partition <device> usually have numbers at the end (sdx)"
     return 1
   fi
   INPUT_FILE="$1"
@@ -1574,7 +1574,7 @@ while true; do
       read -rsp $'Press any key to return to main menu\n' -n1 key
     ;;
     cp)
-      echo -n "Which partition do you want to clone? (e.g sdx1): "
+      echo -n "Which partition do you want to clone? (e.g sdx): "
       read DEVICE
       echo -n "Give an output filename: (e.g myusbpartition) "
       read FILENAME
@@ -1593,7 +1593,7 @@ while true; do
       read -rsp $'Press any key to return to main menu\n' -n1 key
     ;;
     rp)
-      echo -n "Which partition do you want to restore? (e.g sdx1): "
+      echo -n "Which partition do you want to restore? (e.g sdx): "
       read DEVICE
       read -e -p "Image location? (e.g /home/user/my_clonezilla_image): " FILENAME
       DIRNAME="$(dirname $FILENAME)"
@@ -1835,7 +1835,7 @@ while true; do
       read -rsp $'Press any key to return to main menu\n' -n1 key
     ;;
     m)
-      echo -n "Which device do you want to mount? (e.g sdx1): "
+      echo -n "Which device do you want to mount? (e.g sdx): "
       read DEVICE
         if [[ "$DEVICE" =~ ^[[:digit:]] ]]; then
           # e.g) 1: SamsungGalaxy --> 1-SamsungGalaxy
@@ -1851,7 +1851,7 @@ while true; do
       read -rsp $'Press any key to return to main menu\n' -n1 key
     ;;
     u)
-      echo -n "Which device do you want to unmount? (e.g sdx1): "
+      echo -n "Which device do you want to unmount? (e.g sdx): "
       read DEVICE
         if [[ "$DEVICE" = [0-9]* ]]; then
           mtp_num_name=$(simple-mtpfs -l | grep "^${DEVICE}:" | cut -d' ' -f1,2 | sed 's/: /-/g')

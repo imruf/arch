@@ -27,7 +27,7 @@ COMMANDS["file"]="dfile"
 LABELS["file"]=""
 
 # Calculator/menu-calc dmneu rofi script from AUR
-COMMANDS["Calc"]="= --dmenu=dmenu -- -l 3 -c"
+COMMANDS["Calc"]="dmenu -C"
 LABELS["Calc"]=""
 
 # Powermenu
@@ -35,7 +35,7 @@ COMMANDS["power"]="powermenu"
 LABELS["power"]=""
 
 # gpg
-COMMANDS["pgpg"]="passmenu"
+COMMANDS["pgpg"]="passmenu2"
 LABELS["pgpg"]=""
 
 # fix bar

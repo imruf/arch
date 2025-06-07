@@ -1,0 +1,35 @@
+#!/bin/sh
+
+## termux and restor script
+
+brdir=/sdcard
+bname="termux-backup.$(date '+%Y%m%d-%H%M-%S').tar.gz"
+
+fzf_check () {
+  type fzf >/dev/null
+}
+
+inp_dep () {
+  if fzf_check; then
+    echo "Select Backup or Restore"
+  else
+    echo "Installing fzf"
+    apt update && apt install fzf
+  fi
+}
+
+termux_br () {
+case "$(printf "Backup_Termux\\nRestore_Termux\\n" | fzf)" in
+          Backup_Termux) tar -zcvf "${brdir}/${bname}" -C /data/data/com.termux/files ./home ./usr ;;
+         Restore_Termux) 
+           rname=$(echo -e "SelectBackup: \n$(command ls -t1 $brdir)" | fzf)
+             case $rname in
+              *.tar.gz) tar -zxvf "${brdir}/${rname}" -C /data/data/com.termux/files --recursive-unlink --preserve-permissions ;; 
+                     *) echo "No Backup Format Selected" ;;
+                   esac
+                   
+esac
+}
+
+inp_dep
+termux_br

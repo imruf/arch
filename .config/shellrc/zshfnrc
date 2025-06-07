@@ -2,6 +2,25 @@
 
 # fzf file, cd, history,  kill
 #
+
+fzf_to() {
+  local files
+  if [[ -z $string ]]
+  then
+    printf "Search File:>_ "
+    read string
+  fi
+  files=(${(f)"$(locate -Ai -0 $string | grep -z -vE '~$' | fzf --read0 -0 -1 -m)"})
+
+  if [[ -n $files ]]
+  then
+     xdg-open -- $files
+     print -l $files[1]
+  fi
+}
+
+
+
 fzf_file() {
   local files
   if [[ -z $string ]]
