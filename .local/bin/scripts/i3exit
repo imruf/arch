@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 lock() {
     $HOME/.config/i3lock/i3lock.sh
