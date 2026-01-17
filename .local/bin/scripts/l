@@ -10,7 +10,11 @@ case "$url" in
 	*mkv|*webm|*mp4)
 		setsid -f mpv --loop-file=inf -quiet "$url" ;;
 	*png|*jpg|*jpe|*jpeg|*webp)
-		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && nsxiv -fa "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
+		 curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && nsxiv -fa "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
+#        linkfile=/tmp/links
+#		gallery-dl -g $url > $linkfile
+#		feh -B black --scale-down -f $linkfile ;;
+		# feh -Ff $linkfile ;;
 	*gif)
 		curl -L "$url" > "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" && mpv "/tmp/$(echo "$url" | sed "s/.*\///;s/%20/ /g")" ;;
 	*pdf|*cbz|*cbr)
@@ -24,13 +28,10 @@ case "$url" in
 	*v.reddit.com*|*v.redd.it*)
         mpv --profile=yt --loop-file=inf --ytdl-format='bestvideo*+bestaudio/best' $url ;;
 	*reddit.com/gallery*)
-        tmpfile=/tmp/gallery
         linkfile=/tmp/links
-        iurl=https://www.reddit.com/comments/$(basename $1).json
-        rm /tmp/*.[jpg][pni]*
-        curl -L $iurl > $tmpfile
-        tr '"' '\n' < $tmpfile | awk '/https/ && /format/ && !/blur/ {print}' | sed 's/amp;//g' | sort -n > $linkfile
-        [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $tmpfile; sleep 0.5 ;;
+		gallery-dl -g $url > $linkfile
+		feh -B black --scale-down -f $linkfile ;;
+		# feh -Ff $linkfile ;;
 	*imgchest.com*)
         tmpfile=/tmp/gallery
         linkfile=/tmp/links
@@ -38,7 +39,10 @@ case "$url" in
         curl $url | grep og:image | tr '"' '\n' | awk '/https/ {print}' > $linkfile
         [ -s $linkfile ] && aria2c -i $linkfile -d /tmp && nsxiv -fa /tmp/. || cat $linkfile; sleep 0.5 ;;
 	*youtube.com/watch*|*youtube.com/playlist*|*youtube.com/shorts*|*youtu.be*|*hooktube.com*|*bitchute.com*|*odysee.com*|*eroticmv.com*|*xnxx.com*|*pornhub.com*|*xvideos.com*|*xhamster.com*|*youjizz.com*|*youporn.com*|*sxyprn.com*|*spankbang.com*|*desixx.net*|*fsiblog3.club*|*hqporner.com*|*porntrex.com**)
-        mpv --loop-file=inf --ytdl-format=bestvideo*+bestaudio/best "$url" ;;
+        RES="$(yt-dlp -F $url | fzf --print-query | tail -1 | awk '{print $1}')"
+        mpv --loop-file=inf --ytdl-format=$RES "$url" ;;
+	*ok.ru*)
+        mpv --ytdl-format='bestvideo*+bestaudio/best' $url ;;
 	*)
 		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || elinks "$url"
 esac

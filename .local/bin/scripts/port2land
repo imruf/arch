@@ -1,0 +1,56 @@
+#!/bin/sh
+
+cp $1 temp-"$(basename $1 .pdf)".pdf
+
+# pdfjam temp-"$(basename $1 .pdf)".pdf -o "$(basename $1 .pdf)"-print.pdf --nup 2x1 --landscape --paper a4paper
+# rm temp-*.pdf
+
+# cpdf -impose-xy "2 1" temp-"$(basename $1 .pdf)".pdf -o "$(basename $1 .pdf)"-print-cpdf.pdf
+# cp $1 temp-"$(basename $1 .pdf)".pdf
+# cpdf -twoup-stack temp-"$(basename $1 .pdf)".pdf -o "$(basename $1 .pdf)"-print-cts.pdf
+# cpdf -twoup-stack temp-"$(basename $1 .pdf)".pdf -o temp-cts-"$(basename $1 .pdf)".pdf
+# cpdf -rotate 90 temp-cts-"$(basename $1 .pdf)".pdf -o "$(basename $1 .pdf)"-print-cpdf.pdf
+# rm temp-*.pdf
+
+# pdftk temp-"$(basename $1 .pdf)".pdf cat 1 1 output temp-tk-"$(basename $1 .pdf)".pdf
+# cp $1 "$(basename $1 .pdf)"-lr.pdf
+# cpdf -twoup-stack "$(basename $1 .pdf)"-lr.pdf -o "$(basename $1 .pdf)"-lrts.pdf
+# cpdf -rotate 90 "$(basename $1 .pdf)"-lrts.pdf -o "$(basename $1 .pdf)"-lrtsr.pdf
+
+# cp $1 "$(basename $1 .pdf)"-rl.pdf
+# pdftk "$(basename $1 .pdf)"-rl.pdf cat 2 1 output "$(basename $1 .pdf)"-rlf.pdf
+# cpdf -twoup-stack "$(basename $1 .pdf)"-rlf.pdf -o "$(basename $1 .pdf)"-rlfts.pdf
+# cpdf -rotate 90 "$(basename $1 .pdf)"-rlfts.pdf -o "$(basename $1 .pdf)"-rlftsr.pdf
+
+# pdftk "$(basename $1 .pdf)"-lrtsr.pdf "$(basename $1 .pdf)"-rlftsr.pdf output "$(basename $1 .pdf)-print.pdf"
+
+
+
+
+#cpdf -twoup-stack rl.pdf -o rlts.pdf
+#cpdf -rotate 90 rlts.pdf -o rltsr.pdf
+#pdftk temp.pdf cat 2 1 output temp-2.pdf
+#
+#cp $1 lr.pdf
+#cpdf -twoup-stack lr.pdf -o lrts.pdf
+#cpdf -rotate 90 lrts.pdf -o lrtsr.pdf
+
+# cp $1 rl.pdf
+# cpdf -twoup-stack lr.pdf -o rlts.pdf
+# cpdf -rotate 90 rltsr.pdf -o rlts1.pdf
+
+# cp $1 temp.pdf
+# 
+# cpdf -twoup-stack temp.pdf -o temp-ts-1.pdf
+# cpdf -rotate 90 temp-ts-1.pdf -o temp-la-1.pdf
+# 
+# pdftk temp.pdf cat 2 1 output temp-2.pdf
+# 
+# cpdf -twoup-stack temp-2.pdf -o temp-ts-2.pdf
+# cpdf -rotate 90 temp-ts-2.pdf -o temp-la-2.pdf
+# 
+# pdftk temp-la-1.pdf temp-la-2.pdf output "$(basename $1 .pdf)-print.pdf"
+# rm temp*.pdf
+
+#pdfnup --nup 2x1 --landscape true --outfile "$(basename $1.pdf .pdf)-la.pdf" $1.pdf
+

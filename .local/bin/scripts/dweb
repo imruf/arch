@@ -44,7 +44,8 @@ xprop -root | grep '^_NET_ACTIVE_WINDOW' && {
 	winid=$(xprop -root _NET_ACTIVE_WINDOW | sed 's/.*[[:space:]]//')
 	class=$(xprop -id "$winid" WM_CLASS | awk -F'\"' '{ print $(NF - 1) }')
 	case "$class" in
-		Firefox) nbrowser='firefox' ;;
+		firefox) nbrowser='firefox' ;;
+		zen) nbrowser='zen-browser' ;;
 		librewolf) nbrowser='librewolf' ;;
 		#Firefox) shortcut='ctrl+l' ;; # alternative method, uses xdotool
 		IceCat) nbrowser='icecat' ;;
@@ -54,7 +55,7 @@ xprop -root | grep '^_NET_ACTIVE_WINDOW' && {
 		Vivaldi) nbrowser='vivaldi' ;; # not tested
 		Brave) nbrowser='brave' ;; # not tested
 		Conkeror) nbrowser='conkeror' ;; # not tested
-		Palemoon) nbrowser='palemoon' ;; # not tested
+		Pale*) nbrowser='palemoon' ;; # not tested
 		Iceweasel) nbrowser='iceweasel' ;; # not tested
 		qutebrowser) nbrowser='qutebrowser' ;;
 		Midori) nbrowser='midori' ;; # not that good
