@@ -28,7 +28,8 @@ done >/dev/null 2>&1
 # numlockx on &
 # ibus-daemon -xdr &
 # xset r rate 250 50 &
-# setxkbmap -option caps:escape &
+# setxkbmap -option caps:escape
+# unclutter
 
 
 

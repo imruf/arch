@@ -53,6 +53,7 @@ alias \
  xcvn="cd $XDG_CONFIG_HOME/vimwiki/notes" \
  xcvu="cd $XDG_CONFIG_HOME/vimwiki/urls" \
  xcvl="cd $XDG_CONFIG_HOME/vimwiki/latex" \
+ xcvk="cd $XDG_CONFIG_HOME/vimwiki/latex/kgc" \
  xcvd="cd $XDG_CONFIG_HOME/vimwiki/latex/docs" \
  xcvt="cd $XDG_CONFIG_HOME/vimwiki/latex/bnlatex" \
  cnf="cd $XDG_CONFIG_HOME/vimwiki/cnf" \
@@ -77,9 +78,9 @@ alias \
  hg="cd $HOME/Downloads/Git" \
  hga="cd $HOME/Downloads/Git/arch" \
  hgc="cd $HOME/Downloads/Git/cnf" \
- hgd="cd $HOME/Downloads/Git/dwm-git" \
+ hgd="cd $HOME/Downloads/Git/dwm" \
  hgb="cd $HOME/Downloads/Git/dwmblocks" \
- hgs="cd $HOME/Downloads/Git/st-git" \
+ hgs="cd $HOME/Downloads/Git/st" \
  fpconf="snv /etc/pacman.conf" \
  fcm="$EDITOR $XDG_RUNTIME_DIR/clipmenu.6.masud/line_cache" \
  fv="$EDITOR $XDG_CONFIG_HOME/nvim/init.lua" \
@@ -171,12 +172,11 @@ alias \
  linp="sudo pacman --color auto -U" \
  rmv="sudo pacman --color auto -Rns" \
  rmvd="sudo pacman --color auto -Rnds --nodeps" \
- rmopkg="sudo pacman --color auto -Scc" \
+ rmcc="sudo pacman --color auto -Scc" \
 
 alias \
  unlock="sudo rm /var/lib/pacman/db.lck" \
  armv="sudo pacman -Rns $(pacman -Qtdq)" \
- cc="sudo pacman -Sc" \
  nrp="pacman -Qdt" \
  lfp="pacman -Qqm" \
  fp="pacman -Qm" \
@@ -190,20 +190,20 @@ alias \
  inpkg="makepkg -si" \
 
 # trizen
-alias \
- tzn="trizen" \
- tinp="trizen -S" \
- tpacs="trizen -Ss" \
- tznc="trizen -G" \
- quptzn="trizen -Qua" \
- uptzn="trizen -Syu" \
- tznskip="trizen -S --skipinteg" \
+# alias \
+#  tzn="trizen" \
+#  tinp="trizen -S" \
+#  tpacs="trizen -Ss" \
+#  tznc="trizen -G" \
+#  quptzn="trizen -Qua" \
+#  uptzn="trizen -Syu" \
+#  tznskip="trizen -S --skipinteg" \
 
 # yay
 # alias \
-# yinp="yay -S" \
+yinp="yay -S" \
 # yayskip="yay -S --mflags --skipinteg" \
-# upyay="yay -Syu --noconfirm" \
+upyay="yay -Syu --noconfirm" \
 
 # c source
 alias \
