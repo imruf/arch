@@ -11,14 +11,13 @@ autoload -U colors && colors
 autoload edit-command-line; zle -N edit-command-line
 # autoload -U tetris # main attraction of zsh, obviously
 
-autoload edit-command-line; zle -N edit-command-line
 
 # completion opts
 zstyle ':completion:*' menu select # tab opens cmp menu
-zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' #match case
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33 # colorize cmp menu
 # zstyle ':completion:*' file-list true # more detailed list
+# zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
 zstyle ':completion:*' squeeze-slashes false # explicit disable to allow /*/ expansion
 
 # options
@@ -26,9 +25,11 @@ setopt append_history inc_append_history share_history # better history
 setopt auto_menu menu_complete # autocmp first menu match
 setopt autocd
 setopt auto_param_slash # when a dir is completed, add a / instead of a trailing space
-setopt no_case_glob no_case_match # make cmp case insensitive
+setopt no_case_match # make cmp case insensitive
+setopt no_case_glob # make cmp case insensitive
 setopt globdots # include dotfiles
 setopt extended_glob # match ~ # ^
+
 setopt interactive_comments # allow comments in shell
 unsetopt prompt_sp # don't autoclean blanklines
 stty stop undef # disable accidental ctrl s
@@ -89,6 +90,7 @@ preexec() { echo -ne '\e[5 q' ;}
 
 # set up prompt
 PROMPT='%K{237}%B%F{yellow}[%f%b%F{white}%n%f%F{magenta}@%f%F{yellow}%M %f%B%F{225}%~%f%b%B%F{yellow}]%f%b${NEW_LINE}%B${vim_mode}%b%k '
+# PROMPT='%K{237}%B%F{yellow}[%f%b%F{white}%n%f%F{magenta}@%f%F{yellow}%M %f%B%F{225}%~%f%b%B%F{yellow}]%f%b${NEW_LINE%F{#E5E9F0}$(date +%H:%M)%B${vim_mode}%b%k '
 #PROMPT='%K{237}%B%F{yellow}[ %f%b%F{white} %f%F{yellow} %f%B%F{225}%~%f%b%B%F{yellow} ]%f%b${NEW_LINE}%B${vim_mode}%b%k '
 #PROMPT='%K{237}%B%F{15}[%f%b%F{172}%n%f%F{15}@%f%F{38}%M%f%F{226} %f%F{78}%~%f%F{15}]%f%b${NEW_LINE}%B${vim_mode}%b%k '
 #PROMPT='%B%F{15}[%f%F{172}%n%f%F{15}@%f%F{38}%M%f%F{226} %f%F{78}%~%f%F{15}]%f %F{038}>%f%b${NEW_LINE}%B${vim_mode}%b%k '
