@@ -130,7 +130,7 @@ class VRedgifMIMEParser(BaseMIMEParser):
     """
     redgif mime
     """
-    pattern = re.compile(r'http://v3\.redgifs\.com/watch/.+$|https://v3\.redgifs\.com/ifr/.+$|http://www\.redgifs\.com/watch/.+$|https://www\.redgifs\.com/watch/.+$|https://redgifs\.com/watch/.+$|http://www\.redgifs\.com/ifr/.+$|https://www\.redgifs\.com/ifr/.+$|http://redgifs\.com/ifr/.+$|https://redgifs\.com/ifr/.+$')
+    pattern = re.compile(r'http://v3\.redgifs\.com/watch/.+$|https://v3\.redgifs\.com/watch/.+$|http://v3\.redgifs\.com/ifr/.+$|https://v3\.redgifs\.com/ifr/.+$|http://www\.redgifs\.com/watch/.+$|https://www\.redgifs\.com/watch/.+$|https://redgifs\.com/watch/.+$|http://www\.redgifs\.com/ifr/.+$|https://www\.redgifs\.com/ifr/.+$|http://redgifs\.com/ifr/.+$|https://redgifs\.com/ifr/.+$')
 
     @staticmethod
     def get_mimetype(url):
